@@ -15,7 +15,7 @@ class AdminController extends Controller
     }// end method
 
     public function Dashboard(){
-        return view('admin.index');
+        return view('backend.dashboard');
     }// End Method
 
     public function Login(Request $request){

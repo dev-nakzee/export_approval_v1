@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models\Backend;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Services extends Model
+{
+    use HasFactory;
+    protected $table = 'services';
+    protected $fillable = [
+        'title',
+        'description',
+        'image',
+        'status',
+    ];
+}

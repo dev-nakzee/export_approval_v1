@@ -17,18 +17,7 @@ Route::get('/', function () {
 // });
 
 //--------------------------------------------------ROUTE FOR ADMIN-----------------------------------------------------
-Route::prefix('admin')->group(function (){
 
-Route::get('/login', [AdminController::class,'Index'])->name('login_from');
-Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
-Route::get('/clientList', [AdminController::class,'clientList'])->name('admin.clientList');
-Route::get('/dashboard', [AdminController::class,'Dashboard'])->name('admin.dashboard')->middleware('AdminMiddleware');
-Route::get('/logout', [AdminController::class,'AdminLogout'])->name('admin.logout')->middleware('AdminMiddleware');
-Route::get('/register', [AdminController::class,'AdminRegister'])->name('admin.register');
-Route::POST('/register/create', [AdminController::class,'AdminRegisterCreate'])->name('admin.register.create');
-Route::POST('/user/create', [AdminController::class,'createNewUser'])->name('admin.newUser');
-Route::get('/delete/{id}', [AdminController::class,'deleteClient'])->name('admin.deleteClient');
-});
 //----------------------------------------END ROUTE FOR ADMIN-------------------------------------------------------------
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------
