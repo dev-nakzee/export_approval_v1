@@ -11,19 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id('service_id');
-            $table->string('service_name');
-            $table->string('service_slug')->unique();
-            $table->string('media_id')->nullable();
-            $table->unsignedBigInteger('img_alt')->nullable();
-            $table->text('service_compliance')->nullable();
-            $table->longText('faqs')->nullable();
+        Schema::create('products', function (Blueprint $table) {
+            $table->id('product_id');
+            $table->string('product_name');
+            $table->string('product_slug')->unique();
+            $table->longText('product_content')->nullable();
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
             $table->text('seo_keywords')->nullable();
-            $table->integer('service_order')->default(0);
-            $table->boolean('service_status')->default(true);
+            $table->boolean('product_status')->default(true);
+            $table->integer('product_order')->default(0);
+            $table->unsignedBigInteger('product_category_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('products');
     }
 };
