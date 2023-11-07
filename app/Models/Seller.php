@@ -23,6 +23,7 @@ class Seller extends Authenticatable
         'email',
         'password',
         'status',
+        'role_id',
     ];
 
     /**

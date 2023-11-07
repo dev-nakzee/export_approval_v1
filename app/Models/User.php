@@ -20,7 +20,18 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'mobile',
+        'address',
+        'city',
+        'state',
+        'country',
+        'zip',
+        'avatar',
+        'gst_number',
         'password',
+        'otp',
+        'status',
+        'last_login_ip',
     ];
 
     /**
@@ -40,5 +51,9 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'mobile_verified_at' => 'datetime',
+        'otp_sent_at' => 'datetime',
+        'otp_expired_at' => 'datetime',
+        'last_login_at' => 'datetime',
     ];
 }
