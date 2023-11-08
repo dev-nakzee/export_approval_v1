@@ -3,3 +3,27 @@
     --bs-pagination-padding-y: 0.15rem !important;
     --bs-pagination-font-size: 0.75rem !important;
 }
+.tox-promotion {
+    display: none !important;
+}
+
+.tox-statusbar__branding {
+    display: none !important;
+}
+
+.tox-tinymce {
+    border: 1px solid #ced4da !important;
+    border-radius: 3px !important;
+}
+
+#media-gallery {
+    height: 320px;
+    overflow-y: scroll;
+}
+
+#media-gallery div {
+    display: inline-block;
+}
+#media-gallery div button img {
+    max-height: 100px !important;
+}

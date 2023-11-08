@@ -5,17 +5,18 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
 	<title>Backend</title>
-	@yield('css')
-	
+
 	<link href="{{asset('backend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 	<link href="{{asset('backend/css/app.css')}}" rel="stylesheet">
 	<link hidden href="{{asset('backend/css/custom.min.css')}}" rel="stylesheet">
 	<link href="{{asset('fontawesome/css/all.min.css')}}" rel="stylesheet">
+	@yield('css')
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -24,9 +25,9 @@
 		@include('backend.layouts.partials.sidebar')
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
-				<a class="sidebar-toggle js-sidebar-toggle">
-          <i class="hamburger align-self-center"></i>
-        </a>
+				<a class="sidebar-toggle js-sidebar-toggle ms-2">
+					<i class="hamburger align-self-center"></i>
+				</a>
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
@@ -136,8 +137,12 @@
 		</div>
 	</div>
 	<script src="{{asset('backend/js/jquery.min.js')}}"></script>
-	@yield('js')
+	<script src="{{asset('backend/js/custom.min.js')}}"></script>
 	<script src="{{asset('backend/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+	<script>
+		const mediaUrl = "{{route('media.gallery')}}";
+	</script>
+	@yield('js')
 	<script src="{{asset('backend/js/app.js')}}"></script>
 	
 </body>

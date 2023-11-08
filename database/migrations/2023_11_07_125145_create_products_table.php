@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('product_id');
             $table->string('product_name');
             $table->string('product_slug')->unique();
+            $table->unsignedBigInteger('media_id')->nullable();
+            $table->string('img_alt')->nullable();
             $table->longText('product_content')->nullable();
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
@@ -22,6 +24,8 @@ return new class extends Migration
             $table->boolean('product_status')->default(true);
             $table->integer('product_order')->default(0);
             $table->unsignedBigInteger('product_category_id')->nullable();
+            $table->unsignedBigInteger('information')->nullable();
+            $table->unsignedBigInteger('guidelines')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

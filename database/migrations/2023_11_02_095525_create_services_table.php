@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('service_slug')->unique();
             $table->string('media_id')->nullable();
             $table->unsignedBigInteger('img_alt')->nullable();
+            $table->longText('service_description')->nullable();
             $table->text('service_compliance')->nullable();
             $table->longText('faqs')->nullable();
             $table->string('seo_title')->nullable();

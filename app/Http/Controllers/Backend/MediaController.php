@@ -89,9 +89,15 @@ class MediaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function gallery ()
     {
         //
+        //
+        $media = Media::orderBy('media_id', 'desc')->get();
+        foreach($media as $key => $value) {
+            $media[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        return response()->json([$media]);
     }
 
     /**
