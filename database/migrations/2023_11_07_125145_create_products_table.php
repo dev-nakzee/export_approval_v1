@@ -18,14 +18,15 @@ return new class extends Migration
             $table->unsignedBigInteger('media_id')->nullable();
             $table->string('img_alt')->nullable();
             $table->longText('product_content')->nullable();
+            $table->unsignedBigInteger('product_service_id')->nullable();
+            $table->unsignedBigInteger('product_category_id')->nullable();
+            $table->unsignedBigInteger('information')->nullable();
+            $table->unsignedBigInteger('guidelines')->nullable();
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
             $table->text('seo_keywords')->nullable();
             $table->boolean('product_status')->default(true);
             $table->integer('product_order')->default(0);
-            $table->unsignedBigInteger('product_category_id')->nullable();
-            $table->unsignedBigInteger('information')->nullable();
-            $table->unsignedBigInteger('guidelines')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

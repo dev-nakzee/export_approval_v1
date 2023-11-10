@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Services', 'title' => 'Services'])
+@extends('backend.layouts.app', ['module' => 'Products', 'title' => 'Products Categories'])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -12,16 +12,16 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('services.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('products.categories.create')}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
         <div class="col-md-12 pt-1">
-            <table class="table table-secondary table-bordered table-hover table-sm" id="services-table">
+            <table class="table table-secondary table-bordered table-hover table-sm" id="product-category-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Service</th>
+                        <th>Category</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -43,25 +43,25 @@
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>
     $(document).ready(function() {  
-        mediaDatatable();
+        productCategoryDatatable();
     });
-    function mediaDatatable() {
+    function productCategoryDatatable() {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
             }
         });
-        var table = $('#services-table').DataTable({
+        var table = $('#product-category-table').DataTable({
             paging: true,
             retrieve: true,
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('services.show') }}",
+            ajax: "{{ route('products.categories.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'service', name: 'service'},
-                {data: 'status', name: 'status'},
+                {data: 'product_category_name', name: 'product_category_name'},
+                {data: 'product_category_status', name: 'product_category_status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

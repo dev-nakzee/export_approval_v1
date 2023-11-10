@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Services', 'title' => 'Services'])
+@extends('backend.layouts.app', ['module' => 'Services', 'title' => $services->service_name.' - Sections'])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -12,7 +12,7 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('services.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('services.sections.create', $services->service_id)}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Service</th>
+                        <th>Section</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -32,6 +32,9 @@
         </div>
     </div>
 </div>
+@php
+$services_section_url = route('services.sections.show', $services->service_id);
+@endphp
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{asset('backend/dropzone/dropzone.css')}}" type="text/css" />
@@ -57,11 +60,11 @@
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('services.show') }}",
+            ajax: "{{$services_section_url}}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'service', name: 'service'},
-                {data: 'status', name: 'status'},
+                {data: 'service_section_name', name: 'service_section_name'},
+                {data: 'service_section_status', name: 'service_section_status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

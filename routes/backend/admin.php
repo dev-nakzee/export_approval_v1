@@ -1,11 +1,14 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use App\Models\Admin;
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\MediaController;
 use App\Http\Controllers\Backend\DocumentController;
 use App\Http\Controllers\Backend\ServiceController;
-use Illuminate\Support\Facades\Route;
-use App\Models\Admin;
-
+use App\Http\Controllers\Backend\ServiceSectionController;
+use App\Http\Controllers\Backend\ProductCategoryController;
+use App\Http\Controllers\Backend\ProductController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -18,27 +21,57 @@ Route::POST('/user/create', [AdminController::class,'createNewUser'])->name('adm
 Route::get('/delete/{id}', [AdminController::class,'deleteClient'])->name('admin.deleteClient');
 
 Route::controller(MediaController::class)->group(function(){
-    Route::get('/media', [MediaController::class,'index'])->name('media.index');
-    Route::get('/media/show', [MediaController::class,'show'])->name('media.show');
-    Route::post('/media/store', [MediaController::class,'store'])->name('media.store');
-    Route::get('/media/delete/{id}', [MediaController::class,'destroy'])->name('media.delete');
-    Route::get('/media/gallery',[MediaController::class, 'gallery'])->name('media.gallery');
+    Route::get('/media', 'index')->name('media.index');
+    Route::get('/media/show', 'show')->name('media.show');
+    Route::post('/media/store', 'store')->name('media.store');
+    Route::get('/media/delete/{id}', 'destroy')->name('media.delete');
+    Route::get('/media/gallery','gallery')->name('media.gallery');
 })->name('backend');
 
 Route::controller(DocumentController::class)->group(function() {
-    Route::get('/document', [DocumentController::class,'index'])->name('document.index');
-    Route::get('/document/show', [DocumentController::class,'show'])->name('document.show');
-    Route::post('/document/store', [DocumentController::class,'store'])->name('document.store');
-    Route::get('/document/delete/{id}', [DocumentController::class,'destroy'])->name('document.delete');
+    Route::get('/document', 'index')->name('document.index');
+    Route::get('/document/show', 'show')->name('document.show');
+    Route::post('/document/store', 'store')->name('document.store');
+    Route::get('/document/delete/{id}', 'destroy')->name('document.delete');
 });
 
 Route::controller(ServiceController::class)->group(function() {
-    Route::get('/services', [ServiceController::class,'index'])->name('services.index');
-    Route::get('/services/show', [ServiceController::class,'show'])->name('services.show');
-    Route::get('/services/create', [ServiceController::class,'create'])->name('services.create');
-    Route::get('/services/edit/{id}', [ServiceController::class,'edit'])->name('services.edit');
-    Route::post('/services/store', [ServiceController::class,'store'])->name('services.store');
-    Route::post('/services/update/{id}', [ServiceController::class,'update'])->name('services.update');
-    Route::get('/services/delete/{id}', [ServiceController::class,'destroy'])->name('services.delete');
+    Route::get('/services', 'index')->name('services.index');
+    Route::get('/services/show', 'show')->name('services.show');
+    Route::get('/services/create', 'create')->name('services.create');
+    Route::get('/services/edit/{id}', 'edit')->name('services.edit');
+    Route::post('/services/store', 'store')->name('services.store');
+    Route::post('/services/update/{id}', 'update')->name('services.update');
+    Route::get('/services/delete/{id}', 'destroy')->name('services.delete');
+});
+
+Route::controller(ServiceSectionController::class)->group(function() {
+    Route::get('/services/{service}/sections/','index')->name('services.sections.index');
+    Route::get('/services/{service}/sections/show', 'show')->name('services.sections.show');
+    Route::get('/services/{service}/sections/create', 'create')->name('services.sections.create');
+    Route::get('/services/{service}/sections/edit/{id}', 'edit')->name('services.sections.edit');
+    Route::post('/services/{service}/sections/store', 'store')->name('services.sections.store');
+    Route::post('/services/{service}/sections/update/{id}','update')->name('services.sections.update');
+    Route::get('/services/{service}/sections/delete/{id}', 'destroy')->name('services.sections.delete');
+});
+
+Route::controller(ProductCategoryController::class)->group(function() {
+    Route::get('/products/categories', 'index')->name('products.categories.index');
+    Route::get('/products/categories/show', 'show')->name('products.categories.show');
+    Route::get('/products/categories/create', 'create')->name('products.categories.create');
+    Route::get('/products/categories/edit/{id}', 'edit')->name('products.categories.edit');
+    Route::post('/products/categories/store', 'store')->name('products.categories.store');
+    Route::post('/products/categories/update/{id}', 'update')->name('products.categories.update');
+    Route::get('/products/categories/delete/{id}', 'destroy')->name('products.categories.delete');
+});
+
+Route::controller(ProductController::class)->group(function() {
+    Route::get('/products', 'index')->name('products.index');
+    Route::get('/products/show', 'show')->name('products.show');
+    Route::get('/products/create', 'create')->name('products.create');
+    Route::get('/products/edit/{id}', 'edit')->name('products.edit');
+    Route::post('/products/store', 'store')->name('products.store');
+    Route::post('/products/update/{id}', 'update')->name('products.update');
+    Route::get('/products/delete/{id}', 'destroy')->name('products.delete');
 });
 

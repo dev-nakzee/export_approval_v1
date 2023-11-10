@@ -15,14 +15,16 @@ return new class extends Migration
             $table->id('service_id');
             $table->string('service_name');
             $table->string('service_slug')->unique();
-            $table->string('media_id')->nullable();
-            $table->unsignedBigInteger('img_alt')->nullable();
+            $table->unsignedBigInteger('media_id')->nullable();
+            $table->string('img_alt')->nullable();
             $table->longText('service_description')->nullable();
             $table->text('service_compliance')->nullable();
             $table->longText('faqs')->nullable();
             $table->string('seo_title')->nullable();
             $table->text('seo_description')->nullable();
             $table->text('seo_keywords')->nullable();
+            $table->boolean('service_featured')->default(false);
+            $table->boolean('service_product_show')->default(true);
             $table->integer('service_order')->default(0);
             $table->boolean('service_status')->default(true);
             $table->timestamps();
