@@ -1,6 +1,6 @@
 @extends('backend.layouts.app', ['module' => 'Products', 'title' => 'New product'])
 @section('content')
-<form class="form-horizontal" method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
+<form class="form-horizontal" method="POST" action="{{route('products.update', $product->product_id)}}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="mb-2 col-md-12">
@@ -9,15 +9,16 @@
         </div>
         <div class="mb-3 col-md-6">
             <label for="name" class="form-label">Product name</label>
-            <input type="text" class="form-control form-control-sm" id="name" name="name">
+            <input type="text" class="form-control form-control-sm" id="name" name="name" value="{{$product->product_name}}">
         </div>
         <div class="mb-3 col-md-6">
             <label for="slug" class="form-label">Product slug</label>
-            <input type="text" class="form-control form-control-sm" id="slug" name="slug">
+            <input type="text" class="form-control form-control-sm" id="slug" name="slug" value="{{$product->product_slug}}">
         </div>
         <div class="mb-3 col-md-6">
             <label for="product_service_id" class="form-label">Service</label>
-            <select class="form-control form-control-sm" id="product_service_id" name="product_service_id">
+            <select class="form-control form-control-sm" id="product_service_id" name="product_service_id" value="{{$product->product_service_id}}">
+                <option value="{{$service->service_id}}">{{$service->service_name}}</option>
                 <option value="">Select service</option>
                 @foreach($services as $service)
                 <option value="{{$service->service_id}}">{{$service->service_name}}</option>
@@ -27,6 +28,7 @@
         <div class="mb-3 col-md-6">
             <label for="product_category_id" class="form-label">Category</label>
             <select class="form-control form-control-sm" id="product_category_id" name="product_category_id">
+                <option value="{{$category->product_category_id}}">{{$category->product_category_name}}</option>
                 <option value="">Select category</option>
                 @foreach($categories as $category)
                 <option value="{{$category->product_category_id}}">{{$category->product_category_name}}</option>
@@ -37,52 +39,52 @@
             <label for="media_id" class="form-label">Product image</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="image" disabled >
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden>
+                <input type="text" class="form-control form-control-sm" id="image" disabled value="{{$image->media_name}}">
+                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="{{$image->media_id}}">
                 <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
         <div class="mb-3 col-md-6">
             <label for="slug" class="form-label">Product image alt text</label>
-            <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt">
+            <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt" value="{{$product->img_alt}}">
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_compliance" class="form-label">Product complaince</label>
-            <input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance">
+            <input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance" value="{{$product->product_compliance}}">
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_category_content" class="form-label">Product content</label>
-            <textarea class="form-control form-control-sm text-editor" id="product_content" name="product_content"></textarea>
+            <textarea class="form-control form-control-sm text-editor" id="product_content" name="product_content">{{$product->product_content}}</textarea>
         </div>
         <div class="mb-3 col-md-6">
-            <label for="infoDocument_id" class="form-label">Product Information</label>
+            <label for="infoDocument_id" class="form-label">Product information</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="infoDocument" disabled >
-                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden>
+                <input type="text" class="form-control form-control-sm" id="infoDocument" disabled value="{{$infoDocument->document}}">
+                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden value="{{$infoDocument->doc_id}}">
                 <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="infodocs"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
         <div class="mb-3 col-md-6">
-            <label for="guideDocument_id" class="form-label">Product Information</label>
+            <label for="guideDocument_id" class="form-label">Product guidelines</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="guideDocument" disabled >
-                <input type="text" class="form-control form-control-sm" id="guideDocument_id" name="guideDocument_id" hidden>
+                <input type="text" class="form-control form-control-sm" id="guideDocument" disabled value="{{$guideDocument->document}}">
+                <input type="text" class="form-control form-control-sm" id="guideDocument_id" name="guideDocument_id" hidden value="{{$guideDocument->doc_id}}">
                 <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="guidelines"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_title" class="form-label">SEO Title - <b class="text-sm">Length : <span id="titleLength">0</span>&nbsp;|&nbsp;Character : <span id="titleChar">0</span></b></label>
-            <input type="text" class="form-control form-control-sm" id="seo_title" name="seo_title">
+            <input type="text" class="form-control form-control-sm" id="seo_title" name="seo_title" value="{{$product->seo_title}}">
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_description" class="form-label">SEO Description - <b  class="text-sm">Character : <span id="descriptionChar">0</span></b></label>
-            <textarea class="form-control form-control-sm" id="seo_description" name="seo_description"></textarea>
+            <textarea class="form-control form-control-sm" id="seo_description" name="seo_description">{{$product->seo_description}}</textarea>
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_keywords" class="form-label">SEO Keywords - <b  class="text-sm">Count : <span id="keywordCount">0</span></b></label>
-            <textarea class="form-control form-control-sm" id="seo_keywords" name="seo_keywords"></textarea>
+            <textarea class="form-control form-control-sm" id="seo_keywords" name="seo_keywords">{{$product->seo_keywords}}</textarea>
         </div>
         <div class="mb-3 col-md-12 text-center">
            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="fa-light fa-save"></i>&nbsp;Save</button>

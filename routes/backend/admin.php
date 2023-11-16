@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\ServiceSectionController;
 use App\Http\Controllers\Backend\ProductCategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ProductSectionController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -33,6 +34,7 @@ Route::controller(DocumentController::class)->group(function() {
     Route::get('/document/show', 'show')->name('document.show');
     Route::post('/document/store', 'store')->name('document.store');
     Route::get('/document/delete/{id}', 'destroy')->name('document.delete');
+    Route::get('/document/gallery','gallery')->name('document.gallery');
 });
 
 Route::controller(ServiceController::class)->group(function() {
@@ -75,3 +77,12 @@ Route::controller(ProductController::class)->group(function() {
     Route::get('/products/delete/{id}', 'destroy')->name('products.delete');
 });
 
+Route::controller(ProductSectionController::class)->group(function(){
+    Route::get('/products/{product}/sections/','index')->name('products.sections.index');
+    Route::get('/products/{product}/sections/show', 'show')->name('products.sections.show');
+    Route::get('/products/{product}/sections/create', 'create')->name('products.sections.create');
+    Route::get('/products/{product}/sections/edit/{id}', 'edit')->name('products.sections.edit');
+    Route::post('/products/{product}/sections/store', 'store')->name('products.sections.store');
+    Route::post('/products/{product}/sections/update/{id}','update')->name('products.sections.update');
+    Route::get('/products/{product}/sections/delete/{id}', 'destroy')->name('products.sections.delete');
+});

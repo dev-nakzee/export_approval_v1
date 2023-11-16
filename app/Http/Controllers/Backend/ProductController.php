@@ -9,6 +9,7 @@ use App\Models\Backend\ProductCategory;
 use App\Models\Backend\Product;
 use App\Models\Backend\Services;
 use App\Models\Backend\Document;
+use App\Models\Backend\Media;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -47,65 +48,32 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): JsonResponse
+    public function store(Request $request)
     {
         //
         $validate = $request->validate([
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
-            'service_id' => 'required|integer',
-            'product_category_id' => 'required|integer',
         ]);
-        dd($validate);
-        $product_information = null;
-        $product_guidelines = null;
-        if($request->hasFile('product_information')) {
-            $file = $request->file('product_information');
-            $fullName = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $onlyName = explode('.'.$extension, $fullName);
-            $fileName = str_replace(" ","-",$onlyName[0]).'-'.time().'.'.$file->getClientOriginalExtension();
-            $data = [
-                'document' => $file->getClientOriginalName(),
-                'doc_path' => 'documents/'.$fileName,
-                'doc_type' => $file->getMimeType(),
-                'doc_size' => $file->getSize(),
-            ];
-            $document = Document::create($data);
-            $product_information = $document->id;
-            Storage::disk('public')->put('documents/' . $fileName, File::get($file));
-        }
-        if($request->hasFile('product_guidelines')) {
-            $file = $request->file('product_guidelines');
-            $fullName = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $onlyName = explode('.'.$extension, $fullName);
-            $fileName = str_replace(" ","-",$onlyName[0]).'-'.time().'.'.$file->getClientOriginalExtension();
-            $data = [
-                'document' => $file->getClientOriginalName(),
-                'doc_path' => 'documents/'.$fileName,
-                'doc_type' => $file->getMimeType(),
-                'doc_size' => $file->getSize(),
-            ];
-            $document = Document::create($data);
-            $product_guidelines = $document->id;
-            Storage::disk('public')->put('documents/' . $fileName, File::get($file));
-        }
-        $productData = [
+        $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
-            'service_id' => $request->service_id,
+            'product_service_id' => $request->product_service_id,
             'product_category_id' => $request->product_category_id,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+            'product_compliance' => $request->product_compliance,
             'product_content' => $request->product_content,
-            'information' => $product_information,
-            'guidelines' => $product_guidelines,
-            'product_status' => 1,
+            'information' => $request->infoDocument_id,
+            'guidelines' => $request->guideDocument_id,
             'seo_title' => $request->seo_title,
             'seo_description' => $request->seo_description,
             'seo_keywords' => $request->seo_keywords,
+            'product_status' => 1,
+            'product_order' => 0,
         ];
-        $product = Product::create($productData);
-        return response()->json(['success'=> $product->product_name]);
+        Product::create($data);
+        return redirect()->route('products.index')->with([200, 'response', 'status'=>'success','message'=>'Product created successfully.']);
     }
 
     /**
@@ -115,9 +83,9 @@ class ProductController extends Controller
     {
         //
         if($request->ajax()){
-            $data = Products::select('product_id', 'product_name', 'product_category_name', 'service_name','product_status')
-                ->join('product_categories', 'product_categories.product_category_id', 'products.product_category_id')
-                ->join('services', 'services.service_id', 'products.service_id')
+            $data = Product::join('product_categories', 'product_categories.product_category_id', 'products.product_category_id')
+                ->join('services', 'services.service_id', 'products.product_service_id')
+                ->select('product_id', 'product_name', 'service_name', 'product_category_name', 'product_status')
                 ->orderBy('product_id', 'DESC')
                 ->get();
             return Datatables::of($data)
@@ -141,7 +109,7 @@ class ProductController extends Controller
                     return $status;
                 })
                 ->addColumn('action', function($row){
-                    $actionBtn = '<a href="'.route('products.edit', $row->product_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('products.edit', $row->product_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
+                    $actionBtn = '<a href="'.route('products.edit', $row->product_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('products.delete', $row->product_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a><a href="'.route('products.sections.index', $row->product_id).'" class="btn btn-outline-info btn-sm py-0 px-1"><i class="fa-light fa-list-dropdown"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['action', 'status'])
@@ -153,24 +121,72 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
+        $product = Product::where('product_id', $id)->first();
+        $service = Services::select('service_id', 'service_name')
+            ->where('service_id', $product->product_service_id)
+            ->first();
+        $category = ProductCategory::select('product_category_id', 'product_category_name')
+            ->where('product_category_id', $product->product_category_id)
+            ->first();
+        $image = Media::select('media_id', 'media_name')
+            ->where('media_id', $product->media_id)
+            ->first();
+        $infoDocument = Document::select('doc_id', 'document')
+            ->where('doc_id', $product->information)
+            ->first();
+        $guideDocument = Document::select('doc_id', 'document')
+            ->where('doc_id', $product->guidelines)
+            ->first();
+        $services = Services::select('service_id', 'service_name')
+        ->orderBy('service_id', 'asc')
+        ->get();
+        $categories = ProductCategory::select('product_category_id', 'product_category_name')
+        ->orderBy('product_category_id', 'asc')
+        ->get();
+        return view('backend.products.edit', compact('product', 'services', 'categories', 'service', 'category', 'image', 'infoDocument', 'guideDocument'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+        ]);
+        $data = [
+            'product_name' => $request->name,
+            'product_slug' => $request->slug,
+            'product_service_id' => $request->product_service_id,
+            'product_category_id' => $request->product_category_id,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+            'product_compliance' => $request->product_compliance,
+            'product_content' => $request->product_content,
+            'information' => $request->infoDocument_id,
+            'guidelines' => $request->guideDocument_id,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'seo_keywords' => $request->seo_keywords,
+            'product_status' => 1,
+            'product_order' => 0,
+        ];
+        Product::where('product_id', $id)->update($data);
+        return redirect()->route('products.index')->with([200, 'response', 'status'=>'success','message'=>'Product updated successfully.']);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+        Product::where('product_id', $id)->delete();
+        return redirect()->route('products.index')->with([200, 'response', 'status'=>'success','message'=>'Product deleted successfully.']);
     }
 }

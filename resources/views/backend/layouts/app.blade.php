@@ -141,6 +141,7 @@
 	<script src="{{asset('backend/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 	<script>
 		const mediaUrl = "{{route('media.gallery')}}";
+		const docsUrl = "{{route('document.gallery')}}";
 	</script>
 	@yield('js')
 	<script src="{{asset('backend/js/app.js')}}"></script>

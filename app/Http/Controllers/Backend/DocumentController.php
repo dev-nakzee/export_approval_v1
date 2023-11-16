@@ -91,9 +91,14 @@ class DocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function gallery ()
     {
         //
+        $document = Document::orderBy('doc_id', 'desc')->get();
+        foreach($document as $key => $value) {
+            $document[$key]['doc_path'] = Storage::url($value['doc_path']);
+        }
+        return response()->json([$document]);
     }
 
     /**

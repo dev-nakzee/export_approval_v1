@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="{{asset('datatables/datatables.min.css')}}" type="text/css" />
 @endsection
 @section('js')
-<script src="{{asset('backend/js/media.min.js')}}"></script>
+<script src="{{asset('backend/js/document.min.js')}}"></script>
 <script src="{{asset('backend/dropzone/dropzone.js')}}"></script>
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>

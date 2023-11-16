@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Products', 'title' => 'Products'])
+@extends('backend.layouts.app', ['module' => 'Products', 'title' => $product->product_name.' - Sections'])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -12,18 +12,16 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('products.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('products.sections.create', $product->product_id)}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
         <div class="col-md-12 pt-1">
-            <table class="table table-secondary table-bordered table-hover table-sm" id="product-table">
+            <table class="table table-secondary table-bordered table-hover table-sm" id="products-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Service</th>
+                        <th>Section</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -34,6 +32,9 @@
         </div>
     </div>
 </div>
+@php
+$products_section_url = route('products.sections.show', $product->product_id);
+@endphp
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{asset('backend/dropzone/dropzone.css')}}" type="text/css" />
@@ -45,27 +46,25 @@
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>
     $(document).ready(function() {  
-        productCategoryDatatable();
+        mediaDatatable();
     });
-    function productCategoryDatatable() {
+    function mediaDatatable() {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
             }
         });
-        var table = $('#product-table').DataTable({
+        var table = $('#products-table').DataTable({
             paging: true,
             retrieve: true,
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('products.show') }}",
+            ajax: "{{$products_section_url}}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'product_name', name: 'product_name'},
-                {data: 'product_category_name', name: 'product_category_name'},
-                {data: 'service_name', name: 'service_name'},
-                {data: 'product_status', name: 'product_status'},
+                {data: 'product_section_name', name: 'product_section_name'},
+                {data: 'product_section_status', name: 'product_section_name'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

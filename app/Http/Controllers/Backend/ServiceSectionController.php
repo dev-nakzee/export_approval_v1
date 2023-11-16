@@ -37,10 +37,10 @@ class ServiceSectionController extends Controller
     public function create($service)
     {
         //
-        $service = Services::select('service_id','service_name')
+        $services = Services::select('service_id','service_name')
             ->where('service_id', $service)
             ->first();
-        return view('backend.services.sections.create', compact('service'));
+        return view('backend.services.sections.create', compact('services'));
     }
 
     /**

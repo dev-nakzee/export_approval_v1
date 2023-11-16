@@ -27,3 +27,15 @@
 #media-gallery div button img {
     max-height: 100px !important;
 }
+
+#document-gallery {
+    height: 320px;
+    overflow-y: scroll;
+}
+
+#document-gallery div {
+    display: inline-block;
+}
+#document-gallery div button img {
+    max-height: 100px !important;
+}
