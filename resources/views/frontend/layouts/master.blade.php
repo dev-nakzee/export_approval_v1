@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link href="{{asset('frontend/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/custom.min.css')}}" rel="stylesheet">
   </head>
   <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
             <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{asset('frontend/images/logo.png')}}" alt="" height="70" class="d-inline-block align-text-top">
+                <img src="{{asset('frontend/images/logo.png')}}" alt="" height="70" class="d-inline-block align-text-top p-1">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
