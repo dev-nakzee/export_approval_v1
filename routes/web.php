@@ -9,7 +9,7 @@ use App\Models\Admin;
 use App\Models\Seller;
 
 Route::get('/', function () {
-    return view('admin.admin_login');
+    return view('frontend.pages.home');
 });
 
 // Route::get('/clientList', function () {

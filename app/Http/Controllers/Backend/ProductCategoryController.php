@@ -81,7 +81,7 @@ class ProductCategoryController extends Controller
                     return $status;
                 })
                 ->addColumn('action', function($row){
-                    $actionBtn = '<a href="'.route('products.categories.edit', $row->product_category_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('products.categories.edit', $row->product_category_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
+                    $actionBtn = '<a href="'.route('products.categories.edit', $row->product_category_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('products.categories.delete', $row->product_category_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['action', 'status'])

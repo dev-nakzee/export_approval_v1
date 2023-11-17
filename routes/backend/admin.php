@@ -10,6 +10,11 @@ use App\Http\Controllers\Backend\ServiceSectionController;
 use App\Http\Controllers\Backend\ProductCategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ProductSectionController;
+use App\Http\Controllers\Backend\NoticeController;
+use App\Http\Controllers\Backend\BlogCategoryController;
+use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\TestimonialController;
+use App\Http\Controllers\Backend\ClientController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -85,4 +90,54 @@ Route::controller(ProductSectionController::class)->group(function(){
     Route::post('/products/{product}/sections/store', 'store')->name('products.sections.store');
     Route::post('/products/{product}/sections/update/{id}','update')->name('products.sections.update');
     Route::get('/products/{product}/sections/delete/{id}', 'destroy')->name('products.sections.delete');
+});
+
+Route::controller(NoticeController::class)->group(function(){
+    Route::get('/notices', 'index')->name('notices.index');
+    Route::get('/notices/show', 'show')->name('notices.show');
+    Route::get('/notices/create', 'create')->name('notices.create');
+    Route::get('/notices/edit/{id}', 'edit')->name('notices.edit');
+    Route::post('/notices/store', 'store')->name('notices.store');
+    Route::post('/notices/update/{id}', 'update')->name('notices.update');
+    Route::get('/notices/delete/{id}', 'destroy')->name('notices.delete');
+});
+
+Route::controller(BlogCategoryController::class)->group(function(){
+    Route::get('/blogs/categories', 'index')->name('blogs.categories.index');
+    Route::get('/blogs/categories/show', 'show')->name('blogs.categories.show');
+    Route::get('/blogs/categories/create', 'create')->name('blogs.categories.create');
+    Route::get('/blogs/categories/edit/{id}', 'edit')->name('blogs.categories.edit');
+    Route::post('/blogs/categories/store', 'store')->name('blogs.categories.store');
+    Route::post('/blogs/categories/update/{id}', 'update')->name('blogs.categories.update');
+    Route::get('/blogs/categories/delete/{id}', 'destroy')->name('blogs.categories.delete');
+});
+
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/blogs', 'index')->name('blogs.index');
+    Route::get('/blogs/show', 'show')->name('blogs.show');
+    Route::get('/blogs/create', 'create')->name('blogs.create');
+    Route::get('/blogs/edit/{id}', 'edit')->name('blogs.edit');
+    Route::post('/blogs/store', 'store')->name('blogs.store');
+    Route::post('/blogs/update/{id}', 'update')->name('blogs.update');
+    Route::get('/blogs/delete/{id}', 'destroy')->name('blogs.delete');
+});
+
+Route::controller(TestimonialController::class)->group(function(){
+    Route::get('/testimonials', 'index')->name('testimonials.index');
+    Route::get('/testimonials/show', 'show')->name('testimonials.show');
+    Route::get('/testimonials/create', 'create')->name('testimonials.create');
+    Route::get('/testimonials/edit/{id}', 'edit')->name('testimonials.edit');
+    Route::post('/testimonials/store', 'store')->name('testimonials.store');
+    Route::post('/testimonials/update/{id}', 'update')->name('testimonials.update');
+    Route::get('/testimonials/delete/{id}', 'destroy')->name('testimonials.delete');
+});
+
+Route::controller(ClientController::class)->group(function(){
+    Route::get('/clients', 'index')->name('clients.index');
+    Route::get('/clients/show', 'show')->name('clients.show');
+    Route::get('/clients/create', 'create')->name('clients.create');
+    Route::get('/clients/edit/{id}', 'edit')->name('clients.edit');
+    Route::post('/clients/store', 'store')->name('clients.store');
+    Route::post('/clients/update/{id}', 'update')->name('clients.update');
+    Route::get('/clients/delete/{id}', 'destroy')->name('clients.delete');
 });
