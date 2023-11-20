@@ -15,4 +15,5 @@ class Media extends Model
         'media_type',
         'media_size',
     ];
+    protected $softDelete = true;
 }

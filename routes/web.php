@@ -7,14 +7,21 @@ use App\Http\Controllers\UserController;
 use App\Models\User;
 use App\Models\Admin;
 use App\Models\Seller;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ServiceController;
 
 Route::get('/', function () {
     return view('frontend.pages.home');
 });
 
-// Route::get('/clientList', function () {
-//     return view('admin.clientList');
-// });
+
+Route::controller(HomeController::class)->group(function (){
+    Route::get('/', 'index')->name('frontend.site.home');
+});
+
+Route::controller(ServiceController::class)->group(function (){
+    Route::get('/service/{service_slug}', 'index')->name('frontend.site.service');
+});
 
 //--------------------------------------------------ROUTE FOR ADMIN-----------------------------------------------------
 

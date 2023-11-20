@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\BlogCategoryController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\ClientController;
+use App\Http\Controllers\Backend\StaticPageController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -140,4 +141,14 @@ Route::controller(ClientController::class)->group(function(){
     Route::post('/clients/store', 'store')->name('clients.store');
     Route::post('/clients/update/{id}', 'update')->name('clients.update');
     Route::get('/clients/delete/{id}', 'destroy')->name('clients.delete');
+});
+
+Route::controller(StaticPageController::class)->group(function(){
+    Route::get('/pages/static', 'index')->name('static.pages.index');
+    Route::get('/pages/static/show', 'show')->name('static.pages.show');
+    Route::get('/pages/static/create', 'create')->name('static.pages.create');
+    Route::get('/pages/static/edit/{id}', 'edit')->name('static.pages.edit');
+    Route::post('/pages/static/store', 'store')->name('static.pages.store');
+    Route::post('/pages/static/update/{id}', 'update')->name('static.pages.update');
+    Route::get('/pages/static/delete/{id}', 'destroy')->name('static.pages.delete');
 });
