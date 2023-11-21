@@ -70,3 +70,14 @@
 .home-section-1 .home-services-tabs {
     border-radius: 5px;
 }
+
+/* All Pages */
+.page-header {
+    background-color: #ff1f001a;
+}
+
+.page-header div h1 {
+    font-size: 22px !important;
+    font-weight: 700;
+    color: #052faa;
+}

@@ -110,6 +110,7 @@
         <div class="mb-3 col-md-12">
             <label class="form-label">FAQ <span class="text-sm">(Dont put numbering)<span>&nbsp;<button type="button" id="addFaq" class="btn btn-outline-primary btn-sm ml-2"><i class="fa fa-plus"></i></button></label>
                 <div class="container-fluid row pr-0" id="faq">
+                    @if($services->faqs)
                     @php
                     $faqs = json_decode($services->faqs, true);
                     $i = 0;
@@ -129,6 +130,7 @@
                     $i++;
                     @endphp
                     @endforeach
+                    @endif
                 </div>
         </div>
         <div class="mb-3 col-md-12 text-center">
