@@ -61,7 +61,7 @@ class NoticeController extends Controller
         //
         $validate = Validator::make($request->all(), [
             'notice_title' => 'required',
-            'notice_content' => 'required',
+            'notice_slug' => 'required',
         ]);
         $data = [
             'notice_title' => $request->name,
@@ -77,11 +77,13 @@ class NoticeController extends Controller
             'notice_status' => 1,
         ];
         $notice_id = Notices::insertGetId($data);
-        foreach ($request->products as $product_id) {
-            NoticeMap::create([
-                'notice_id' => $notice_id,
-                'notice_product_id' => $product_id,
-            ]);
+        if($request->products) {
+            foreach ($request->products as $product_id) {
+                NoticeMap::create([
+                    'notice_id' => $notice_id,
+                    'notice_product_id' => $product_id,
+                ]);
+            }
         }
         return redirect()->route('notices.index')->with([200, 'response', 'status'=>'success','message'=>'Notice created successfully.']);
     }
@@ -152,7 +154,6 @@ class NoticeController extends Controller
         //
         $validate = Validator::make($request->all(), [
             'notice_title' => 'required',
-            'notice_content' => 'required',
         ]);
         $data = [
             'notice_title' => $request->name,
@@ -169,11 +170,13 @@ class NoticeController extends Controller
         ];
         Notices::where('notice_id', $id)->update($data);
         NoticeMap::where('notice_id', $id)->delete();
-        foreach ($request->products as $product_id) {
-            NoticeMap::create([
-                'notice_id' => $id,
-                'notice_product_id' => $product_id,
-            ]);
+        if($request->products) {
+            foreach ($request->products as $product_id) {
+                NoticeMap::create([
+                    'notice_id' => $notice_id,
+                    'notice_product_id' => $product_id,
+                ]);
+            }
         }
         return redirect()->route('notices.index')->with([200, 'response', 'status'=>'success','message'=>'Notice updated successfully.']);
     }

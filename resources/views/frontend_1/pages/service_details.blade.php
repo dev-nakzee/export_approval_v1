@@ -59,7 +59,28 @@
                 <div class="section-content-header px-2">
                     <span>{{'Mandatory product list'}}<span>
                 </div>
+                @php
+  
+                @endphp
                 <div class="px-2 pt-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product Name</th>
+                                <th>Product Compliance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($products as $product)
+                            <tr>
+                                <td>{{$product->product_name}}</td>
+                                <td>{{$product->product_category_name}}</td>
+                               
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
             @endif

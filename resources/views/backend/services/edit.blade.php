@@ -48,7 +48,24 @@
         </div>
         <div class="mb-3 col-md-12">
             <label for="service_compliance" class="form-label">Service Compliance <span class="text-sm">(Comma ',' separated - Example: Indian Standard, Group, Scheme)</span></label>
-            <input type="text" class="form-control form-control-sm" id="service_compliance" name="service_compliance" value="{{$services->service_compliance}}">
+            @php
+            $service_compliance = null;
+            @endphp
+            @if ($services->service_compliance)
+            @php
+            $compliance = json_decode($services->service_compliance, true);
+            $service_compliance = "";
+            @endphp
+            @foreach($compliance as $c)
+            @php
+            $service_compliance .= $c.",";
+            @endphp
+            @endforeach
+            @php
+            $service_compliance = rtrim($service_compliance, ',');
+            @endphp
+            @endif
+            <input type="text" class="form-control form-control-sm" id="service_compliance" name="service_compliance" value="{{$service_compliance}}">
         </div>
         <div class="mb-3 col-md-3">
             <label for="service_status" class="form-label">Service Status</label>

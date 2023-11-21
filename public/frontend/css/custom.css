@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+}
+.uk-img-logo {
+    height: 60px !important;
+}
+
+.uk-navbar-nav.top-navbar li a {
+    text-transform: capitalize !important;
+    font-weight: 500;
+    font-size: 15px;
+    color: #052faa;
+}
+.uk-navbar-nav.top-navbar li a:hover {
+    text-transform: capitalize !important;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ed462f;
+}
+.uk-navbar-right button.uk-button-default {
+    text-transform: capitalize !important;
+    background: #052faa;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 15px;
+}
+.home-section-1 {
+    background-color: #cecece;
+}
+.home-section-1 p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #161616;
+    line-height: normal;
+}
+.home-section-1 span.banner-heading-1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ed462f;
+}
+.home-section-1 span.banner-heading-2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #052faa;
+}
+.home-section-1 span.banner-heading-3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ed462f;
+}
+.home-section-1 span.banner-heading-4 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #052faa;
+}

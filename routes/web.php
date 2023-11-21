@@ -10,9 +10,9 @@ use App\Models\Seller;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ServiceController;
 
-Route::get('/', function () {
-    return view('frontend.pages.home');
-});
+// Route::get('/', function () {
+//     return view('frontend.pages.home');
+// });
 
 
 Route::controller(HomeController::class)->group(function (){
