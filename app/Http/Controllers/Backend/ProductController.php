@@ -36,7 +36,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $services = Services::select('service_id', 'service_name')
+        $services = Services::select('service_id', 'service_name', 'service_compliance')
             ->orderBy('service_id', 'asc')
             ->get();
         $categories = ProductCategory::select('product_category_id', 'product_category_name')
@@ -55,6 +55,8 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
         ]);
+        $product_compliance[] = $request->product_compliance;
+        $product_compliance = json_encode($product_compliance);
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
@@ -62,7 +64,7 @@ class ProductController extends Controller
             'product_category_id' => $request->product_category_id,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
-            'product_compliance' => $request->product_compliance,
+            'product_compliance' => $product_compliance,
             'product_content' => $request->product_content,
             'information' => $request->infoDocument_id,
             'guidelines' => $request->guideDocument_id,
@@ -125,7 +127,7 @@ class ProductController extends Controller
     {
         //
         $product = Product::where('product_id', $id)->first();
-        $service = Services::select('service_id', 'service_name')
+        $service = Services::select('service_id', 'service_name', 'service_compliance')
             ->where('service_id', $product->product_service_id)
             ->first();
         $category = ProductCategory::select('product_category_id', 'product_category_name')
@@ -159,6 +161,8 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
         ]);
+        $product_compliance[] = $request->product_compliance;
+        $product_compliance = json_encode($product_compliance);
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
@@ -166,7 +170,7 @@ class ProductController extends Controller
             'product_category_id' => $request->product_category_id,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
-            'product_compliance' => $request->product_compliance,
+            'product_compliance' => $product_compliance,
             'product_content' => $request->product_content,
             'information' => $request->infoDocument_id,
             'guidelines' => $request->guideDocument_id,

@@ -39,8 +39,8 @@
             <label for="media_id" class="form-label">Product image</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="image" disabled value="{{$image->media_name}}">
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="{{$image->media_id}}">
+                <input type="text" class="form-control form-control-sm" id="image" disabled value="@if($image){{$image->media_name}}@endif">
+                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="@if($image){{$image->media_id}}@endif">
                 <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
@@ -50,7 +50,15 @@
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_compliance" class="form-label">Product complaince</label>
-            <input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance" value="{{$product->product_compliance}}">
+            <div class="input-group input-group-sm" id="standards">
+                @php
+                    $standards = json_decode($product->product_compliance, true);
+                @endphp
+                @foreach($standards[0] as $key => $value)
+                <span class="input-group-text">{{$key}}</span>
+                <input type="text" class="form-control form-control-sm" name="product_compliance[{{$key}}]" value="{{$value}}">
+                @endforeach
+            </div>
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_category_content" class="form-label">Product content</label>

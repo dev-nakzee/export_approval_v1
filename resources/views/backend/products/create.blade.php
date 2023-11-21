@@ -20,7 +20,7 @@
             <select class="form-control form-control-sm" id="product_service_id" name="product_service_id">
                 <option value="">Select service</option>
                 @foreach($services as $service)
-                <option value="{{$service->service_id}}">{{$service->service_name}}</option>
+                <option value="{{$service->service_id}}" data-standard="{{$service->service_compliance}}">{{$service->service_name}}</option>
                 @endforeach
             </select>
         </div>
@@ -48,7 +48,9 @@
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_compliance" class="form-label">Product complaince</label>
-            <input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance">
+            <div class="input-group input-group-sm" id="standards">
+            </div>
+            {{-- <input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance"> --}}
         </div>
         <div class="mb-3 col-md-12">
             <label for="product_category_content" class="form-label">Product content</label>
@@ -135,4 +137,14 @@
 <script src="{{asset('backend/js/media.min.js')}}"></script>
 <script src="{{asset('tinymce/tinymce.min.js')}}"></script>
 <script src="{{asset('backend/js/editor.min.js')}}"></script>
+<script>
+    $('#product_service_id').on('change', function(){
+        var standard = $(this).find(':selected').data('standard');
+        var stdArray = standard.split(',');
+        $('#standards').empty();
+        $. each(stdArray, function(index, value) {
+            $('#standards').append('<span class="input-group-text">'+value+'</span><input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance['+value+']">'); 
+        });
+    });
+</script>
 @endsection
