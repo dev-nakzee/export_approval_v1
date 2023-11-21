@@ -42,9 +42,7 @@
 </div>
 <div class="container section-two py-5">
     <div class="section-two-heading text-center">
-        <h3>
-            Mandatory Certification for your Products
-        </h3>
+        <span class="uk-heading-small"></span>
         <span>Get your Product Approvel for the Indian Market fast and economical way.</span>
         <p class="px-4">Get your Product Approved for the Indian Market fast and economical way. Get your Product Approved for the Indian
             Market fast and economical way. Get your Product Approved for the Indian Market fast and economical way. Get your

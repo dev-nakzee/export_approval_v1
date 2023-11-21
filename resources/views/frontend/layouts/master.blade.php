@@ -39,5 +39,8 @@
             </div>
         </nav>
         @yield('content')
+        <footer class="uk-section uk-background-default footer">
+            
+        </footer>
     </body>
 </html>
