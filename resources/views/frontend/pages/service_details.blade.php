@@ -9,7 +9,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-remove uk-width-1-1">
-    <div class="uk-container uk-padding-remove">
+    <div class="uk-container uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
             <li><span>Services</span></li>
@@ -17,7 +17,7 @@
         </ul>
     </div>
 </section>
-<section class="uk-section uk-padding-remove">
+<section class="uk-section uk-padding-remove" uk-scrollspy="offset: 80px">
     <div class="uk-container">
         <div uk-grid>
         <div class="uk-width-1-4@m">
@@ -45,6 +45,35 @@
         </div>
         <div class="uk-width-expand@m">
             <ul id="component-tab-left" class="uk-switcher">
+                @if($sections)
+                @foreach($sections as $section)
+                    <li>
+                        <div class="uk-container ps-tab-header">
+                            <span>{{$section->service_section_name}}<span>
+                        </div>
+                        <div class="uk-container ps-tab-content">
+                            {!! $section->service_section_content !!}
+                        </div>
+                    </li>
+                    @if($loop->first)
+                        @if($service->service_product_show === 1) 
+                        <li class="nav-item">
+                            <a href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                        </li>
+                        @endif
+                    @endif
+                @endforeach
+                @endif
+                @if($service->faqs) 
+                <li>
+                    <div class="section-content-header px-2">
+                        <span>{{$section->service_section_name}}<span>
+                    </div>
+                    <div class="px-2 pt-4">
+                    {!! $section->service_section_content !!}
+                    </div>
+                </li>
+                @endif
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
                 <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
                 <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>

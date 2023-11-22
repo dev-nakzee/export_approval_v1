@@ -8,7 +8,7 @@
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
     </head>
     <body>
-        <nav class="uk-navbar-container uk-padding uk-padding-remove-vertical" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container uk-padding uk-padding-remove-vertical uk-background-transparent" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
                     <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
