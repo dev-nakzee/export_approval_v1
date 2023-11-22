@@ -68,8 +68,8 @@
             <label for="infoDocument_id" class="form-label">Product information</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="infoDocument" disabled value="@if($infoDocument->document){{$infoDocument->document}}@endif">
-                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden value="@if($infoDocument->doc_id){{$infoDocument->doc_id}}@endif">
+                <input type="text" class="form-control form-control-sm" id="infoDocument" disabled value="@if($product->information){{$infoDocument->document}}@endif">
+                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden value="@if($$product->information){{$infoDocument->doc_id}}@endif">
                 <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="infodocs"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
@@ -77,8 +77,8 @@
             <label for="guideDocument_id" class="form-label">Product guidelines</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="guideDocument" disabled value="@if($guideDocument->document){{$guideDocument->document}}@endif">
-                <input type="text" class="form-control form-control-sm" id="guideDocument_id" name="guideDocument_id" hidden value="@if($guideDocument->document){{$guideDocument->doc_id}}@endif">
+                <input type="text" class="form-control form-control-sm" id="guideDocument" disabled value="@if($product->guidelines){{$guideDocument->document}}@endif">
+                <input type="text" class="form-control form-control-sm" id="guideDocument_id" name="guideDocument_id" hidden value="@if($product->guidelines){{$guideDocument->doc_id}}@endif">
                 <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="guidelines"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
