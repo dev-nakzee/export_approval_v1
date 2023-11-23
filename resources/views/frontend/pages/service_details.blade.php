@@ -68,7 +68,9 @@
                                             <th>#</th>
                                             <th>Product Name</th>
                                             @if($service->service_compliance)
-                                            <th>{{$service->service_compliance}}</th>
+                                            @foreach(expolde(',',$service->service_compliance) as $compliance)
+                                            <th>{{$compliance}}</th>
+                                            @endforeach
                                             @endif
                                         </tr>
                                     </thead>
