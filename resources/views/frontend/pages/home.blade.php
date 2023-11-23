@@ -59,8 +59,8 @@
         <span class="section-tagline">{{$sections[1]->section_tagline}}</span>
         <p class="section-description">{!! $sections[1]->section_description !!}</p>
     </div>
-    <div class="uk-container uk-padding-large">
-        <div class="uk-child-width-1-2@m uk-grid-match uk-co" uk-grid>
+    <div class="uk-container uk-padding-large uk-padding-top-remove">
+        <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
             @if($services)
             @foreach($services as $service)
             <article class="uk-comment uk-card uk-box-shadow-large uk-card-body" role="comment">
