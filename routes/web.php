@@ -25,12 +25,8 @@ Route::controller(ServiceController::class)->group(function (){
 });
 
 Route::controller(ProductsController::class)->group(function (){
-    Route::get('/service/{service}/product/{product_slug}', 'index')->name('frontend.site.product');
+    Route::get('/product/{product_slug}', 'index')->name('frontend.site.product');
 });
-
-//--------------------------------------------------ROUTE FOR ADMIN-----------------------------------------------------
-
-//----------------------------------------END ROUTE FOR ADMIN-------------------------------------------------------------
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------
 Route::prefix('seller')->group(function (){

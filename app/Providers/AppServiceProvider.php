@@ -6,6 +6,9 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\Backend\Module;
 use App\Models\Backend\SubModule;
 use App\Models\Backend\Services;
+use App\Models\Backend\Clients;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,7 +38,18 @@ class AppServiceProvider extends ServiceProvider
             ->where('service_status', 1)
             ->orderBy('service_order', 'asc')
             ->get();
-            $view->with(['services' => $services]);
+            $clients = Clients::select('client_name', 'client_slug', 'img_alt', 'media_path')
+            ->leftJoin('media', 'clients.media_id', 'media.media_id')
+            ->orderBy('client_id', 'asc')
+            ->limit(12)
+            ->get();
+            foreach ($clients as $client)
+            {
+                if($client['media_path'] != null) {
+                    $client['media_path'] = Storage::url($client['media_path']);
+                }
+            }
+            $view->with(['services' => $services, 'clients' => $clients]);
         });
     }
 }

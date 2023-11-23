@@ -57,20 +57,75 @@
             </div>
         </nav>
         @yield('content')
-        <footer class="uk-section uk-background-default footer">
-            <div class="uk-width-1-2@s uk-width-1-5@m">
-                <ul class="uk-nav uk-nav-default">
-                    <li class="uk-nav-header">Services</li>
-                    @if($services)
-                    @foreach($services as $service)
-                    <li>
-                        <a href="{{route('frontend.site.service', $service->service_slug)}}">
-                            {{$service->service_name}}
-                        </a>
-                    </li>
-                    @endforeach
-                    @endif
-                </ul>
+        <section class="uk-section uk-padding-remove uk-background-muted">
+            <div class="uk-container uk-padding-small">
+                <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000; finite: false; easing: ease;sets: false;">
+                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@s uk-child-width-1-8@m uk-grid">
+                        @if($clients)
+                        @foreach($clients as $client)
+                        <li>
+                            <img src="{{$client->media_path}}" width="100%" height="100%" alt="{{$client->img_alt}}">
+                        </li>
+                        @endforeach
+                        @endif
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+                </div>
+                
+            </div>
+        </section>
+        <footer class="uk-section uk-background-default uk-footer">
+            <div class="uk-container uk-padding uk-padding-remove-vertical" uk-grid>
+                <div class="uk-width-1-5@s">
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header">Quick Links</li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-width-1-5@s">
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header">Services</li>
+                        @if($services)
+                        @foreach($services as $service)
+                        <li>
+                            <a href="{{route('frontend.site.service', $service->service_slug)}}">
+                                {{$service->service_name}}
+                            </a>
+                        </li>
+                        @endforeach
+                        @endif
+                    </ul>
+                </div>
+                <div class="uk-width-1-5@s">
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header">Important Links</li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-width-2-5@s">
+                    <div class="">
+                        <span class="uk-nav-header">Export Approval</span>
+                        <address>
+                        </address>
+                        <span class="uk-nav-header">Subscribe to our newsletter</span>
+                        <form class="uk-form-stacked uk-margin-top">
+                            <div class="uk-margin">
+                                <div class="uk-inline uk-width-1-1">
+                                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                    <input class="uk-input uk-form-small" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <button class="uk-button uk-button-primary uk-width-1-1">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>
