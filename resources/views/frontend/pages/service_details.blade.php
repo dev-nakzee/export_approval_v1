@@ -68,7 +68,7 @@
                                             <th>#</th>
                                             <th>Product Name</th>
                                             @if($service->service_compliance)
-                                            @foreach(expolde(',',$service->service_compliance) as $compliance)
+                                            @foreach(explode(',',$service->service_compliance) as $compliance)
                                             <th>{{$compliance}}</th>
                                             @endforeach
                                             @endif
