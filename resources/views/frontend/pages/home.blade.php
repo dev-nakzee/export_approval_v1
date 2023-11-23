@@ -49,6 +49,7 @@
         </div>
     </div>
     <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain">
+        <p> {{ $sections[0]->section_tagline }}</p>
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding">
