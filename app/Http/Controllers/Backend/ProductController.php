@@ -55,8 +55,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
         ]);
-        $product_compliance[] = $request->product_compliance;
-        $product_compliance = json_encode($product_compliance);
+        $product_compliance = serialize($request->product_compliance);
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
@@ -161,8 +160,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
         ]);
-        $product_compliance[] = $request->product_compliance;
-        $product_compliance = json_encode($product_compliance);
+        $product_compliance = serialize($request->product_compliance);
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,

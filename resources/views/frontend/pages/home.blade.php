@@ -17,10 +17,7 @@
 @section('content')
 <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding" uk-grid>
     <div>
-        <p class="banner-text uk-margin-top">Are you Planning to<br>
-        <span class="banner-heading-1">Export your Product to India?</span><br>
-        <span class="banner-text-1">Get your Product Approvel for Indian Market fast & Economical way.<span></p>
-        <p><span class="banner-heading-2">Find the export compliance for India</span></p>
+        {!! $sections[0]->section_content !!}
         <div class="uk-margin">
             <div class="uk-inline">
                 <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: search"></a>
@@ -55,15 +52,12 @@
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding">
-    <div class="section-two-heading text-center">
-        <h3>
-            Mandatory Certification for your Products
-        </h3>
-        <span>Get your Product Approvel for the Indian Market fast and economical way.</span>
-        <p class="px-4">Get your Product Approved for the Indian Market fast and economical way. Get your Product Approved for the Indian
-            Market fast and economical way. Get your Product Approved for the Indian Market fast and economical way. Get your
-            Product Approved for the Indian Market fast and economical way. Get your Product Approved for the Indian Market fast and
-            economical way.</p>
+    <div class="section-two-heading uk-text-center uk-padding">
+        <p class="section-heading">
+            {{$sections[1]->section_name}} 
+        </p>
+        <span class="section-tagline">{{$sections[1]->section_tagline}}</span>
+        <p class="section-description">{!! $sections[1]->section_description !!}</p>
     </div>
 </section>
 @endsection

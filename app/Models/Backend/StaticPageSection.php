@@ -15,10 +15,12 @@ class StaticPageSection extends Model
         'media_id',
         'img_alt',
         'section_name',
+        'section_slug',
         'section_tagline',
         'section_description',
         'section_content',
         'section_status',
-        'section_order'
+        'section_order',
+        'section_color',
     ];
 }

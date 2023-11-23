@@ -67,7 +67,7 @@ class StaticPageController extends Controller
                     return $status;
                 })
                 ->addColumn('action', function($row){
-                    $actionBtn = '<a href="'.route('static.pages.edit', $row->static_page_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('static.pages.delete', $row->static_page_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a><a href="'.route('services.sections.index', $row->static_page_id).'" class="btn btn-outline-info btn-sm py-0 px-1"><i class="fa-light fa-list-dropdown"></i></a>';
+                    $actionBtn = '<a href="'.route('static.pages.edit', $row->static_page_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('static.pages.sections.index', $row->static_page_id).'" class="btn btn-outline-info btn-sm py-0 px-1"><i class="fa-light fa-list-dropdown"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['action', 'status'])
@@ -89,9 +89,24 @@ class StaticPageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id): RedirectResponse
     {
         //
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+        $data = [
+            'page_name' => $request->name,
+            'page_slug' => $request->slug,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'seo_keywords' => $request->seo_keywords,
+            'page_status' => $request->status,
+        ];
+        $static_page = StaticPages::where('static_page_id', $id)->update($data);
+        return redirect()->route('static.pages.index')->with('success', 'Static Page updated successfully');
     }
 
     /**

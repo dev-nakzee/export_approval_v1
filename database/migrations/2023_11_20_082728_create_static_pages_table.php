@@ -18,9 +18,9 @@ return new class extends Migration
             $table->unsignedBigInteger('media_id')->nullable();
             $table->string('img_alt')->nullable();
             $table->string('seo_title')->nullable();
-            $table->string('seo_keyword')->nullable();
-            $table->string('seo_description')->nullable();
-            $table->text('page_status')->nullable();
+            $table->text('seo_keywords')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->boolean('page_status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

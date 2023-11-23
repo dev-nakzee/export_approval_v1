@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Services;
+use App\Models\Backend\StaticPages;
+use App\Models\Backend\StaticPageSection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
@@ -22,6 +24,11 @@ class HomeController extends Controller
         foreach($services as $key => $value) {
             $services[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        return view('frontend.pages.home', compact('services'));
+        $sections = StaticPageSection::select('static_page_sections.*','media_path')
+            ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
+            ->where('static_page_id', 1)
+            ->orderBy('section_order', 'asc')
+            ->get();
+        return view('frontend.pages.home', compact('services', 'sections'));
     }
 }

@@ -1,6 +1,6 @@
-@extends('backend.layouts.app', ['module' => 'Pages', 'title' => 'New Static Page'])
+@extends('backend.layouts.app', ['module' => 'Pages', 'title' => 'Edit'.ucfirst($static_page->page_name)])
 @section('content')
-<form class="form-horizontal" method="POST" action="{{route('static.pages.update', $static_page->page_name)}}" enctype="multipart/form-data">
+<form class="form-horizontal" method="POST" action="{{route('static.pages.update', $static_page->static_page_id)}}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="mb-2 col-md-12">
@@ -19,8 +19,8 @@
             <label for="media_id" class="form-label">Page image</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="image" disabled >
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden>
+                <input type="text" class="form-control form-control-sm" id="image" disabled value="{{$static_page->media_name}}">
+                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="{{$static_page->media_id}}">
                 <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
@@ -28,27 +28,13 @@
             <label for="slug" class="form-label">Page image alt text</label>
             <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt">
         </div>
-        <div class="mb-3 col-md-12">
-            <label for="product_category_content" class="form-label">Product content</label>
-            <textarea class="form-control form-control-sm text-editor" id="product_content" name="product_content"></textarea>
-        </div>
         <div class="mb-3 col-md-6">
-            <label for="infoDocument_id" class="form-label">Product Information</label>
-            <div class="input-group input-group-sm">
-                <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="infoDocument" disabled >
-                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden>
-                <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="infodocs"><i class="fa-light fa-plus"></i></a>
-            </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="guideDocument_id" class="form-label">Product Information</label>
-            <div class="input-group input-group-sm">
-                <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="guideDocument" disabled >
-                <input type="text" class="form-control form-control-sm" id="guideDocument_id" name="guideDocument_id" hidden>
-                <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="guidelines"><i class="fa-light fa-plus"></i></a>
-            </div>
+            <label for="slug" class="form-label">Page status</label>
+            <select class="form-control form-control-sm" id="status" name="status">
+                <option value="{{$static_page->page_status}}">@if($static_page->page_status ===1){{'Active'}}@else{{'Inactive'}}@endif</option>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_title" class="form-label">SEO Title - <b class="text-sm">Length : <span id="titleLength">0</span>&nbsp;|&nbsp;Character : <span id="titleChar">0</span></b></label>

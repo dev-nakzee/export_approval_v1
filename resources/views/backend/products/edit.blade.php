@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Products', 'title' => 'New product'])
+@extends('backend.layouts.app', ['module' => 'Products', 'title' => 'Edit product'])
 @section('content')
 <form class="form-horizontal" method="POST" action="{{route('products.update', $product->product_id)}}" enctype="multipart/form-data">
     @csrf
@@ -18,10 +18,10 @@
         <div class="mb-3 col-md-6">
             <label for="product_service_id" class="form-label">Service</label>
             <select class="form-control form-control-sm" id="product_service_id" name="product_service_id" value="{{$product->product_service_id}}">
-                <option value="{{$service->service_id}}">{{$service->service_name}}</option>
+                <option value="{{$service->service_id}}" data-standard="{{$service->service_compliance}}">{{$service->service_name}}</option>
                 <option value="">Select service</option>
                 @foreach($services as $service)
-                <option value="{{$service->service_id}}">{{$service->service_name}}</option>
+                <option value="{{$service->service_id}}" data-standard="{{$service->service_compliance}}">{{$service->service_name}}</option>
                 @endforeach
             </select>
         </div>
@@ -51,13 +51,14 @@
         <div class="mb-3 col-md-12">
             <label for="product_compliance" class="form-label">Product complaince</label>
             <div class="input-group input-group-sm" id="standards">
-                @php
-                    $standards = json_decode($product->product_compliance, true);
-                @endphp
-                @foreach($standards[0] as $key => $value)
-                <span class="input-group-text">{{$key}}</span>
-                <input type="text" class="form-control form-control-sm" name="product_compliance[{{$key}}]" value="{{$value}}">
-                @endforeach
+                @if(unserialize($product->product_compliance) == null)
+                    <input type="text" class="form-control form-control-sm" name="product_compliance[]">
+                @else
+                    @foreach(unserialize($product->product_compliance) as $key => $value)
+                    <span class="input-group-text">{{$key}}</span>
+                    <input type="text" class="form-control form-control-sm" name="product_compliance[{{$key}}]" value="{{$value}}">
+                    @endforeach
+                @endif
             </div>
         </div>
         <div class="mb-3 col-md-12">
@@ -69,7 +70,7 @@
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
                 <input type="text" class="form-control form-control-sm" id="infoDocument" disabled value="@if($product->information){{$infoDocument->document}}@endif">
-                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden value="@if($$product->information){{$infoDocument->doc_id}}@endif">
+                <input type="text" class="form-control form-control-sm" id="infoDocument_id" name="infoDocument_id" hidden value="@if($product->information){{$infoDocument->doc_id}}@endif">
                 <a class="btn btn-outline-secondary btn-sm document-btn" data-bs-toggle="modal" data-bs-target="#fileUpload" data-pdf="infodocs"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
@@ -145,4 +146,14 @@
 <script src="{{asset('backend/js/media.min.js')}}"></script>
 <script src="{{asset('tinymce/tinymce.min.js')}}"></script>
 <script src="{{asset('backend/js/editor.min.js')}}"></script>
+<script>
+    $('#product_service_id').on('change', function(){
+        var standard = $(this).find(':selected').data('standard');
+        var stdArray = standard.split(',');
+        $('#standards').empty();
+        $. each(stdArray, function(index, value) {
+            $('#standards').append('<span class="input-group-text">'+value+'</span><input type="text" class="form-control form-control-sm" id="product_compliance" name="product_compliance['+value+']">'); 
+        });
+    });
+</script>
 @endsection

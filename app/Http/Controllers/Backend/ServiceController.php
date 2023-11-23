@@ -48,14 +48,13 @@ class ServiceController extends Controller
             'media_id' => 'required|numeric',
         ]);
         $faq = array_combine($request->question, $request->answer);
-        $service_compliance = explode(',', $request->service_compliance);
         $data = [
             'service_name' => $request->name,
             'service_slug' => $request->slug,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
             'service_description' => $request->description,
-            'service_compliance' => $service_compliance,
+            'service_compliance' => $request->service_compliance,
             'faqs' => json_encode($faq),
             'seo_title' => $request->seo_title,
             'seo_description' => $request->seo_description,
@@ -125,14 +124,13 @@ class ServiceController extends Controller
             'media_id' => 'required|numeric',
         ]);
         $faq = array_combine($request->question, $request->answer);
-        $service_compliance = explode(',', $request->service_compliance);
         $data = [
             'service_name' => $request->name,
             'service_slug' => $request->slug,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
             'service_description' => $request->description,
-            'service_compliance' => $service_compliance,
+            'service_compliance' => $request->service_compliance,
             'faqs' => json_encode($faq),
             'seo_title' => $request->seo_title,
             'seo_description' => $request->seo_description,

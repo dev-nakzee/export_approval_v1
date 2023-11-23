@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Pages', 'title' => 'Static Pages'])
+@extends('backend.layouts.app', ['module' => 'Static Pages', 'title' => 'Static Page - '. $static_page->page_name])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Static Pages</th>
+                        <th>Sections</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -54,11 +54,11 @@
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('static.pages.show') }}",
+            ajax: "{{ route('static.pages.sections.show',$static_page->static_page_id) }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'page_name', name: 'page_name'},
-                {data: 'page_status', name: 'page_status'},
+                {data: 'section_name', name: 'section_name'},
+                {data: 'section_status', name: 'section_status'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });
