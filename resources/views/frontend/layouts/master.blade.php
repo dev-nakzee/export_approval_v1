@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
+        <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
     </head>
@@ -56,7 +57,20 @@
         </nav>
         @yield('content')
         <footer class="uk-section uk-background-default footer">
-            
+            <div class="uk-width-1-2@s uk-width-1-5@m">
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-nav-header">Services</li>
+                    @if($services)
+                    @foreach($services as $service)
+                    <li>
+                        <a href="{{route('frontend.site.service', $service->service_slug)}}">
+                            {{$service->service_name}}
+                        </a>
+                    </li>
+                    @endforeach
+                    @endif
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
