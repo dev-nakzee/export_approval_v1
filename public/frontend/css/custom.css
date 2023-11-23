@@ -81,6 +81,9 @@
     display: block;
 }
 
+.home-ml-section {
+    background-color: #cccccc;
+}
 
 /* All Pages */
 .page-header {

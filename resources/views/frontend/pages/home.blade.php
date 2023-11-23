@@ -59,44 +59,30 @@
         <span class="section-tagline">{{$sections[1]->section_tagline}}</span>
         <p class="section-description">{!! $sections[1]->section_description !!}</p>
     </div>
-    <div class="uk-container uk-padding-large uk-padding-top-remove">
+    <div class="uk-container uk-padding-large uk-padding-remove-top">
         <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
             @if($services)
             @foreach($services as $service)
-            <article class="uk-comment uk-card uk-box-shadow-large uk-card-body" role="comment">
-                <header class="uk-comment-header">
-                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+            <div class="uk-padding-small uk-margin-small home-ml-section">
+                <article uk-height-match=".home-ml-section" class="uk-comment uk-card uk-box-shadow-large uk-card-body home-ml-section" role="comment">
+                    <header class="uk-comment-header">
+                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
+                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                    <li><a href="{{route('frontend.site.service', $service->service_slug)}}">View all Products</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="uk-width-expand">
-                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
-                            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">View all Products</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-            </article>
+                    </header>
+                </article>
+            </div>
             @endforeach
             @endif
         </div>
     </div>
-        {{-- @if($services)
-        @foreach($services as $service)
-        <div class="col-md-3 mandatory-list pt-3">
-            <div class="mandatory-list-wrapper">
-                <div class="mandatory-list-img align-middle">
-                    <img class="align-middle" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-                </div>
-                <div class="mandatory-list-text text-center">
-                    <span class="mandatory-list-h3">{{$service->service_name}}</span><br>
-                    <a class="mandatory-list-p" href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}} Product list</a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-        @endif --}}
-
 </section>
 @endsection
