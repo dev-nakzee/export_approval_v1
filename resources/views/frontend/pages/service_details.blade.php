@@ -160,7 +160,6 @@
         var service = "{{$service->service_slug}}";
         var url = "{{route('frontend.site.product', [$service->service_slug,":slug"])}}";
         url = url.replace(':slug', slug);
-        alert(url);
         window.location.href = url;
     });
 </script>
