@@ -3,8 +3,7 @@
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <h1>
-            <img class="uk-margin-right" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-            {{$service->service_name}}
+            {{$service->service_name}} For {{$product->product_name}}
         </h1>
     </div>
 </section>
@@ -12,12 +11,12 @@
     <div class="uk-container uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span>Services</span></li>
             <li><span>{{$service->service_name}}</span></li>
+            <li><span>{{$product->product_name}}</span></li>
         </ul>
     </div>
 </section>
-<section class="uk-section uk-padding-remove" uk-scrollspy="offset: 80px">
+{{-- <section class="uk-section uk-padding-remove" uk-scrollspy="offset: 80px">
     <div class="uk-container">
         <div uk-grid>
         <div class="uk-width-1-4@m">
@@ -83,7 +82,7 @@
                                         @endphp
                                         @foreach($products as $product)
                                         @if($category === $product->product_category_name)
-                                        <tr class="product-page-link" data-slug="{{$product->product_slug}}">
+                                        <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td class="uk-hidden">{{$product->product_category_name}}</td>
                                             <td>{{$product->product_name}}</td>
@@ -141,7 +140,7 @@
         </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
 @section('scripts')
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
@@ -155,13 +154,6 @@
             "searching": true,
         });
     });
-    $(document).on('click', '.product-page-link', function() {
-        var slug = $(this).data('slug');
-        var service = "{{$service->service_slug}}";
-        var url = "{{route('frontend.site.product', [$service->service_slug,":slug"])}}";
-        url = url.replace(':slug', slug);
-        alert(url);
-        window.location.href = url;
-    });
+
 </script>
 @endsection

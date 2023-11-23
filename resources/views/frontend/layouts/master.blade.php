@@ -7,6 +7,7 @@
         <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
+        @yield('scripts')
     </head>
     <body>
         <nav class="uk-navbar-container uk-padding uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">

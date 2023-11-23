@@ -112,3 +112,6 @@
     font-weight: 300;
     color: #303030;
 }
+#mandatory-list tbody tr:hover {
+    cursor: pointer !important;
+}

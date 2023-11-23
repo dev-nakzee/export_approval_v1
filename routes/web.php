@@ -9,6 +9,7 @@ use App\Models\Admin;
 use App\Models\Seller;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\Frontend\ProductsController;
 
 // Route::get('/', function () {
 //     return view('frontend.pages.home');
@@ -21,6 +22,10 @@ Route::controller(HomeController::class)->group(function (){
 
 Route::controller(ServiceController::class)->group(function (){
     Route::get('/service/{service_slug}', 'index')->name('frontend.site.service');
+});
+
+Route::controller(ProductsController::class)->group(function (){
+    Route::get('/service/{service}/product/{product_slug}', 'index')->name('frontend.site.product');
 });
 
 //--------------------------------------------------ROUTE FOR ADMIN-----------------------------------------------------
