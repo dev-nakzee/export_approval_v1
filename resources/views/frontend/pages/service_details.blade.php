@@ -67,12 +67,18 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Product Name</th>
-                                            <th>Product Compliance</th>
+                                            @if($service->service_compliance)
+                                            <th>{{$service->service_compliance}}</th>
+                                            @endif
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($products as $product)
                                         <tr>
+                                            <td>{{$loop->iteration}}</td>
+                                            <td>{{$product->product_name}}</td>
+                                            <td>{{$product->product_compliance}}</td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -92,9 +98,6 @@
                     </div>
                 </li>
                 @endif
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
             </ul>
         </div>
         </div>
