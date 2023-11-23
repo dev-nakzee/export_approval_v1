@@ -69,7 +69,9 @@
                                             <th>Product Name</th>
                                             @if($service->service_compliance)
                                             @foreach(explode(',',$service->service_compliance) as $compliance)
+                                            @if($compliance)
                                             <th>{{$compliance}}</th>
+                                            @endif
                                             @endforeach
                                             @endif
                                         </tr>
@@ -79,7 +81,11 @@
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$product->product_name}}</td>
-                                            <td>{{$product->product_compliance}}</td>
+                                            @if($service->service_compliance)
+                                            @foreach(unserialize($product->product_compliance) as $compliance)
+                                                <td>{{$compliance}}</td>
+                                            @endforeach
+                                            @endif
                                         </tr>
                                         @endforeach
                                     </tbody>
