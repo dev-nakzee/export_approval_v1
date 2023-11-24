@@ -37,7 +37,10 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
-                <div class="uk-padding-small" uk-grid id="overview">
+                <div class="uk-padding-small ps-tab-header" id="overview">
+                    <span>{{$section->product_section_name}}</span>
+                </div>
+                <div class="uk-padding-small" uk-grid>
                     <div data-src="{{$product->media_path}}" uk-img class="uk-width-1-3@m uk-background-contain uk-padding-remove">
                     </div>
                     <div class="uk-width-2-3@m">
