@@ -10,7 +10,7 @@
         @yield('scripts')
     </head>
     <body>
-        <nav class="uk-navbar-container uk-padding uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
                     <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
@@ -42,7 +42,7 @@
                                     <a href="#">Downloads</a>
                                 </li>
                                 <li>
-                                    <a href="#">Blogs</a>
+                                    <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
                                     <a href="#">Careers</a>
@@ -57,7 +57,7 @@
             </div>
         </nav>
         @yield('content')
-        <section class="uk-section uk-padding-remove uk-background-muted">
+        {{-- <section class="uk-section uk-padding-remove uk-background-muted">
             <div class="uk-container uk-padding-small">
                 <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000; finite: false; easing: ease;sets: false;">
                     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@s uk-child-width-1-8@m uk-grid">
@@ -74,8 +74,8 @@
                 </div>
                 
             </div>
-        </section>
-        <footer class="uk-section uk-background-default uk-footer">
+        </section> --}}
+        <section class="uk-section uk-background-default uk-footer">
             <div class="uk-container uk-padding uk-padding-remove-vertical" uk-grid>
                 <div class="uk-width-1-5@s">
                     <ul class="uk-nav uk-nav-default">
@@ -127,6 +127,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
     </body>
 </html>

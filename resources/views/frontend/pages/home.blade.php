@@ -15,17 +15,17 @@
 
 @endsection
 @section('content')
-<section class="uk-section home-section-1 uk-child-width-expand@s uk-padding" uk-grid>
+<section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large" uk-grid>
     <div>
         {!! $sections[0]->section_content !!}
         <div class="uk-margin">
-            <div class="uk-inline">
+            <div class="uk-inline uk-width-1-1">
                 <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input class="uk-input uk-border-rounded uk-form-large uk-form-width-large" type="text" placeholder="Enter product or compliances" aria-label="Search">
+                <input class="uk-input uk-border-rounded uk-form-large uk-width-1-1" type="text" placeholder="Enter product or compliances" aria-label="Search">
             </div>
         </div>
-        <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand" uk-grid>
+        <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand uk-flex-center" uk-grid>
             @if($services)
             @foreach($services as $service)
             <div class="uk-background-transparent uk-margin-remove">
