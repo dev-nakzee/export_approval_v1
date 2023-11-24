@@ -20,36 +20,34 @@
         {!! $sections[0]->section_content !!}
         <div class="uk-margin">
             <div class="uk-inline">
-                <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: search"></a>
-                <input class="uk-input uk-form-large uk-form-width-large" type="text" placeholder="Search" aria-label="Search">
+                <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                </button>
+                <input class="uk-input uk-border-rounded uk-form-large uk-form-width-large" type="text" placeholder="Enter product or compliances" aria-label="Search">
             </div>
         </div>
         <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand" uk-grid>
             @if($services)
             @foreach($services as $service)
             <div class="uk-background-transparent uk-margin-remove">
-                <article class="uk-comment uk-background-default uk-border-rounded" role="comment">
-                    <header class="uk-comment-header">
-                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto home-service-image">
-                                <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-                            </div>
-                            <div class="uk-width-expand uk-padding-remove">
-                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
-                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                    <li><a href="{{route('frontend.site.service', $service->service_slug)}}">About {{$service->service_name}}</a></li>
-                                </ul>
-                            </div>
+                <div class="uk-card-header uk-padding-remove uk-margin-bottom-small">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <img class="uk-border-circle home-services-img" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                         </div>
-                    </header>
-                </article>
+                        <div class="uk-width-expand">
+                            <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
+                                <h3 class="uk-card-title uk-margin-remove-bottom home-services-tabs">{{$service->service_name}}</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             @endforeach
             @endif
         </div>
     </div>
-    <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain">
-        <p> {{ $sections[0]->section_tagline }}</p>
+    <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove">
+        <p class="uk-text-center uk-text-small uk-text-bold" style="font-size: 14px;">{{ $sections[0]->section_tagline }}</p>
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding">
