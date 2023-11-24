@@ -10,6 +10,7 @@ use App\Models\Seller;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\ProductsController;
+use App\Http\Controllers\Frontend\BlogsController;
 
 // Route::get('/', function () {
 //     return view('frontend.pages.home');
@@ -26,6 +27,12 @@ Route::controller(ServiceController::class)->group(function (){
 
 Route::controller(ProductsController::class)->group(function (){
     Route::get('/product/{product_slug}', 'index')->name('frontend.site.product');
+});
+
+Route::controller(BlogsController::class)->group(function (){
+    Route::get('/blogs', 'index')->name('frontend.site.blog');
+    Route::get('/blogs/{blog_category}', 'category')->name('frontend.site.blog.category');
+    Route::get('/blogs/{blog_category}/{blog_slug}', 'detail')->name('frontend.site.blog.detail');
 });
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------
