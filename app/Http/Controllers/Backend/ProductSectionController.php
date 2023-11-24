@@ -110,9 +110,23 @@ class ProductSectionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $product, $id)
     {
         //
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+        ]);
+        $data = [
+            'product_section_name' => $request->name,
+            'product_section_slug' => $request->slug,
+            'product_id' => $product,
+            'product_section_content' => $request->product_section_content,
+            'product_section_status' => $request->product_section_status,
+            'product_section_order' => $request->product_section_order,
+        ];
+        ProductSection::where('product_section_id', $id)->update($data);
+        return redirect()->route('products.sections.index', $product)->with('success', 'Products section updated successfully');
     }
 
     /**
