@@ -22,7 +22,7 @@ class ProductsController extends Controller
     public function index($slug)
     {
         //
-        $product = Product::select('products.*', 'media_path')
+        $product = Product::select('products.*', 'product_category_name', 'media_path')
             ->join('product_categories', 'products.product_category_id', 'product_categories.product_category_id')
             ->leftJoin('media', 'products.media_id', 'media.media_id')
             ->where('product_slug', $slug)
