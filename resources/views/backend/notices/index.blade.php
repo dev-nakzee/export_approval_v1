@@ -23,6 +23,7 @@
                         <th>#</th>
                         <th>Notice</th>
                         <th>Service</th>
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -62,6 +63,7 @@
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
                 {data: 'notice_title', name: 'notice_title'},
                 {data: 'service_name', name: 'service_name'},
+                {data: 'notice_date', name: 'notice_date'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

@@ -16,7 +16,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
-    <div class="uk-flex">
+    <div class="uk-section">
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
@@ -36,18 +36,20 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
-                <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Notification</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="uk-container">
+                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Notification</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -83,14 +85,11 @@
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('products.show') }}",
+            ajax: "{{ route('frontend.site.industry-notification.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'product_name', name: 'product_name'},
-                {data: 'product_category_name', name: 'product_category_name'},
-                {data: 'service_name', name: 'service_name'},
-                {data: 'product_status', name: 'product_status'},
-                {data: 'action', name: 'action', orderable: false, searchable: false},
+                {data: 'notice_title', name: 'notice_title'},
+                {data: 'notice_date', name: 'notice_date'},
             ]
         });
     }

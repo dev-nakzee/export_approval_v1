@@ -95,7 +95,7 @@ class NoticeController extends Controller
     {
         //
         if($request->ajax()){
-            $data = Notices::select('notice_id', 'notice_title', 'service_name')
+            $data = Notices::select('notice_id', 'notice_title', 'notice_date', 'service_name')
                 ->join('services', 'services.service_id', '=', 'notices.service_id')
                 ->orderBy('notices.created_at', 'DESC')
                 ->get();
@@ -106,6 +106,9 @@ class NoticeController extends Controller
                 })
                 ->addColumn('service_name', function($row){
                     return $row->service_name;
+                })
+                ->addColumn('notice_date', function($row){
+                    return $row->notice_date;
                 })
                 ->addColumn('action', function($row){
                     $actionBtn = '<a href="'.route('notices.edit', $row->notice_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('notices.delete', $row->notice_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';

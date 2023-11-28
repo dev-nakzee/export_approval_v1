@@ -15,6 +15,7 @@ class Notices extends Model
 
     protected $fillable = [
         'notice_title',
+        'notice_date',
         'notice_slug',
         'media_id',
         'img_alt',
@@ -27,4 +28,7 @@ class Notices extends Model
         'notice_status',
     ];
 
+    protected $casts = [
+        'notice_date' => 'datetime:d-m-Y',
+    ];
 }
