@@ -34,11 +34,11 @@ class IndustryNotificationController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('notice_title', function($row){
-                    $notificationLink = '<a href="'.route('frontend.site.industry-notification.show', $row->notice_slug).'">'.$row->notice_title.'</a>';
+                    $notificationLink = '<a href="'.route('frontend.site.industry-notification.detail', [$row->service_slug, $row->notice_slug]).'">'.$row->notice_title.'</a>';
                     return $notificationLink;
                 })
                 ->addColumn('notice_date', function($row){
-                    $notificationLink = '<a href="'.route('frontend.site.industry-notification.show', $row->notice_slug).'">'.$row->created_at.'</a>';
+                    $notificationLink = '<a href="'.route('frontend.site.industry-notification.detail', [$row->service_slug, $row->notice_slug]).'">'.$row->created_at.'</a>';
                     return $notificationLink;
                 })
                 ->rawColumns(['notice_title', 'notice_date'])
