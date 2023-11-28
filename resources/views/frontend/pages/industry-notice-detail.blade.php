@@ -45,9 +45,10 @@
                             {!! $notice->notice_content !!}
 
                             @if($document)
-                            Please click to 
+                            <p>Please click to 
                                 <a href="{{$document->doc_path}}" target="blank" class="uk-link">View</a> or
                                 <a href="{{$document->doc_path}}" target="blank" class="uk-link" download>Download</a>
+                            </p>
                             @endif
                         </div>
                     </div>
