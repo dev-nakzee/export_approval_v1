@@ -47,10 +47,10 @@
                         <ul class="uk-list uk-list-divider">
                             <li><b>Product Name</b> : {{$product->product_name}}</li>
                             <li><b>Product Category</b> : {{$product->product_category_name}}</li>
+                            <li><b>Compliance Name</b> : {{$service->service_name}}</li>
                             @if(unserialize($product->product_compliance) == null)
                             @else
                             @foreach(unserialize($product->product_compliance) as $key => $value)
-                            <li><b>Compliance Name</b> : {{$key}}</li>
                             <li><b>{{$key}}</b> : {{$value}}</li>
                             @endforeach
                             @endif
