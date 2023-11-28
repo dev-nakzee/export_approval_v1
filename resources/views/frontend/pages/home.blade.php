@@ -71,7 +71,7 @@
                                 <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                             </div>
                             <div class="uk-width-expand uk-padding-small">
-                                <a href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
+                                <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
                                 <span>{!!$service->service_description!!}</span>
                                 </a>
                             </div>
