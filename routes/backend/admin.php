@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\ClientController;
 use App\Http\Controllers\Backend\StaticPageController;
 use App\Http\Controllers\Backend\StaticPageSectionController;
+use App\Http\Controllers\Backend\FormsController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -162,4 +163,14 @@ Route::controller(StaticPageSectionController::class)->group(function(){
     Route::post('/pages/static/{page}/sections/store', 'store')->name('static.pages.sections.store');
     Route::post('/pages/static/{page}/sections/update/{id}','update')->name('static.pages.sections.update');
     Route::get('/pages/static/{page}/sections/delete/{id}', 'destroy')->name('static.pages.sections.delete');
+});
+
+Route::controller(FormsController::class)->group(function(){
+    Route::get('/forms', 'index')->name('forms.index');
+    Route::get('/forms/show', 'show')->name('forms.show');
+    Route::get('/forms/create', 'create')->name('forms.create');
+    Route::get('/forms/edit/{id}', 'edit')->name('forms.edit');
+    Route::post('/forms/store', 'store')->name('forms.store');
+    Route::post('/forms/update/{id}', 'update')->name('forms.update');
+    Route::get('/forms/delete/{id}', 'destroy')->name('forms.delete');
 });

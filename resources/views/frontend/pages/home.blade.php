@@ -22,7 +22,8 @@
             <div class="uk-inline uk-width-1-1">
                 <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input class="uk-input uk-border-rounded uk-form-large uk-width-1-1" type="text" placeholder="Enter product or compliances" aria-label="Search">
+                <input id="home-search" class="uk-input uk-border-rounded uk-form-large uk-width-1-1" type="text" placeholder="Enter product or compliances" aria-label="Search">
+                <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
             </div>
         </div>
         <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand uk-flex-center" uk-grid>
@@ -58,11 +59,11 @@
         <span class="section-tagline">{{$sections[1]->section_tagline}}</span>
         <p class="section-description">{!! $sections[1]->section_description !!}</p>
     </div>
-    <div class="uk-container uk-padding-remove-top">
-        <div class="uk-child-width-1-3@m uk-grid-match uk-flex-center" uk-grid>
+    <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right">
+        <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
             @if($services)
             @foreach($services as $service)
-            <div class="uk-padding-small uk-margin-remove home-ml-section">
+            <div class="uk-margin-remove home-ml-section">
                 <article class="uk-comment uk-padding-small uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
                     <header class="uk-comment-header">
                         <div class="uk-grid-medium uk-flex-middle" uk-grid>
@@ -162,4 +163,27 @@
     @endif
 </section>
 @endif
+@endsection
+@section('scripts')
+<script>
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+$(document).keyup('#home-search', function(e) {
+    var search = $(this).val();
+    if(search != ''){
+        $.ajax({
+            url:"{{route('frontend.site.search')}}",
+            method:"POST",
+            data:{search:search},
+            success:function(response){
+                $('#home-search-result').html(response);
+                $('#home-search-result').removeClass('uk-hidden');
+            }
+        });
+    }
+});
+</script>
 @endsection

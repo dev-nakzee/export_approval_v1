@@ -12,6 +12,7 @@ use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\BlogsController;
 use App\Http\Controllers\Frontend\IndustryNotificationController;
+use App\Http\Controllers\Frontend\SearchController;
 
 // Route::get('/', function () {
 //     return view('frontend.pages.home');
@@ -39,6 +40,11 @@ Route::controller(IndustryNotificationController::class)->group(function (){
     Route::get('/industry-notifications', 'index')->name('frontend.site.industry-notification');
     Route::get('/industry-notifications/{service}', 'service')->name('frontend.site.industry-notification.service');
     Route::get('/industry-notifications/{service}/{industry_notification_slug}', 'detail')->name('frontend.site.industry-notification.detail');
+});
+
+Route::controller(SearchController::class)->group(function (){
+    Route::get('/search', 'index')->name('frontend.site.search');
+    Route::get('/search/{search}', 'search')->name('frontend.site.search.page');
 });
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------
