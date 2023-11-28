@@ -16,7 +16,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
-    <div class="uk-container">
+    <div class="uk-section uk-padding-remove-vertical">
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
@@ -24,7 +24,7 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
-                            <li>
+                            <li {{ ($service->service_slug === $notice_service->service_slug) ? 'class=uk-active':'' }}>
                                 <a href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
@@ -37,25 +37,20 @@
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
                 <div class="uk-container">
-                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Notification</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if($notices)
-                            @foreach($notices as $notice)
-                            <tr> <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">                <td>{{$loop->iteration}}</td>
-                                <td>{{$notice->notice_title}}</td>
-                                <td>{{$notice->notice_date}}</td>
-                            </tr>
-                            @endforeach
+                    <div class="ps-sections">
+                        <div class="uk-container ps-tab-header">
+                            <span>{{$notice->notice_title}}<span>
+                        </div>
+                        <div class="uk-container ps-tab-content">
+                            {!! $notice->notice_content !!}
+
+                            @if($document)
+                            Please click to 
+                                <a href="{{$document->doc_path}}" target="blank" class="uk-link">View</a> or
+                                <a href="{{$document->doc_path}}" target="blank" class="uk-link" download>Download</a>
                             @endif
-                        </tbody>
-                    </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,11 +63,6 @@
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#industrial-notification-list').DataTable({
-            "paging":   true,
-            "ordering": false,
-            "searching": true,
-        });
         $(window).scroll(function(){
             var scrollTop = 80;
             if($(window).scrollTop() >= scrollTop){
@@ -83,9 +73,5 @@
             }
         });
     });
-    $(document).on('click', '.notice-detail-link', function() {
-        var url = $(this).data('link');
-        window.location.href = url;
-    })
 </script>
 @endsection

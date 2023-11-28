@@ -16,7 +16,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
-    <div class="uk-container">
+    <div class="uk-section">
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
@@ -24,7 +24,7 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
-                            <li>
+                            <li {{ ($service->service_slug === $notice_service->service_slug) ? 'class=uk-active':'' }}>
                                 <a href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
@@ -48,7 +48,8 @@
                         <tbody>
                             @if($notices)
                             @foreach($notices as $notice)
-                            <tr> <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">                <td>{{$loop->iteration}}</td>
+                            <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{$notice->notice_title}}</td>
                                 <td>{{$notice->notice_date}}</td>
                             </tr>

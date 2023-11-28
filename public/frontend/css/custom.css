@@ -107,8 +107,6 @@
     }
 }
 
-
-
 .ps-tab-header {
     background: linear-gradient(180deg, rgb(255 35 0 / 28%) 0%, rgba(255,255,255,1) 100%) !important;
     font-size: 20px !important;
@@ -134,6 +132,10 @@
     color: #303030;
 }
 #mandatory-list tbody tr:hover {
+    cursor: pointer !important;
+}
+
+.notice-detail-link:hover {
     cursor: pointer !important;
 }
 

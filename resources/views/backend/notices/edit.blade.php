@@ -64,6 +64,10 @@
                 @endforeach
             </select>
         </div>
+        <div class="mb-3 col-md-6">
+            <label for="notice_date" class="form-label">Notice date</label>
+            <input type="date" class="form-control form-control-sm" id="notice_date" name="notice_date" value="{{$notice->notice_date}}">
+        </div>
         <div class="mb-3 col-md-12">
             <label for="seo_title" class="form-label">SEO Title - <b class="text-sm">Length : <span id="titleLength">0</span>&nbsp;|&nbsp;Character : <span id="titleChar">0</span></b></label>
             <input type="text" class="form-control form-control-sm" id="seo_title" name="seo_title" value="{{$notice->seo_title}}">

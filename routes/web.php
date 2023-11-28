@@ -37,7 +37,7 @@ Route::controller(BlogsController::class)->group(function (){
 });
 Route::controller(IndustryNotificationController::class)->group(function (){
     Route::get('/industry-notifications', 'index')->name('frontend.site.industry-notification');
-    Route::get('/industry-notifications/all', 'show')->name('frontend.site.industry-notification.show');
+    Route::get('/industry-notifications/{service}', 'service')->name('frontend.site.industry-notification.service');
     Route::get('/industry-notifications/{service}/{industry_notification_slug}', 'detail')->name('frontend.site.industry-notification.detail');
 });
 
