@@ -16,7 +16,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
-    <div class="uk-container">
+    <div class="uk-section uk-padding-remove-vertical">
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
