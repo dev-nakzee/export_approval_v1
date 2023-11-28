@@ -36,6 +36,7 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
+                
                 <div class="uk-container">
                     <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
                         <thead>

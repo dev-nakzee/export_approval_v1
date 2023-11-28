@@ -47,10 +47,7 @@ class IndustryNotificationController extends Controller
         $notice_service = Services::select('service_id','service_slug')->where('service_slug', $service)->first();
         $notice = Notices::where('notice_slug', $notice_slug)->first();
         $document = Document::where('doc_id', $notice->notice_document)->first();
-        if($document)
-        {
-            $document['doc_path'] = Storage::path($document->doc_path);
-        }
-        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document'));
+        $media = Media::where('media_id', $notice->media_id)->first();
+        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media'));
     }
 }

@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="uk-width-3-4@m uk-padding-remove-right">
+            <div class="uk-width-3-4@m uk-padding-remove-right uk-height-small">
                 <div class="uk-container">
                     <div class="ps-sections">
                         <div class="uk-container ps-tab-header">
@@ -45,9 +45,9 @@
                             {!! $notice->notice_content !!}
 
                             @if($document)
-                            <p>Please click to 
-                                <a href="{{$document->doc_path}}" target="blank" class="uk-link">View</a> or
-                                <a href="{{$document->doc_path}}" target="blank" class="uk-link" download>Download</a>
+                            <p class="notice-dl-text">Please click to 
+                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link">View</a> or
+                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link" download>Download</a>
                             </p>
                             @endif
                         </div>
