@@ -59,7 +59,7 @@
                     @endforeach
                         @if ($blogs->hasPages())
                             <div class="pagination-wrapper">
-                                {{ $blogs->links() }}
+                               <h1>OK</h1>
                             </div>
                         @endif
                     @endif

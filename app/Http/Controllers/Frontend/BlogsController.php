@@ -26,6 +26,7 @@ class BlogsController extends Controller
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $categories = BlogCategory::get();
+        // dd($blogs);
         return view('frontend.pages.blogs', compact('blogs', 'categories'));
     }
 
