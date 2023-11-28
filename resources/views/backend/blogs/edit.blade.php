@@ -19,8 +19,8 @@
             <label for="media_id" class="form-label">Blog image</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="image" disabled value="{{$media->media_name}}">
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="{{$media->media_id}}">
+                <input type="text" class="form-control form-control-sm" id="image" disabled value="@if($media){{$media->media_name}}@endif">
+                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="@if($media){{$media->media_id}}@endif">
                 <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>

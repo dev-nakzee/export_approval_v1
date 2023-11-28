@@ -41,8 +41,9 @@ class BlogsController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
+        $category_slug = $category;
         $categories = BlogCategory::get();
-        return view('frontend.pages.blog-category', compact('blogs', 'categories'));
+        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug'));
     }
 
     public function detail ($category, $slug)

@@ -12,6 +12,7 @@
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
             <li><span> {{'Blogs'}}</span></li>
+            <li><span> {{$category_slug}}</span></li>
         </ul>
     </div>
 </section>
@@ -20,7 +21,7 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-remove uk-heading-bullet uk-text-bold"> {{'Blogs'}}</span>
+                    <span class="uk-padding-remove-left uk-heading-bullet uk-text-bold"> {{'Blog Categories'}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($categories)
                         @foreach($categories as $category)
