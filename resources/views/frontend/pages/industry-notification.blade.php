@@ -48,7 +48,8 @@
                         <tbody>
                             @if($notices)
                             @foreach($notices as $notice)
-                            <tr> <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">                <td>{{$loop->iteration}}</td>
+                            <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">                <td>{{$loop->iteration}}</td>
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{$notice->notice_title}}</td>
                                 <td>{{$notice->notice_date}}</td>
                             </tr>
