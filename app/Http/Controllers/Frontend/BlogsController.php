@@ -29,6 +29,22 @@ class BlogsController extends Controller
         return view('frontend.pages.blogs', compact('blogs', 'categories'));
     }
 
+    public function category ($category)
+    {
+        //
+        $blogs = Blog::select('blogs.*', 'blog_category_name', 'blog_category_slug', 'media_path')
+            ->join('blog_categories', 'blogs.blog_category_id', 'blog_categories.blog_category_id')
+            ->leftJoin('media', 'blogs.media_id', 'media.media_id')
+            ->where('blog_category_slug', $category)
+            ->orderBy('blog_id', 'desc')
+            ->paginate(6);
+        foreach($blogs as $key => $value) {
+            $blogs[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        $categories = BlogCategory::get();
+        return view('frontend.pages.blog-category', compact('blogs', 'categories'));
+    }
+
     public function detail ($category, $slug)
     {
         //
