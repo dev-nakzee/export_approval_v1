@@ -85,13 +85,12 @@
 .ps-sidebar-fixed {
     position: fixed;
     top: 80px;
-    bottom: 0;
+    bottom: 500px !important;
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
     width: 20%;
-    z-index: -1;
-    min-height: 500px !important;
+    z-index: 15 !important;
     background-color: #fff;
 }
 @media screen and (min-width: 1600px) {
@@ -102,8 +101,7 @@
         left: 2.5%;
         padding: 15px;
         width: 20%;
-        z-index: 999;
-        /* display: none; */
+        z-index: 15 !important;
     }
 }
 
@@ -150,6 +148,10 @@
 }
 
 /* Footer */
+.clients-scroll {
+    z-index: 11 !important;
+}
+ 
 .uk-footer {
     background-color: #052faa;
     color: #fff;

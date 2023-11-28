@@ -57,7 +57,7 @@
             </div>
         </nav>
         @yield('content')
-        <section class="uk-section uk-padding-remove uk-background-muted">
+        <section class="uk-section uk-padding-remove uk-background-muted clients-scroll">
             <div class="uk-container uk-padding-small">
                 <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 1000; finite: false; easing: ease;sets: false;">
                     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@s uk-child-width-1-8@m uk-grid">

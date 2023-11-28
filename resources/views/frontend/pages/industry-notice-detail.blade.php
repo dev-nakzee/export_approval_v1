@@ -59,9 +59,6 @@
 </section>
 @endsection
 @section('scripts')
-<link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
-<script type="text/javascript" src="{{asset('frontend/datatables/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $(window).scroll(function(){

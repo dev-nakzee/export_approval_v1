@@ -56,6 +56,7 @@ class BlogsController extends Controller
             ->first();
         $blog['media_path'] = Storage::url($blog['media_path']);
         $categories = BlogCategory::get();
-        return view('frontend.pages.blog_details', compact('blog', 'categories'));
+        $category_slug = $category;
+        return view('frontend.pages.blog_details', compact('blog', 'categories', 'category_slug'));
     }
 }

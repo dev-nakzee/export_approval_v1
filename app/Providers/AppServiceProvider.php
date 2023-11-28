@@ -9,6 +9,7 @@ use App\Models\Backend\Services;
 use App\Models\Backend\Clients;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -51,5 +52,6 @@ class AppServiceProvider extends ServiceProvider
             }
             $view->with(['services' => $services, 'clients' => $clients]);
         });
+        Paginator::useBootstrap();
     }
 }
