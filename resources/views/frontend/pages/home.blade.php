@@ -71,11 +71,9 @@
                                 <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                             </div>
                             <div class="uk-width-expand uk-padding-small">
-                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
+                                <a href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">{{$service->service_name}}</a></h4>
                                 <span>{!!$service->service_description!!}</span>
-                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                    <li><a href="{{route('frontend.site.service', $service->service_slug)}}">View all Products</a></li>
-                                </ul>
+                                </a>
                             </div>
                         </div>
                     </header>
