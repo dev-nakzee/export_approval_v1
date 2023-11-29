@@ -19,7 +19,7 @@
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
-                <div class="uk-inline uk-width-1-1">
+                <div class="uk-inline uk-width-expanded">
                     <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                     </button>
                     <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section class="uk-section home-section-2 uk-padding">
+    <section class="uk-section home-section-2 uk-padding uk-padding-remove-vertical">
         <div class="section-two-heading uk-text-center uk-padding">
             <p class="section-heading">
                 {{$sections[1]->section_name}} 
