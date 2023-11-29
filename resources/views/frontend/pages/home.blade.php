@@ -16,7 +16,7 @@
     @endsection
     @section('content')
     <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
-        <div class="uk-margin-top uk-margin-bottom">
+        <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
                 <div class="uk-inline uk-width-1-1">
@@ -31,12 +31,12 @@
                 @if($services)
                 @foreach($services as $service)
                 <div class="uk-background-transparent uk-margin-remove">
-                    <div class="uk-card-header uk-padding-remove uk-margin-bottom-small">
+                    <div class="uk-card-header uk-padding-remove">
                         <div class="uk-grid-small uk-flex-middle" uk-grid>
                             <div class="uk-width-auto">
                                 <img class="uk-border-circle uk-box-shadow-medium home-services-img uk-background-default" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                             </div>
-                            <div class="uk-width-expand">
+                            <div class="uk-width-expand uk-margin-top">
                                 <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
                                     <h3 class="uk-card-title uk-margin-remove-bottom home-services-tabs">{{$service->service_name}}</h3>
                                     <span>{!!$service->service_description!!}</span>
@@ -51,7 +51,7 @@
         </div>
         <div class="uk-padding-remove uk-margin-top uk-margin-bottom">
             <div class="uk-width-1-1 uk-padding-remove">{!! $sections[0]->section_tagline !!}</div>
-            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove uk-height-medium">
+            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove uk-height-1-1">
             </div>
         </div>
     </section>
