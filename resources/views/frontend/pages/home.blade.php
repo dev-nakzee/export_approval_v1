@@ -49,9 +49,9 @@
                 @endif
             </div>
         </div>
-        <div class="uk-padding-remove uk-margin-top uk-margin-bottom">
+        <div class="uk-padding-remove uk-margin-top">
             <div class="uk-width-1-1 uk-padding-remove">{!! $sections[0]->section_tagline !!}</div>
-            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove uk-height-1-1">
+            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove" style="height: calc(100% - 30px)">
             </div>
         </div>
     </section>
