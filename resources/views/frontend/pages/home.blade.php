@@ -68,15 +68,16 @@
                 @if($services)
                 @foreach($services as $service)
                 <div class="uk-margin-remove home-ml-section">
-                    <article class="uk-comment uk-padding-small uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
+                    <article class="uk-comment uk-padding-remove uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
                         <header class="uk-comment-header">
                             <div class="uk-grid-medium uk-flex-middle" uk-grid>
                                 <div class="uk-width-auto">
                                     <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                                 </div>
-                                <div class="uk-width-expand uk-padding-small">
+                                <div class="uk-width-expand uk-padding-small uk-padding-remove-left">
                                     <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
                                     <span>{!!$service->service_description!!}</span>
+                                    <p class="uk-margin-remove-vertical uk-padding-remove uk-text-small view-all-products">View All Products</p>
                                     </a>
                                 </div>
                             </div>
@@ -94,7 +95,7 @@
             <p class="section-heading">
                 {{$sections[2]->section_name}} 
             </p>
-            <span class="section-tagline">{{$sections[2]->section_tagline}}</span>
+            <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[2]->section_description !!}</p>
         </div>
         <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
@@ -116,7 +117,7 @@
             <p class="section-heading">
                 {{$sections[3]->section_name}} 
             </p>
-            <span class="section-tagline">{{$sections[3]->section_tagline}}</span>
+            <span class="section-tagline">{!!$sections[3]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
         <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
@@ -138,7 +139,7 @@
             <p class="section-heading">
                 {{$sections[4]->section_name}} 
             </p>
-            <span class="section-tagline">{{$sections[4]->section_tagline}}</span>
+            <span class="section-tagline">{!!$sections[4]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[4]->section_description !!}</p>
         </div>
         @if($blogs)

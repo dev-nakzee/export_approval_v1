@@ -3,7 +3,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            <img class="uk-margin-right service-details-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
             {{$service->service_name}}
         </h1>
     </div>

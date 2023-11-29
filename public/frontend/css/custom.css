@@ -62,14 +62,39 @@
 }
 
 .home-ml-section article {
-    background-color: #cccccc;
+    border: 2px #052faa solid;
+    background-color: #ffffff;
 }
-
+.home-ml-section article img.uk-comment-avatar{
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    
+}
+.home-ml-section article h4.uk-comment-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #052faa;
+}
+.home-ml-section article p.view-all-products {
+    margin-top: 5px !important;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ed462f;
+}
+.home-ml-section article span {
+    margin-bottom: 5px !important;
+}
+.home-ml-section article span p {
+    border-bottom: #052faa solid 2px;
+    padding-bottom: 5px;
+    margin-bottom: 0px !important;  
+}
 /* All Pages */
 .page-header {
     background-color: #ff1f001a;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
 .page-header div h1 {
@@ -95,7 +120,7 @@
     padding: 15px;
     padding-left: 5px;
     width: 20%;
-    z-index: 15 !important;
+    z-index: -1 !important;
     background-color: #fff;
 }
 @media screen and (min-width: 1600px) {
@@ -106,7 +131,8 @@
         left: 2.5%;
         padding: 15px;
         width: 20%;
-        z-index: 15 !important;
+        z-index: -1 !important;
+        background-color: #fff;
     }
 }
 .service-details-image {
@@ -151,6 +177,11 @@
     font-weight: 500;
 }
 
+.home-blog-tabs span.uk-card-title{
+    font-size: 16px !important;
+    font-weight: 700;
+}
+
 .blog-cards {
     border: 1px #a3a3a3 solid !important;
     border-radius: 5px;
@@ -164,6 +195,7 @@
 .uk-footer {
     background-color: #052faa;
     color: #fff;
+    z-index: 99 !important;
 }
 
 .uk-footer .uk-nav-header {
