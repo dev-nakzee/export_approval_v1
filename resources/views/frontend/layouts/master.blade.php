@@ -10,7 +10,7 @@
         @yield('scripts')
     </head>
     <body>
-        <nav class="uk-navbar-container uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav style="border-bottom: 0.02em solid #e4e4e4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
                     <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
