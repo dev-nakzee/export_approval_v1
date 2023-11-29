@@ -37,7 +37,12 @@
 }
 
 .home-section-1 .home-services-img {
-    padding: 15px !important;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .home-section-1 .home-services-tabs {

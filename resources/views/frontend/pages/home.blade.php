@@ -34,7 +34,7 @@
                 <div class="uk-card-header uk-padding-remove uk-margin-bottom-small">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
-                            <img class="uk-border-circle home-services-img" style="height:60px; width: 60px;" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+                            <img class="uk-border-circle home-services-img uk-background-default" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                         </div>
                         <div class="uk-width-expand">
                             <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
