@@ -120,7 +120,7 @@
     padding: 15px;
     padding-left: 5px;
     width: 20%;
-    z-index: -1 !important;
+    z-index: 10 !important;
     background-color: #fff;
 }
 @media screen and (min-width: 1600px) {
@@ -131,7 +131,7 @@
         left: 2.5%;
         padding: 15px;
         width: 20%;
-        z-index: -1 !important;
+        z-index: 10 !important;
         background-color: #fff;
     }
 }
@@ -189,13 +189,13 @@
 
 /* Footer */
 .clients-scroll {
-    z-index: 11 !important;
+    z-index: 99 !important;
 }
  
 .uk-footer {
     background-color: #052faa;
     color: #fff;
-    z-index: 99 !important;
+    z-index: 999 !important;
 }
 
 .uk-footer .uk-nav-header {

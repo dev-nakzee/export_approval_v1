@@ -60,7 +60,7 @@
             <p class="section-heading">
                 {{$sections[1]->section_name}} 
             </p>
-            <span class="section-tagline">{{$sections[1]->section_tagline}}</span>
+            <span class="section-tagline">{!!$sections[1]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[1]->section_description !!}</p>
         </div>
         <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right">
