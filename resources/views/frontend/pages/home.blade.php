@@ -39,6 +39,7 @@
                         <div class="uk-width-expand">
                             <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
                                 <h3 class="uk-card-title uk-margin-remove-bottom home-services-tabs">{{$service->service_name}}</h3>
+                                <span>{!!$service->service_description!!}</span>
                             </a>
                         </div>
                     </div>
