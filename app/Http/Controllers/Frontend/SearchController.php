@@ -22,9 +22,6 @@ class SearchController extends Controller
     //
     public function index (Request $request): Response
     {
-        // $request->validate([
-        //     'search' => 'required',
-        // ]);
-        dd($request->all());
+        
     }
 }

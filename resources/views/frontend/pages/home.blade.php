@@ -26,6 +26,7 @@
                 <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
             </div>
         </div>
+        {!! $sections[0]->section_description !!}
         <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand uk-flex-center" uk-grid>
             @if($services)
             @foreach($services as $service)
@@ -48,7 +49,7 @@
         </div>
     </div>
     <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove">
-        <p class="uk-text-center uk-text-small uk-text-bold" style="font-size: 14px;">{{ $sections[0]->section_tagline }}</p>
+        <p class="uk-text-center uk-text-small uk-text-bold" style="font-size: 14px;">{!! $sections[0]->section_tagline !!}</p>
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding">
