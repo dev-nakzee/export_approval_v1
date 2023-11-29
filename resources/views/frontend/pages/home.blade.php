@@ -63,7 +63,7 @@
             <span class="section-tagline">{!!$sections[1]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[1]->section_description !!}</p>
         </div>
-        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right">
+        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-bottom">
             <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
                 @if($services)
                 @foreach($services as $service)
