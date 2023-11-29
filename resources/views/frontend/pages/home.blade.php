@@ -22,7 +22,7 @@
                 <div class="uk-inline uk-width-1-1">
                     <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                     </button>
-                    <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter product name OR compliance name" aria-label="Search">
+                    <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
                     <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="uk-padding-remove uk-margin-top uk-margin-bottom">
             <div class="uk-width-1-1 uk-padding-remove">{!! $sections[0]->section_tagline !!}</div>
-            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove uk-height-large">
+            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove uk-height-medium">
             </div>
         </div>
     </section>
