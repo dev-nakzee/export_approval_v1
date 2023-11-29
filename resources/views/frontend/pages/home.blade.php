@@ -18,7 +18,7 @@
     <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
         <div class="uk-margin-top uk-margin-bottom">
             {!! $sections[0]->section_content !!}
-            <div class="uk-margin-remove">
+            <div class="uk-margin-remove uk-margin-bottom">
                 <div class="uk-inline uk-width-1-1">
                     <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                     </button>
