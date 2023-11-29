@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{$service->service_name}} For {{$product->product_name}}
+            <span class="uk-text-small">{{$service->service_name}} For</span>
+            <br>{{$product->product_name}}
         </h1>
     </div>
 </section>
