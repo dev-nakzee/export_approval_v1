@@ -121,7 +121,7 @@
     padding-left: 5px;
     width: 20%;
     z-index: 10 !important;
-    background-color: #fff;
+    background-color: #fff !important;
 }
 @media screen and (min-width: 1600px) {
     .ps-sidebar-fixed {
@@ -132,7 +132,7 @@
         padding: 15px;
         width: 20%;
         z-index: 10 !important;
-        background-color: #fff;
+        background-color: #fff !important;
     }
 }
 .service-details-image {
@@ -195,7 +195,7 @@
 .uk-footer {
     background-color: #052faa;
     color: #fff;
-    z-index: 999 !important;
+    z-index: 99 !important;
 }
 
 .uk-footer .uk-nav-header {
