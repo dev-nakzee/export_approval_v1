@@ -149,6 +149,12 @@
 @endsection
 @section('scripts')
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
+<style>
+#mandatory-list_filter {
+    font-size: 14px !important;
+    color: #052faa !important;
+}
+</style>
 <script type="text/javascript" src="{{asset('frontend/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>
 <script type="text/javascript">
