@@ -92,7 +92,7 @@
     @if($sections[2]->section_status == 1)
     <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[2]->section_color}}">
         <div class="section-two-heading uk-text-center uk-padding">
-            <p class="section-heading">
+            <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[2]->section_name}} 
             </p>
             <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
