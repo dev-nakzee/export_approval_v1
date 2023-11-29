@@ -90,7 +90,7 @@
         </div>
     </section>
     @if($sections[2]->section_status == 1)
-    <section class="uk-section home-section-3 uk-padding" style="background-color: {{$sections[2]->section_color}}">
+    <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[2]->section_color}}">
         <div class="section-two-heading uk-text-center uk-padding">
             <p class="section-heading">
                 {{$sections[2]->section_name}} 
@@ -112,7 +112,7 @@
     </section>
     @endif
     @if($sections[3]->section_status == 1)
-    <section class="uk-section home-section-3 uk-padding" style="background-color: {{$sections[3]->section_color}}">
+    <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[3]->section_color}}">
         <div class="section-two-heading uk-text-center uk-padding">
             <p class="section-heading">
                 {{$sections[3]->section_name}} 
