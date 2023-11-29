@@ -49,8 +49,11 @@
             @endif
         </div>
     </div>
-    <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove">
-        <p class="uk-text-center uk-text-small uk-text-bold" style="font-size: 14px;">{!! $sections[0]->section_tagline !!}</p>
+    <div>
+        
+        <div class="uk-width-1-1">{!! $sections[0]->section_tagline !!}</div>
+        <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove">
+        </div>
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding">
