@@ -63,7 +63,7 @@
             <span class="section-tagline">{!!$sections[1]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[1]->section_description !!}</p>
         </div>
-        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-bottom">
+        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-large-bottom">
             <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
                 @if($services)
                 @foreach($services as $service)
@@ -120,7 +120,9 @@
             <span class="section-tagline">{!!$sections[3]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
+        <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
         {!! $sections[3]->section_content !!}
+        </div>
     </section>
     @endif
     @if($sections[4]->section_status == 1)
