@@ -95,7 +95,7 @@
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[2]->section_name}} 
             </p>
-            <span class="section-tagline 2323">{!!$sections[2]->section_tagline!!}</span>
+            <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[2]->section_description !!}</p>
         </div>
         <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
@@ -114,7 +114,7 @@
     @if($sections[3]->section_status == 1)
     <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[3]->section_color}}">
         <div class="section-two-heading uk-text-center uk-padding">
-            <p class="section-heading">
+            <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[3]->section_name}} 
             </p>
             <span class="section-tagline">{!!$sections[3]->section_tagline!!}</span>
