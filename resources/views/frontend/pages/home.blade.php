@@ -120,17 +120,7 @@
             <span class="section-tagline">{!!$sections[3]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
-        <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-                <img src="{{$sections[3]->media_path}}" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    {!! $sections[3]->section_content !!}
-                </div>
-            </div>
-        </div>
+        {!! $sections[3]->section_content !!}
     </section>
     @endif
     @if($sections[4]->section_status == 1)
