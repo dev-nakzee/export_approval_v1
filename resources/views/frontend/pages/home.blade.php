@@ -95,7 +95,7 @@
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[2]->section_name}} 
             </p>
-            <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
+            <span class="section-tagline 2323">{!!$sections[2]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[2]->section_description !!}</p>
         </div>
         <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
