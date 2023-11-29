@@ -57,7 +57,7 @@
     </section>
     <section class="uk-section home-section-2 uk-padding uk-padding-remove-vertical">
         <div class="section-two-heading uk-text-center uk-padding">
-            <p class="section-heading">
+            <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[1]->section_name}} 
             </p>
             <span class="section-tagline">{!!$sections[1]->section_tagline!!}</span>
