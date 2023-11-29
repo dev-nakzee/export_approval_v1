@@ -4,7 +4,7 @@
 }
 .uk-img-logo {
     height: 60px !important;
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
 }
 .uk-navbar-container.uk-background-transparent {
     background: #fff !important;
@@ -87,7 +87,7 @@
     margin-bottom: 5px !important;
 }
 .home-ml-section article span p {
-    border-bottom: #052faa solid 2px;
+    border-bottom: #1c42b5 solid 2px;
     padding-bottom: 5px;
     margin-bottom: 0px !important;  
 }
