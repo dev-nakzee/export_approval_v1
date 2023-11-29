@@ -58,7 +58,7 @@
         </nav>
         @yield('content')
 
-        <section class="uk-section uk-background-default uk-footer">
+        <section class="uk-section uk-background-default uk-footer website-footer">
             <div class="uk-container uk-padding uk-padding-remove-vertical" uk-grid>
                 <div class="uk-width-1-5@s">
                     <ul class="uk-nav uk-nav-default">

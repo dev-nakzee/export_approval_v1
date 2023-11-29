@@ -45,6 +45,10 @@
     object-fit: fill;
 }
 
+.home-banner-image {
+    height: calc(100% - 50px) !important;
+}
+
 .home-section-1 .home-services-tabs {
     font-size: 16px;
     font-weight: 500;
@@ -113,9 +117,8 @@
 
 /* Product Services Pages */
 .ps-sidebar-fixed {
-    position: fixed;
+    position: fixed !important;
     top: 80px;
-    bottom: 500px !important;
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
@@ -192,10 +195,11 @@
     z-index: 99 !important;
 }
  
-.uk-footer {
+section.website-footer {
     background-color: #052faa;
     color: #fff;
     z-index: 99 !important;
+    position: relative;
 }
 
 .uk-footer .uk-nav-header {
