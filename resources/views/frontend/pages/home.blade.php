@@ -22,7 +22,7 @@
             <div class="uk-inline uk-width-1-1">
                 <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input id="home-search" class="uk-input uk-border-rounded uk-form-large uk-width-1-1" type="text" placeholder="Enter product or compliances" aria-label="Search">
+                <input id="home-search" class="uk-input uk-border-rounded uk-form-large" type="text" placeholder="Enter product or compliances" aria-label="Search">
                 <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <div class="uk-card-header uk-padding-remove uk-margin-bottom-small">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
-                            <img class="uk-border-circle home-services-img" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+                            <img class="uk-border-circle home-services-img" style="height:60px; width: 60px;" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                         </div>
                         <div class="uk-width-expand">
                             <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
