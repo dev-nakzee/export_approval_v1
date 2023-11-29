@@ -15,7 +15,7 @@
 
 @endsection
 @section('content')
-<section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large" uk-grid>
+<section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-small" uk-grid>
     <div>
         {!! $sections[0]->section_content !!}
         <div class="uk-margin-remove">
