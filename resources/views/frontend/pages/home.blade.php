@@ -135,7 +135,7 @@
             <p class="section-description">{!! $sections[4]->section_description !!}</p>
         </div>
         @if($blogs)
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-bottom" tabindex="-1" uk-slider>
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid" uk-height-match=".home-blog-tabs">
                 @foreach($blogs as $blog)
                 <li>

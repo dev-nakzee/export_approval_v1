@@ -58,8 +58,11 @@
         </nav>
         @yield('content')
         <section class="uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
-            <div class="uk-text-large uk-text-bold uk-text-center">
-            <span>Get brochure from us</span>
+            <div class="section-two-heading uk-text-center uk-padding">
+                <p class="section-heading uk-margin-remove-bottom">
+                    Form Name
+                </p>
+                <span class="section-tagline">Form ke bareme kuch tobhi</span>
             </div>
             <form class="uk-form-stacked uk-padding">
                 <div uk-grid>
