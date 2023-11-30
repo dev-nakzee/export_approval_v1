@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master', ['pages' => 'Services'])
 @section('content')
-<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical" id="overview">
     <div class="uk-container uk-text-center">
         <h1>
             <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
-                <div class="uk-padding-small ps-tab-header" id="overview">
+                <div class="uk-padding-small ps-tab-header">
                     <span>{{'Product Overview'}}</span>
                 </div>
                 <div class="uk-padding-small" uk-grid>
