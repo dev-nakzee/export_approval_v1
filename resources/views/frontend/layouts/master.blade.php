@@ -116,7 +116,7 @@
                     <div class="uk-width-1-1@m uk-margin-small-top">    
                         <label class="uk-form-label" for="form-stacked-select">Some message</label>
                         <div class="uk-form-controls">
-                            <textarea class="uk-textarea" placeholder="Textarea"></textarea>
+                            <textarea class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
                         </div>
                     </div>
                     <div class="uk-width-1-1@m uk-text-center uk-margin-small-top">
