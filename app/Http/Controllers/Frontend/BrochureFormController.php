@@ -51,8 +51,7 @@ class BrochureFormController extends Controller
             'status' => 'open',
             'ip_address' => $request->ip(),
         ];
-        dd($data);
         Leads::create($data);
-        // return redirect()->back()->with('success', 'Brochure Form Submitted Successfully');
+        return response()->json(['success' => 'Form is successfully submitted!', $data]);
     }
 }

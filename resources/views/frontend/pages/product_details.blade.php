@@ -3,7 +3,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            <span class="uk-text-small">{{$service->service_name}} For</span>
+            <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
             <br>{{$product->product_name}}
         </h1>
     </div>
@@ -24,6 +24,9 @@
                 <div class="ps-details-section">
                     <a class="uk-heading-bullet uk-text-bold" href="#overview">{{$product->product_name}}</a>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
+                        <li>
+                            <a href="#overview">{{'Product Overview'}}</a>
+                        </li>
                         @if($sections)
                         @foreach($sections as $section)
                             <li>
