@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Backend\Leads;
 use App\Models\Backend\Services;
+use App\Models\Backend\ServiceSection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -26,7 +27,7 @@ class BrochureFormController extends Controller
         return view('frontend.pdf.brochure');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
         $request->validate([
             'fullname' => 'required',
@@ -41,13 +42,17 @@ class BrochureFormController extends Controller
         $phonecode = json_decode($json)[1];
         $data = [
             'fullname' => $request->fullname,
-            'organisation' => $request->organisation,
+            'source' => $request->organisation,
             'email' => $request->email,
             'country' => $country,
-            'mobile' => '+'.$phonecode.'-'.$request->mobile,
+            'phone' => '+'.$phonecode.'-'.$request->mobile,
             'service' => $request->service,
+            'message' => $request->message,
+            'status' => 'open',
+            'ip_address' => $request->ip(),
         ];
         dd($data);
+        Leads::create($data);
         // return redirect()->back()->with('success', 'Brochure Form Submitted Successfully');
     }
 }
