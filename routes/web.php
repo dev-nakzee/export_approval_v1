@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\ProductsController;
 use App\Http\Controllers\Frontend\BlogsController;
 use App\Http\Controllers\Frontend\IndustryNotificationController;
 use App\Http\Controllers\Frontend\SearchController;
+use App\Http\Controllers\Frontend\BrochureFormController;
 
 // Route::get('/', function () {
 //     return view('frontend.pages.home');
@@ -45,6 +46,11 @@ Route::controller(IndustryNotificationController::class)->group(function (){
 Route::controller(SearchController::class)->group(function (){
     Route::get('/search', 'index')->name('frontend.site.search');
     Route::get('/search/{search}', 'search')->name('frontend.site.search.page');
+});
+
+Route::controller(BrochureFormController::class)->group(function (){
+    Route::get('/brochure', 'index')->name('frontend.site.brochure');
+    Route::post('/brochure', 'store')->name('frontend.site.brochure.store');
 });
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------

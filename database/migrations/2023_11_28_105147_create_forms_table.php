@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('form_name');
             $table->string('form_slug');
             $table->string('form_email');
-            $table->longBlob('form_components');
+            $table->longText('form_components');
             $table->boolean('form_status')->default(true);
             $table->timestamps();
             $table->softDeletes();

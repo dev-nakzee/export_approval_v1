@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('form_data', function (Blueprint $table) {
             $table->id('form_data_id');
             $table->string('form_id');
-            $table->string('form_data');
+            $table->longText('form_data');
             $table->string('form_data_response')->nullable();
             $table->boolean('form_data_status')->default(true);
             $table->timestamps();
