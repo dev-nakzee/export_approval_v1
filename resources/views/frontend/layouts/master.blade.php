@@ -8,6 +8,25 @@
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
         @yield('scripts')
+        <script>
+            $(document).ready(function(){
+                $(".brochure-form-submit").click(function(e){
+                    e.preventDefault();
+                    var form = $("#brochure-form");
+                    var formData = new FormData(form[0]);
+                    $.ajax({
+                        url: "{{route('frontend.site.brochure')}}",
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(data){
+                            console.log(data);
+                        }
+                    });
+                });
+            }
+        </script>
     </head>
     <body>
         <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
@@ -57,50 +76,51 @@
             </div>
         </nav>
         @yield('content')
-        <section class="uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
+        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
             <div class="section-two-heading uk-text-center uk-padding">
                 <p class="section-heading uk-margin-remove-bottom">
                     Form Name
                 </p>
                 <span class="section-tagline">Form ke bareme kuch tobhi</span>
             </div>
-            <form class="uk-form-stacked uk-padding">
+            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
+                @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">
-                        <label class="uk-form-label" for="form-stacked-text">Full Name</label>
+                        <label class="uk-form-label" for="fullname">Full Name</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Complete Name">
+                            <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Complete Name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m">
-                        <label class="uk-form-label" for="form-stacked-text">Organisation</label>
+                        <label class="uk-form-label" for="organisation">Organisation</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Company name">
+                            <input class="uk-input" name="organisation" id="organisation" type="text" placeholder="Company name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="form-stacked-text">Email</label>
+                        <label class="uk-form-label" for="email">Email</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Email address">
+                            <input class="uk-input" name="email" id="email" type="email" placeholder="Email address">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="form-stacked-text">Mobile</label>
+                        <label class="uk-form-label" for="mobile">Mobile</label>
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
-                            <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="form-stacked-select" style="font-size: 12px;">
+                            <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
                                 @if($countries)
                                 @foreach($countries as $country)
-                                <option value=""{{json_encode([$country->name, $country->phonecode])}}>{{ucfirst(strtolower($country->name))." (+".$country->phonecode.")"}}</option>
+                                <option value="{{json_encode([$country->name, $country->phonecode])}}">{{ucfirst(strtolower($country->name))." (+".$country->phonecode.")"}}</option>
                                 @endforeach
                                 @endif
                             </select>
-                            <input class="uk-input uk-width-3-5 uk-padding-small uk-padding-remove-vertical" id="form-stacked-text" type="text" placeholder="mobile number">
+                            <input class="uk-input uk-width-3-5 uk-padding-small uk-padding-remove-vertical" name="mobile" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="mobile number">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="form-stacked-select">Services</label>
+                        <label class="uk-form-label" for="service">Services</label>
                         <div class="uk-form-controls">
-                            <select class="uk-select" id="form-stacked-select">
+                            <select class="uk-select" id="service" name="service">
                                 @if($services)
                                 @foreach($services as $service)
                                 <option value="{{$service->service_id}}">{{$service->service_name}}</option>
@@ -109,18 +129,14 @@
                             </select>
                         </div>
                     </div>
-                    <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="form-stacked-select"><input class="uk-checkbox" type="checkbox"> &nbsp; Terms & conditions</label>
-                        <label class="uk-text-small">By checking this, I accept terms & conditions of the site and I allow BL India to contact me for details.</label>
-                    </div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="form-stacked-select">Some message</label>
+                        <label class="uk-form-label" for="message">Some message</label>
                         <div class="uk-form-controls">
-                            <textarea class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
+                            <textarea name="message" class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
                         </div>
                     </div>
                     <div class="uk-width-1-1@m uk-text-center uk-margin-small-top">
-                        <button class="uk-button uk-button-primary uk-width-1-4">Submit</button>
+                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit">Submit</button>
                     </div>
                 </div>
             </form>

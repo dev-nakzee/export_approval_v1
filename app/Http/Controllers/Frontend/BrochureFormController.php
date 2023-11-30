@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Leads;
+use App\Models\Backend\Leads;
 use App\Models\Backend\Services;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
@@ -29,28 +29,25 @@ class BrochureFormController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'email|required',
-            'phone' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-            'zip_code' => 'required',
+            'fullname' => 'required',
+            'organisation' => 'required',
+            'email' => 'required',
             'country' => 'required',
-            'message' => 'required',
+            'mobile' => 'required',
+            'service' => 'required',
         ]);
-
-        $data = $request->all();
-
-        $brochure = new BrochureForm();
-        $brochure->name = $data['name'];
-        $brochure->email = $data['email'];
-        $brochure->country = $data['country'];
-        $brochure->phone = $data['phone'];
-        $brochure->address = $data['service'];
-        $brochure->message = $data['message'];
-        $brochure->save();
-
-        return redirect()->back()->with('success', 'Brochure Form Submitted Successfully');
+        $json = $request->country;
+        $country = json_decode($json)[0];
+        $phonecode = json_decode($json)[1];
+        $data = [
+            'fullname' => $request->fullname,
+            'organisation' => $request->organisation,
+            'email' => $request->email,
+            'country' => $country,
+            'mobile' => '+'.$phonecode.'-'.$request->mobile,
+            'service' => $request->service,
+        ];
+        dd($data);
+        // return redirect()->back()->with('success', 'Brochure Form Submitted Successfully');
     }
 }
