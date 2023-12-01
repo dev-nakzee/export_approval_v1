@@ -24,8 +24,9 @@
 }
 .uk-navbar-right button.uk-button-default {
     text-transform: capitalize !important;
-    background: #052faa;
-    color: #fff;
+    color: #052faa;
+    background-color: #fff;
+    border: 2px #052faa solid;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
