@@ -50,7 +50,7 @@
                     <div class="uk-width-2-3@m">
                         <ul class="uk-list uk-list-divider">
                             <li><b>Product Name</b> : {{$product->product_name}}</li>
-                            <li><b>Product Name</b> : {{$product->product_technical_name}}</li>
+                            <li><b>Technical Name</b> : {{$product->product_technical_name}}</li>
                             <li><b>Product Category</b> : {{$product->product_category_name}}</li>
                             <li><b>Compliance Name</b> : {{$service->service_name}}</li>
                             @if(unserialize($product->product_compliance) == null)
