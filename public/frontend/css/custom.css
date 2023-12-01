@@ -98,13 +98,13 @@
 .home-blog-title {
     font-size: 18px !important;
     font-weight: 700;
-    margin-bottom: 30px !important;
 }
 .home-blog-content {
     margin-top: 30px !important;
 }
 .home-blog-content p {
     display: none;
+    margin-bottom: none !important;
 }
 .home-blog-content p:first-child {
     display: block;

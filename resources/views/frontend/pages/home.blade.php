@@ -143,7 +143,7 @@
                         <div class="uk-card-media-top">
                             <img src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
                         </div>
-                        <div class="uk-card-body uk-padding-small">
+                        <div class="uk-card-body uk-padding-small uk-padding-remove-bottom">
                             <span class="home-blog-title"><a class="uk-link-reset" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">{{$blog->blog_title}}</a></span>
                             <span class="home-blog-content">
                                 {!! $blog->blog_content !!}
