@@ -51,6 +51,7 @@ Route::controller(SearchController::class)->group(function (){
 Route::controller(BrochureFormController::class)->group(function (){
     Route::get('/brochure', 'index')->name('frontend.site.brochure');
     Route::post('/brochure', 'store')->name('frontend.site.brochure.store');
+    Route::get('/brochure/{lead_id}', 'download')->name('frontend.site.brochure.download');
 });
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------

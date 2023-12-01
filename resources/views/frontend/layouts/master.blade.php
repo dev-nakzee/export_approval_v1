@@ -9,21 +9,21 @@
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
         @yield('scripts')
         <script>
-            $(document).ready(function(){
-                $(".brochure-form-submit").click(function(e){
-                    e.preventDefault();
-                    var form = $("#brochure-form");
-                    var formData = new FormData(form[0]);
-                    $.ajax({
-                        url: "{{route('frontend.site.brochure')}}",
-                        type: "POST",
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function(data){
-                            console.log(data);
-                        }
-                    });
+            $('#brochure-form').submit(function(e){
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+                $.ajax({
+                    url: "{{route('frontend.site.brochure')}}",
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data){
+                        var lead = JSON.parse(data);
+                        var id = lead.lead_id;
+                        var url = "{{route('frontend.site.brochure', "+id+" )}}";
+                    }
                 });
             });
         </script>
@@ -83,7 +83,7 @@
                 </p>
                 <span class="section-tagline">Form ke bareme kuch tobhi</span>
             </div>
-            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
+            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">

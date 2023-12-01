@@ -152,6 +152,7 @@
 <style>
 #mandatory-list_filter {
     font-size: 14px !important;
+    font-weight: 700 !important;
     color: #052faa !important;
 }
 </style>

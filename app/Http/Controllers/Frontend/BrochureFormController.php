@@ -41,7 +41,7 @@ class BrochureFormController extends Controller
         $country = json_decode($json)[0];
         $phonecode = json_decode($json)[1];
         $data = [
-            'fullname' => $request->fullname,
+            'name' => $request->fullname,
             'source' => $request->organisation,
             'email' => $request->email,
             'country' => $country,
@@ -51,7 +51,8 @@ class BrochureFormController extends Controller
             'status' => 'open',
             'ip_address' => $request->ip(),
         ];
-        Leads::create($data);
-        return response()->json(['success' => 'Form is successfully submitted!', $data]);
+        $lead = Leads::create($data);
+        $id = $lead->id;
+        return response()->json(['success' => 'Form is successfully submitted!', 'lead_id' => $id]);
     }
 }
