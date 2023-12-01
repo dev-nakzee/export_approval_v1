@@ -98,6 +98,11 @@
 .home-blog-title {
     font-size: 18px !important;
     font-weight: 700;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
 }
 .home-blog-content {
     margin-top: 30px !important;
@@ -240,7 +245,12 @@
     font-size: 16px !important;
     font-weight: 700;
 }
-
+.home-blog-tabs img {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    object-fit: fill;
+}
 .blog-cards {
     border: 1px #a3a3a3 solid !important;
     border-radius: 5px;

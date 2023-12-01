@@ -32,7 +32,7 @@
                             @if($loop->first)
                                 @if($service->service_product_show === 1) 
                                 <li class="nav-item">
-                                    <a href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                                    <a href="#{{'mandatory-product-list'}}">Product List for mandatory compliance</a>
                                 </li>
                                 @endif
                             @endif
@@ -50,7 +50,7 @@
             <div class="uk-width-3-4@m uk-padding-remove-right">
                 @if($sections)
                 @foreach($sections as $section)
-                    <div class="ps-sections" id="{{$section->service_section_slug}}">
+                    <div class="ps-sections" @if(!$loop->first) id="{{$section->service_section_slug}}" @endif>
                         <div class="uk-container ps-tab-header">
                             <span>{{$section->service_section_name}}<span>
                         </div>
@@ -62,7 +62,7 @@
                         @if($service->service_product_show === 1) 
                         <div class="ps-sections" id="mandatory-product-list">
                             <div class="uk-container ps-tab-header">
-                                <span>Mandatory Product List<span>
+                                <span>Product list for mandatory compliance<span>
                             </div>
                             <div class="uk-container ps-tab-content">
                                 <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
