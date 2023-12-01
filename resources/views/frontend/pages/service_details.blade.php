@@ -32,7 +32,7 @@
                             @if($loop->first)
                                 @if($service->service_product_show === 1) 
                                 <li class="nav-item">
-                                    <a href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                                    <a href="#{{'mandatory-product-list'}}">Product List for mandatory compliance</a>
                                 </li>
                                 @endif
                             @endif
@@ -43,16 +43,14 @@
                             <a href="#{{'frequently-asked-questions'}}">Frequently asked questions</a>
                         </li>
                         @endif
-                        <li>
-                            <a href="#">{{'Download Brochure'}}</a>
-                        </li>
                     </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
                 @if($sections)
                 @foreach($sections as $section)
-                    <div class="ps-sections" id="{{$section->service_section_slug}}">
+                    <div class="ps-sections" @if(!$loop->first) id="{{$section->service_section_slug}}" @endif>
                         <div class="uk-container ps-tab-header">
                             <span>{{$section->service_section_name}}<span>
                         </div>
@@ -64,7 +62,7 @@
                         @if($service->service_product_show === 1) 
                         <div class="ps-sections" id="mandatory-product-list">
                             <div class="uk-container ps-tab-header">
-                                <span>Mandatory Product List<span>
+                                <span>Product list for mandatory compliance<span>
                             </div>
                             <div class="uk-container ps-tab-content">
                                 <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
@@ -150,11 +148,7 @@
 @section('scripts')
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
 <style>
-#mandatory-list_filter {
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    color: #052faa !important;
-}
+
 </style>
 <script type="text/javascript" src="{{asset('frontend/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>

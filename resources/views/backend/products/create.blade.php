@@ -15,6 +15,10 @@
             <label for="slug" class="form-label">Product slug</label>
             <input type="text" class="form-control form-control-sm" id="slug" name="slug">
         </div>
+        <div class="mb-3 col-md-12">
+            <label for="product_technical_name" class="form-label">Product technical name</label>
+            <input type="text" class="form-control form-control-sm" id="product_technical_name" name="product_technical_name">
+        </div>
         <div class="mb-3 col-md-6">
             <label for="product_service_id" class="form-label">Service</label>
             <select class="form-control form-control-sm" id="product_service_id" name="product_service_id">

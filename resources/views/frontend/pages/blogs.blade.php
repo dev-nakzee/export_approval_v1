@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{'Blogs'}}
+            <span class="uk-text-small" style="color: #8b8b8b;">{{'Export Approval'}}</span>
+            <br>{{'Blogs'}}
         </h1>
     </div>
 </section>
@@ -29,10 +30,8 @@
                             </li>
                         @endforeach
                         @endif
-                        <li>
-                            <a href="#">{{'Download Brochure'}}</a>
-                        </li>
                     </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-section uk-width-3-4@m uk-padding-remove-right uk-padding-remove-vertical">

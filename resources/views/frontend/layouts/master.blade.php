@@ -26,6 +26,18 @@
                     }
                 });
             });
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scrollTop = 80;
+                    if($(window).scrollTop() >= scrollTop){
+                        $('.back-to-top').removeClass('uk-hidden');
+                    }
+                    if($(window).scrollTop() < scrollTop){
+                        $('.back-to-top').addClass('uk-hidden');  
+                    }
+                });
+                UIkit.modal('#site-pop-up').show();
+            });
         </script>
     </head>
     <body>
@@ -64,7 +76,10 @@
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="#">Careers</a>
+                                    <a href="#">Media Coverage</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,36 +91,36 @@
             </div>
         </nav>
         @yield('content')
-        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
+        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
                 </p>
-                <span class="section-tagline">Guidelines & Requirements</span>
+                <span class="section-tagline">Process &amp; Guidelines</span>
             </div>
             <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">
-                        <label class="uk-form-label" for="fullname">Your Name</label>
+                        {{-- <label class="uk-form-label" for="fullname">Your Name</label> --}}
                         <div class="uk-form-controls">
-                            <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Full Name">
+                            <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Your Name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m">
-                        <label class="uk-form-label" for="organisation">Organisation</label>
+                        {{-- <label class="uk-form-label" for="organisation">Organisation</label> --}}
                         <div class="uk-form-controls">
                             <input class="uk-input" name="organisation" id="organisation" type="text" placeholder="Company name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="email">Email</label>
+                        {{-- <label class="uk-form-label" for="email">Email</label> --}}
                         <div class="uk-form-controls">
                             <input class="uk-input" name="email" id="email" type="email" placeholder="Email address">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="mobile">Mobile</label>
+                        {{-- <label class="uk-form-label" for="mobile">Mobile</label> --}}
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
                                 <option value="">Select Country</option>
@@ -119,7 +134,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="service">Services</label>
+                        {{-- <label class="uk-form-label" for="service">Services</label> --}}
                         <div class="uk-form-controls">
                             <select class="uk-select" id="service" name="service">
                                 <option value="">Select Service</option>
@@ -132,10 +147,10 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="source">How did you find you?</label>
+                        {{-- <label class="uk-form-label" for="source">How did you find us?</label> --}}
                         <div class="uk-form-controls">
                             <select class="uk-select" id="source" name="source">
-                                <option value="">Select Source</option>
+                                <option value="">How did you find us?</option>
                                 <option value="Website">Website</option>
                                 <option value="Social Media">Social Media</option>
                                 <option value="Referral">Referral</option>
@@ -144,22 +159,22 @@
                         </div>
                     </div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="message">Message</label>
+                        {{-- <label class="uk-form-label" for="message">Message</label> --}}
                         <div class="uk-form-controls">
                             <textarea name="message" class="uk-textarea" placeholder="Enter you query along with product details"></textarea>
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        <label class="uk-form-label" for="captcha">Captcha</label>
+                        {{-- <label class="uk-form-label" for="captcha">Captcha</label> --}}
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <span class="uk-width-1-2 uk-padding-remove-left">{!! captcha_img() !!}<button type="button" class="uk-button uk-button-small" class="reload" id="reload" uk-icon="refresh">
                             </button></span>
                             
-                            <input class="uk-input uk-width-1-2 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Validate captcha">
+                            <input class="uk-input uk-width-1-2 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
-                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit uk-margin-top uk-width-1-1">Submit</button>
+                        <button class="uk-border-rounded uk-button uk-button-primary brochure-form-submit">Submit</button>
                     </div>
                 </div>
             </form>
@@ -218,5 +233,17 @@
                 </div>
             </div>
         </section>
+        <div class="back-to-top uk-position-fixed uk-position-bottom-right uk-padding-small uk-background-primary uk-margin uk-light uk-hidden">
+            <a href="#" uk-totop uk-scroll></a>
+        </div>
+        {{-- <div id="site-pop-up" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title">Headline</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                </p>
+            </div>
+        </div> --}}
     </body>
 </html>

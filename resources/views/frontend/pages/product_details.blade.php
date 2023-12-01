@@ -34,10 +34,8 @@
                             </li>
                         @endforeach
                         @endif
-                        <li>
-                            <a href="#">{{'Download Brochure'}}</a>
-                        </li>
                     </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
@@ -45,11 +43,15 @@
                     <span>{{'Product Overview'}}</span>
                 </div>
                 <div class="uk-padding-small" uk-grid>
-                    <div data-src="{{$product->media_path}}" uk-img class="uk-width-1-3@m uk-background-contain uk-padding-remove">
+                    <div class="uk-width-2-5@m uk-background-contain uk-padding-remove-right">
+                        <img class="uk-width-1-1" src="{{$product->media_path}}" alt="{{$product->img_alt}}">
                     </div>
-                    <div class="uk-width-2-3@m">
+                    <div class="uk-width-3-5@m">
                         <ul class="uk-list uk-list-divider">
-                            <li><b>Product Name</b> : {{$product->product_name}}</li>
+                            <li><b>General Product Name</b> : {{$product->product_name}}</li>
+                            @if($product->product_technical_name != null)
+                            <li><b>Technical Product Name</b> : <span>{{$product->product_technical_name}}</span></li>
+                            @endif
                             <li><b>Product Category</b> : {{$product->product_category_name}}</li>
                             <li><b>Compliance Name</b> : {{$service->service_name}}</li>
                             @if(unserialize($product->product_compliance) == null)

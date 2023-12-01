@@ -2,8 +2,8 @@
 @section('content')
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
-        <h1>
-            {{$blog->blog_title}}
+        <h1 class="uk-padding-small">
+            {{'Blog - '. $blog->blog_category_name}}
         </h1>
     </div>
 </section>
@@ -31,17 +31,15 @@
                             </li>
                         @endforeach
                         @endif
-                        <li>
-                            <a href="#">{{'Download Brochure'}}</a>
-                        </li>
                     </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-section uk-width-3-4@m uk-padding-remove-right uk-padding-remove-vertical">
                 <div class="uk-container">
                     @if($blog)
                     <article class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{$blog->blog_title}}</a></h1>
+                        <h1 class="uk-article-title blog-detail-title">{{$blog->blog_title}}</h1>
                         <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>
                         <img class="uk-margin-bottom" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">                   
                         <div>

@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{'Industrial Notifications'}}
+            <span class="uk-text-small" style="color: #8b8b8b;">{{$notice_service->service_name}}</span>
+            <br>{{'Industrial Notifications'}}
         </h1>
     </div>
 </section>
@@ -29,17 +30,15 @@
                             </li>
                         @endforeach
                         @endif
-                        <li>
-                            <a href="#">{{'Download Brochure'}}</a>
-                        </li>
                     </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right uk-height-small">
                 <div class="uk-container">
                     <div class="ps-sections">
-                        <div class="uk-container ps-tab-header">
-                            <span>{{$notice->notice_title}}<span>
+                        <div class="uk-container">
+                            <span class="notice-title">{{$notice->notice_title}}<span>
                         </div>
                         <div class="uk-container ps-tab-content">
                             {!! $notice->notice_content !!}
