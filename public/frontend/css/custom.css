@@ -282,19 +282,11 @@
 .brochure-form-submit {
     background-color: #052faa;
     color: #ffffff;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 15px;
 }
 .brochure-form-submit:hover {
     background-color: #ffffff;
     border: 2px #052faa solid;
     color: #052faa;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 15px;
 }
 
 .clients-scroll {
