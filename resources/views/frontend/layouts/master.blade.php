@@ -159,7 +159,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
-                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit uk-margin-top">Submit</button>
+                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit uk-margin-top uk-width-1-1">Submit</button>
                     </div>
                 </div>
             </form>
