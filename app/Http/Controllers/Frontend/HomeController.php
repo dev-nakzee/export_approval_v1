@@ -31,6 +31,9 @@ class HomeController extends Controller
             ->where('static_page_id', 1)
             ->orderBy('section_order', 'asc')
             ->get();
+        foreach($sections as $key => $value) {
+            $sections[$key]['media_path'] = Storage::url($value['media_path']);
+        }
         $blogs = Blog::select('blogs.*', 'blog_categories.blog_category_slug', 'media_path')
             ->join('blog_categories', 'blogs.blog_category_id', 'blog_categories.blog_category_id')
             ->leftJoin('media', 'blogs.media_id', 'media.media_id')
