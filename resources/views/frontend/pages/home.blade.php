@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="wcu-one wcu-tabs" hidden>
-                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                            <span>We ensure that our clients receive strategic insights and personalized advice to navigate challenges and achieve their goals.</span>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="wcu-two wcu-tabs" hidden>
-                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                            <span>We eliminate unnecessary steps and enhance overall productivity, enabling you to focus on your core objectives.</span>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="wcu-three wcu-tabs" hidden>
-                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                            <span>From proactive problem-solving to personalized assistance, we stand by our clients at every stage.</span>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
-                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                            <span>Our strategies are designed to deliver swift and effective results, allowing our clients to stay ahead in their competitive landscape.</span>
                         </div>
                     </div>
                 <!-- grid content end -->
