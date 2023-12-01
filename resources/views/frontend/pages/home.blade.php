@@ -99,7 +99,7 @@
             <p class="section-description">{!! $sections[2]->section_description !!}</p>
         </div>
         <div class="uk-card uk-grid-collapse uk-margin" uk-grid>
-            <div class="uk-flex-last@s uk-card-media-right uk-cover-container uk-width-2-5@m">
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container uk-width-2-5@m uk-border-rounded">
                 <img src="{{$sections[2]->media_path}} " alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
