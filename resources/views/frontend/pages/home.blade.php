@@ -104,7 +104,7 @@
                 <canvas width="600" height="400"></canvas>
             </div>
             <div class="uk-width-2-3@m">
-                <div class="uk-card-body">
+                <div class="uk-card-body uk-padding-remove-vertical">
                     {!! $sections[2]->section_content !!}
                 </div>
             </div>
