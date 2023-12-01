@@ -240,6 +240,10 @@
     font-size: 14px !important;
     font-weight: 500;
 }
+.notice-title {
+    font-size: 26px !important;
+    font-weight: 500;
+}
 
 .home-blog-tabs span.uk-card-title{
     font-size: 16px !important;
@@ -266,6 +270,15 @@
     z-index: 99 !important;
     position: relative;
 }
+#download-brochure {
+    border-top: 0.1em solid #aaaaaa !important;
+}
+#download-brochure .section-tagline {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #000;
+}
+
 .brochure-form-submit {
     background-color: #052faa;
     color: #ffffff;
@@ -299,4 +312,9 @@ section.website-footer {
     font-size: 16px !important;
     font-weight: 500;
     color: #fff !important;
+}
+.back-to-top {
+    background-color: #ed462f !important;
+    color: #fff;
+    z-index: 99 !important;
 }

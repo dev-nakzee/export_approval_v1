@@ -96,7 +96,7 @@
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
                 </p>
-                <span class="section-tagline">Guidelines & Requirements</span>
+                <span class="section-tagline">Process &amp; Guidelines</span>
             </div>
             <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
                 @csrf
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
-                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit uk-margin-top uk-width-1-1">Submit</button>
+                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit uk-margin-top">Submit</button>
                     </div>
                 </div>
             </form>
@@ -236,7 +236,7 @@
         <div class="back-to-top uk-position-fixed uk-position-bottom-right uk-padding-small uk-background-primary uk-margin uk-light uk-hidden">
             <a href="#" uk-totop uk-scroll></a>
         </div>
-        <div id="site-pop-up" uk-modal>
+        {{-- <div id="site-pop-up" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
                 <h2 class="uk-modal-title">Headline</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -244,6 +244,6 @@
                     <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                 </p>
             </div>
-        </div>
+        </div> --}}
     </body>
 </html>

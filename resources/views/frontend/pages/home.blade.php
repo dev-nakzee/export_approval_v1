@@ -206,7 +206,7 @@
                             <span class="home-blog-content">
                                 {!! $blog->blog_content !!}
                             </span>                
-                            <div>
+                            <div class="uk-margin-bottom">
                                 <a class="home-blog-link" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">Read more</a>
                             </div>
                         </div>
