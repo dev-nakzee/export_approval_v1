@@ -90,7 +90,7 @@
         </div>
     </section>
     @if($sections[2]->section_status == 1)
-    <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[2]->section_color}}">
+    <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="background-color: {{$sections[2]->section_color}}">
         <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[2]->section_name}} 
