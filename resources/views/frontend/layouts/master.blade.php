@@ -147,6 +147,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
+                        <label class="uk-form-label" for="mobile">Captcha</label>
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <span class="uk-width-1-2">{!! captcha_img() !!}</span>
                             <input class="uk-input uk-width-1-2 uk-padding-small uk-padding-remove-vertical" name="mobile" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="mobile number">
