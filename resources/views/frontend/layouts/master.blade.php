@@ -129,13 +129,27 @@
                             </select>
                         </div>
                     </div>
+                    <div class="uk-width-1-2@m uk-margin-small-top">    
+                        <label class="uk-form-label" for="source">Source</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="source" name="source">
+                                <option value="Website">Website</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Referral">Referral</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
                         <label class="uk-form-label" for="message">Some message</label>
                         <div class="uk-form-controls">
                             <textarea name="message" class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
                         </div>
                     </div>
-                    <div class="uk-width-1-1@m uk-text-center uk-margin-small-top">
+                    <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
+                        <button class="uk-button-small uk-button uk-button-primary brochure-form-submit">Submit</button>
+                    </div>
+                    <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
                         <button class="uk-button-small uk-button uk-button-primary brochure-form-submit">Submit</button>
                     </div>
                 </div>

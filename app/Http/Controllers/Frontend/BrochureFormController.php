@@ -27,6 +27,11 @@ class BrochureFormController extends Controller
         return view('frontend.pdf.brochure');
     }
 
+    public function reloadCaptcha()
+    {
+        return response()->json(['captcha'=> captcha_img()]);
+    }
+
     public function store(Request $request): JsonResponse
     {
         $request->validate([

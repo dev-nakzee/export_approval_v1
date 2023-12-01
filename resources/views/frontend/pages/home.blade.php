@@ -113,7 +113,7 @@
     @endif
     @if($sections[3]->section_status == 1)
     <section class="uk-section home-section-3 uk-padding uk-padding-remove-vertical" style="background-color: {{$sections[3]->section_color}}">
-        <div class="section-two-heading uk-text-center uk-padding">
+        <div class="section-two-heading uk-text-center uk-padding-remove">
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[3]->section_name}} 
             </p>
