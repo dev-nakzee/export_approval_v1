@@ -77,11 +77,11 @@
         </nav>
         @yield('content')
         <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
-            <div class="section-two-heading uk-text-center uk-padding">
+            <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
                 </p>
-                <span class="section-tagline">Guidelines & requirements</span>
+                <span class="section-tagline">Guidelines & Requirements</span>
             </div>
             <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
                 @csrf

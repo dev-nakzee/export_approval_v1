@@ -121,7 +121,65 @@
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
         <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
-        {!! $sections[3]->section_content !!}
+        {{-- {!! $sections[3]->section_content !!} --}}
+        <div class="uk-section">
+            <div class="uk-container"><!-- grid content begin -->
+                <div class="uk-grid-divider uk-grid" data-uk-grid="" uk-height-match=".wcu-tabs">
+                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+                        <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
+                            <div class="uk-width-auto uk-first-column">
+                                <img src="../../../../../../storage/media/rating-1701255267.svg" alt="vulcan-icon1" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/rating-1701255267.svg" data-uk-img="">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3>Expert Guidance</h3>
+                            </div>
+                        </div>
+                        <div class="wcu-one wcu-tabs" hidden>
+                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
+                        <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
+                            <div class="uk-width-auto uk-first-column">
+                                <img src="../../../../../../storage/media/onboarding-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/onboarding-1701255267.svg" data-uk-img="">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3>Streamline Process</h3>
+                            </div>
+                        </div>
+                        <div class="wcu-two wcu-tabs" hidden>
+                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
+                        <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
+                            <div class="uk-width-auto uk-first-column">
+                                <img src="../../../../../../storage/media/customer-support-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/customer-support-1701255267.svg" data-uk-img="">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3>Comprehensive Support</h3>
+                            </div>
+                        </div>
+                        <div class="wcu-three wcu-tabs" hidden>
+                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
+                        <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
+                            <div class="uk-width-auto uk-first-column">
+                                <img src="../../../../../../storage/media/back-in-time-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/back-in-time-1701255267.svg" data-uk-img="">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h3>Comprehensive Support</h3>
+                            </div>
+                        </div>
+                        <div class="wcu-four wcu-tabs" hidden>
+                            <span>Facilis este expedita distinctio libero tempore soluta nobis eligendi cumque nihil impedit</span>
+                        </div>
+                    </div>
+                <!-- grid content end -->
+                </div>
+            </div>
         </div>
     </section>
     @endif
