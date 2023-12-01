@@ -79,17 +79,17 @@
         <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
             <div class="section-two-heading uk-text-center uk-padding">
                 <p class="section-heading uk-margin-remove-bottom">
-                    Form Name
+                    Download Brochure
                 </p>
-                <span class="section-tagline">Form ke bareme kuch tobhi</span>
+                <span class="section-tagline">Guidelines & requirements</span>
             </div>
             <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">
-                        <label class="uk-form-label" for="fullname">Full Name</label>
+                        <label class="uk-form-label" for="fullname">Your Name</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Complete Name">
+                            <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Full Name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m">
@@ -108,6 +108,7 @@
                         <label class="uk-form-label" for="mobile">Mobile</label>
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
+                                <option value="">Select Country</option>
                                 @if($countries)
                                 @foreach($countries as $country)
                                 <option value="{{json_encode([$country->name, $country->phonecode])}}">{{ucfirst(strtolower($country->name))." (+".$country->phonecode.")"}}</option>
@@ -121,6 +122,7 @@
                         <label class="uk-form-label" for="service">Services</label>
                         <div class="uk-form-controls">
                             <select class="uk-select" id="service" name="service">
+                                <option value="">Select Service</option>
                                 @if($services)
                                 @foreach($services as $service)
                                 <option value="{{$service->service_id}}">{{$service->service_name}}</option>
@@ -133,6 +135,7 @@
                         <label class="uk-form-label" for="source">Source</label>
                         <div class="uk-form-controls">
                             <select class="uk-select" id="source" name="source">
+                                <option value="">Select Source</option>
                                 <option value="Website">Website</option>
                                 <option value="Social Media">Social Media</option>
                                 <option value="Referral">Referral</option>
