@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="source">Source</label>
+                        <label class="uk-form-label" for="source">How did you find you?</label>
                         <div class="uk-form-controls">
                             <select class="uk-select" id="source" name="source">
                                 <option value="">Select Source</option>
@@ -144,9 +144,9 @@
                         </div>
                     </div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
-                        <label class="uk-form-label" for="message">Some message</label>
+                        <label class="uk-form-label" for="message">Message</label>
                         <div class="uk-form-controls">
-                            <textarea name="message" class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
+                            <textarea name="message" class="uk-textarea" placeholder="Enter you query along with product details"></textarea>
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
