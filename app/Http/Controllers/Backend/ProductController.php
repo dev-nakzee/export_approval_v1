@@ -59,6 +59,7 @@ class ProductController extends Controller
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
+            'product_technical_name' => $request->product_technical_name,
             'product_service_id' => $request->product_service_id,
             'product_category_id' => $request->product_category_id,
             'media_id' => $request->media_id,
@@ -164,6 +165,7 @@ class ProductController extends Controller
         $data = [
             'product_name' => $request->name,
             'product_slug' => $request->slug,
+            'product_technical_name' => $request->product_technical_name,
             'product_service_id' => $request->product_service_id,
             'product_category_id' => $request->product_category_id,
             'media_id' => $request->media_id,

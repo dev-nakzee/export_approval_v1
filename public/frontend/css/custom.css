@@ -195,6 +195,24 @@
     font-weight: 300;
     color: #303030;
 }
+
+.dataTables_filter label {
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    color: #ed462f !important;
+}
+#mandatory-list_filter label input {
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    border: 1px solid #052faa !important;
+    box-shadow: 0 0 0 0.1rem rgba(5, 47, 170, 0.25) !important;
+    border-radius: 2px !important;
+    width: 80% !important;
+}
+#mandatory-list_filter label input::before {
+    content: "Hello" !important;
+}
+
 #mandatory-list tbody tr:hover {
     cursor: pointer !important;
 }
