@@ -94,6 +94,34 @@
     padding-bottom: 5px;
     margin-bottom: 0px !important;  
 }
+
+.home-blog-title {
+    font-size: 18px !important;
+    font-weight: 700;
+    margin-bottom: 30px !important;
+}
+.home-blog-content {
+    margin-top: 30px !important;
+}
+.home-blog-content p {
+    display: none;
+}
+.home-blog-content p:first-child {
+    display: block;
+}
+.home-blog-content p:first-child span {
+    font-size: 14px !important;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}
+.home-blog-link {
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #ed462f !important;
+}
 /* All Pages */
 .page-header {
     background-color: #ff1f001a;

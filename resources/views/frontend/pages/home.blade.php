@@ -136,15 +136,21 @@
         </div>
         @if($blogs)
         <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-bottom" tabindex="-1" uk-slider>
-            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid" uk-height-match=".home-blog-tabs">
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid" uk-height-match=".home-blog-tabs">
                 @foreach($blogs as $blog)
                 <li>
                     <div class="uk-card uk-card-default home-blog-tabs">
                         <div class="uk-card-media-top">
                             <img src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
                         </div>
-                        <div class="uk-card-body">
-                            <a href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}"><span class="uk-card-title">{{$blog->blog_title}}</span></a>
+                        <div class="uk-card-body uk-padding-small">
+                            <span class="home-blog-title"><a class="uk-link-reset" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">{{$blog->blog_title}}</a></span>
+                            <span class="home-blog-content">
+                                {!! $blog->blog_content !!}
+                            </span>                
+                            <div>
+                                <a class="home-blog-link" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">Read more</a>
+                            </div>
                         </div>
                     </div>
                 </li>
