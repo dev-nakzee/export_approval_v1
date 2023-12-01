@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{'Blogs'}}
+            <span class="uk-text-small" style="color: #8b8b8b;">{{$category_name->blog_category_name}}</span>
+            <br>{{'Blogs'}}
         </h1>
     </div>
 </section>
@@ -25,7 +26,7 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($categories)
                         @foreach($categories as $category)
-                            <li>
+                            <li {{ ($category->blog_category_slug === $category_slug) ? 'class=uk-active':'' }}>
                                 <a href="{{route('frontend.site.blog.category',$category->blog_category_slug)}}">{{$category->blog_category_name}}</a>
                             </li>
                         @endforeach
@@ -45,13 +46,12 @@
                                 <span class="uk-article-title uk-text-large uk-text-bold"><a class="uk-link-reset" href="">{{$blog->blog_title}}</a></span>
                             
                                 <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>
-                            
+                                
                                 <div class="uk-grid-small uk-child-width-auto" uk-grid>
                                     <div>
                                         <a class="uk-button uk-button-text" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">Read more</a>
                                     </div>
                                 </div>
-                            
                             </article>
                         </div>
                     </div>

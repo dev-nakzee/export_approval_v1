@@ -31,9 +31,9 @@ class IndustryNotificationController extends Controller
 
     public function service(Request $request, $service)
     {
-        $notice_service = Services::select('service_id','service_slug')->where('service_slug', $service)->first();
+        $notice_service = Services::select('service_id', 'service_name', 'service_slug')->where('service_slug', $service)->first();
         $services = Services::select('service_name', 'service_slug')->get();
-        $notices = Notices::select('notice_id', 'notice_title', 'notice_date', 'notice_slug', 'service_slug')
+        $notices = Notices::select('notice_id', 'notice_title', 'notice_date', 'notice_slug', 'service_name','service_slug')
             ->join('services', 'services.service_id', '=', 'notices.service_id')
             ->where('notices.service_id', $notice_service->service_id)
             ->orderBy('notices.created_at', 'DESC')

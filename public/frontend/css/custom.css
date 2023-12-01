@@ -249,6 +249,11 @@
     border-radius: 5px;
 }
 
+/* Blogs */
+.blog-detail-title {
+    font-size: 24px !important;
+    font-weight: 500;
+}
 /* Footer */
 .brochure-section {
     z-index: 99 !important;

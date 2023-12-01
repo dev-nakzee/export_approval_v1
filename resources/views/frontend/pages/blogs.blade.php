@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{'Blogs'}}
+            <span class="uk-text-small" style="color: #8b8b8b;">{{'Export Approval'}}</span>
+            <br>{{'Blogs'}}
         </h1>
     </div>
 </section>

@@ -42,15 +42,16 @@ class BlogsController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
+        $category_name = BlogCategory::select('blog_category_name')->where('blog_category_slug', $category)->first();
         $category_slug = $category;
         $categories = BlogCategory::get();
-        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug'));
+        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug', 'category_name'));
     }
 
     public function detail ($category, $slug)
     {
         //
-        $blog = Blog::select('blogs.*', 'blog_category_name', 'blog_category_slug', 'media_path')
+        $blog = Blog::select('blogs.*', 'blog_category_name', 'blog_category_name', 'blog_category_slug', 'media_path')
             ->join('blog_categories', 'blogs.blog_category_id', 'blog_categories.blog_category_id')
             ->leftJoin('media', 'blogs.media_id', 'media.media_id')
             ->where('blog_slug', $slug)

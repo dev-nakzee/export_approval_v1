@@ -3,7 +3,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            {{'Industrial Notifications'}}
+            <span class="uk-text-small" style="color: #8b8b8b;">{{$notice_service->service_name}}</span>
+            <br>{{'Industrial Notifications'}}
         </h1>
     </div>
 </section>
