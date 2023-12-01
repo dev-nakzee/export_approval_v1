@@ -76,7 +76,10 @@
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="#">Careers</a>
+                                    <a href="#">Media Coverage</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery</a>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +91,7 @@
             </div>
         </nav>
         @yield('content')
-        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical">
+        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
