@@ -146,11 +146,13 @@
                             <textarea name="message" class="uk-textarea" placeholder="Some thing that you would like to know"></textarea>
                         </div>
                     </div>
-                    <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
-                        <label class="uk-form-label" for="mobile">Captcha</label>
+                    <div class="uk-width-1-2@m uk-margin-small-top">
+                        <label class="uk-form-label" for="captcha">Captcha</label>
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
-                            <span class="uk-width-1-2">{!! captcha_img() !!}</span>
-                            <input class="uk-input uk-width-1-2 uk-padding-small uk-padding-remove-vertical" name="mobile" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="mobile number">
+                            <span class="uk-width-1-2 uk-padding-remove-left">{!! captcha_img() !!}<button type="button" class="uk-button uk-button-small" class="reload" id="reload" uk-icon="refresh">
+                            </button></span>
+                            
+                            <input class="uk-input uk-width-1-2 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Validate captcha">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
