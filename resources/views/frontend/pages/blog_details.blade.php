@@ -39,7 +39,7 @@
                 <div class="uk-container">
                     @if($blog)
                     <article class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{$blog->blog_title}}</a></h1>
+                        <h1 class="uk-article-title uk-text-medium">{{$blog->blog_title}}</h1>
                         <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>
                         <img class="uk-margin-bottom" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">                   
                         <div>
