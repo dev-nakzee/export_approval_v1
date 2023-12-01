@@ -98,12 +98,12 @@
             <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[2]->section_description !!}</p>
         </div>
-        <div class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+        <div class="uk-card uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container uk-width-1-3@m">
                 <img src="{{$sections[2]->media_path}} " alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
-            <div>
+            <div class="uk-width-2-3@m">
                 <div class="uk-card-body">
                     {!! $sections[2]->section_content !!}
                 </div>
