@@ -170,7 +170,7 @@
                                 <img src="../../../../../../storage/media/back-in-time-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/back-in-time-1701255267.svg" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Comprehensive Support</h3>
+                                <h3>Time Efficient</h3>
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
