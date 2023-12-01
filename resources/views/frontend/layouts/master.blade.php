@@ -27,6 +27,8 @@
                 });
             });
             $(document).ready(function(){
+                // $('.dataTables_filter label input').attr('placeholder', 'search');
+                // $('.dataTables_filter label').innerText = '';
                 $(window).scroll(function(){
                     var scrollTop = 80;
                     if($(window).scrollTop() >= scrollTop){
@@ -36,7 +38,7 @@
                         $('.back-to-top').addClass('uk-hidden');  
                     }
                 });
-                UIkit.modal('#site-pop-up').show();
+                // UIkit.modal('#site-pop-up').show();
             });
         </script>
     </head>

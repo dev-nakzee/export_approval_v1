@@ -18,7 +18,7 @@
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
-    <div class="uk-flex">
+    <div>
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
@@ -51,7 +51,7 @@
                 @if($sections)
                 @foreach($sections as $section)
                     <div class="ps-sections" @if(!$loop->first) id="{{$section->service_section_slug}}" @endif>
-                        <div class="uk-container ps-tab-header">
+                        <div class="uk-container ps-tab-header uk-margin-remove-left uk-margin-remove-right">
                             <span>{{$section->service_section_name}}<span>
                         </div>
                         <div class="uk-container ps-tab-content">
@@ -70,7 +70,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Product Name</th>
-                                            <th class="uk-hidden">category</th>
+                                            <th>category</th>
                                             @if($service->service_compliance)
                                             @foreach(explode(',',$service->service_compliance) as $compliance)
                                             @if($compliance)
@@ -81,46 +81,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @php
-                                            $category = ''
-                                        @endphp
                                         @foreach($products as $product)
-                                        @if($category === $product->product_category_name)
                                         <tr class="product-page-link" data-slug="{{$product->product_slug}}">
                                             <td>{{$loop->iteration}}</td>
-                                            <td class="uk-hidden">{{$product->product_category_name}}</td>
                                             <td>{{$product->product_name}}</td>
+                                            <td>{{$product->product_category_name}}</td>
                                             @if($service->service_compliance)
                                             @foreach(unserialize($product->product_compliance) as $compliance)
                                                 <td>{{$compliance}}</td>
                                             @endforeach
                                             @endif
                                         </tr>
-                                        @else
-                                            <tr>
-                                                <td class="uk-hidden"></td>
-                                                <td colspan="100%" class="uk-text-center uk-text-bold">{{$product->product_category_name}}</td>
-                                                <td class="uk-hidden"></td>
-                                                @if($service->service_compliance)
-                                                @foreach(unserialize($product->product_compliance) as $compliance)
-                                                    <td class="uk-hidden"></td>
-                                                @endforeach
-                                                @endif
-                                            </tr>
-                                            <tr class="product-page-link" data-slug="{{$product->product_slug}}">
-                                                <td>{{$loop->iteration}}</td>
-                                                <td class="uk-hidden">{{$product->product_category_name}}</td>
-                                                <td>{{$product->product_name}}</td>
-                                                @if($service->service_compliance)
-                                                @foreach(unserialize($product->product_compliance) as $compliance)
-                                                    <td>{{$compliance}}</td>
-                                                @endforeach
-                                                @endif
-                                            </tr>
-                                        @endif
-                                        @php
-                                        $category = $product->product_category_name;
-                                        @endphp
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -158,6 +129,12 @@
             "paging":   true,
             "ordering": false,
             "searching": true,
+            "oLanguage": {
+                "sSearch": ""
+            },
+            language: {
+                searchPlaceholder: "Search {{$service->service_name}} products"
+            }
         });
         $(window).scroll(function(){
             var scrollTop = 80;

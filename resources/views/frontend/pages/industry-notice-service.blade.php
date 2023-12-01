@@ -35,9 +35,9 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
-                <div class="uk-container">
-                    <div>
-                        <span>{{$notice_service->service_name}}</span>
+                <div class="uk-container uk-padding-remove-right uk-margin-remove-right">
+                    <div class="uk-margin-bottom">
+                        <span class="notification_title">{{$notice_service->service_name}} Industrial Notifications</span>
                     </div>
                     <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
                         <thead>
@@ -53,7 +53,7 @@
                             <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$notice->notice_title}}</td>
-                                <td>{{$notice->notice_date}}</td>
+                                <td>{{$notice->notice_date->format('d-m-Y')}}</td>
                             </tr>
                             @endforeach
                             @endif
@@ -75,6 +75,12 @@
             "paging":   true,
             "ordering": false,
             "searching": true,
+            "oLanguage": {
+                "sSearch": ""
+            },
+            language: {
+                searchPlaceholder: "Search {{$notice_service->service_name}} notifications"
+            }
         });
         $(window).scroll(function(){
             var scrollTop = 80;

@@ -34,29 +34,33 @@
                     <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
-            <div class="uk-width-3-4@m uk-padding-remove-right">
-                
-                <div class="uk-container">
-                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Notification</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if($notices)
-                            @foreach($notices as $notice)
-                            <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$notice->notice_title}}</td>
-                                <td>{{$notice->notice_date}}</td>
-                            </tr>
-                            @endforeach
-                            @endif
-                        </tbody>
-                    </table>
+            <div class="uk-width-3-4@m uk-padding-remove uk-margin-remove">
+                <div class="uk-flex uk-padding-remove-right uk-margin-remove-right uk-margin-remove-left" uk-grid>
+                    <div class="uk-margin-bottom uk-width-1-1">
+                        <span class="notification_title">{{"All Industrial Notifications"}}</span>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Notification</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if($notices)
+                                @foreach($notices as $notice)
+                                <tr class="notice-detail-link" data-link="{{route('frontend.site.industry-notification.detail', [$notice->service_slug,$notice->notice_slug])}}">
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$notice->notice_title}}</td>
+                                    <td>{{$notice->notice_date->format('d-m-Y')}}</td>
+                                </tr>
+                                @endforeach
+                                @endif
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +77,12 @@
             "paging":   true,
             "ordering": false,
             "searching": true,
+            "oLanguage": {
+                "sSearch": ""
+            },
+            language: {
+                searchPlaceholder: "Search notifications"
+            }
         });
         $(window).scroll(function(){
             var scrollTop = 80;

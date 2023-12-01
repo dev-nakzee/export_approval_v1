@@ -33,6 +33,11 @@
     padding: 5px 15px;
 }
 
+.uk-navbar-right button.uk-button-default:hover {
+    color: #ffffff;
+    background-color: #052faa;
+}
+
 /* Home */
 .home-section-1 {
     background-color: #ff1f001a;
@@ -192,8 +197,17 @@
 }
 
 .download-brochure-btn {
+    border: 2px solid #052faa;
+    color: #052faa;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 15px;
+}
+.download-brochure-btn:hover {
+    border: 2px solid #052faa;
     background-color: #052faa;
-    color: #fff;
+    color: #ffffff;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
@@ -217,7 +231,11 @@
     font-weight: 900 !important;
     color: #ed462f !important;
 }
-#mandatory-list_filter label input {
+.dataTables_filter label input {
+    background-image: url(../images/search-icon.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    padding-left: 30px !important;
     font-size: 14px !important;
     font-weight: 900 !important;
     border: 1px solid #052faa !important;
@@ -225,14 +243,17 @@
     border-radius: 2px !important;
     width: 80% !important;
 }
-#mandatory-list_filter label input::before {
+.dataTables_filter label input::before {
     content: "Hello" !important;
 }
 
 #mandatory-list tbody tr:hover {
     cursor: pointer !important;
 }
-
+.notification_title {
+    font-size: 24px !important;
+    font-weight: 700;
+}
 .notice-detail-link:hover {
     cursor: pointer !important;
 }
@@ -281,13 +302,14 @@
 }
 
 .brochure-form-submit {
-    background-color: #052faa;
-    color: #ffffff;
+    border: 2px #052faa solid;
+    background-color: #ffffff;
+    color: #052faa;
 }
 .brochure-form-submit:hover {
-    background-color: #ffffff;
+    background-color: #052faa;
     border: 2px #052faa solid;
-    color: #052faa;
+    color: #ffffff;
 }
 
 .clients-scroll {
