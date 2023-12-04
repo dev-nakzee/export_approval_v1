@@ -313,7 +313,7 @@ iframe {
            line-clamp: 3; 
    -webkit-box-orient: vertical;
 }
-.blog-content ol, .blog-content ul, .blog-content div, .blog-content p {
+.blog-content ol, .blog-content ul, .blog-content div, .blog-content p, .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6, .blog-content blockquote, .blog-content pre, .blog-content table, .blog-content dl, .blog-content address, .blog-content fieldset, .blog-content form, .blog-content hr, .blog-content noscript, .blog-content iframe, .blog-content figure, .blog-content figcaption, .blog-content audio, .blog-content video, .blog-content canvas, .blog-content details, .blog-content marquee, .blog-content template {
     display: none;
 }
 
@@ -329,20 +329,29 @@ iframe {
 
 .blog-pagination nav ul.pagination li {
     display: inline-block;
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #052faa;
     padding: 5px 15px !important;
     border: 1px solid #c6c6c6;
 }
 
-.blog-pagination nav ul.pagination li a {
+.blog-pagination nav ul.pagination li.active {
     display: inline-block;
-    font-size: 14px !important;
-    font-weight: 500;
-    color: #052faa;
-}
-.blog-pagination nav ul.pagination li a:hover {
+    padding: 5px 15px !important;
+    border: 1px solid #ed462f;
     color: #ed462f;
 }
 
+.blog-pagination nav ul.pagination li.disabled {
+    display: inline-block;
+    padding: 5px 15px !important;
+    border: 1px solid #c6c6c6;
+}
+
+.blog-pagination nav ul.pagination li:hover {
+    color: #ed462f;
+}
 
 .social-share-section a {
     border: 1px solid #a3a3a3;
