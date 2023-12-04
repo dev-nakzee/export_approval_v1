@@ -230,7 +230,7 @@
     color: #ed462f !important;
 }
 .dataTables_filter label input {
-    background-image: url(../images/search-icon.png) !important;
+    background-image: url(../images/search.png) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     padding-left: 30px !important;
