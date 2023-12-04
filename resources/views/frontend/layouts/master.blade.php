@@ -43,6 +43,24 @@
 
                 UIkit.icon.add('twitter','<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>');
             });
+
+            jQuery(function($) {
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    var target = $(this.hash);
+                        $('html,body').stop().animate({
+                        scrollTop: target.offset().top - 90
+                        }, 'linear');   
+                });    
+                if (location.hash){
+                    var id = $(location.hash);
+                }
+                $(window).on('load', function() {
+                    if (location.hash){
+                        $('html,body').animate({scrollTop: id.offset().top - 90}, 'linear')
+                    };
+                });
+                
+            });
         </script>
     </head>
     <body>
@@ -107,25 +125,25 @@
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">
-                        {{-- <label class="uk-form-label" for="fullname">Your Name</label> --}}
+     
                         <div class="uk-form-controls">
                             <input class="uk-input" name="fullname" id="fullname" type="text" placeholder="Your Name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m">
-                        {{-- <label class="uk-form-label" for="organisation">Organisation</label> --}}
+              
                         <div class="uk-form-controls">
                             <input class="uk-input" name="organisation" id="organisation" type="text" placeholder="Company name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        {{-- <label class="uk-form-label" for="email">Email</label> --}}
+
                         <div class="uk-form-controls">
                             <input class="uk-input" name="email" id="email" type="email" placeholder="Email address">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        {{-- <label class="uk-form-label" for="mobile">Mobile</label> --}}
+        
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
                                 <option value="">Select Country</option>
@@ -139,7 +157,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        {{-- <label class="uk-form-label" for="service">Services</label> --}}
+
                         <div class="uk-form-controls">
                             <select class="uk-select" id="service" name="service">
                                 <option value="">Select Service</option>
@@ -152,7 +170,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-                        {{-- <label class="uk-form-label" for="source">How did you find us?</label> --}}
+         
                         <div class="uk-form-controls">
                             <select class="uk-select" id="source" name="source">
                                 <option value="">How did you find us?</option>
@@ -164,13 +182,13 @@
                         </div>
                     </div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
-                        {{-- <label class="uk-form-label" for="message">Message</label> --}}
+
                         <div class="uk-form-controls">
                             <textarea name="message" class="uk-textarea" placeholder="Enter you query along with product details"></textarea>
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-                        {{-- <label class="uk-form-label" for="captcha">Captcha</label> --}}
+
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             <span class="uk-width-1-2 uk-padding-remove-left">{!! captcha_img() !!}<button type="button" class="uk-button uk-button-small" class="reload" id="reload" uk-icon="refresh">
                             </button></span>
