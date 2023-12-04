@@ -17,8 +17,8 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-            {{$service->service_name}}
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
+            {{$static_page->page_name}}
         </h1>
     </div>
 </section>
