@@ -67,6 +67,7 @@ class HomeController extends Controller
         $sections = StaticPageSection::select('static_page_sections.*','media_path')
             ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
             ->where('static_page_id', 2)
+            ->where('section_status', 1)
             ->orderBy('section_order', 'asc')
             ->get();
         foreach($sections as $key => $value) {
