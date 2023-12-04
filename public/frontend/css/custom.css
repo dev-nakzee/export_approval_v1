@@ -303,6 +303,20 @@
     font-weight: 500;
     color: #000;
 }
+.blog-pagination {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #052faa;
+}
+.blog-pagination:hover {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #ed462f;
+}
+.blog-pagination li {
+    
+}
+
 
 .social-share-section a {
     border: 1px solid #a3a3a3;

@@ -58,7 +58,9 @@
                         </div>
                     </div>
                     @endforeach
-                    {{ $blogs->links() }}
+                    <div class="uk-width-1-1 blog-pagination">
+                        {{ $blogs->links() }}
+                    </div>
                     @endif
                 </div>
             </div>
