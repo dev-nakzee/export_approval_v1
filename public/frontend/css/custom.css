@@ -315,18 +315,29 @@ iframe {
     font-weight: 500;
     color: #000;
 }
-.blog-pagination {
+
+.blog-pagination nav ul.pagination{
+    list-style-type: none;
+}
+
+.blog-pagination nav ul.pagination li {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+}
+
+.blog-pagination nav ul.pagination li a {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
     font-size: 14px !important;
     font-weight: 500;
     color: #052faa;
 }
-.blog-pagination:hover {
-    font-size: 14px !important;
-    font-weight: 500;
+.blog-pagination nav ul.pagination li a:hover {
     color: #ed462f;
-}
-.blog-pagination li {
-
 }
 
 
