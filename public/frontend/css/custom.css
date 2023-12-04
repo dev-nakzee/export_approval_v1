@@ -290,12 +290,14 @@
 .blog-content p:first-child span {
     font-size: 14px !important;
     overflow: hidden;
-   display: -webkit-box;
+    display: -webkit-box;
    -webkit-line-clamp: 3; /* number of lines to show */
            line-clamp: 3; 
    -webkit-box-orient: vertical;
 }
-
+.blog-content ol {
+    display: none;
+}
 .blog-detail-title {
     font-size: 24px !important;
     font-weight: 500;
