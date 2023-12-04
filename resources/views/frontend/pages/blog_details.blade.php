@@ -49,6 +49,13 @@
                     </article>
                     @endif
                 </div>
+                <div class="uk-margin-top uk-margin-bottom social-share-section">
+                    <span class="uk-text-bold">Share this page</span><br>
+                    <a href="" class="twitter" uk-icon="twitter"></a>
+                    <a href="" class="facebook" uk-icon="facebook"></a>
+                    <a href="" class="linkedin" uk-icon="linkedin"></a>
+                    <a href="" class="whatsapp" uk-icon="whatsapp"></a>
+                </div>
             </div>
         </div>
     </div>

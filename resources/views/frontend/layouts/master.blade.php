@@ -4,10 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
-        <link rel="stylesheet" href="{{asset('frontend/font-awesome/css/all.min.css')}}" />
         <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         @yield('scripts')
         <script>
             $('#brochure-form').submit(function(e){
@@ -40,6 +40,8 @@
                     }
                 });
                 // UIkit.modal('#site-pop-up').show();
+
+                UIkit.icon.add('twitter','<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>');
             });
         </script>
     </head>

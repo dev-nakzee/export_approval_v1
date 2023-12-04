@@ -44,7 +44,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Notification</th>
-                                <th>Date</th>
+                                <th width="100px">Date</th>
                             </tr>
                         </thead>
                         <tbody>
