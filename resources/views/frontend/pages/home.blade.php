@@ -128,7 +128,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="../../../../../../storage/media/rating-1701255267.svg" alt="vulcan-icon1" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/rating-1701255267.svg" data-uk-img="">
+                                <img src="{{asset('storage/media/rating-1701255267.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/rating-1701255267.svg" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Expert Guidance</h3>
@@ -141,7 +141,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="../../../../../../storage/media/onboarding-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/onboarding-1701255267.svg" data-uk-img="">
+                                <img src="{{asset('storage/media/onboarding-1701255267.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/onboarding-1701255267.svg" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Streamline Process</h3>
@@ -154,7 +154,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="../../../../../../storage/media/customer-support-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/customer-support-1701255267.svg" data-uk-img="">
+                                <img src="{{asset('storage/media/customer-support-1701255267.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/customer-support-1701255267.svg" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Comprehensive Support</h3>
@@ -167,7 +167,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="../../../../../../storage/media/back-in-time-1701255267.svg" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/back-in-time-1701255267.svg" data-uk-img="">
+                                <img src="{{asset('storage/media/back-in-time-1701255267.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="https://two.exportapproval.com/storage/media/back-in-time-1701255267.svg" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Time Efficient</h3>
