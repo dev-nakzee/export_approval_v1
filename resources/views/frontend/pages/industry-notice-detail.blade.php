@@ -12,6 +12,7 @@
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><a href="{{route('frontend.site.industry-notification.service',$notice_service->service_slug)}}">{{$notice_service->service_name}}</a></li>
             <li><span>{{'Industrial Notifications'}}</span></li>
         </ul>
     </div>
@@ -35,14 +36,16 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right uk-height-small">
-                <div class="uk-container">
-                    <div class="ps-sections">
-                        <div class="uk-container">
-                            <span class="notice-title">{{$notice->notice_title}}<span>
-                        </div>
-                        <div class="uk-container ps-tab-content">
-                            {!! $notice->notice_content !!}
+                <div class="uk-container uk-padding-remove-horizontal uk-margin-remove uk-width-1-1">
+                    <div class="uk-section uk-padding-remove-vertical uk-margin-remove">
 
+                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{$notice->notice_title}}</a></h1>
+                    
+                        <p class="uk-article-meta">Notification Date : {{$notice->notice_date->format('d-m-Y')}}</a></p>
+                    
+                        <span class="uk-text-lead">{!! $notice->notice_content !!}</span>
+                    
+                        <div class="uk-grid-small uk-height-large" uk-grid>
                             @if($document)
                             <p class="notice-dl-text">Please click to 
                                 <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link">View</a> or
@@ -53,6 +56,7 @@
                     </div>
                 </div>
             </div>
+            <div class="uk-height-small"></div>
         </div>
     </div>
 </section>

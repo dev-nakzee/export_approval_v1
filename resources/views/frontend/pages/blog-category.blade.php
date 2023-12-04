@@ -43,10 +43,12 @@
                         <div class="blog-cards uk-card uk-card-default uk-card-body uk-margin-bottom uk-box-shadow-large uk-padding-small">
                             <article class="uk-article">
                                 <img class="uk-margin-bottom" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
-                                <span class="uk-article-title uk-text-large uk-text-bold"><a class="uk-link-reset" href="">{{$blog->blog_title}}</a></span>
+                                <span class="uk-article-title uk-text-large uk-text-bold"><a class="uk-link-reset" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">{{$blog->blog_title}}</a></span>
                             
                                 <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>
                                 
+                                <div class="blog-content">{!! $blog->blog_content !!}</div>
+
                                 <div class="uk-grid-small uk-child-width-auto" uk-grid>
                                     <div>
                                         <a class="uk-button uk-button-text" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">Read more</a>

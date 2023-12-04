@@ -44,7 +44,7 @@ class IndustryNotificationController extends Controller
     public function detail(Request $request, $service, $notice_slug)
     {
         $services = Services::select('service_name', 'service_slug')->get();
-        $notice_service = Services::select('service_id','service_slug')->where('service_slug', $service)->first();
+        $notice_service = Services::select('service_id', 'service_name', 'service_slug')->where('service_slug', $service)->first();
         $notice = Notices::where('notice_slug', $notice_slug)->first();
         $document = Document::where('doc_id', $notice->notice_document)->first();
         $media = Media::where('media_id', $notice->media_id)->first();
