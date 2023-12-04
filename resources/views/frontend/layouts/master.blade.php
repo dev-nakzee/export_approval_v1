@@ -126,7 +126,7 @@
             </div>
         </nav>
         @yield('content')
-        <section class="brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
+        <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure

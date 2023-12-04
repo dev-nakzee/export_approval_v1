@@ -399,7 +399,6 @@ iframe {
     z-index: 99 !important;
     position: relative;
     border-bottom: 1px solid #a5a5a5;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.35) !important;
 }
 #download-brochure {
     border-top: 0.1em solid #aaaaaa !important;
