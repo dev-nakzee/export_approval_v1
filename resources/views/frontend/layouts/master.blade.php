@@ -27,7 +27,7 @@
                     }
                 });
             });
-            $('#reload').click(function () {
+            $('#reload').on('click', function () {
                 $.ajax({
                     type: 'GET',
                     url: "{{route('frontend.site.brochure.reload-captcha')}}",
