@@ -35,7 +35,7 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{'Industrial Notifications'}}</span>
+                    <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{'About us'}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($sections)
                         @foreach($sections as $section)
