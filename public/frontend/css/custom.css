@@ -290,6 +290,13 @@ iframe {
 }
 
 /* Blogs */
+.blogs-group-title {
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}
 .blog-detail-image {
     width: 100% !important;
 }
