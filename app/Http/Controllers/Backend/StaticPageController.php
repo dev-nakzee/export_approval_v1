@@ -94,7 +94,6 @@ class StaticPageController extends Controller
     public function update(Request $request, $id): RedirectResponse
     {
         //
-        dd($request->all());
         $data = [
             'page_name' => $request->name,
             'page_slug' => $request->slug,

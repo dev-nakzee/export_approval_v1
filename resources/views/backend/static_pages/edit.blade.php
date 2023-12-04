@@ -26,7 +26,7 @@
         </div>
         <div class="mb-3 col-md-6">
             <label for="slug" class="form-label">Page image alt text</label>
-            <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt">
+            <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt" value="{{$static_page->img_alt}}">
         </div>
         <div class="mb-3 col-md-6">
             <label for="slug" class="form-label">Page status</label>
@@ -38,15 +38,15 @@
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_title" class="form-label">SEO Title - <b class="text-sm">Length : <span id="titleLength">0</span>&nbsp;|&nbsp;Character : <span id="titleChar">0</span></b></label>
-            <input type="text" class="form-control form-control-sm" id="seo_title" name="seo_title">
+            <input type="text" class="form-control form-control-sm" id="seo_title" name="seo_title" value="{{$static_page->seo_title}}">
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_description" class="form-label">SEO Description - <b  class="text-sm">Character : <span id="descriptionChar">0</span></b></label>
-            <textarea class="form-control form-control-sm" id="seo_description" name="seo_description"></textarea>
+            <textarea class="form-control form-control-sm" id="seo_description" name="seo_description">{{$static_page->seo_description}}</textarea>
         </div>
         <div class="mb-3 col-md-12">
             <label for="seo_keywords" class="form-label">SEO Keywords - <b  class="text-sm">Count : <span id="keywordCount">0</span></b></label>
-            <textarea class="form-control form-control-sm" id="seo_keywords" name="seo_keywords"></textarea>
+            <textarea class="form-control form-control-sm" id="seo_keywords" name="seo_keywords">{{$static_page->seo_keywords}}</textarea>
         </div>
         <div class="mb-3 col-md-12 text-center">
            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="fa-light fa-save"></i>&nbsp;Save</button>
