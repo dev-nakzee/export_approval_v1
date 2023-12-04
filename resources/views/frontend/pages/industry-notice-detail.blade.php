@@ -35,7 +35,7 @@
                     <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
-            <div class="uk-width-3-4@m uk-padding-remove-right uk-height-small">
+            <div class="uk-width-3-4@m uk-padding-remove-right">
                 <div class="uk-container uk-padding-remove-horizontal uk-margin-remove uk-width-1-1">
                     <div class="uk-section uk-padding-remove-vertical uk-margin-remove">
                         <div class="uk-margin-bottom">
@@ -65,7 +65,6 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-height-small"></div>
         </div>
     </div>
 </section>
