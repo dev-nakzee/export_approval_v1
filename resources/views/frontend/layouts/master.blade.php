@@ -27,7 +27,12 @@
                     }
                 });
             });
-            $('#reload').on('click', function () {
+            $(document).on('click', '#reload-captcha', function() {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                    }
+                });
                 $.ajax({
                     type: 'GET',
                     url: "{{route('frontend.site.brochure.reload-captcha')}}",
