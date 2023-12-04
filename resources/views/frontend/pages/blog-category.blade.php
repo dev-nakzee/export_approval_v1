@@ -42,7 +42,7 @@
                     <div>
                         <div class="blog-cards uk-card uk-card-default uk-card-body uk-margin-bottom uk-box-shadow-large uk-padding-small">
                             <article class="uk-article">
-                                <img class="uk-margin-bottom" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
+                                <img class="uk-margin-bottom blogs-group-image" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
                                 <span class="uk-article-title uk-text-large uk-text-bold blogs-group-title"><a class="uk-link-reset" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">{{$blog->blog_title}}</a></span>
                             
                                 <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>

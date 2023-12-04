@@ -297,6 +297,12 @@ iframe {
            line-clamp: 2; 
    -webkit-box-orient: vertical;
 }
+.blogs-group-image {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    object-fit: fill;
+}
 .blog-detail-image {
     width: 100% !important;
 }
