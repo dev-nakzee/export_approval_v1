@@ -30,6 +30,38 @@
         </ul>
     </div>
 </section>
+<section class="uk-section uk-padding-large uk-padding-remove-vertical">
+    <div class="uk-section uk-padding-remove-vertical">
+        <div uk-grid>
+            <div class="uk-width-1-4@m">
+                <div class="ps-details-section">
+                    <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{'Industrial Notifications'}}</span>
+                    <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
+                        @if($sections)
+                        @foreach($sections as $section)
+                            <li>
+                                <a href="#{{$section->section_slug}}">{{$section->section_name}}</a>
+                            </li>
+                        @endforeach
+                        @endif
+                    </ul>
+                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
+                </div>
+            </div>
+            <div class="uk-section uk-width-3-4@m uk-padding-remove-right uk-padding-remove-vertical">
+                <div class="uk-section uk-padding-remove">
+                    @if($sections)
+                    @foreach($sections as $section)
+                    <div class="uk-section">
+                        <span id="{{$section->section_slug}}">{{$section->section_name}}</span>
+                    </div>
+                    @endforeach
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 @section('scripts')
 
