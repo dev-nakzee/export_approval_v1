@@ -202,7 +202,6 @@
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
-    padding: 5px 15px;
 }
 .download-brochure-btn:hover {
     border: 2px solid #052faa;
@@ -211,7 +210,6 @@
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
-    padding: 5px 15px;
 }
 
 .uk-tab-left li a {
@@ -241,10 +239,7 @@
     border: 1px solid #052faa !important;
     box-shadow: 0 0 0 0.1rem rgba(5, 47, 170, 0.25) !important;
     border-radius: 2px !important;
-    width: 80% !important;
-}
-.dataTables_filter label input::before {
-    content: "Hello" !important;
+    width: 100% !important;
 }
 
 #mandatory-list tbody tr:hover {
