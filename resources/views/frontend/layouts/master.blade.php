@@ -197,7 +197,8 @@
                     <div class="uk-width-1-2@m uk-margin-small-top">
 
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
-                            <span class="uk-width-2-5 uk-padding-remove-left captcha">{!! captcha_img() !!}</span><button type="button" class="uk-button uk-button-small" class="reload" id="reload" uk-icon="refresh">
+                            <span class="uk-width-2-5 uk-padding-remove-left captcha">{!! captcha_img() !!}</span>
+                            <button type="button" class="uk-button uk-button-small" id="reload-captcha" uk-icon="refresh">
                             </button>
                             <input class="uk-input uk-width-2-5 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha">
                         </div>
