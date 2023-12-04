@@ -134,6 +134,13 @@
     color: #ed462f !important;
 }
 /* All Pages */
+
+.about-section-title {
+    font-size: 24px !important;
+    font-weight: 700;
+    color: #052faa;
+}
+
 .page-header {
     background-color: #ff1f001a;
     padding-top: 10px !important;
@@ -314,7 +321,7 @@
     color: #ed462f;
 }
 .blog-pagination li {
-    
+
 }
 
 

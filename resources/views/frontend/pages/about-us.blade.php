@@ -53,7 +53,10 @@
                     @if($sections)
                     @foreach($sections as $section)
                     <div class="uk-section uk-padding-remove-vertical">
-                        <span class="" id="{{$section->section_slug}}">{{$section->section_name}}</span>
+                        <span class="about-section-title" id="{{$section->section_slug}}">{{$section->section_name}}</span>
+                        <div class="about-section-description">
+                            {!! $section->section_description !!}
+                        </div>
                     </div>
                     @endforeach
                     @endif
