@@ -63,6 +63,7 @@ class HomeController extends Controller
             ->leftJoin('media', 'static_pages.media_id', 'media.media_id')
             ->where('page_slug', 'about-us')
             ->first();
+        $static_page['media_path'] = Storage::url($static_page['media_path']);
         $sections = StaticPageSection::select('static_page_sections.*','media_path')
             ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
             ->where('static_page_id', 2)
