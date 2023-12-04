@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
+        <link rel="stylesheet" href="{{asset('frontend/font-awesome/css/all.min.css')}}" />
         <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
@@ -52,7 +53,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav top-navbar">
                     <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-                    <li><a href="{{route('frontend.site.home')}}">About us</a></li>
+                    <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
                     <li>
                         <a href="#">Services <span uk-navbar-parent-icon></span></a>
                         <div class="uk-navbar-dropdown" style="top: -20px !important;">

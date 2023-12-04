@@ -3,7 +3,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
-            <span class="uk-text-small" style="color: #8b8b8b;">{{'Indian Compliances'}}</span>
+            <span class="uk-text-small" style="color: #8b8b8b;">{{'All Compliances'}}</span>
             <br>{{'Industrial Notifications'}}
         </h1>
     </div>
@@ -37,7 +37,7 @@
             <div class="uk-width-3-4@m uk-padding-remove uk-margin-remove">
                 <div class="uk-flex uk-padding-remove-right uk-margin-remove-right uk-margin-remove-left" uk-grid>
                     <div class="uk-margin-bottom uk-width-1-1">
-                        <span class="notification_title">{{"All Industrial Notifications"}}</span>
+                        <span class="notification_title">{{"All Compliances Industrial Notifications"}}</span>
                     </div>
                     <div class="uk-width-1-1">
                         <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">

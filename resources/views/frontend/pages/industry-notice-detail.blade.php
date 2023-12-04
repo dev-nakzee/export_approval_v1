@@ -38,8 +38,10 @@
             <div class="uk-width-3-4@m uk-padding-remove-right uk-height-small">
                 <div class="uk-container uk-padding-remove-horizontal uk-margin-remove uk-width-1-1">
                     <div class="uk-section uk-padding-remove-vertical uk-margin-remove">
-
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">{{$notice->notice_title}}</a></h1>
+                        <div class="uk-margin-bottom">
+                            <span class="notification_title">Industrial Notifications for {{$notice_service->service_name}}</span>
+                        </div>
+                        <span class="uk-article-title blog-detail-title"><a class="uk-link-reset" href="">{{$notice->notice_title}}</a></span>
                     
                         <p class="uk-article-meta">Notification Date : {{$notice->notice_date->format('d-m-Y')}}</a></p>
                     
@@ -52,6 +54,11 @@
                                 <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link" download>Download</a>
                             </p>
                             @endif
+                        </div>
+                        <div>
+                            <a href="" class=""></a>
+                            <a href="" uk-icon="linkedin"></a>
+                            <a href="" uk-icon="Twitter"></a>
                         </div>
                     </div>
                 </div>

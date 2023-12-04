@@ -37,7 +37,7 @@
             <div class="uk-width-3-4@m uk-padding-remove-right">
                 <div class="uk-container uk-padding-remove-right uk-margin-remove-right">
                     <div class="uk-margin-bottom">
-                        <span class="notification_title">{{$notice_service->service_name}} Industrial Notifications</span>
+                        <span class="notification_title">Industrial Notifications for {{$notice_service->service_name}}</span>
                     </div>
                     <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
                         <thead>

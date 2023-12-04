@@ -82,7 +82,9 @@ class StaticPageController extends Controller
     public function edit($id)
     {
         //
-        $static_page = StaticPages::where('static_page_id', $id)->first();
+        $static_page = StaticPages::select('static_pages.*', 'media_name', 'media_path')
+            ->leftJoin('media', 'static_pages.media_id', 'media.media_id')
+            ->where('static_page_id', $id)->first();
         return view('backend.static_pages.edit', compact('static_page'));
     }
 
@@ -92,9 +94,7 @@ class StaticPageController extends Controller
     public function update(Request $request, $id): RedirectResponse
     {
         //
-        $validate = $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
+        dd($request->all());
         $data = [
             'page_name' => $request->name,
             'page_slug' => $request->slug,

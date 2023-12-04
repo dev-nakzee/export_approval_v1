@@ -56,4 +56,21 @@ class HomeController extends Controller
         }
         return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'clients'));
     }
+
+    public function about()
+    {
+        $static_page = StaticPages::select('static_pages.*', 'media_path')
+            ->leftJoin('media', 'static_pages.media_id', 'media.media_id')
+            ->where('page_slug', 'about-us')
+            ->first();
+        $sections = StaticPageSection::select('static_page_sections.*','media_path')
+            ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
+            ->where('static_page_id', 2)
+            ->orderBy('section_order', 'asc')
+            ->get();
+        foreach($sections as $key => $value) {
+            $sections[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        return view('frontend.pages.about-us', compact('sections'));
+    }
 }

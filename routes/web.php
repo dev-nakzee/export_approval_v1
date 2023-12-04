@@ -15,13 +15,12 @@ use App\Http\Controllers\Frontend\IndustryNotificationController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\BrochureFormController;
 
-// Route::get('/', function () {
-//     return view('frontend.pages.home');
-// });
-
-
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
+});
+
+Route::controller(HomeController::class)->group(function (){
+    Route::get('/about-us', 'about')->name('frontend.site.about-us');
 });
 
 Route::controller(ServiceController::class)->group(function (){

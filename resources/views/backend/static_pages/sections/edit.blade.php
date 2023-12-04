@@ -18,7 +18,6 @@
         <div class="mb-3 col-md-12">
             <label for="section_tagline" class="form-label">Section Tagline</label>
             <textarea class="form-control form-control-sm text-editor" id="section_tagline" name="section_tagline">{!!$static_page_section->section_tagline!!}</textarea>
-            {{-- <input type="text" class="form-control form-control-sm" id="section_tagline" name="section_tagline" value="{{$static_page_section->section_tagline}}"> --}}
         </div>
         <div class="mb-3 col-md-6">
             <label for="media_id" class="form-label">Section image</label>

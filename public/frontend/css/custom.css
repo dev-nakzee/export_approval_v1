@@ -251,7 +251,7 @@
     cursor: pointer !important;
 }
 .notification_title {
-    font-size: 24px !important;
+    font-size: 18px !important;
     font-weight: 700;
 }
 .notice-detail-link:hover {
@@ -304,6 +304,7 @@
 .blog-detail-title {
     font-size: 24px !important;
     font-weight: 500;
+    color: #000;
 }
 /* Footer */
 .brochure-section {
