@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="uk-section uk-width-3-4@m uk-padding-remove-right uk-padding-remove-vertical">
-                <div class="uk-child-width-1-1@s uk-child-width-1-2@m uk-grid-small" uk-grid="masonry: pack">
+                <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-grid-small" uk-grid="masonry: pack">
                     @if($blogs)
                     @foreach($blogs as $blog)
                     <div>
