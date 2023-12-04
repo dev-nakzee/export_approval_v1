@@ -298,6 +298,12 @@ iframe {
 }
 .blog-content p:first-child {
     display: block;
+    font-size: 14px !important;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
 }
 .blog-content p:first-child span {
     font-size: 14px !important;
@@ -307,9 +313,10 @@ iframe {
            line-clamp: 3; 
    -webkit-box-orient: vertical;
 }
-.blog-content ol {
+.blog-content ol, .blog-content ul, .blog-content div, .blog-content p {
     display: none;
 }
+
 .blog-detail-title {
     font-size: 24px !important;
     font-weight: 500;
@@ -322,16 +329,12 @@ iframe {
 
 .blog-pagination nav ul.pagination li {
     display: inline-block;
-    padding: 5px;
+    padding: 5px 15px !important;
     border: 1px solid #c6c6c6;
-    border-radius: 5px;
 }
 
 .blog-pagination nav ul.pagination li a {
     display: inline-block;
-    padding: 5px;
-    border: 1px solid #c6c6c6;
-    border-radius: 5px;
     font-size: 14px !important;
     font-weight: 500;
     color: #052faa;
