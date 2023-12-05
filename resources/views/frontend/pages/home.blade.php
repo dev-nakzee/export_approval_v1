@@ -131,7 +131,10 @@
                                 <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Expert Guidance</h3>
+                                <h3>Cost effective
+                                    - 
+                                    - 
+                                    - 10+ years of experience/ 1000+ projects</h3>
                             </div>
                         </div>
                         <div class="wcu-one wcu-tabs" hidden>
@@ -144,7 +147,7 @@
                                 <img src="{{asset('frontend/images/onboarding.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/onboarding.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Streamline Process</h3>
+                                <h3>Pay step-by-step</h3>
                             </div>
                         </div>
                         <div class="wcu-two wcu-tabs" hidden>
@@ -157,7 +160,7 @@
                                 <img src="{{asset('frontend/images/customer-support.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/customer-support.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Comprehensive Support</h3>
+                                <h3>Global Support</h3>
                             </div>
                         </div>
                         <div class="wcu-three wcu-tabs" hidden>
@@ -170,7 +173,7 @@
                                 <img src="{{asset('frontend/images/back-in-time.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/back-in-time.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Time Efficient</h3>
+                                <h3>10+ years of experience/1000+ projects</h3>
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
