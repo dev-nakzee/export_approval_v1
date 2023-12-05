@@ -246,6 +246,7 @@ iframe {
     box-shadow: 0 0 0 0.1rem rgba(5, 47, 170, 0.25) !important;
     border-radius: 2px !important;
     width: 100% !important;
+    color: rgb(143, 143, 143);
 }
 
 #mandatory-list tbody tr:hover {
