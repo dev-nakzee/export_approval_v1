@@ -50,8 +50,8 @@
                         <div class="uk-grid-small" uk-grid>
                             @if($document)
                             <p class="notice-dl-text">Please click to 
-                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link">View</a> or
-                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link" download>Download</a>
+                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link view-file">View</a> or
+                                <a href="{{ asset('storage/'.$document->doc_path)}}" target="blank" class="uk-link download-file" download>Download</a>
                             </p>
                             @endif
                         </div>

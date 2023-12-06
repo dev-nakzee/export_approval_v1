@@ -57,12 +57,12 @@
                                     <td>{{$download->product_name}}</td>
                                     <td>
                                         @if($download->information)
-                                        <a class="views" href="{{$download->information}}" target="black">View</a> / <a class="views" href="{{$download->information}}" download>Downloads</a>
+                                        <a class="view-file" href="{{$download->information}}" target="black">View</a> / <a class="download-file" href="{{$download->information}}" download>Downloads</a>
                                         @endif
                                     </td>
                                     <td>
                                         @if($download->guidelines)
-                                        <a class="views" href="{{$download->guidelines}}" target="black">View</a> / <a class="views" href="{{$download->guidelines}}" download>Downloads</a>
+                                        <a class="view-file" href="{{$download->guidelines}}" target="black">View</a> / <a class="download-file" href="{{$download->guidelines}}" download>Downloads</a>
                                         @endif
                                     </td>
                                 </tr>

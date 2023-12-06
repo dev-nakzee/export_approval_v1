@@ -287,7 +287,19 @@ iframe {
     border: 1px #a3a3a3 solid !important;
     border-radius: 5px;
 }
+.view-file {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #052faa !important;
+    text-decoration: none !important;
+}
+.download-file {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #ed462f !important;
+    text-decoration: none !important;
 
+}
 /* Blogs */
 .blogs-group-title {
     overflow: hidden;
