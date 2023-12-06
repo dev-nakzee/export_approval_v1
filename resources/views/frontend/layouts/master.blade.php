@@ -311,7 +311,7 @@
                 </div>
                 <div class="uk-width-1-4@s">
                     <div uk-grid class="uk-margin-remove">
-                        <span class="uk-nav-header uk-width-1-1 uk-margin-remove">Contact us</span>
+                        <span class="uk-nav-header uk-width-1-1 uk-margin-small">Contact us</span>
                         <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="location"></span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">First Floor, F-205, Green House, Gali No 06, Mangal Bazar Laxmi Nagar, New Delhi, East Delhi, Delhi, 110092</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
