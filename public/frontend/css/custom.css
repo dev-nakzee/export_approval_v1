@@ -300,6 +300,14 @@ iframe {
     text-decoration: none !important;
 
 }
+.powered-by {
+    font-size: 10px !important;
+    font-weight: 500;
+}
+.copyright-text {
+    font-size: 10px !important;
+    font-weight: 500;
+}
 /* Blogs */
 .blogs-group-title {
     overflow: hidden;

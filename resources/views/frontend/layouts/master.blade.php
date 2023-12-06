@@ -321,8 +321,10 @@
                         <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="mail"></span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
+                    <span class="powered-by uk-margin-top">Powered by</span>
+                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval">
                 </div>
-                <div class="uk-width-1-1 uk-text-center uk-text-small">
+                <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
                     <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
                 </div>
             </div>
