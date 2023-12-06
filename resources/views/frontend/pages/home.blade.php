@@ -157,7 +157,7 @@
                                 <img src="{{asset('frontend/images/customer-support.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/customer-support.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Global Support</h3>
+                                <h3>10+ years of experience</h3>
                             </div>
                         </div>
                         <div class="wcu-three wcu-tabs" hidden>
@@ -170,7 +170,7 @@
                                 <img src="{{asset('frontend/images/back-in-time.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/back-in-time.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>10+ years of experience/1000+ projects</h3>
+                                <h3>1000+ projects</h3>
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
