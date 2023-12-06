@@ -254,7 +254,7 @@
             </form>
         </section>
         @yield('clients')
-        <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-vertical">
+        <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom">
             <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid>
                 <div class="uk-width-1-4@s">
                     <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
