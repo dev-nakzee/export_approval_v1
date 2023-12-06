@@ -20,7 +20,7 @@
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
                 <input type="text" class="form-control form-control-sm" id="image" disabled value="{{$news->media_name}}">
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden {{$news->media_id}}>
+                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden value="{{$news->media_id}}">
                 <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
             </div>
         </div>
