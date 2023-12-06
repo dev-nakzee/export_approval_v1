@@ -131,10 +131,7 @@
                                 <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Cost effective
-                                    - 
-                                    - 
-                                    - 10+ years of experience/ 1000+ projects</h3>
+                                <h3>Cost effective</h3>
                             </div>
                         </div>
                         <div class="wcu-one wcu-tabs" hidden>
