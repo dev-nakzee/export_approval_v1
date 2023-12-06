@@ -47,7 +47,7 @@ class NewsController extends Controller
             'news_slug' => $request->slug,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
-            'news_url' => $request->url,
+            'news_url' => $request->news_url,
         ];
         News::create($data);
         return redirect()->route('news.index')->with('success', 'News created successfully.');
@@ -101,7 +101,7 @@ class NewsController extends Controller
             'news_slug' => $request->slug,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
-            'news_url' => $request->url,
+            'news_url' => $request->news_url,
         ];
         News::where('news_id', $id)->update($data);
         return redirect()->route('news.index')->with('success', 'News updated successfully.');
