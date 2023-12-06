@@ -1,6 +1,6 @@
 @extends('backend.layouts.app', ['module' => 'News', 'title' => 'New News'])
 @section('content')
-<form class="form-horizontal" method="POST" action="{{route('news.update')}}" enctype="multipart/form-data">
+<form class="form-horizontal" method="POST" action="{{route('news.update', $news->news_id)}}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="mb-2 col-md-12">
