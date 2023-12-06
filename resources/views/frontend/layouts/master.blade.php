@@ -323,7 +323,7 @@
                     </div>
                     <span class="powered-by uk-padding-top">Powered by</span>
                     <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
-                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval">
+                    {{-- <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval"> --}}
                 </div>
                 <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
                     <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
