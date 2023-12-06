@@ -42,6 +42,15 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         //
+        $data = [
+            'news_title' => $request->name,
+            'news_slug' => $request->slug,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+            'news_url' => $request->url,
+        ];
+        News::save($data);
+        return redirect()->route('news.index')->with('success', 'News created successfully.');
     }
 
     /**
@@ -71,24 +80,40 @@ class NewsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
+        $news = News::select('news.*', 'media_name')
+            ->leftJoin('media', 'media.media_id', 'news.media_id')
+            ->where('news_id', $id)
+            ->first();
+        return view('backend.news.edit', compact('news'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $data = [
+            'news_title' => $request->name,
+            'news_slug' => $request->slug,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+            'news_url' => $request->url,
+        ];
+        News::where('news_id', $id)->update($data);
+        return redirect()->route('news.index')->with('success', 'News updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+        News::where('news_id', $id)->delete();
+        return redirect()->route('news.index')->with('success', 'News deleted successfully.');
     }
 }
