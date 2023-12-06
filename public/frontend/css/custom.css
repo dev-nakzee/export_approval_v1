@@ -444,6 +444,7 @@ section.website-footer {
 
 .footer-logo {
     background: #ffffff;
+    padding: 5px;
 }
 .footer-social a {
     border: 1px solid #ffffff;
