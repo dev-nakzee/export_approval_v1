@@ -19,7 +19,7 @@
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div>
-        <div uk-grid>
+        <div uk-grid  uk-height-match>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
                     <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{$service->service_name}}</span>

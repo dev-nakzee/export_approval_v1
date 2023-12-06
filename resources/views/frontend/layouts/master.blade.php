@@ -41,6 +41,7 @@
                     }
                 });
             });
+            
             $(document).ready(function(){
                 $(window).scroll(function(){
                     var scrollTop = 80;
@@ -51,9 +52,50 @@
                         $('.back-to-top').addClass('uk-hidden');  
                     }
                 });
+                $(window).scroll(function(){
+                    var scrollTop = 80;
+                    if($(window).scrollTop() >= scrollTop){
+                        $('.ps-details-section').addClass('ps-sidebar-fixed');  
+                    }
+                    if($(window).scrollTop() < scrollTop){
+                        $('.ps-details-section').removeClass('ps-sidebar-fixed');  
+                    }
+                });
                 // UIkit.modal('#site-pop-up').show();
 
                 UIkit.icon.add('twitter','<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>');
+
+                function isInViewport(el) {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+                    );
+                }
+
+
+                const box = document.querySelector('#brochure');
+                const message = document.querySelector('#message');
+
+                document.addEventListener('scroll', function () {
+                    if(isInViewport(box)) {
+                        $('.ps-details-section').addClass('ps-sidebar-absolute');
+                        console.log('in viewport');
+                    } else {
+                        $('.ps-details-section').removeClass('ps-sidebar-absolute');
+                    }
+                    // const messageText = isInViewport(box) ?
+                    //     $('.ps-details-section').addClass('ps-sidebar-absolute') :
+                    //     'The box is not visible in the viewport';
+
+                    // message.textContent = messageText;
+
+                }, {
+                    passive: true
+                });
             });
 
             jQuery(function($) {
@@ -73,6 +115,7 @@
                 });
                 
             });
+
         </script>
     </head>
     <body>
@@ -127,7 +170,7 @@
         </nav>
         @yield('content')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
-            <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
+            <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom" id="brochure">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
                 </p>
@@ -220,8 +263,9 @@
         <section class="uk-section uk-background-default uk-footer website-footer">
             <div uk-grid>
                 <div class="uk-width-1-5@s">
+                    <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
                     <ul class="uk-nav uk-nav-default">
-                        <li class="uk-nav-header">Quick Links</li>
+                        <li class="uk-nav-header"></li>
                         <li>
                             <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
                         </li>
