@@ -142,16 +142,16 @@
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li>
-                                    <a href="#">Downloads</a>
+                                    <a href="{{route('frontend.site.downloads')}}">Downloads</a>
                                 </li>
                                 <li>
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="#">Media Coverage</a>
+                                    <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
-                                    <a href="#">Gallery</a>
+                                    <a href="{{route('frontend.site.gallery')}}">Gallery</a>
                                 </li>
                             </ul>
                         </div>

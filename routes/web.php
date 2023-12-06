@@ -17,10 +17,12 @@ use App\Http\Controllers\Frontend\BrochureFormController;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
-});
-
-Route::controller(HomeController::class)->group(function (){
     Route::get('/about-us', 'about')->name('frontend.site.about-us');
+    Route::get('/downloads', 'downloads')->name('frontend.site.downloads');
+    Route::get('/downloads/{download_slug}', 'download')->name('frontend.site.download.service');
+    Route::get('/media-cover', 'media_cover')->name('frontend.site.media-cover');
+    Route::get('/gallery', 'gallery')->name('frontend.site.gallery');
+    Route::get('/contact-us', 'contact')->name('frontend.site.contact-us');
 });
 
 Route::controller(ServiceController::class)->group(function (){

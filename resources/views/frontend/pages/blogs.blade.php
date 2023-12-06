@@ -1,4 +1,4 @@
-@extends('frontend.layouts.master', ['pages' => 'Industrial Notifications'])
+@extends('frontend.layouts.master', ['pages' => 'Blogs'])
 @section('content')
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
