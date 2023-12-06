@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="wcu-one wcu-tabs" hidden>
-                            <span>We ensure that our clients receive strategic insights and personalized advice to navigate challenges and achieve their goals.</span>
+                            <span>We deliver cost-effective solutions tailored to meet your diverse needs.</span>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
@@ -148,11 +148,11 @@
                             </div>
                         </div>
                         <div class="wcu-two wcu-tabs" hidden>
-                            <span>We eliminate unnecessary steps and enhance overall productivity, enabling you to focus on your core objectives.</span>
+                            <span>We offer flexible installment plans to let you pay at your own pace.</span>
                         </div>
                     </div>
-                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
-                        <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
+                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small" uk-height-match=".wcu-tabs">
+                        <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid>
                             <div class="uk-width-auto uk-first-column">
                                 <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
                             </div>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="wcu-three wcu-tabs" hidden>
-                            <span>From proactive problem-solving to personalized assistance, we stand by our clients at every stage.</span>
+                            <span>We bring over 10 years of proven experience to achieve success in every project.</span>
                         </div>
                     </div>
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
-                            <span>Our strategies are designed to deliver swift and effective results, allowing our clients to stay ahead in their competitive landscape.</span>
+                            <span>Trust in our track record of successfully completing over 1000 projects.</span>
                         </div>
                     </div>
                 <!-- grid content end -->
@@ -215,8 +215,8 @@
                 @endforeach
             </ul>
         
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+            <a class="slider-arrows uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="slider-arrows uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
         
         </div>
         @endif

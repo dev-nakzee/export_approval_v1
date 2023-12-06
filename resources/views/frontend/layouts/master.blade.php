@@ -310,7 +310,7 @@
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
-                    <div uk-grid class="uk-margin-remove">
+                    <div uk-grid class="uk-margin-remove-top uk-margin-remove-left uk-margin-bottom uk-margin-remove-right">
                         <span class="uk-nav-header uk-width-1-1 uk-margin-small">Contact us</span>
                         <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="location"></span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">First Floor, F-205, Green House, Gali No 06, Mangal Bazar Laxmi Nagar, New Delhi, East Delhi, Delhi, 110092</p>
@@ -321,7 +321,7 @@
                         <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="mail"></span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
-                    <span class="powered-by uk-margin-top">Powered by</span>
+                    <span class="powered-by uk-padding-top">Powered by</span>
                     <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval">
                 </div>
                 <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
