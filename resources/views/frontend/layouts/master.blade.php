@@ -322,6 +322,11 @@
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
                 </div>
+                <div class="uk-width-1-1">
+                    <p>
+                        Copyright © 2023 Brand Liaison India Pvt Ltd.
+                    </p>
+                </div>
             </div>
         </section>
         <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-background-primary uk-margin uk-light uk-hidden uk-padding-small">

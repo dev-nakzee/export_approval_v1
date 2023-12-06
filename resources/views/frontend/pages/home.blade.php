@@ -128,7 +128,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
+                                <img src="{{asset('frontend/images/cost-effective.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/cost-effective.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Cost effective</h3>
@@ -141,7 +141,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/onboarding.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/onboarding.svg')}}" data-uk-img="">
+                                <img src="{{asset('frontend/images/step-payment.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/step-payment.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>Pay step-by-step</h3>
@@ -154,7 +154,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/customer-support.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/customer-support.svg')}}" data-uk-img="">
+                                <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>10+ years of experience</h3>
@@ -167,7 +167,7 @@
                     <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
                         <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
                             <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/back-in-time.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/back-in-time.svg')}}" data-uk-img="">
+                                <img src="{{asset('frontend/images/projects.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/projects.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
                                 <h3>1000+ projects</h3>
