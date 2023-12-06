@@ -59,7 +59,7 @@
             ajax: "{{ route('news.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'client_name', name: 'client_name'},
+                {data: 'news_title', name: 'news_title'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });
