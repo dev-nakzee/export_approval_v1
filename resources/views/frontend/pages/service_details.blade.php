@@ -44,7 +44,7 @@
                         </li>
                         @endif
                     </ul>
-                    <a class="uk-button uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
+                    <a class="uk-button uk-margin-top download-brochure-btn" href="#download-brochure"><i class="fa fa-download"></i>{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
