@@ -32,7 +32,7 @@
                         @endforeach
                         @endif
                     </ul>
-                    <a class="uk-button uk-width-1-1 uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
+                    <a class="uk-button uk-margin-top download-brochure-btn" href="#download-brochure">{{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
