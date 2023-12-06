@@ -18,6 +18,7 @@ use App\Http\Controllers\Backend\ClientController;
 use App\Http\Controllers\Backend\StaticPageController;
 use App\Http\Controllers\Backend\StaticPageSectionController;
 use App\Http\Controllers\Backend\FormsController;
+use App\Http\Controllers\Backend\NewsController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -173,4 +174,14 @@ Route::controller(FormsController::class)->group(function(){
     Route::post('/forms/store', 'store')->name('forms.store');
     Route::post('/forms/update/{id}', 'update')->name('forms.update');
     Route::get('/forms/delete/{id}', 'destroy')->name('forms.delete');
+});
+
+Route::controller(NewsController::class)->group(function(){
+    Route::get('/news', 'index')->name('news.index');
+    Route::get('/news/show', 'show')->name('news.show');
+    Route::get('/news/create', 'create')->name('news.create');
+    Route::get('/news/edit/{id}', 'edit')->name('news.edit');
+    Route::post('/news/store', 'store')->name('news.store');
+    Route::post('/news/update/{id}', 'update')->name('news.update');
+    Route::get('/news/delete/{id}', 'destroy')->name('news.delete');
 });

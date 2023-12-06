@@ -96,4 +96,8 @@ class HomeController extends Controller
         }
         return view('frontend.pages.downloads', compact('services', 'downloads'));
     }
+
+    public function media_cover() {
+        
+    }
 }
