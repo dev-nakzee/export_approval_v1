@@ -87,12 +87,6 @@
                     } else {
                         $('.ps-details-section').removeClass('ps-sidebar-absolute');
                     }
-                    // const messageText = isInViewport(box) ?
-                    //     $('.ps-details-section').addClass('ps-sidebar-absolute') :
-                    //     'The box is not visible in the viewport';
-
-                    // message.textContent = messageText;
-
                 }, {
                     passive: true
                 });
