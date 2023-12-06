@@ -436,3 +436,11 @@ section.website-footer {
     color: #fff;
     z-index: 99 !important;
 }
+.back-to-top:hover {
+    background-color: #052faa !important;
+    color: #fff;
+}
+.back-to-top img {
+    width: 20px !important;
+    height: 20px !important;
+}
