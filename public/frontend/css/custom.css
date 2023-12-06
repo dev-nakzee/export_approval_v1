@@ -230,23 +230,17 @@ iframe {
     color: #303030;
 }
 
-.dataTables_filter label {
-    font-size: 14px !important;
-    font-weight: 900 !important;
-    color: #ed462f !important;
-}
-.dataTables_filter label input {
+.dataTables_filter label input.uk-input {
     background-image: url(../images/search.png) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     padding-left: 45px !important;
     font-size: 14px !important;
-    font-weight: 900 !important;
-    border: 1px solid #052faa !important;
+    border: 1px solid #7894e6 !important;
     box-shadow: 0 0 0 0.1rem rgba(5, 47, 170, 0.25) !important;
     border-radius: 2px !important;
     width: 100% !important;
-    color: rgb(143, 143, 143);
+    color: #000000 !important;
 }
 
 #mandatory-list tbody tr:hover {

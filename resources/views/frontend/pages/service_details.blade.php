@@ -103,12 +103,7 @@
                 @endif
                 @if($service->faqs) 
                 <div class="ps-sections" id="frequently-asked-questions">
-                    <div class="section-content-header px-2">
-                        <span>{{$section->service_section_name}}<span>
-                    </div>
-                    <div class="px-2 pt-4">
-                    {!! $section->service_section_content !!}
-                    </div>
+                   
                 </div>
                 @endif
             </div>
