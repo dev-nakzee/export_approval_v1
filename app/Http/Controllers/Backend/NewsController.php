@@ -24,6 +24,7 @@ class NewsController extends Controller
     public function index()
     {
         //
+        return view('backend.news.index');
     }
 
     /**
