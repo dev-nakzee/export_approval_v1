@@ -49,7 +49,7 @@ class NewsController extends Controller
             'img_alt' => $request->img_alt,
             'news_url' => $request->url,
         ];
-        News::save($data);
+        News::create($data);
         return redirect()->route('news.index')->with('success', 'News created successfully.');
     }
 
