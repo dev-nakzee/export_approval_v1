@@ -306,7 +306,7 @@
                             <a href="#">Gallery</a>
                         </li>
                         <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
-                    <li><a href="{{route('frontend.site.home')}}">Contact us</a></li>
+                    {{-- <li><a href="{{route('frontend.site.home')}}">Contact us</a></li> --}}
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
