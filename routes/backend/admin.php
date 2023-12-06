@@ -19,6 +19,8 @@ use App\Http\Controllers\Backend\StaticPageController;
 use App\Http\Controllers\Backend\StaticPageSectionController;
 use App\Http\Controllers\Backend\FormsController;
 use App\Http\Controllers\Backend\NewsController;
+use App\Http\Controllers\Backend\GalleryImageController;
+use App\Http\Controllers\Backend\GalleryVideoController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -184,4 +186,24 @@ Route::controller(NewsController::class)->group(function(){
     Route::post('/news/store', 'store')->name('news.store');
     Route::post('/news/update/{id}', 'update')->name('news.update');
     Route::get('/news/delete/{id}', 'destroy')->name('news.delete');
+});
+
+Route::controller(GalleryImageController::class)->group(function(){
+    Route::get('/gallery/images', 'index')->name('gallery.images.index');
+    Route::get('/gallery/images/show', 'show')->name('gallery.images.show');
+    Route::get('/gallery/images/create', 'create')->name('gallery.images.create');
+    Route::get('/gallery/images/edit/{id}', 'edit')->name('gallery.images.edit');
+    Route::post('/gallery/images/store', 'store')->name('gallery.images.store');
+    Route::post('/gallery/images/update/{id}', 'update')->name('gallery.images.update');
+    Route::get('/gallery/images/delete/{id}', 'destroy')->name('gallery.images.delete');
+});
+
+Route::controller(GalleryVideoController::class)->group(function(){
+    Route::get('/gallery/videos', 'index')->name('gallery.videos.index');
+    Route::get('/gallery/videos/show', 'show')->name('gallery.videos.show');
+    Route::get('/gallery/videos/create', 'create')->name('gallery.videos.create');
+    Route::get('/gallery/videos/edit/{id}', 'edit')->name('gallery.videos.edit');
+    Route::post('/gallery/videos/store', 'store')->name('gallery.videos.store');
+    Route::post('/gallery/videos/update/{id}', 'update')->name('gallery.videos.update');
+    Route::get('/gallery/videos/delete/{id}', 'destroy')->name('gallery.videos.delete');
 });
