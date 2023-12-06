@@ -441,6 +441,16 @@ section.website-footer {
     font-weight: 500;
     color: #fff !important;
 }
+
+.footer-logo {
+    background: #ffffff;
+}
+.footer-social a {
+    border: 1px solid #ffffff;
+    padding: 3px !important;
+    border-radius: 5px;
+}
+
 .back-to-top {
     background-color: #ed462f !important;
     color: #fff;

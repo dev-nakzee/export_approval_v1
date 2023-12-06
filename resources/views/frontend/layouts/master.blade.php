@@ -254,18 +254,22 @@
             </form>
         </section>
         @yield('clients')
-        <section class="uk-section uk-background-default uk-footer website-footer">
-            <div uk-grid>
-                <div class="uk-width-1-5@s">
+        <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-vertical">
+            <div  class="uk-padding-large" uk-grid>
+                <div class="uk-width-1-4@s">
                     <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
-                    <ul class="uk-nav uk-nav-default">
-                        <li class="uk-nav-header"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
-                        </li>
-                    </ul>
+                    <p class="uk-text-small">At Brand Liaison India Pvt Ltd, We Pride Ourselves On Being Your Trusted Partner In Regulatory Compliance. With A Commitment To Excellence, We Offer A Comprehensive Range Of Services To Ensure That Your Products Meet The Necessary Standards And Approvals.</p>
+                    <div class="footer-social">
+                        <a href="" class="facebook" uk-icon="facebook"></a>
+                        <a href="" class="twitter" uk-icon="instagram"></a>
+                        <a href="" class="linkedin" uk-icon="linkedin"></a>
+                        <a href="" class="twitter" uk-icon="pinterest"></a>
+                        <a href="" class="twitter" uk-icon="twitter"></a>
+                        <a href="" class="whatsapp" uk-icon="whatsapp"></a>
+                        
+                    </div>
                 </div>
-                <div class="uk-width-1-5@s">
+                <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Services</li>
                         @if($services)
@@ -278,32 +282,44 @@
                         @endforeach
                         @endif
                     </ul>
-                </div>
-                <div class="uk-width-1-5@s">
                     <ul class="uk-nav uk-nav-default">
-                        <li class="uk-nav-header">Important Links</li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
-                        </li>
+                        <li class="uk-nav-header">Partner with us</li>
+                        <li><a href="{{route('frontend.site.home')}}">Partnership</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Careers</a></li>
                     </ul>
                 </div>
-                <div class="uk-width-2-5@s">
-                    <div class="">
-                        <span class="uk-nav-header">Export Approval</span>
-                        <address>
-                        </address>
-                        <span class="uk-nav-header">Subscribe to our newsletter</span>
-                        <form class="uk-form-stacked uk-margin-top">
-                            <div class="uk-margin">
-                                <div class="uk-inline uk-width-1-1">
-                                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                    <input class="uk-input uk-form-small" type="text" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="uk-margin">
-                                <button class="uk-button uk-button-primary uk-width-1-1">Subscribe</button>
-                            </div>
-                        </form>
+                <div class="uk-width-1-4@s">
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header">Important Links</li>
+                        <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+                        <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
+                        <li>
+                            <a href="#">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="#">Media Coverage</a>
+                        </li>
+                        <li>
+                            <a href="#">Gallery</a>
+                        </li>
+                        <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                    <li><a href="{{route('frontend.site.home')}}">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="uk-width-1-4@s">
+                    <div uk-grid class="uk-margin-remove">
+                        <span class="uk-nav-header uk-width-1-1 uk-margin-remove">Contact us</span>
+                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="location"></span>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">First Floor, F-205, Green House, Gali No 06, Mangal Bazar Laxmi Nagar, New Delhi, East Delhi, Delhi, 110092</p>
+                        <span class="uk-width-1-1 uk-margin-small"></span>
+                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="receiver"></span>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988</p>
+                        <span class="uk-width-1-1 uk-margin-small"></span>
+                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="mail"></span>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
                 </div>
             </div>
