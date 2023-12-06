@@ -255,7 +255,7 @@
         </section>
         @yield('clients')
         <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-vertical">
-            <div  class="uk-padding-large" uk-grid>
+            <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid>
                 <div class="uk-width-1-4@s">
                     <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
                     <p class="uk-text-small">At Brand Liaison India Pvt Ltd, We Pride Ourselves On Being Your Trusted Partner In Regulatory Compliance. With A Commitment To Excellence, We Offer A Comprehensive Range Of Services To Ensure That Your Products Meet The Necessary Standards And Approvals.</p>
@@ -322,10 +322,8 @@
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
                 </div>
-                <div class="uk-width-1-1">
-                    <p>
-                        Copyright © 2023 Brand Liaison India Pvt Ltd.
-                    </p>
+                <div class="uk-width-1-1 uk-text-center uk-text-small">
+                    <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
                 </div>
             </div>
         </section>
