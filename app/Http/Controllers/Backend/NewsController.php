@@ -46,9 +46,25 @@ class NewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request)
     {
         //
+        if($request->ajax()){
+            $data = News::select('news_id','news_title')
+                ->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('news_title', function($row){
+                    return $row->news_title;
+                })
+                ->addColumn('action', function($row){
+                    $actionBtn = '<a href="'.route('news.edit', $row->news_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('news.delete', $row->news_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action', 'status'])
+                ->escapeColumns([])
+                ->make(true);
+        }
     }
 
     /**
