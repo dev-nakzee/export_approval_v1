@@ -315,7 +315,7 @@
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="receiver"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988 (Whatsapp prefered)</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="mail"></i>
@@ -329,7 +329,6 @@
                             <a href="" class="linkedin" uk-icon="linkedin"></a>
                             <a href="" class="twitter" uk-icon="pinterest"></a>
                             <a href="" class="twitter" uk-icon="twitter"></a>
-                            <a href="" class="whatsapp" uk-icon="whatsapp"></a>
                         </div>
                     </div>
                     
