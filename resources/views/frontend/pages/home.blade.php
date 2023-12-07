@@ -144,7 +144,7 @@
                                 <img src="{{asset('frontend/images/step-payment.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/step-payment.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Pay step-by-step</h3>
+                                <h3>Pay<br>step-by-step</h3>
                             </div>
                         </div>
                         <div class="wcu-two wcu-tabs" hidden>
