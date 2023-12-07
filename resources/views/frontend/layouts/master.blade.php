@@ -166,6 +166,7 @@
             </div>
         </nav>
         @yield('content')
+        @if (request()->route()->getName() != 'frontend.site.contact-us')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom" id="brochure">
                 <p class="section-heading uk-margin-remove-bottom">
@@ -255,6 +256,8 @@
                 </div>
             </form>
         </section>
+        @endif
+
         @yield('clients')
         <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom">
             <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid>
@@ -327,7 +330,7 @@
                             <a href="" class="facebook" uk-icon="facebook"></a>
                             <a href="" class="twitter" uk-icon="instagram"></a>
                             <a href="" class="linkedin" uk-icon="linkedin"></a>
-                            <a href="" class="twitter" uk-icon="pinterest"></a>
+                            <a href="" class="pinterest" uk-icon="pinterest"></a>
                             <a href="" class="twitter" uk-icon="twitter"></a>
                         </div>
                     </div>
