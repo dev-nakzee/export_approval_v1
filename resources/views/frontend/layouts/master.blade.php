@@ -293,7 +293,7 @@
                         <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
                         <li>
-                            <a href="#">Downloads</a>
+                            <a href="{{route('frontend.site.downloads')}}">Downloads</a>
                         </li>
                         <li>
                             <a href="{{route('frontend.site.blog')}}">Blogs</a>
