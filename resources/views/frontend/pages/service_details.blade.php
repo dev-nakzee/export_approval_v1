@@ -40,11 +40,11 @@
                         @endif
                         @if($service->faqs) 
                         <li class="nav-item">
-                            <a href="#{{'frequently-asked-questions'}}">Frequently asked questions</a>
+                            <a href="#{{'frequently-asked-questions'}}">F.A.Q.</a>
                         </li>
                         @endif
                     </ul>
-                    <a class="uk-button uk-margin-top download-brochure-btn" href="#download-brochure"><i uk-icon="download"></i>{{'Download Brochure'}}</a>
+                    <a class="uk-button uk-margin-top download-brochure-btn" href="#download-brochure"><i class="fa-solid fa-down-long"></i> {{'Download Brochure'}}</a>
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
