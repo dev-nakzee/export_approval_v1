@@ -131,7 +131,7 @@
                                 <img src="{{asset('frontend/images/cost-effective.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/cost-effective.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Cost effective</h3>
+                                <h3>Cost effective<br>solutions</h3>
                             </div>
                         </div>
                         <div class="wcu-one wcu-tabs" hidden>
@@ -144,7 +144,7 @@
                                 <img src="{{asset('frontend/images/step-payment.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/step-payment.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>Pay<br>step-by-step</h3>
+                                <h3>Make Payment<br>step-by-step</h3>
                             </div>
                         </div>
                         <div class="wcu-two wcu-tabs" hidden>
@@ -170,7 +170,7 @@
                                 <img src="{{asset('frontend/images/projects.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/projects.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>1000+ projects</h3>
+                                <h3>1000+ projects completed successfully</h3>
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>

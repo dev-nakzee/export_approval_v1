@@ -141,6 +141,12 @@
     font-weight: 500;
     color: #ed462f !important;
 }
+
+.wcu-tabs div.uk-width-expand h3 {
+    font-size: 20px !important;
+    font-weight: 500;
+}
+
 /* All Pages */
 
 .about-section-title {
@@ -521,12 +527,12 @@ section.website-footer {
 }
 
 .back-to-top {
-    background-color: #ed462f !important;
+    background-color: #ebd6d3 !important;
     color: #fff;
     z-index: 99 !important;
 }
 .back-to-top:hover {
-    background-color: #052faa !important;
+    background-color: #6e6e6e !important;
     color: #fff;
 }
 .back-to-top img {
