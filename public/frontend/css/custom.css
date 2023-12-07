@@ -226,7 +226,15 @@ iframe {
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
+    text-transform: capitalize;
+    padding: 0px 5px !important;
 }
+.download-brochure-btn svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
 .download-brochure-btn:hover {
     border: 2px solid #052faa;
     background-color: #052faa;
@@ -234,6 +242,9 @@ iframe {
     border-radius: 5px;
     font-size: 12px;
     font-weight: 500;
+}
+.download-brochure-btn:hover svg {
+    fill: #fff;
 }
 
 .uk-tab-left li a {

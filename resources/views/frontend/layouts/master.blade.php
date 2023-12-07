@@ -280,8 +280,8 @@
                     </ul>
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Partner with us</li>
-                        <li><a href="{{route('frontend.site.home')}}">Partnership</a></li>
-                        <li><a href="{{route('frontend.site.home')}}">Careers</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Business associate</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Residential Officer</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
@@ -295,36 +295,44 @@
                         <li>
                             <a href="{{route('frontend.site.blog')}}">Blogs</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="#">Media Coverage</a>
                         </li>
                         <li>
                             <a href="#">Gallery</a>
-                        </li>
+                        </li> --}}
                         <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
-                    {{-- <li><a href="{{route('frontend.site.home')}}">Contact us</a></li> --}}
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
                     <div uk-grid class="uk-margin-remove-top uk-margin-remove-left uk-margin-bottom uk-margin-remove-right">
                         <span class="uk-nav-header uk-width-1-1 uk-margin-small">Contact us</span>
-                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="location"></span>
+                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
+                            <i uk-icon="location"></i>
+                        </span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">First Floor, F-205, Green House, Gali No 06, Mangal Bazar Laxmi Nagar, New Delhi, East Delhi, Delhi, 110092</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
-                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="receiver"></span>
+                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
+                            <i uk-icon="receiver"></i>
+                        </span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
-                        <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="mail"></span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
+                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
+                            <i uk-icon="mail"></i>
+                        </span>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">test@mail.com</p>
+                        <span class="uk-width-1-1 uk-margin-small"></span>
+                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove"></span>
+                        <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
+                            <a href="" class="facebook" uk-icon="facebook"></a>
+                            <a href="" class="twitter" uk-icon="instagram"></a>
+                            <a href="" class="linkedin" uk-icon="linkedin"></a>
+                            <a href="" class="twitter" uk-icon="pinterest"></a>
+                            <a href="" class="twitter" uk-icon="twitter"></a>
+                            <a href="" class="whatsapp" uk-icon="whatsapp"></a>
+                        </div>
                     </div>
-                    <div class="footer-social">
-                        <a href="" class="facebook" uk-icon="facebook"></a>
-                        <a href="" class="twitter" uk-icon="instagram"></a>
-                        <a href="" class="linkedin" uk-icon="linkedin"></a>
-                        <a href="" class="twitter" uk-icon="pinterest"></a>
-                        <a href="" class="twitter" uk-icon="twitter"></a>
-                        <a href="" class="whatsapp" uk-icon="whatsapp"></a>
-                    </div>
+                    
                 </div>
                 <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
                     <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
