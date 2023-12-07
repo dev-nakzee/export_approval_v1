@@ -36,7 +36,7 @@
                 ctx.fillStyle = "Blue";
                 ctx.textAlign = "center";
                 ctx.font = "26px Arial";
-                ctx.strokeText(x+" + "+y+" =",50,30);
+                ctx.strokeText(x+" + "+y+"   =",60,20);
                 var answer = document.getElementById("captcha_answer");
                 answer.value = x + y;
             }
@@ -244,9 +244,9 @@
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             {{-- <span class="captcha">{!! captcha_img() !!}</span> --}}
                             <input id="captcha_answer" name="captcha_answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
-                            <canvas id="captcha_image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="170" height="36" style="border:1px solid rgb(192, 192, 192); background: rgb(192, 192, 192);"></canvas>
-                            <button type="button" class="uk-button uk-padding-remove-left uk-button-small uk-width-1-5" id="reload_captcha" uk-icon="refresh"></button>
-                            <input class="uk-input uk-width-2-5 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha">
+                            <canvas id="captcha_image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="120" height="25"></canvas>
+                            <button type="button" class="uk-button uk-padding-remove uk-button-small" style="width: 36px; height: 36px;" id="reload_captcha" uk-icon="refresh"></button>
+                            <input class="uk-input uk-width-expand uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha value">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-text-center uk-margin-small-top">
@@ -281,7 +281,7 @@
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Partner with us</li>
                         <li><a href="{{route('frontend.site.home')}}">Business associate</a></li>
-                        <li><a href="{{route('frontend.site.home')}}">Residential Officer</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Residential Executive</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">

@@ -471,7 +471,7 @@ iframe {
     color: #052faa !important;
     font-size: 26px !important;
 } */
-#captcha-image {
+#captcha_image {
     background-image: url(../images/captacha-bg.svg) !important;
     padding: none;
 }

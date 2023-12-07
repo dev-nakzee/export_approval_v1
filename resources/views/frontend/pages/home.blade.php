@@ -170,7 +170,7 @@
                                 <img src="{{asset('frontend/images/projects.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/projects.svg')}}" data-uk-img="">
                             </div>
                             <div class="uk-width-expand">
-                                <h3>1000+ projects completed successfully</h3>
+                                <h3>1000+ projects completed</h3>
                             </div>
                         </div>
                         <div class="wcu-four wcu-tabs" hidden>
