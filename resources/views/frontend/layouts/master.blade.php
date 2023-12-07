@@ -259,18 +259,11 @@
         <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom">
             <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid>
                 <div class="uk-width-1-4@s">
-                    <span class="powered-by uk-padding-top">Powered by</span>
+                    <ul class="uk-nav uk-nav-default">
+                        <li class="uk-nav-header">Services</li>
+                    </ul>
                     <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval">
                     <p class="uk-text-small">At Brand Liaison India Pvt Ltd, We Pride Ourselves On Being Your Trusted Partner In Regulatory Compliance. With A Commitment To Excellence, We Offer A Comprehensive Range Of Services To Ensure That Your Products Meet The Necessary Standards And Approvals.</p>
-                    <div class="footer-social">
-                        <a href="" class="facebook" uk-icon="facebook"></a>
-                        <a href="" class="twitter" uk-icon="instagram"></a>
-                        <a href="" class="linkedin" uk-icon="linkedin"></a>
-                        <a href="" class="twitter" uk-icon="pinterest"></a>
-                        <a href="" class="twitter" uk-icon="twitter"></a>
-                        <a href="" class="whatsapp" uk-icon="whatsapp"></a>
-                        
-                    </div>
                 </div>
                 <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default">
@@ -324,9 +317,14 @@
                         <span class="uk-width-1-5 uk-align-center uk-padding-remove uk-margin-remove" uk-icon="mail"></span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">Testing@Gmail.Com</p>
                     </div>
-                    
-                    <img class="footer-logo" src="{{asset('frontend/images/logo.png')}}" alt="Export Approval">
-                    {{-- <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval"> --}}
+                    <div class="footer-social">
+                        <a href="" class="facebook" uk-icon="facebook"></a>
+                        <a href="" class="twitter" uk-icon="instagram"></a>
+                        <a href="" class="linkedin" uk-icon="linkedin"></a>
+                        <a href="" class="twitter" uk-icon="pinterest"></a>
+                        <a href="" class="twitter" uk-icon="twitter"></a>
+                        <a href="" class="whatsapp" uk-icon="whatsapp"></a>
+                    </div>
                 </div>
                 <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
                     <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
