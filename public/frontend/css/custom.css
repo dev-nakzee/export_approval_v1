@@ -458,6 +458,18 @@ iframe {
     background-image: url(../images/captacha-bg.svg) !important;
     padding: none;
 }
+
+.contact-form-submit {
+    border: 2px #052faa solid;
+    background-color: #ffffff;
+    color: #052faa;
+}
+.contact-form-submit:hover {
+    background-color: #052faa;
+    border: 2px #052faa solid;
+    color: #ffffff;
+}
+
 .brochure-form-submit {
     border: 2px #052faa solid;
     background-color: #ffffff;

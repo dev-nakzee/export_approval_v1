@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
+use App\Models\Countries;
 
 class HomeController extends Controller
 {
@@ -99,5 +100,16 @@ class HomeController extends Controller
 
     public function media_cover() {
         
+    }
+
+    public function contact() {
+        $countries = Countries::select('id','name', 'iso', 'iso3', 'phonecode')->get();
+        $sections = StaticPageSection::select('static_page_sections.*','media_path')
+            ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
+            ->where('static_page_id', 3)
+            ->where('section_status', 1)
+            ->orderBy('section_order', 'asc')
+            ->get();
+        return view('frontend.pages.contact', compact('sections', 'countries'));
     }
 }

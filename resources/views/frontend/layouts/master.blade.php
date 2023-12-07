@@ -22,11 +22,7 @@
                     processData: false,
                     contentType: false,
                     success: function(data){
-                        console.log(data);
-                        // var lead = JSON.parse(data);
-                        // var id = lead.lead_id;
-                        // alert(lead.lead_id);
-                        // var url = "{{route('frontend.site.brochure', "+id+" )}}";
+                        alert(data);
                     }
                 });
             });
@@ -34,17 +30,17 @@
             function captcha(){
                 var x = Math.floor((Math.random() * 9) + 1);
                 var y = Math.floor((Math.random() * 9) + 1);
-                var canvas = document.getElementById("captcha-image");
+                var canvas = document.getElementById("captcha_image");
                 var ctx=canvas.getContext("2d");
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = "Blue";
                 ctx.textAlign = "center";
-                ctx.font = "30px Arial";
-                ctx.strokeText(x+" + "+y,50,30);
-                var answer = document.getElementById("captcha-answer");
+                ctx.font = "26px Arial";
+                ctx.strokeText(x+" + "+y+" =",50,30);
+                var answer = document.getElementById("captcha_answer");
                 answer.value = x + y;
             }
-            $(document).on("click", "#reload-captcha", function(){
+            $(document).on("click", "#reload_captcha", function(){
                 captcha();
             });
 
@@ -164,7 +160,7 @@
                         </div>
                     </li>
                     <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
-                    <li><a href="{{route('frontend.site.home')}}">Contact us</a></li>
+                    <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                 </ul>
                 <button class="uk-button uk-button-default uk-button-small">Login / Register</button>  
             </div>
@@ -247,9 +243,9 @@
 
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             {{-- <span class="captcha">{!! captcha_img() !!}</span> --}}
-                            <input id="captcha-answer" name="captcha-answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
-                            <canvas id="captcha-image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="170" height="37" style="border:1px solid rgb(192, 192, 192); background: rgb(192, 192, 192);"></canvas>
-                            <button type="button" class="uk-button uk-padding-remove-left uk-button-small uk-width-1-5" id="reload-captcha" uk-icon="refresh"></button>
+                            <input id="captcha_answer" name="captcha_answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
+                            <canvas id="captcha_image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="170" height="36" style="border:1px solid rgb(192, 192, 192); background: rgb(192, 192, 192);"></canvas>
+                            <button type="button" class="uk-button uk-padding-remove-left uk-button-small uk-width-1-5" id="reload_captcha" uk-icon="refresh"></button>
                             <input class="uk-input uk-width-2-5 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha">
                         </div>
                     </div>
