@@ -445,15 +445,18 @@ iframe {
     font-weight: 700 !important;
     color: #000;
 }
-.captcha {
+/* .captcha {
     background-image: url(../images/captacha-bg.svg) !important;
     padding: auto 90px !important;
     text-align: center !important;
     letter-spacing: 15px;
     font-weight: 700;
     color: #052faa !important;
-    /* font-family: captcha !important; */
     font-size: 26px !important;
+} */
+#captcha-image {
+    background-image: url(../images/captacha-bg.svg) !important;
+    padding: none;
 }
 .brochure-form-submit {
     border: 2px #052faa solid;

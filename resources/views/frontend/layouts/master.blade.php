@@ -10,10 +10,11 @@
         <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}" />
         @yield('scripts')
         <script>
-            $('#brochure-form').submit(function(e){
+            $(document).on('submit', '#brochure-form', function(e){
                 e.preventDefault();
                 var form = $(this);
                 var formData = new FormData(form[0]);
+                console.log(formData);
                 $.ajax({
                     url: "{{route('frontend.site.brochure')}}",
                     type: "POST",
@@ -21,28 +22,34 @@
                     processData: false,
                     contentType: false,
                     success: function(data){
-                        var lead = JSON.parse(data);
-                        var id = lead.lead_id;
-                        var url = "{{route('frontend.site.brochure', "+id+" )}}";
+                        console.log(data);
+                        // var lead = JSON.parse(data);
+                        // var id = lead.lead_id;
+                        // alert(lead.lead_id);
+                        // var url = "{{route('frontend.site.brochure', "+id+" )}}";
                     }
                 });
             });
-            $(document).on('click', '#reload-captcha', function() {
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $.ajax({
-                    type: 'GET',
-                    url: "{{route('frontend.site.brochure.reload-captcha')}}",
-                    success: function (data) {
-                        $(".captcha").html(data.captcha);
-                    }
-                });
+
+            function captcha(){
+                var x = Math.floor((Math.random() * 9) + 1);
+                var y = Math.floor((Math.random() * 9) + 1);
+                var canvas = document.getElementById("captcha-image");
+                var ctx=canvas.getContext("2d");
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "Blue";
+                ctx.textAlign = "center";
+                ctx.font = "30px Arial";
+                ctx.strokeText(x+" + "+y,50,30);
+                var answer = document.getElementById("captcha-answer");
+                answer.value = x + y;
+            }
+            $(document).on("click", "#reload-captcha", function(){
+                captcha();
             });
-            
+
             $(document).ready(function(){
+                captcha();
                 $(window).scroll(function(){
                     var scrollTop = 80;
                     if($(window).scrollTop() >= scrollTop){
@@ -240,11 +247,8 @@
 
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             {{-- <span class="captcha">{!! captcha_img() !!}</span> --}}
-                                @php
-                                    $x = rand(1,9);
-                                    $y = rand(1,9);
-                                @endphp
-                            <input class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical captcha" disabled value="{{$x.' + '.$y}}">
+                            <input id="captcha-answer" name="captcha-answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
+                            <canvas id="captcha-image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="170" height="37" style="border:1px solid rgb(192, 192, 192); background: rgb(192, 192, 192);"></canvas>
                             <button type="button" class="uk-button uk-padding-remove-left uk-button-small uk-width-1-5" id="reload-captcha" uk-icon="refresh"></button>
                             <input class="uk-input uk-width-2-5 uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha">
                         </div>
