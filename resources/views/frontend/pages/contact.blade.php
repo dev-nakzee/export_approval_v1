@@ -32,7 +32,7 @@
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <p class="section-heading uk-margin-remove-bottom" style="color: #8a8a8a">
+        <p class="section-heading uk-margin-remove" style="color: #8a8a8a">
             {{$sections[0]->section_name}} 
         </p>
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
