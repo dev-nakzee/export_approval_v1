@@ -24,7 +24,7 @@
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
-        <ul class="uk-breadcrumb uk-align-right">
+        <ul class="uk-breadcrumb uk-align-right uk-margin-remove-bottom">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
             <li><span>{{'Contact-us'}}</span></li>
         </ul>
@@ -32,7 +32,7 @@
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <p class="section-heading uk-margin-remove" style="color: #8a8a8a">
+        <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
             {{$sections[0]->section_name}} 
         </p>
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
@@ -40,13 +40,13 @@
     </div>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-            <div class="uk-card-body uk-padding-remove-vertical uk-border-rounded">
-                <div style="overflow:hidden;max-width:100%;width:600px;height:400px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Brand+Liaison+India+Private+Limited,+Veer+Savarkar+Block,+Guru+Nanak+Pura,+Laxmi+Nagar,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a><style>#google-maps-display .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;}</style></div>
+            <div class="uk-card-body uk-padding-remove-vertical uk-border-rounded  uk-padding-remove-left">
+                <div style="overflow:hidden;max-width:100%;width:600px;height:100%;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Brand+Liaison+India+Private+Limited,+Veer+Savarkar+Block,+Guru+Nanak+Pura,+Laxmi+Nagar,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a><style>#google-maps-display .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;}</style></div>
             </div>
         </div>
         <div>
-            <div class="uk-card-body uk-padding-remove-vertical uk-background-muted uk-border-rounded">
-               <form method="POST" action="">
+            <div class="uk-card-body uk-padding-remove-vertical">
+               <form method="POST" action="" class="uk-background-muted uk-border-rounded contact-box uk-padding-small uk-padding-remove-vertical">
                 @csrf
                 <div class="uk-margin">
                     <input class="uk-input" type="text" placeholder="Name" name="name" required>
@@ -89,7 +89,36 @@
         </div>
     </div>
 </section>
-
+<section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
+    <div class="uk-text-center uk-padding uk-padding-remove-vertical uk-child-width-1-3@s uk-margin" uk-grid>
+        <div class="uk-text-center">
+            <h3 class="uk-margin-remove-bottom">Corporate Office</h3>
+            <p class="uk-text-small">Brand Liaison India Pvt. Ltd.<br>
+110, Sharma Complex, A-2 Guru Nanak Pura, Laxmi Nagar,<br>
+Delhi - 110092, India Nearest Metro Station:<br>
+Nirman Vihar - Gate No. 1 / Skywalk Exit<br>
+(150 meters / 2 minutes walk)</p>
+        </div>
+        <div class="uk-text-center">
+            <h3 class="uk-margin-remove-bottom">Customer Care</h3>
+            <p class="uk-text-small">
+                <strong>Office :</strong><br>
++91-11-42686678<br>
++91-11-47562062<br>
+<strong>Mobile :</strong><br>
++91-9250056788<br>
++91-8130615678<br></p>
+        </div>
+        <div class="uk-text-center">
+            <h3 class="uk-margin-remove-bottom">Feedback / Grievance</h3>
+            <p class="uk-text-small">
+                <strong>Mobile :</strong> +91-9810363988<br>
+                (Call / SMS / Whatsapp)<br>
+                <strong>Email :</strong> rk@bl-india.com<br>
+            </p>
+        </div>
+    </div>
+</section>
 @endsection
 @section('scripts')
 

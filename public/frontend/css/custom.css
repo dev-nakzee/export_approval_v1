@@ -476,6 +476,11 @@ iframe {
     padding: none;
 }
 
+.contact-box {
+    border: 1px #d6d6d6 solid;
+    background-color: #d6d6d6;
+}
+
 .contact-form-submit {
     border: 2px #052faa solid;
     background-color: #ffffff;
