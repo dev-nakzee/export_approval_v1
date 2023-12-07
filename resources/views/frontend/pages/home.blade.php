@@ -15,7 +15,7 @@
 
     @endsection
     @section('content')
-    <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid style="background-color: {{$sections[2]->section_color}}">
+    <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid style="background-color: {{$sections[0]->section_color}}">
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
