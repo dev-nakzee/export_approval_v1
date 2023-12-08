@@ -234,11 +234,12 @@ iframe {
     font-weight: 500;
     text-transform: capitalize;
     padding: 0px 5px !important;
+    padding-right: 10px !important;
 }
 .download-brochure-btn svg {
     width: 18px;
     height: 18px;
-    margin-right: 10px;
+    margin-right: 2px;
 }
 
 .download-brochure-btn:hover {
