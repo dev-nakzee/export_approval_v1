@@ -81,7 +81,12 @@ class HomeController extends Controller
     }
 
     public function downloads() {
-        $services = Services::select('service_name', 'service_slug')->get();
+        $services = Product::select('services.service_name', 'services.service_slug')
+            ->join('services', 'products.product_service_id','services.service_id')
+            ->where('information', '!=', null)
+            ->orWhere('guidelines', '!=', null)
+            ->distinct()
+            ->get();
         $downloads = Product::select('product_id', 'product_name', DB::raw('(SELECT doc_path FROM documents WHERE doc_id=information) AS information'), DB::raw('(SELECT doc_path FROM documents WHERE doc_id=guidelines) AS guidelines'))
             ->where('information', '!=', null)
             ->orWhere('guidelines', '!=', null)
