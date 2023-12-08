@@ -25,7 +25,7 @@ class DownloadCategoryController extends Controller
     public function index()
     {
         //
-        
+        return view('frontend.downloads.categories.index');
     }
 
     /**
