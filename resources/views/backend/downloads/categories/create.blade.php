@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'New Client'])
+@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'New Download Category'])
 @section('content')
 <form class="form-horizontal" method="POST" action="{{route('clients.store')}}" enctype="multipart/form-data">
     @csrf
@@ -8,29 +8,12 @@
             <a href="{{ URL::previous() }}" class="btn btn-sm btn-outline-danger float-end"><i class="fa-light fa-arrow-left"></i>&nbsp;Back</a>
         </div>
         <div class="mb-3 col-md-6">
-            <label for="name" class="form-label">Client name</label>
+            <label for="name" class="form-label">Download Category name</label>
             <input type="text" class="form-control form-control-sm" id="name" name="name">
         </div>
         <div class="mb-3 col-md-6">
-            <label for="slug" class="form-label">Client slug</label>
+            <label for="slug" class="form-label">Download Category Slug</label>
             <input type="text" class="form-control form-control-sm" id="slug" name="slug">
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="media_id" class="form-label">Client image</label>
-            <div class="input-group input-group-sm">
-                <span class="input-group-text"><i class="fa-light fa-image"></i></span>
-                <input type="text" class="form-control form-control-sm" id="image" disabled >
-                <input type="text" class="form-control form-control-sm" id="media_id" name="media_id" hidden>
-                <a class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadMediaModal"><i class="fa-light fa-plus"></i></a>
-            </div>
-        </div>
-        <div class="mb-3 col-md-6">
-            <label for="slug" class="form-label">Client image alt text</label>
-            <input type="text" class="form-control form-control-sm" id="img_alt" name="img_alt">
-        </div>
-        <div class="mb-3 col-md-12">
-            <label for="client_content" class="form-label">Client content</label>
-            <textarea class="form-control form-control-sm text-editor" id="client_content" name="client_content"></textarea>
         </div>
         <div class="mb-3 col-md-12 text-center">
            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="fa-light fa-save"></i>&nbsp;Save</button>
