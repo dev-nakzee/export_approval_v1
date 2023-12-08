@@ -34,6 +34,7 @@ class DownloadCategoryController extends Controller
     public function create()
     {
         //
+        return view('backend.downloads.categories.create');
     }
 
     /**
