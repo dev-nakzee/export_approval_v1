@@ -185,7 +185,7 @@
                     <div class="uk-width-1-2@m">
               
                         <div class="uk-form-controls">
-                            <input class="uk-input" name="organisation" id="organisation" type="text" placeholder="Company name">
+                            <input class="uk-input" name="organisation" id="organisation" type="text" placeholder="Organisation name">
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
@@ -239,7 +239,6 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">
-
                         <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                             {{-- <span class="captcha">{!! captcha_img() !!}</span> --}}
                             <input id="captcha_answer" name="captcha_answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
