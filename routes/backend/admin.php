@@ -21,6 +21,8 @@ use App\Http\Controllers\Backend\FormsController;
 use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\Backend\GalleryImageController;
 use App\Http\Controllers\Backend\GalleryVideoController;
+use App\Http\Controllers\Backend\DownloadCategoryController;
+use App\Http\Controllers\Backend\DownloadsController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
@@ -206,4 +208,24 @@ Route::controller(GalleryVideoController::class)->group(function(){
     Route::post('/gallery/videos/store', 'store')->name('gallery.videos.store');
     Route::post('/gallery/videos/update/{id}', 'update')->name('gallery.videos.update');
     Route::get('/gallery/videos/delete/{id}', 'destroy')->name('gallery.videos.delete');
+});
+
+Route::controller(DownloadCategoryController::class)->group(function(){
+    Route::get('/downloads/category','index')->name('downloads.category.index');
+    Route::get('/downloads/category/show', 'show')->name('downloads.category.show');
+    Route::get('/downloads/category/create', 'create')->name('downloads.category.create');
+    Route::get('/downloads/category/edit/{id}', 'edit')->name('downloads.category.edit');
+    Route::post('/downloads/category/store', 'store')->name('downloads.category.store');
+    Route::post('/downloads/category/update/{id}', 'update')->name('downloads.category.update');
+    Route::get('/downloads/category/delete/{id}', 'delete')->name('downloads.category.delete');
+});
+
+Route::controller(DownloadsController::class)->group(function(){
+    Route::get('/downloads', 'index')->name('downloads.index');
+    Route::get('/downloads/show', 'show')->name('downloads.show');
+    Route::get('/downloads/create', 'create')->name('downloads.create');
+    Route::get('/downloads/edit/{id}', 'edit')->name('downloads.edit');
+    Route::post('/downloads/store', 'store')->name('downloads.store');
+    Route::post('/downloads/update/{id}', 'update')->name('downloads.update');
+    Route::post('/downloads/delete/{id}', 'delete')->namespace('downloads.delete');
 });

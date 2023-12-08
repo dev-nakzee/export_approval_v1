@@ -5,6 +5,18 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Backend\DownloadCategory;
+use App\Models\Backend\Downloads;
+use App\Models\Backend\Document;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use DataTables;
+
 class DownloadCategoryController extends Controller
 {
     /**
@@ -13,6 +25,7 @@ class DownloadCategoryController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
