@@ -43,6 +43,16 @@ class DownloadCategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+        ]);
+        $data = [
+            'download_category' => $request->name,
+            'download_category_slug' => $request->slug,
+        ];
+        Clients::create($data);
+        return redirect()->route('downloads.categories.index')->with([200, 'response', 'status'=>'success','message'=>'Download category created successfully.']);
     }
 
     /**

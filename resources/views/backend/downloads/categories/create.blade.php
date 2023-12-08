@@ -1,6 +1,6 @@
 @extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'New Download Category'])
 @section('content')
-<form class="form-horizontal" method="POST" action="{{route('clients.store')}}" enctype="multipart/form-data">
+<form class="form-horizontal" method="POST" action="{{route('downloads.categories.store')}}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="mb-2 col-md-12">
@@ -20,32 +20,4 @@
         </div>
     </div>
 </form>
-<div class="modal fade" id="uploadMediaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mediaImageUpload" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="mediaImageUpload">Add Image</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('media.store') }}" method="POST" enctype="multipart/form-data" class="dropzone" id="upload-image">
-                    @csrf
-                </form>
-                <div class="media-gallery m-1 mr-2 container-fluid" id="media-gallery">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@endsection
-@section('css')
-<link rel="stylesheet" href="{{asset('backend/dropzone/dropzone.css')}}" type="text/css" />
-@endsection
-@section('js')
-<script src="{{asset('backend/dropzone/dropzone.js')}}"></script>
-<script src="{{asset('backend/js/media.min.js')}}"></script>
-<script src="{{asset('tinymce/tinymce.min.js')}}"></script>
-<script src="{{asset('backend/js/editor.min.js')}}"></script>
 @endsection

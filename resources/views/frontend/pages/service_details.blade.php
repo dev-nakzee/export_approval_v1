@@ -56,7 +56,7 @@
             <div class="uk-width-3-4@m uk-padding-remove-right">
                 @if($sections)
                 @foreach($sections as $section)
-                    <div class="ps-sections" @if(!$loop->first) id="{{$section->service_section_slug}}" @endif>
+                    <div class="ps-sections" id="{{$section->service_section_slug}}">
                         <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
                             <span>{{$section->service_section_name}}<span>
                         </div>
