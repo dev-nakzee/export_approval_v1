@@ -35,7 +35,7 @@
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = "Blue";
                 ctx.textAlign = "center";
-                ctx.font = "26px Arial";
+                ctx.font = "12px Arial";
                 ctx.strokeText(x+" + "+y+"   =",60,20);
                 var answer = document.getElementById("captcha_answer");
                 answer.value = x + y;
@@ -264,7 +264,7 @@
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Powered by</li>
                     </ul>
-                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo.png')}}" alt="Export Approval">
+                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
                     <p class="uk-text-small">At Brand Liaison India Pvt Ltd, We Pride Ourselves On Being Your Trusted Partner In Regulatory Compliance. With A Commitment To Excellence, We Offer A Comprehensive Range Of Services To Ensure That Your Products Meet The Necessary Standards And Approvals.</p>
                 </div>
                 <div class="uk-width-1-4@s">

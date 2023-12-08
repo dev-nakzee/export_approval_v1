@@ -523,6 +523,8 @@ section.website-footer {
 .footer-logo {
     background: #ffffff;
     padding: 5px;
+    border-radius: 5px;
+    height: 90px;
 }
 .footer-social a {
     border: 1px solid #ffffff;
