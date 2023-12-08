@@ -47,9 +47,26 @@ class DownloadCategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request)
     {
         //
+        if($request->ajax()){
+            $data = Downloads::orderBy('download_id', 'DESC')
+                ->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('download_name', function($row){
+                    $image = '<i class="fa-light fa-2xl fa-file-pdf"></i> '.$row->download_name;
+                    return $image;
+                })
+                ->addColumn('action', function($row){
+                    $removeBtn = '<a class="btn btn-outline-info btn-sm" href="'.route("downloads.categories.edit", $row->doc_id).'"><i class="fa fa-edit"></i></a><a class="btn btn-outline-danger btn-sm" href="'.route("downloads.categories.delete", $row->doc_id).'"><i class="fa fa-trash-can"></i></a>';
+                    return $removeBtn;
+                })
+                ->rawColumns(['action', 'media_path', 'media_detail'])
+                ->escapeColumns([])
+                ->make(true);
+        }
     }
 
     /**
