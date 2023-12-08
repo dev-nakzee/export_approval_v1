@@ -121,65 +121,8 @@
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
         <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
-        {{-- {!! $sections[3]->section_content !!} --}}
-        <div class="uk-section">
-            <div class="uk-container"><!-- grid content begin -->
-                <div class="uk-grid-divider uk-grid" data-uk-grid="" uk-height-match=".wcu-tabs">
-                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
-                        <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
-                            <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/cost-effective.svg')}}" alt="vulcan-icon1" width="70" height="70" data-src="{{asset('frontend/images/cost-effective.svg')}}" data-uk-img="">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3>Cost effective<br>solutions</h3>
-                            </div>
-                        </div>
-                        <div class="wcu-one wcu-tabs" hidden>
-                            <span>We deliver cost-effective solutions tailored to meet your diverse needs.</span>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
-                        <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
-                            <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/step-payment.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/step-payment.svg')}}" data-uk-img="">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3>Make Payment<br>step-by-step</h3>
-                            </div>
-                        </div>
-                        <div class="wcu-two wcu-tabs" hidden>
-                            <span>We offer flexible installment plans to let you pay at your own pace.</span>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small" uk-height-match=".wcu-tabs">
-                        <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid>
-                            <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/rating.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/rating.svg')}}" data-uk-img="">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3>10+ years of experience</h3>
-                            </div>
-                        </div>
-                        <div class="wcu-three wcu-tabs" hidden>
-                            <span>We bring over 10 years of proven experience to achieve success in every project.</span>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
-                        <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
-                            <div class="uk-width-auto uk-first-column">
-                                <img src="{{asset('frontend/images/projects.svg')}}" alt="vulcan-icon3" width="70" height="70" data-src="{{asset('frontend/images/projects.svg')}}" data-uk-img="">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3>1000+ projects completed</h3>
-                            </div>
-                        </div>
-                        <div class="wcu-four wcu-tabs" hidden>
-                            <span>Trust in our track record of successfully completing over 1000 projects.</span>
-                        </div>
-                    </div>
-                <!-- grid content end -->
-                </div>
-            </div>
+        {!! $sections[3]->section_content !!}
+            
         </div>
     </section>
     @endif
