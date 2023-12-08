@@ -63,7 +63,7 @@ class DownloadCategoryController extends Controller
                     $removeBtn = '<a class="btn btn-outline-info btn-sm" href="'.route("downloads.categories.edit", $row->doc_id).'"><i class="fa fa-edit"></i></a><a class="btn btn-outline-danger btn-sm" href="'.route("downloads.categories.delete", $row->doc_id).'"><i class="fa fa-trash-can"></i></a>';
                     return $removeBtn;
                 })
-                ->rawColumns(['action', 'media_path', 'media_detail'])
+                ->rawColumns(['action', 'download_name'])
                 ->escapeColumns([])
                 ->make(true);
         }

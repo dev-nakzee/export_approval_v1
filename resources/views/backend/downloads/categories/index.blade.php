@@ -56,7 +56,7 @@
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('clients.show') }}",
+            ajax: "{{ route('downloads.categories.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
                 {data: 'client_name', name: 'client_name'},
