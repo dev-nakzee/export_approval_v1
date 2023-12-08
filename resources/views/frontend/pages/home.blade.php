@@ -122,7 +122,6 @@
         </div>
         <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
         {!! $sections[3]->section_content !!}
-            
         </div>
     </section>
     @endif
