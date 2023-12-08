@@ -162,7 +162,6 @@
                     <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
                     <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                 </ul>
-                <button class="uk-button uk-button-default uk-button-small">Login / Register</button>  
             </div>
         </nav>
         @yield('content')
