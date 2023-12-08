@@ -32,7 +32,7 @@
                             @if($loop->first)
                                 @if($service->service_product_show === 1) 
                                 <li class="nav-item">
-                                    <a href="#{{'mandatory-product-list'}}">Product List for mandatory compliance</a>
+                                    <a href="#{{'mandatory-product-list'}}">Mandetory Product List</a>
                                 </li>
                                 @endif
                             @endif
@@ -66,9 +66,9 @@
                     </div>
                     @if($loop->first)
                         @if($service->service_product_show === 1) 
-                        {{-- <div class="ps-sections" id="mandatory-product-list"> --}}
+                        <div class="ps-sections" id="mandatory-product-list">
                             <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
-                                <span>Product list for mandatory compliance<span>
+                                <span>Mandatory Product list<span>
                             </div>
                             <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
                                 <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
@@ -102,7 +102,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        {{-- </div> --}}
+                        </div>
                         @endif
                     @endif
                 @endforeach
@@ -112,7 +112,7 @@
                     <span>{{'Frequently Asked Questions'}}<span>
                 </div>
                 <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
-                    <ul uk-accordion class="uk-margin-bottom">
+                    <ul uk-accordion class="uk-margin-large-bottom">
                         @foreach(json_decode($service->faqs, true) as $que=>$ans)
                         <li @if ($loop->first) class="uk-open" @endif>
                             <a class="uk-accordion-title" href>{{$que}}</a>
