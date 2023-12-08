@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Clients</th>
+                        <th>Download Category</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -50,7 +50,7 @@
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
             }
         });
-        var table = $('#clients-table').DataTable({
+        var table = $('#download-category-table').DataTable({
             paging: true,
             retrieve: true,
             processing: true,
@@ -59,7 +59,7 @@
             ajax: "{{ route('downloads.categories.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'client_name', name: 'client_name'},
+                {data: 'download_category', name: 'download_category'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });
