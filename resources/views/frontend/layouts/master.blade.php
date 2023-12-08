@@ -283,7 +283,7 @@
                     </ul>
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Partner with us</li>
-                        <li><a href="{{route('frontend.site.home')}}">Business associate</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Business Associate</a></li>
                         <li><a href="{{route('frontend.site.home')}}">Residential Executive</a></li>
                     </ul>
                 </div>
