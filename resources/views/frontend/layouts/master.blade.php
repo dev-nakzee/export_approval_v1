@@ -231,7 +231,7 @@
                             </select>
                         </div>
                     </div>
-                    <div id="brochure"></div>
+                    <div id="brochure" style="margin: 0; padding: 0;"></div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
 
                         <div class="uk-form-controls">
