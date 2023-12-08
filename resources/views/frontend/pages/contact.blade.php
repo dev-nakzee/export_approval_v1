@@ -89,9 +89,7 @@
         </div>
     </div>
 </section>
-<section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
-    {!! $sections[0]->section_content !!}
-</section>
+{!! $sections[0]->section_content !!}
 @endsection
 @section('scripts')
 
