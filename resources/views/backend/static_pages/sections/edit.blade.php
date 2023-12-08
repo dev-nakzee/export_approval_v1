@@ -13,7 +13,7 @@
         </div>
         <div class="mb-3 col-md-6">
             <label for="slug" class="form-label">Section Slug</label>
-            <input type="text" class="form-control form-control-sm" id="slug" name="slug" value="{{$static_page_section->page_slug}}">
+            <input type="text" class="form-control form-control-sm" id="slug" name="slug" value="{{$static_page_section->section_slug}}">
         </div>
         <div class="mb-3 col-md-12">
             <label for="section_tagline" class="form-label">Section Tagline</label>
