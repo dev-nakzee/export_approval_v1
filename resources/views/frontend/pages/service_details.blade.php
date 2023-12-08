@@ -108,20 +108,22 @@
                 @endforeach
                 @endif
                 @if($service->faqs) 
-                <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
-                    <span>{{'Frequently Asked Questions'}}<span>
-                </div>
-                <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
-                    <ul uk-accordion class="uk-margin-large-bottom">
-                        @foreach(json_decode($service->faqs, true) as $que=>$ans)
-                        <li @if ($loop->first) class="uk-open" @endif>
-                            <a class="uk-accordion-title" href>{{$que}}</a>
-                            <div class="uk-accordion-content">
-                                {{ $ans }}
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
+                <div class="ps-sections" id="{{'frequently-asked-questions'}}">
+                    <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                        <span>{{'Frequently Asked Questions'}}<span>
+                    </div>
+                    <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                        <ul uk-accordion class="uk-margin-large-bottom">
+                            @foreach(json_decode($service->faqs, true) as $que=>$ans)
+                            <li @if ($loop->first) class="uk-open" @endif>
+                                <a class="uk-accordion-title faq-question" href>{{$loop->iteration}}. {{$que}}</a>
+                                <div class="uk-accordion-content faq-answer uk-margin-remove-top">
+                                    {{ $ans }}
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
                 @endif
             </div>

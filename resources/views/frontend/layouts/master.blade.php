@@ -167,7 +167,7 @@
         @yield('content')
         @if (request()->route()->getName() != 'frontend.site.contact-us')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
-            <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom" id="brochure">
+            <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
                     Download Brochure
                 </p>
@@ -209,7 +209,6 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-
                         <div class="uk-form-controls">
                             <select class="uk-select" id="service" name="service">
                                 <option value="">Select Service</option>
@@ -222,7 +221,6 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@m uk-margin-small-top">    
-         
                         <div class="uk-form-controls">
                             <select class="uk-select" id="source" name="source">
                                 <option value="">How did you find us?</option>
@@ -233,6 +231,7 @@
                             </select>
                         </div>
                     </div>
+                    <div id="brochure"></div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
 
                         <div class="uk-form-controls">
