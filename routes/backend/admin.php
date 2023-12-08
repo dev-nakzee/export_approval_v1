@@ -211,13 +211,13 @@ Route::controller(GalleryVideoController::class)->group(function(){
 });
 
 Route::controller(DownloadCategoryController::class)->group(function(){
-    Route::get('/downloads/category','index')->name('downloads.category.index');
-    Route::get('/downloads/category/show', 'show')->name('downloads.category.show');
-    Route::get('/downloads/category/create', 'create')->name('downloads.category.create');
-    Route::get('/downloads/category/edit/{id}', 'edit')->name('downloads.category.edit');
-    Route::post('/downloads/category/store', 'store')->name('downloads.category.store');
-    Route::post('/downloads/category/update/{id}', 'update')->name('downloads.category.update');
-    Route::get('/downloads/category/delete/{id}', 'delete')->name('downloads.category.delete');
+    Route::get('/downloads/category','index')->name('downloads.categories.index');
+    Route::get('/downloads/category/show', 'show')->name('downloads.categories.show');
+    Route::get('/downloads/category/create', 'create')->name('downloads.categories.create');
+    Route::get('/downloads/category/edit/{id}', 'edit')->name('downloads.categories.edit');
+    Route::post('/downloads/category/store', 'store')->name('downloads.categories.store');
+    Route::post('/downloads/category/update/{id}', 'update')->name('downloads.categories.update');
+    Route::get('/downloads/category/delete/{id}', 'delete')->name('downloads.categories.delete');
 });
 
 Route::controller(DownloadsController::class)->group(function(){
