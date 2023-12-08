@@ -12,7 +12,7 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('clients.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('downloads.categories.create')}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
