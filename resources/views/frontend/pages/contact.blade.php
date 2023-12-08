@@ -89,22 +89,7 @@
         </div>
     </div>
 </section>
-<section class="uk-section home-section-3 uk-padding uk-padding-remove-top">
-    <div class="uk-text-center uk-padding uk-padding-remove-vertical uk-child-width-1-3@s uk-margin uk-grid">
-    <div class="uk-text-center">
-    <h3 class="uk-margin-remove-bottom">Corporate Office</h3>
-    <p class="uk-text-small">Brand Liaison India Pvt. Ltd.<br>110, Sharma Complex, A-2 Guru Nanak Pura, Laxmi Nagar,<br>Delhi - 110092, India Nearest Metro Station:<br>Nirman Vihar - Gate No. 1 / Skywalk Exit<br>(150 meters / 2 minutes walk)</p>
-    </div>
-    <div class="uk-text-center">
-    <h3 class="uk-margin-remove-bottom">Customer Care</h3>
-    <p class="uk-text-small"><strong>Office :</strong><br>+91-11-42686678<br>+91-11-47562062<br><strong>Mobile :</strong><br>+91-9250056788<br>+91-8130615678</p>
-    </div>
-    <div class="uk-text-center">
-    <h3 class="uk-margin-remove-bottom">Feedback / Grievance</h3>
-    <p class="uk-text-small"><strong>Mobile :</strong> +91-9810363988<br>(Call / SMS / Whatsapp)<br><strong>Email :</strong> rk@bl-india.com</p>
-    </div>
-    </div>
-    </section>
+
 {!! $sections[0]->section_content !!}
 @endsection
 @section('scripts')
