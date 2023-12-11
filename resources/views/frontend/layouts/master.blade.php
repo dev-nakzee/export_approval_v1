@@ -177,7 +177,7 @@
             </div>
         </nav>
         @yield('content')
-        @if (request()->route()->getName() != 'frontend.site.contact-us')
+        @if (request()->route()->getName() != 'frontend.site.contact-us' && request()->route()->getName() != 'frontend.site.business.associate' && request()->route()->getName() != 'frontend.site.resident.executive')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
@@ -292,8 +292,8 @@
                     </ul>
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Partner with us</li>
-                        <li><a href="{{route('frontend.site.home')}}">Business Associate</a></li>
-                        <li><a href="{{route('frontend.site.home')}}">Resident Executive</a></li>
+                        <li><a href="{{route('frontend.site.business.associate')}}">Business Associate</a></li>
+                        <li><a href="{{route('frontend.site.resident.executive')}}">Resident Executive</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">

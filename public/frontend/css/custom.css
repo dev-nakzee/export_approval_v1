@@ -237,6 +237,18 @@ iframe {
     padding: 5px;
 }
 
+.partner-form-btn {
+    border: 2px solid #052faa;
+    background-color: #ffffff;
+    color: #052faa;
+}
+
+.partner-form-btn:hover {
+    border: 2px solid #052faa;
+    background-color: #052faa;
+    color: #ffffff;
+}
+
 .download-brochure-btn {
     border: 2px solid #052faa;
     color: #052faa;

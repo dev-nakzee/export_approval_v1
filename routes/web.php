@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\BlogsController;
 use App\Http\Controllers\Frontend\IndustryNotificationController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\BrochureFormController;
+use App\Http\Controllers\Frontend\PartnerFormController;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
@@ -54,6 +55,13 @@ Route::controller(BrochureFormController::class)->group(function (){
     Route::get('/brochure/reload-captcha', 'reloadCaptcha')->name('frontend.site.brochure.reload-captcha');
     Route::post('/brochure', 'store')->name('frontend.site.brochure.store');
     Route::get('/brochure/{lead_id}', 'download')->name('frontend.site.brochure.download');
+});
+
+Route::controller(PartnerFormController::class)->group(function(){
+    Route::get('/business-associate', 'business_associate')->name('frontend.site.business.associate');
+    Route::post('/business-associate', 'ba_save')->name('frontend.site.ba.save');
+    Route::get('/resident-executive', 'resident_executive')->name('frontend.site.resident.executive');
+    Route::post('/resident-executive', 're_save')->name('frontend.site.re.save');
 });
 
 //-----------------------------------ROUTE FOR SELLER---------------------------------------------------------------------
