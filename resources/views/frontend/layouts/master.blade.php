@@ -275,7 +275,7 @@
                         <li class="uk-nav-header">Powered by</li>
                     </ul>
                     <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
-                    <p class="uk-text-small">At Brand Liaison India Pvt Ltd, We Pride Ourselves On Being Your Trusted Partner In Regulatory Compliance. With A Commitment To Excellence, We Offer A Comprehensive Range Of Services To Ensure That Your Products Meet The Necessary Standards And Approvals.</p>
+                    <p class="uk-text-small">Export Approval is a trusted platform for foreign manufacturers entering the Indian market. Our platform simplifies necessary Indian certifications and approvals for seamless product exportation to India.                    </p>
                 </div>
                 <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default">

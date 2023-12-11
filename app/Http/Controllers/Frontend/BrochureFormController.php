@@ -60,7 +60,6 @@ class BrochureFormController extends Controller
             $id = $lead->id;
             $service = Services::where('service_id', $request->service)->first();
             $data['service'] = $service;
-            // view()->share('frontend.pdf.brochure',[$data, $service]);
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data']));
             Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
             Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
