@@ -22,8 +22,8 @@
                     processData: false,
                     contentType: false,
                     dataType: 'JSON',
-                    success: function(data){
-                        alert(data);
+                    success: function(response){
+                        alert(response);
                     }
                 });
             });
