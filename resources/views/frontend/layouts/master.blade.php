@@ -23,10 +23,21 @@
                     contentType: false,
                     dataType: 'JSON',
                     success: function(response){
-                        alert(response);
+                        $data = JSON.parse(response);
+                        download($data.download);
                     }
                 });
             });
+
+            function download(link) {
+                var element = document.createElement('a');
+                element.setAttribute('href', link);
+                element.setAttribute('target', '_blank');
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            }
 
             function captcha(){
                 var x = Math.floor((Math.random() * 9) + 1);

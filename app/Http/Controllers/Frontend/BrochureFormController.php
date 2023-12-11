@@ -30,7 +30,7 @@ class BrochureFormController extends Controller
         return view('frontend.pdf.index', compact(['countries', 'services']));
     }
 
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
         if($request->captcha === $request->captcha_answer) {
             $request->validate([
@@ -65,7 +65,8 @@ class BrochureFormController extends Controller
             Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
             Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
             $download = env('APP_URL').Storage::url('brochure/Brochure-'.$id.'.pdf');
-            return response()->json(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
+            $files = json_encode(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
+            return response()->json($files);
         }
     }
 }
