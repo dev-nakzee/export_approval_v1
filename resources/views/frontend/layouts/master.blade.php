@@ -293,7 +293,7 @@
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Partner with us</li>
                         <li><a href="{{route('frontend.site.home')}}">Business Associate</a></li>
-                        <li><a href="{{route('frontend.site.home')}}">Residential Executive</a></li>
+                        <li><a href="{{route('frontend.site.home')}}">Resident Executive</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
@@ -322,7 +322,8 @@
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="location"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">First Floor, F-205, Green House, Gali No 06, Mangal Bazar Laxmi Nagar, New Delhi, East Delhi, Delhi, 110092</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">110, Sharma Complex, A-2 Guru Nanak Pura, Laxmi Nagar
+                            Delhi - 110092, India</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="receiver"></i>
@@ -332,7 +333,7 @@
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="mail"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">test@mail.com</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">info@bl-india.com</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove"></span>
                         <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
