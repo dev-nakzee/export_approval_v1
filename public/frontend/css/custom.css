@@ -226,12 +226,14 @@ iframe {
     padding: 10px !important;
 }
 
+.faq-element {
+    border: 1px solid #6e6e6e;
+}
+
 .faq-question {
-    background-color: #f0dcca;
     font-weight: bolder;
     font-size: 12pt;
     padding: 5px;
-    border: 1px solid #6e6e6e;
 }
 .faq-answer {
     font-size: 12pt;
