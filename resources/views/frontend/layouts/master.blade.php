@@ -322,8 +322,8 @@
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="location"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">110, Sharma Complex, A-2 Guru Nanak Pura, Laxmi Nagar
-                            Delhi - 110092, India</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">110, Sharma Complex<br> A-2 Guru Nanak Pura<br> Laxmi Nagar
+                            Delhi<br> 110092, India</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="receiver"></i>
