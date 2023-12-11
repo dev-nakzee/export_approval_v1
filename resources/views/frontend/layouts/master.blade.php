@@ -162,12 +162,12 @@
                                 <li>
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
                                     <a href="{{route('frontend.site.gallery')}}">Gallery</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </li>
