@@ -77,7 +77,7 @@
                     <input class="uk-input" type="email" placeholder="Email" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="Website (if any)" aria-label="Input">
+                    <input class="uk-input" type="text" placeholder="Years of experience" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-1@m">
                     <textarea class="uk-textarea" placeholder="Profile details" aria-label="Textarea"></textarea>
