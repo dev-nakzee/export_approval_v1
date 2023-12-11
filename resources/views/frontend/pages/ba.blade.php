@@ -45,10 +45,10 @@
                     <input class="uk-input" type="text" placeholder="Complete address" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="State / Province / Region" aria-label="Input">
+                    <input class="uk-input" type="text" placeholder="State / Province" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="City / County / Town" aria-label="Input">
+                    <input class="uk-input" type="text" placeholder="City / Town" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-2@m">
                     <select class="uk-select" aria-label="Select">
@@ -80,7 +80,7 @@
                     <input class="uk-input" type="text" placeholder="Website (if any)" aria-label="Input">
                 </div>
                 <div class="uk-margin-small uk-width-1-1@m">
-                    <textarea class="uk-textarea" placeholder="Area of interest / Service offerings" aria-label="Textarea"></textarea>
+                    <textarea class="uk-textarea" placeholder="Feild of expertise" aria-label="Textarea"></textarea>
                 </div>
                 <div class="uk-width-1-1@m uk-text-center uk-margin-small">
                     <button class="uk-border-rounded uk-button uk-button-primary partner-form-btn">Submit</button>
