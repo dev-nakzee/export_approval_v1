@@ -64,7 +64,7 @@ class BrochureFormController extends Controller
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data']));
             Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
             Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
-            $download = env('APP_URL').Storage::url('brochure/Brochure-'.$id.'.pdf');
+            $download = Storage::url('brochure/Brochure-'.$id.'.pdf');
             $files = json_encode(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
             return response()->json($files);
         }
