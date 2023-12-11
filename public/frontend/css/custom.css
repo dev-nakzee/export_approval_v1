@@ -231,6 +231,7 @@ iframe {
     font-weight: bolder;
     font-size: 12pt;
     padding: 5px;
+    border: 1px solid #6e6e6e;
 }
 .faq-answer {
     font-size: 12pt;
