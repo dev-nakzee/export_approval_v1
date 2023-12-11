@@ -58,7 +58,7 @@ class BrochureFormController extends Controller
             ];
             $lead = Leads::create($data);
             $id = $lead->id;
-            $service = Services::where('service_id', $request->service)->first();
+            $service = Services::where('services.service_id', $request->service)->select('services.service_name', 'services.service_description', 'services.faqs', 'service_sections.service_section_name', 'service_sections.service_section_content')->join('service_sections', 'services.service_id', 'service_sections.service_id')->first();
             $data['service'] = $service;
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data']));
             Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));

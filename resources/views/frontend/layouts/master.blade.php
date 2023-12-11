@@ -16,7 +16,7 @@
                 var formData = new FormData(form[0]);
                 console.log(formData);
                 $.ajax({
-                    url: "{{route('frontend.site.brochure')}}",
+                    url: "{{route('frontend.site.brochure.store')}}",
                     type: "POST",
                     data: formData,
                     processData: false,

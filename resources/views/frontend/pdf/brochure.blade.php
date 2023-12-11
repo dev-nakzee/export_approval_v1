@@ -12,8 +12,14 @@ Explain
     <body>
         <div class="uk-section">
             <div class="uk-container">
-                <h1>Brochure</h1>
-                <p>Brochure content</p>
+                @if($data)
+                <p>To,<br>
+                {{$data['name']}}<br>
+                {{-- {{$data->country}}</p> --}}
+                @endif
+            </div>
+            <div class="uk-container">
+
             </div>
         </div>
     </body>
