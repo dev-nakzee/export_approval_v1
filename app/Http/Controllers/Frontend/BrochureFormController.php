@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\Leads;
 use App\Models\Backend\Services;
 use App\Models\Backend\ServiceSection;
+use App\Models\Countries;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
@@ -24,18 +25,20 @@ class BrochureFormController extends Controller
     //
     public function index()
     {
-        return view('frontend.pdf.brochure');
+        $countries = Countries::get();
+        $services = Services::select('service_id', 'service_name')->get();
+        return view('frontend.pdf.index', compact(['countries', 'services']));
     }
 
-    public function store(Request $request): JsonResponse
+    public function store(Request $request)
     {
         if($request->captcha === $request->captcha_answer) {
             $request->validate([
-                'fullname' => 'required',
-                'organisation' => 'required',
-                'email' => 'required',
+                'fullname' => 'required|string',
+                'organisation' => 'required|string',
+                'email' => 'required|email',
                 'country' => 'required',
-                'mobile' => 'required',
+                'mobile' => 'required|numeric',
                 'service' => 'required',
             ]);
             $json = $request->country;
@@ -55,9 +58,14 @@ class BrochureFormController extends Controller
             ];
             $lead = Leads::create($data);
             $id = $lead->id;
-            return response()->json(['status'=>200, 'message'=> 'Form is successfully submitted!', 'lead_id' => $id]);
-        } else {
-            return response()->json(['status'=>302, 'message'=> 'Captcha is not correct!']);
+            $service = Services::where('service_id', $request->service)->first();
+            $data['service'] = $service;
+            // view()->share('frontend.pdf.brochure',[$data, $service]);
+            $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data']));
+            Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
+            Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
+            $download = env('APP_URL').Storage::url('brochure/Brochure-'.$id.'.pdf');
+            return response()->json(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
         }
     }
 }

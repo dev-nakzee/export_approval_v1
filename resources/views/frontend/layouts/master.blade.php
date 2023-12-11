@@ -21,6 +21,7 @@
                     data: formData,
                     processData: false,
                     contentType: false,
+                    dataType: 'JSON',
                     success: function(data){
                         alert(data);
                     }
