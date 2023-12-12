@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('partner_forms', function (Blueprint $table) {
             $table->id('partner_form_id');
-            $table->string('organization_name');
             $table->string('contact_person_name');
             $table->string('designation_name');
-            $table->string('address_street');
+            $table->string('organization_name')->nullable();
+            $table->string('industry_name')->nullable();
+            $table->text('address_street');
             $table->string('city');
             $table->string('state');
             $table->string('zip');
@@ -25,8 +26,9 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('email');
             $table->string('website')->nullable();
-            $table->string('offerings')->nullable();
-            $table->string('position_interested');
+            $table->string('experience')->nullable();
+            $table->text('partner_details')->nullable();
+            $table->string('partner_type')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

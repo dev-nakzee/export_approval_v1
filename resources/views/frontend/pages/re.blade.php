@@ -32,55 +32,88 @@
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container">
-        <form method="POST" action="{{route('frontend.site.re.save')}}">      
+        <form method="POST" action="{{route('frontend.site.re.save')}}">
+            @csrf    
             <div uk-grid>
                 <legend class="uk-legend uk-width-1-1">Become a <strong>Resident Executive</strong> with us</legend>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="Complete name" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="Field of expertise" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-1@m">
-                    <input class="uk-input" type="text" placeholder="Complete address" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="State / Province" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="City / Town" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <select class="uk-select" aria-label="Select">
-                        <option value="">Select Country</option>
-                        @if($countries)
-                        @foreach($countries as $country)
-                        <option value="{{ucfirst(strtolower($country->name))}}">{{ucfirst(strtolower($country->name))}}</option>
+                @if ($errors->any())
+                <div class="uk-margin-small uk-width-1-1">
+                    <div class="uk-alert-warning" uk-alert>
+                        <a href class="uk-alert-close" uk-close></a>
+                        @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
                         @endforeach
-                        @endif
-                    </select>
+                    </div>
                 </div>
+                @endif
+                @if (session()->has('success'))
+                <div class="uk-margin-small uk-width-1-1">
+                    <div class="uk-alert-success" uk-alert>
+                        <a href class="uk-alert-close" uk-close></a>
+                        @foreach (session('success') as $message)
+                            <p>{{ $message }}</p>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
                 <div class="uk-margin-small uk-width-1-2@m">
                     <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
-                        <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
-                            <option value="">Country Code</option>
-                            @if($countries)
-                            @foreach($countries as $country)
-                            <option value="{{json_encode([$country->name, $country->phonecode])}}">{{ucfirst(strtolower($country->name))." (+".$country->phonecode.")"}}</option>
-                            @endforeach
-                            @endif
+                        <select class="uk-select uk-width-1-5 uk-padding-small uk-padding-remove-vertical" id="salutation" value="{{ old('salutation') }}" name="salutation" style="font-size: 12px;">
+                            <option>Salutation</option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Others">Others</option>
                         </select>
-                        <input class="uk-input uk-width-3-5 uk-padding-small uk-padding-remove-vertical" name="mobile" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="Phone number">
+                        <input class="uk-input uk-width-4-5 uk-padding-small uk-padding-remove-vertical" value="{{old('contact')}}" id="contact" name="contact" placeholder="Full name" aria-label="Input">
                     </div>
                 </div>
                 <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="email" placeholder="Email" aria-label="Input">
-                </div>
-                <div class="uk-margin-small uk-width-1-2@m">
-                    <input class="uk-input" type="text" placeholder="Years of experience" aria-label="Input">
+                    <input class="uk-input" type="text" placeholder="Field of expertise" aria-label="Input" id="expertise" name="expertise" value="{{old('expertise')}}">
                 </div>
                 <div class="uk-margin-small uk-width-1-1@m">
-                    <textarea class="uk-textarea" placeholder="Profile details" aria-label="Textarea"></textarea>
+                    <input class="uk-input" type="text" placeholder="Complete address" aria-label="Input" id="address" name="address" value="{{old('address')}}">
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <input class="uk-input" type="text" placeholder="State / Province" aria-label="Input" id="state" name="state" value="{{old('state')}}">
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <input class="uk-input" type="text" placeholder="City / Town" aria-label="Input" id="city" name="city" value="{{old('city')}}">
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
+                        <select class="uk-select uk-width-3-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" value="{{old('country')}}">
+                            <option value="">Select Country</option>
+                            @if($countries)
+                            @foreach($countries as $country)
+                            <option value="{{ucfirst(strtolower($country->name))}}">{{ucfirst(strtolower($country->name))}}</option>
+                            @endforeach
+                            @endif
+                        </select>
+                        <input class="uk-input uk-width-2-5 uk-padding-small uk-padding-remove-vertical" value="{{old('zip')}}" id="zip" name="zip" placeholder="Zip code" aria-label="Input">
+                    </div>
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
+                        <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" value="{{old('countrycode')}}" id="countrycode" name="countrycode" style="font-size: 12px;">
+                            <option value="">Country Code</option>
+                            @if($countries)
+                            @foreach($countries as $country)
+                            <option value="{{$country->phonecode}}">{{ucfirst(strtolower($country->name))." (+".$country->phonecode.")"}}</option>
+                            @endforeach
+                            @endif
+                        </select>
+                        <input class="uk-input uk-width-3-5 uk-padding-small uk-padding-remove-vertical" value="{{old('phone')}}" id="phone" name="phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="Phone number">
+                    </div>
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <input class="uk-input" type="email" placeholder="Email" aria-label="Input" name="email" id="email" value="{{old('email')}}">
+                </div>
+                <div class="uk-margin-small uk-width-1-2@m">
+                    <input class="uk-input" type="text" placeholder="Years of experience" aria-label="Input" id="experience" name="experience" value="{{old('experience')}}">
+                </div>
+                <div class="uk-margin-small uk-width-1-1@m">
+                    <textarea class="uk-textarea" placeholder="Profile details" aria-label="Textarea" id="details" name="details">{{old('details')}}</textarea>
                 </div>
                 <div class="uk-width-1-2@m uk-margin-small">
                     <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
