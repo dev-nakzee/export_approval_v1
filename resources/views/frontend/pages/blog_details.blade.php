@@ -61,6 +61,7 @@
                     <a href="" class="linkedin" uk-icon="linkedin"></a>
                     <a href="" class="whatsapp" uk-icon="whatsapp"></a>
                 </div>
+                @include('frontend.components.downloadbrochure')
             </div>
         </div>
     </div>

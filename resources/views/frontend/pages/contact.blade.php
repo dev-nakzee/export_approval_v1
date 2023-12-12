@@ -89,7 +89,6 @@
         </div>
     </div>
 </section>
-
 {!! $sections[0]->section_content !!}
 @endsection
 @section('scripts')

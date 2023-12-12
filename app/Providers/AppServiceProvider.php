@@ -44,6 +44,14 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with(['services' => $services, 'countries' => $countries]);
         });
+        view()->composer('frontend.components.downloadbrochure', function ($view) {
+            $countries = Countries::select('id','name', 'iso', 'iso3', 'phonecode')->get();
+            $services = Services::select('service_id','service_name')
+            ->orderBy('service_order', 'asc')
+            ->get();
+
+            $view->with(['services' => $services, 'countries' => $countries]);
+        });
         Paginator::useBootstrap();
     }
 }

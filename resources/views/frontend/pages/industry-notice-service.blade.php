@@ -64,6 +64,7 @@
                         </tbody>
                     </table>
                 </div>
+                @include('frontend.components.downloadbrochure')
             </div>
         </div>
     </div>

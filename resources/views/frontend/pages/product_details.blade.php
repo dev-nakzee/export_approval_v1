@@ -82,6 +82,7 @@
                 </div>
                 @endforeach
                 @endif
+                @include('frontend.components.downloadbrochure')
             </div>
         </div>
     </div>

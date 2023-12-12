@@ -92,19 +92,19 @@
                 }
 
 
-                const box = document.querySelector('#brochure');
-                const message = document.querySelector('#message');
+                // const box = document.querySelector('#footer');
+                // const message = document.querySelector('#message');
 
-                document.addEventListener('scroll', function () {
-                    if(isInViewport(box)) {
-                        $('.ps-details-section').addClass('ps-sidebar-absolute');
-                        console.log('in viewport');
-                    } else {
-                        $('.ps-details-section').removeClass('ps-sidebar-absolute');
-                    }
-                }, {
-                    passive: true
-                });
+                // document.addEventListener('scroll', function () {
+                //     if(isInViewport(box)) {
+                //         $('.ps-details-section').addClass('ps-sidebar-absolute');
+                //         console.log('in viewport');
+                //     } else {
+                //         $('.ps-details-section').removeClass('ps-sidebar-absolute');
+                //     }
+                // }, {
+                //     passive: true
+                // });
             });
 
             jQuery(function($) {
@@ -177,7 +177,7 @@
             </div>
         </nav>
         @yield('content')
-        @if (request()->route()->getName() != 'frontend.site.contact-us' && request()->route()->getName() != 'frontend.site.business.associate' && request()->route()->getName() != 'frontend.site.resident.executive')
+        @if (request()->route()->getName() === 'frontend.site.home')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
@@ -243,7 +243,6 @@
                             </select>
                         </div>
                     </div>
-                    <div id="brochure" style="margin: 0; padding: 0;"></div>
                     <div class="uk-width-1-1@m uk-margin-small-top">    
 
                         <div class="uk-form-controls">
@@ -269,7 +268,7 @@
 
         @yield('clients')
         <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom">
-            <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid>
+            <div  class="uk-padding-large uk-padding-remove-vertical" uk-grid id="footer">
                 <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Powered by</li>
