@@ -68,7 +68,7 @@ class PartnerFormController extends Controller
 
             // Message
             $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['countrycode'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'</p>';
+            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'</p>';
 
             // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
