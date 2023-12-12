@@ -38,7 +38,6 @@ class PartnerFormController extends Controller
             'countrycode' => 'required',
             'phone' => 'required|numeric',
             'email' => 'required|email',
-            'website' => 'required',
             'captcha' => 'required|numeric',
         ]);
         if($request->captcha_answer === $request->captcha) {
@@ -59,16 +58,17 @@ class PartnerFormController extends Controller
                 'partner_details' => $request->details,
                 'partner_type' => 'Business Associate',
             ];
+
             PartnerForm::create($data);
             $to  = 'rk@bl-india.com';
 
             // Subject
             $subject1 = 'Your application is submitted';
-            $subject = $data->contact_person_name.' form for '. $data->partner_type;
+            $subject = $data['contact_person_name'].' form for '. $data['partner_type'];
 
             // Message
             $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data->organization.'<br>'.$data->industry.'<br>'.$data->contact_person_name.'<br>'.$data->designation_name.'<br>'.$data->address_street.'<br>'.$data->city.'<br>'.$data->state.'<br>'.$data->country.'<br>'.$data->zip.'<br>'.$data->countrycode.$data->phone_number.'<br>'.$data->email.'<br>'.$data->website.'</p>';
+            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['countrycode'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'</p>';
 
             // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
