@@ -94,6 +94,7 @@
                 <div class="uk-width-1-2@m uk-text-center uk-margin-small">
                     <button class="uk-border-rounded uk-button uk-button-primary partner-form-btn">Submit</button>
                 </div>
+                <div></div>
             </div>
         </form>
     </div>
