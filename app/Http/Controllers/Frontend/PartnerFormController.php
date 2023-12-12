@@ -68,7 +68,7 @@ class PartnerFormController extends Controller
 
             // Message
             $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'</p>';
+            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'<br>'.$data['partner_details'].'</p>';
 
             // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -127,6 +127,27 @@ class PartnerFormController extends Controller
                 'partner_type' => 'Resident Executive',
             ];
             PartnerForm::create($data);
+            $to  = 'rk@bl-india.com';
+
+            // Subject
+            $subject1 = 'Your application is submitted';
+            $subject = $data['contact_person_name'].' form for '. $data['partner_type'];
+
+            // Message
+            $thanks = '<p>Thank you for your interest.</p>';
+            $message = '<p><strong>Application for position of Resident Executive<strong><br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['experience'].'<br>'.$data['partner_details'].'</p>';
+
+            // To send HTML mail, the Content-type header must be set
+            $headers  = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+
+            // Additional headers
+            $headers .= 'From: Team Export Approval <no-reply@exportapproval.com>' . "\r\n";
+
+
+            // Mail it
+            mail($to, $subject, $message, $headers);
+            mail($data['email'], $subject1, $thanks, $headers);
             return redirect()->back()->withSuccess(['Form submitted successfully.']);
         } else {
             return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
