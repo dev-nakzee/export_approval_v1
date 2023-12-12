@@ -80,7 +80,7 @@ class PartnerFormController extends Controller
 
             // Mail it
             mail($to, $subject, $message, $headers);
-            mail($data->email, $subject1, $thanks, $headers);
+            mail($data['email'], $subject1, $thanks, $headers);
             return redirect()->back()->withSuccess(['Form submitted successfully.']);
         } else {
             return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
