@@ -22,7 +22,9 @@
         <div uk-grid  uk-height-match>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{$service->service_name}}</span>
+                    <span class="uk-margin-small-left uk-heading uk-text-bold uk-text-middle">
+                        <img style="width: 50px;" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+                        {{$service->service_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($sections)
                         @foreach($sections as $section)
