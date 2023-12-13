@@ -60,7 +60,63 @@
                         <span>{{$section->section_name}}<span>
                     </div>
                     <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                        @if ($section->static_page_section_id === 7)
                         {!! $section->section_description !!}
+                        <div uk-slider>
+                            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-light">
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Rajesh Kumar</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Kiran</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Rinku</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Nisha</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Sneh Lata</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            <li class="uk-width-3-4">
+                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Amit kumar</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            </div>
+                            </li>
+                            </ul>
+                            </div>
+                        @else
+                        {!! $section->section_description !!}
+                        @endif  
                     </div>
                 </div>
                 @endforeach
