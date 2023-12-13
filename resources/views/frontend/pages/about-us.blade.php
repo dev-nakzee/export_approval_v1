@@ -53,19 +53,19 @@
                 </div>
             </div>
             <div class="uk-section uk-width-3-4@m uk-padding-remove-right uk-padding-remove-vertical">
-                <div class="uk-section uk-padding-remove">
-                    @if($sections)
-                    @foreach($sections as $section)
-                    <div class="uk-section uk-padding-remove-vertical">
-                        <span class="about-section-title" id="{{$section->section_slug}}">{{$section->section_name}}</span>
-                        <div class="about-section-description">
-                            {!! $section->section_description !!}
-                        </div>
+                @if($sections)
+                @foreach($sections as $section)
+                <div class="ps-sections" id="{{$section->section_slug}}">
+                    <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                        <span>{{$section->section_name}}<span>
                     </div>
-                    @endforeach
-                    @endif
-                    @include('frontend.components.downloadbrochure')
+                    <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                        {!! $section->section_description !!}
+                    </div>
                 </div>
+                @endforeach
+                @endif
+                @include('frontend.components.downloadbrochure')
             </div>
         </div>
     </div>
