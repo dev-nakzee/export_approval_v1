@@ -61,6 +61,7 @@
                     </div>
                     <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
                         @if ($section->static_page_section_id === 7)
+                        {!! $section->section_description !!}
                         <div uk-slider>
 
                             <div class="uk-position-relative">
