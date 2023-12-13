@@ -36,7 +36,7 @@
             {{'Holiday list'}} 
         </p>
     </div>
-    <div uk-grid>
+    <div class="uk-container uk-width-1-1 uk-padding" uk-grid>
         <div class="uk-width-1-3">
             <div class="month">      
                 <ul>
