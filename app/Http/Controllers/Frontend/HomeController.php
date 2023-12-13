@@ -173,4 +173,8 @@ class HomeController extends Controller
             ->get();
         return view('frontend.pages.contact', compact('sections', 'countries'));
     }
+
+    public function holidays() {
+        return view('frontend.pages.holiday-list');
+    }
 }
