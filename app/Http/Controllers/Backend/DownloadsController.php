@@ -34,7 +34,8 @@ class DownloadsController extends Controller
     public function create()
     {
         //
-        return view('backend.downloads.create');
+        $downloadCategory = DownloadCategory::get();
+        return view('backend.downloads.create', compact('downloadCategory'));
     }
 
     /**
@@ -43,35 +44,19 @@ class DownloadsController extends Controller
     public function store(Request $request)
     {
         //
-       
-    }
-
-    public function save(Request $request): JsonResponse
-    {
-        //
-        $file = $request->file('file');
-        $fullName = $file->getClientOriginalName();
-        $extension = $file->getClientOriginalExtension();
-        $onlyName = explode('.'.$extension, $fullName);
-        $fileName = str_replace(" ","-",$onlyName[0]).'-'.time().'.'.$file->getClientOriginalExtension();
-        Document::create([
-            'document' => $file->getClientOriginalName(),
-            'doc_path' => 'documents/'.$fileName,
-            'doc_type' => $file->getMimeType(),
-            'doc_size' => $file->getSize(),
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
         ]);
-        Storage::disk('public')->put('documents/' . $fileName, File::get($file));
-        return response()->json(['success'=> $file->getClientOriginalName()]);
-    }
-
-    public function gallery ()
-    {
-        //
-        $document = Document::orderBy('doc_id', 'desc')->get();
-        foreach($document as $key => $value) {
-            $document[$key]['doc_path'] = Storage::url($value['doc_path']);
-        }
-        return response()->json([$document]);
+        $data = [
+            'download_name' => $request->name,
+            'download_slug' => $request->slug,
+            'download_category_id' => $request->download_category_id,
+            'download_document' => $request->download_id,
+            'download_status' => 'active',
+        ];
+        Downloads::create($data);
+        return redirect()->route('downloads.index')->with([200, 'response', 'status'=>'success','message'=>'Download created successfully.']);
     }
     
     /**

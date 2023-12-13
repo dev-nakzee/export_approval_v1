@@ -10,6 +10,7 @@ class Downloads extends Model
     use HasFactory;
     protected $table = 'downloads';
     protected $fillable = [
+        'download_category_id',
         'download_name',
         'download_slug',
         'download_document',
