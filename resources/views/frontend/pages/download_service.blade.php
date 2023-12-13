@@ -12,7 +12,7 @@
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span>{{'Downloads'}}</span></li>
+            <li><span>{{'frontend.site.downloads'}}</span></li>
         </ul>
     </div>
 </section>
@@ -25,14 +25,14 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
-                            <li>
+                            <li {{ ($service->service_slug === $serviceDownload->service_slug) ? 'class=uk-active':'' }}>
                                 <a href="{{route('frontend.site.download.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
                         @endif
                         @if($downloadCategory)
                         @foreach($downloadCategory as $category)
-                        <li>
+                        <li {{ ($category->download_category === $category->download_category) ? 'class=uk-active':'' }}>
                             <a href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
                         </li>
                         @endforeach
@@ -76,18 +76,6 @@
                                         <a class="view-file" href="{{$download->guidelines}}" target="black">View</a> / <a class="download-file" href="{{$download->guidelines}}" download>Downloads</a>
                                         @endif
                                     </td>
-                                </tr>
-                                @endforeach
-                                @endif
-                                @if($otherDownload)
-                                @foreach($otherDownload as $other)
-                                <tr>
-                                    <td>{{$loop->iteration}}</td>
-                                    <td>{{$other->download_name}}</td>
-                                    <td colspan="2">
-                                        <a class="view-file" href="{{$other->doc_path}}" target="black">View</a> / <a class="download-file" href="{{$other->doc_path}}" download>Downloads</a>
-                                    </td>
-                                    <td hidden></td>
                                 </tr>
                                 @endforeach
                                 @endif

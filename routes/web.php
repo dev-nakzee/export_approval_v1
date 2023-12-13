@@ -20,8 +20,8 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
     Route::get('/about-us', 'about')->name('frontend.site.about-us');
     Route::get('/downloads', 'downloads')->name('frontend.site.downloads');
-    Route::get('/downloads/{download_slug}', 'download-service')->name('frontend.site.download.service');
-    Route::get('/downloads/{download_slug}', 'download-category')->name('frontend.site.download.category');
+    Route::get('/downloads/{service_slug}', 'download_service')->name('frontend.site.download.service');
+    Route::get('/downloads/o/{category_slug}', 'download_category')->name('frontend.site.download.category');
     Route::get('/media-cover', 'media_cover')->name('frontend.site.media-cover');
     Route::get('/gallery', 'gallery')->name('frontend.site.gallery');
     Route::get('/contact-us', 'contact')->name('frontend.site.contact-us');

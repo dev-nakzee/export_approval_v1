@@ -103,7 +103,60 @@ class HomeController extends Controller
             }
         }
         $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
-        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory'));
+
+        $otherDownload = Downloads::select('downloads.*', 'doc_path as downloads')
+            ->join('documents', 'documents.doc_id', 'downloads.download_document')
+            ->get();
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload'));
+    }
+
+    public function download_service($service_slug) {
+        $services = Product::select('services.service_name', 'services.service_slug')
+        ->join('services', 'products.product_service_id','services.service_id')
+        ->where('information', '!=', null)
+        ->orWhere('guidelines', '!=', null)
+        ->distinct()
+        ->get();
+        $serviceDownload = Services::select('services.service_id', 'services.service_slug')->where('service_slug', $service_slug)->first();
+        $downloads = Product::select('product_id', 'product_name', DB::raw('(SELECT doc_path FROM documents WHERE doc_id=information) AS information'), DB::raw('(SELECT doc_path FROM documents WHERE doc_id=guidelines) AS guidelines'))
+            ->where('product_service_id', $serviceDownload['service_id'])
+            ->where('information', '!=', null)
+            ->orWhere('guidelines', '!=', null)
+            ->orderBy('product_id', 'asc')
+            ->get();
+        foreach($downloads as $key => $value) {
+            if($downloads[$key]['information'] != null) {
+                $downloads[$key]['information'] = Storage::url($value['information']);
+            }
+            if($downloads[$key]['guidelines'] != null) {
+                $downloads[$key]['guidelines'] = Storage::url($value['guidelines']);
+            }
+        }
+        $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
+
+        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload'));
+    }
+
+    public function download_category($category_slug) {
+
+        $services = Product::select('services.service_name', 'services.service_slug')
+        ->join('services', 'products.product_service_id','services.service_id')
+        ->where('information', '!=', null)
+        ->orWhere('guidelines', '!=', null)
+        ->distinct()
+        ->get();
+        $categoryDownload = DownloadCategory::select('download_category_id','download_category_slug')->where('download_category_slug', $category_slug)->first();
+      
+        $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
+
+        $downloads = Downloads::select('downloads.*', 'doc_path')
+        ->join('documents', 'documents.doc_id', 'downloads.download_document')
+        ->where('download_category_id', $categoryDownload->download_category_id)
+        ->get();
+        foreach($downloads as $key => $value) {
+            $downloads[$key]['doc_path'] = Storage::url($value['doc_path']);
+        }
+        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload'));
     }
 
     public function media_cover() {
