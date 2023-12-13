@@ -73,35 +73,31 @@
                                         </li>
                                         <li>
                                             <img src="images/slider2.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anil Kumar</strong><br>Sales</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Padma Lata</strong><br>HR</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider5.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince Kumar</strong><br>Sales</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider1.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush Kumar</strong><br>Sales</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anil Kumar</strong><br>Director - Operations</div>
                                         </li>
                                         <li>
                                             <img src="images/slider2.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nisha Kumari</strong><br>Sales</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Kumari</strong><br>Sales</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nupur</strong><br>Manager Operation</div>
                                         </li>
                                         <li>
                                             <img src="images/slider4.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Sales</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>P. Padma Lata</strong><br>Manager - Finance</div>
                                         </li>
                                         <li>
                                             <img src="images/slider5.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Accounts</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince</strong><br>Technical Executive</div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider1.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush</strong><br>Technical Executive</div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kojol Kumari</strong><br>Technical Executive</div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu</strong><br>Technical Executive</div>
                                         </li>
                                     </ul>
                                 </div>
