@@ -336,8 +336,10 @@
                 </div>
             </div>
         </section>
-        <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-margin uk-hidden uk-padding-remove">
-            <a href="#" uk-scroll>&#8420;</a>
+        <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-background-primary uk-margin uk-hidden uk-padding-small">
+            <a href="#" uk-scroll>
+                <span uk-icon="icon: chevron-up; ratio: 1.5"></span>
+            </a>
         </div>
         {{-- <div id="site-pop-up" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">

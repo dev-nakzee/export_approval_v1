@@ -566,21 +566,18 @@ section.website-footer {
 
 .back-to-top {
     background-color: #e7e7e7 !important;
-    color: #052faa;
+    color: #052faa !important;
     border: #052faa solid 2px;
     z-index: 99 !important;
-    padding-left: 20px !important;
-    height: 50px !important;
-    width: 50px !important;
-    padding-top: 5px !important;
-    padding-left: 30px !important;
-}
-.back-to-top:hover {
-    background-color: #6e6e6e !important;
-    color: #fff;
 }
 .back-to-top a {
-    font-weight: 700 !important;
-    text-align: center;
-    font-size: 24px !important;
+    font-weight: 900;
+    color: #052faa !important;
+}
+.back-to-top:hover {
+    background-color: #9c9c9c !important;
+    color: #ffffff;
+}
+.back-to-top:hover a span {
+    color: #ffffff;
 }
