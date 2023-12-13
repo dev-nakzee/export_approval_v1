@@ -298,8 +298,9 @@
                         <li>
                             <a href="#">Gallery</a>
                         </li>
-                        <li><a href="{{route('frontend.site.holiday.list')}}">Holiday List</a></li>
+                        
                         <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                        <li><a href="{{route('frontend.site.holiday.list')}}">Holiday List</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">

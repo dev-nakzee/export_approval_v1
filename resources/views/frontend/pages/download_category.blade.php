@@ -100,7 +100,7 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search downloads"
+                searchPlaceholder: "Search"
             }
         });
     });

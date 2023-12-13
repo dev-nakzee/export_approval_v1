@@ -32,7 +32,7 @@
                         @endif
                         @if($downloadCategory)
                         @foreach($downloadCategory as $category)
-                        <li {{ ($category->download_category === $category->download_category) ? 'class=uk-active':'' }}>
+                        <li>
                             <a href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
                         </li>
                         @endforeach
@@ -106,7 +106,7 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search downloads"
+                searchPlaceholder: "Search"
             }
         });
     });

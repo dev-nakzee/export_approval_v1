@@ -48,7 +48,7 @@
             <div class="uk-width-3-4@m uk-padding-remove uk-margin-remove">
                 <div class="uk-flex uk-padding-remove-right uk-margin-remove-right uk-margin-remove-left" uk-grid>
                     <div class="uk-margin-bottom uk-width-1-1">
-                        <span class="downloads_list">{{"All Downloads"}}</span>
+                        <span class="downloads_list">{{"All Categories"}}</span>
                     </div>
                     <div class="uk-width-1-1 uk-margin-remove-right uk-margin-remove-left uk-margin-remove-top uk-margin-large-bottom">
                         <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
@@ -118,7 +118,7 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search downloads"
+                searchPlaceholder: "Search"
             }
         });
     });
