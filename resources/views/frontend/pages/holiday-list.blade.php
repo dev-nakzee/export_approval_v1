@@ -147,7 +147,7 @@
                     <li>22</li>
                     <li><span class="holiday">23</span></li>
                     <li>24</li>
-                    <li><span class="holiday">25<p>Christmas</p></span></li>
+                    <li><span class="holiday">25<i>Christmas</i></span></li>
                     <li>26</li>
                     <li>27</li>
                     <li>28</li>
