@@ -118,7 +118,7 @@
                         <ul uk-accordion class="uk-margin-large-bottom">
                             @foreach(json_decode($service->faqs, true) as $que=>$ans)
                             <li class="faq-element @if ($loop->first) uk-open @endif">
-                                <a class="uk-accordion-title faq-question" href>{{$loop->iteration}}. {{$que}}</a>
+                                <a class="uk-accordion-title faq-question uk-margin-large" href>{{$loop->iteration}}. {{$que}}</a>
                                 <div class="uk-accordion-content faq-answer uk-margin-remove-top">
                                     {{ $ans }}
                                 </div>
