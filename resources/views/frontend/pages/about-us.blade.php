@@ -61,59 +61,71 @@
                     </div>
                     <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
                         @if ($section->static_page_section_id === 7)
-                        {!! $section->section_description !!}
                         <div uk-slider>
-                            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-light">
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Rajesh Kumar</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <div class="uk-position-relative">
+                        
+                                <div class="uk-slider-container uk-light">
+                                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                                        <li>
+                                            <img src="images/slider1.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider2.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider3.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider4.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider5.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider1.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider2.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider3.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider4.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                                        </li>
+                                        <li>
+                                            <img src="images/slider5.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="uk-hidden@s uk-light">
+                                    <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
+                                    <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
+                                </div>
+                        
+                                <div class="uk-visible@s">
+                                    <a class="uk-position-center-left-out uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
+                                    <a class="uk-position-center-right-out uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
+                                </div>
+                        
                             </div>
-                            </div>
-                            </li>
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Kiran</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            </div>
-                            </li>
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Rinku</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            </div>
-                            </li>
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Nisha</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            </div>
-                            </li>
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Sneh Lata</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            </div>
-                            </li>
-                            <li class="uk-width-3-4">
-                            <div class="uk-cover-container uk-panel"><img src="images/photo.jpg" alt="">
-                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                            <h3 class="uk-margin-remove">Amit kumar</h3>
-                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            </div>
-                            </li>
-                            </ul>
-                            </div>
+                        
+                            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                        
+                        </div>
+                        
                         @else
                         {!! $section->section_description !!}
                         @endif  
