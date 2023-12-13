@@ -12,8 +12,8 @@
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><a href="{{route('frontend.site.home', $service->service_slug)}}">{{$service->service_name}}</a></li>
-            <li><a href="{{route('frontend.site.home', $service->service_slug)}}#{{'mandatory-product-list'}}">{{"Mandatory List"}}</a></li>
+            <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+            <li><a href="{{route('frontend.site.service', $service->service_slug)}}#{{'mandatory-product-list'}}">{{"Mandatory List"}}</a></li>
             <li><span>{{$product->product_name}}</span></li>
         </ul>
     </div>
