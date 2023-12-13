@@ -97,7 +97,7 @@
                                         </li>
                                         <li>
                                             <img src="images/slider3.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu</strong><br>Technical Executive</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Dhaka</strong><br>Technical Executive</div>
                                         </li>
                                     </ul>
                                 </div>
