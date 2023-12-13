@@ -17,7 +17,7 @@
             </a>
         </div>
         <div class="col-md-12 pt-1">
-            <table class="table table-secondary table-bordered table-hover table-sm" id="clients-table">
+            <table class="table table-secondary table-bordered table-hover table-sm" id="download-category-table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -33,12 +33,10 @@
 </div>
 @endsection
 @section('css')
-<link rel="stylesheet" href="{{asset('backend/dropzone/dropzone.css')}}" type="text/css" />
-<link rel="stylesheet" href="{{asset('datatables/datatables.min.css')}}" type="text/css" />
+
 @endsection
 @section('js')
-<script src="{{asset('backend/js/media.min.js')}}"></script>
-<script src="{{asset('backend/dropzone/dropzone.js')}}"></script>
+
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>
     $(document).ready(function() {  

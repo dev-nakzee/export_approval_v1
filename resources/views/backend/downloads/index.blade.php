@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'All Clients'])
+@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'Download Categories'])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -12,16 +12,17 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('clients.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('downloads.create')}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
         <div class="col-md-12 pt-1">
-            <table class="table table-secondary table-bordered table-hover table-sm" id="clients-table">
+            <table class="table table-secondary table-bordered table-hover table-sm" id="download-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Clients</th>
+                        <th>Download Name</th>
+                        <th>Download Category</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -33,12 +34,10 @@
 </div>
 @endsection
 @section('css')
-<link rel="stylesheet" href="{{asset('backend/dropzone/dropzone.css')}}" type="text/css" />
-<link rel="stylesheet" href="{{asset('datatables/datatables.min.css')}}" type="text/css" />
+
 @endsection
 @section('js')
-<script src="{{asset('backend/js/media.min.js')}}"></script>
-<script src="{{asset('backend/dropzone/dropzone.js')}}"></script>
+
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>
     $(document).ready(function() {  
@@ -50,16 +49,17 @@
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
             }
         });
-        var table = $('#clients-table').DataTable({
+        var table = $('#download-table').DataTable({
             paging: true,
             retrieve: true,
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('clients.show') }}",
+            ajax: "{{ route('downloads.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'client_name', name: 'client_name'},
+                {data: 'download_name', name: 'download_name'},
+                {data: 'download_category', name: 'download_category'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="mb-3 col-md-6">
-            <label for="guideDocument_id" class="form-label">Product Information</label>
+            <label for="guideDocument_id" class="form-label">Product Guidelines</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
                 <input type="text" class="form-control form-control-sm" id="guideDocument" disabled >

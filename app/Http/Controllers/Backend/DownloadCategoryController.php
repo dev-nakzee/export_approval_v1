@@ -51,7 +51,7 @@ class DownloadCategoryController extends Controller
             'download_category' => $request->name,
             'download_category_slug' => $request->slug,
         ];
-        Clients::create($data);
+        DownloadCategory::create($data);
         return redirect()->route('downloads.categories.index')->with([200, 'response', 'status'=>'success','message'=>'Download category created successfully.']);
     }
 
@@ -67,14 +67,13 @@ class DownloadCategoryController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('download_category', function($row){
-                    $image = '<i class="fa-light fa-2xl fa-file-pdf"></i> '.$row->download_name;
-                    return $image;
+                    return  $row->download_category;
                 })
                 ->addColumn('action', function($row){
                     $removeBtn = '<a class="btn btn-outline-info btn-sm" href="'.route("downloads.categories.edit", $row->download_category_id).'"><i class="fa fa-edit"></i></a><a class="btn btn-outline-danger btn-sm" href="'.route("downloads.categories.delete", $row->download_category_id).'"><i class="fa fa-trash-can"></i></a>';
                     return $removeBtn;
                 })
-                ->rawColumns(['action', 'download_name'])
+                ->rawColumns(['action'])
                 ->escapeColumns([])
                 ->make(true);
         }
@@ -83,17 +82,29 @@ class DownloadCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
+        $downloadCategory = DownloadCategory::where('download_category_id', $id)->first();
+        return view('backend.downloads.categories.edit', compact('downloadCategory'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+        ]);
+        $data = [
+            'download_category' => $request->name,
+            'download_category_slug' => $request->slug,
+        ];
+        DownloadCategory::where('download_category_id', $id)->update($data);
+        return redirect()->route('downloads.categories.index')->with([200, 'response', 'status'=>'success','message'=>'Download category updated successfully.']);
     }
 
     /**

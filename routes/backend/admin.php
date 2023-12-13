@@ -226,6 +226,7 @@ Route::controller(DownloadsController::class)->group(function(){
     Route::get('/downloads/create', 'create')->name('downloads.create');
     Route::get('/downloads/edit/{id}', 'edit')->name('downloads.edit');
     Route::post('/downloads/store', 'store')->name('downloads.store');
+    Route::post('/downloads/save', 'save')->name('downloads.save');
     Route::post('/downloads/update/{id}', 'update')->name('downloads.update');
     Route::post('/downloads/delete/{id}', 'delete')->name('downloads.delete');
 });
