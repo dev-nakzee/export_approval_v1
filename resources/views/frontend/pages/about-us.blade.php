@@ -68,74 +68,44 @@
                                 <div class="uk-slider-container uk-light">
                                     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
                                         <li>
-                                            <img src="images/slider1.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Rajesh Kumar</h3>
-                                                <p class="uk-margin-remove">Founder - Director</p>
-                                            </div>
+                                            <img src="https://two.exportapproval.com/storage/media/Rajesh-Kumar_Director_Brand-Liaison_SEPC-1702360461.jpg" width="400" height="600" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rajesh Kumar</strong><br>Founder - Director</div>
                                         </li>
                                         <li>
                                             <img src="images/slider2.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Amit Kumar</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Arun Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider3.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Sanjay Kapri</h3>
-                                                <p class="uk-margin-remove">Tech</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Sanjay kapri</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider4.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Sneh Lata</h3>
-                                                <p class="uk-margin-remove">HR</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Sneh Lata</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider5.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Prince Kumar</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider1.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Anuj Kumar</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anuj Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider2.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Nisha</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nisha Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider3.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Rinku</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rinku Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider4.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Kiran</h3>
-                                                <p class="uk-margin-remove">Sales</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
                                             <img src="images/slider5.jpg" width="400" height="600" alt="">
-                                            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                                <h3 class="uk-margin-remove">Kajal</h3>
-                                                <p class="uk-margin-remove">Accounts</p>
-                                            </div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Accounts</div>
                                         </li>
                                     </ul>
                                 </div>
