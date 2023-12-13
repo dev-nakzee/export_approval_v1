@@ -565,15 +565,22 @@ section.website-footer {
 }
 
 .back-to-top {
-    background-color: #ebd6d3 !important;
-    color: #fff;
+    background-color: #e7e7e7 !important;
+    color: #052faa;
+    border: #052faa solid 2px;
     z-index: 99 !important;
+    padding-left: 20px !important;
+    height: 50px !important;
+    width: 50px !important;
+    padding-top: 5px !important;
+    padding-left: 28px !important;
 }
 .back-to-top:hover {
     background-color: #6e6e6e !important;
     color: #fff;
 }
-.back-to-top img {
-    width: 20px !important;
-    height: 20px !important;
+.back-to-top a {
+    font-weight: 700 !important;
+    text-align: center;
+    font-size: 24px !important;
 }

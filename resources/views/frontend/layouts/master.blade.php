@@ -4,10 +4,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
+        <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}" />
         <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
-        <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}" />
+
         @yield('scripts')
         <script>
             $(document).on('submit', '#brochure-form', function(e){
@@ -90,21 +91,6 @@
 
                     );
                 }
-
-
-                // const box = document.querySelector('#footer');
-                // const message = document.querySelector('#message');
-
-                // document.addEventListener('scroll', function () {
-                //     if(isInViewport(box)) {
-                //         $('.ps-details-section').addClass('ps-sidebar-absolute');
-                //         console.log('in viewport');
-                //     } else {
-                //         $('.ps-details-section').removeClass('ps-sidebar-absolute');
-                //     }
-                // }, {
-                //     passive: true
-                // });
             });
 
             jQuery(function($) {
@@ -350,8 +336,8 @@
                 </div>
             </div>
         </section>
-        <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-background-primary uk-margin uk-light uk-hidden uk-padding-small">
-            <a href="#" uk-scroll><img src="{{asset('frontend/images/upload.svg')}}" alt="back to top"/></a>
+        <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-margin uk-hidden uk-padding-remove">
+            <a href="#" uk-scroll>&#8420;</a>
         </div>
         {{-- <div id="site-pop-up" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
