@@ -77,27 +77,27 @@
                                         </li>
                                         <li>
                                             <img src="images/slider2.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nupur</strong><br>Manager Operation</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nupur Monga</strong><br>Manager - Key Account</div>
                                         </li>
                                         <li>
                                             <img src="images/slider4.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>P. Padma Lata</strong><br>Manager - Finance</div>
                                         </li>
                                         <li>
+                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Dhaka</strong><br>Tech Executive</div>
+                                        </li>
+                                        <li>
                                             <img src="images/slider5.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince</strong><br>Technical Executive</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince</strong><br>Tech Executive</div>
                                         </li>
                                         <li>
                                             <img src="images/slider1.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush</strong><br>Technical Executive</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush Sharma</strong><br>Tech Executive</div>
                                         </li>
                                         <li>
                                             <img src="images/slider4.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kojol Kumari</strong><br>Technical Executive</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Dhaka</strong><br>Technical Executive</div>
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kojol Kumari</strong><br>Tech Executive</div>
                                         </li>
                                     </ul>
                                 </div>
