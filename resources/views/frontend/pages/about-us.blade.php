@@ -68,43 +68,39 @@
                                 <div class="uk-slider-container uk-light">
                                     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
                                         <li>
-                                            <img src="https://two.exportapproval.com/storage/media/Rajesh-Kumar_Director_Brand-Liaison_SEPC-1702360461.jpg" width="400" height="600" alt="">
+                                            <img src="https://two.exportapproval.com/storage/media/Rajesh-Kumar_Director_Brand-Liaison_SEPC-1702360461.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rajesh Kumar</strong><br>Founder - Director</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider2.jpg" width="400" height="600" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Arun Kumar</strong><br>Sales</div>
+                                            <img src="images/slider2.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anil Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider3.jpg" width="400" height="600" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Sanjay kapri</strong><br>Sales</div>
+                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Padma Lata</strong><br>HR</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider4.jpg" width="400" height="600" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Sneh Lata</strong><br>Sales</div>
-                                        </li>
-                                        <li>
-                                            <img src="images/slider5.jpg" width="400" height="600" alt="">
+                                            <img src="images/slider5.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider1.jpg" width="400" height="600" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anuj Kumar</strong><br>Sales</div>
+                                            <img src="images/slider1.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush Kumar</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider2.jpg" width="400" height="600" alt="">
+                                            <img src="images/slider2.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nisha Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider3.jpg" width="400" height="600" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rinku Kumari</strong><br>Sales</div>
+                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
+                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider4.jpg" width="400" height="600" alt="">
+                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Sales</div>
                                         </li>
                                         <li>
-                                            <img src="images/slider5.jpg" width="400" height="600" alt="">
+                                            <img src="images/slider5.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kiran Kumari</strong><br>Accounts</div>
                                         </li>
                                     </ul>
