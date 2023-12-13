@@ -26,8 +26,15 @@
                         @if($services)
                         @foreach($services as $service)
                             <li>
-                                <a href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
+                                <a href="{{route('frontend.site.download.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
+                        @endforeach
+                        @endif
+                        @if($downloadCategory)
+                        @foreach($downloadCategory as $category)
+                        <li>
+                            <a href="{{route('frontend.site.download.category',$service->service_slug)}}">{{$service->service_name}}</a>
+                        </li>
                         @endforeach
                         @endif
                     </ul>

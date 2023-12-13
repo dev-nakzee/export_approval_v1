@@ -11,6 +11,8 @@ use App\Models\Backend\Blog;
 use App\Models\Backend\Product;
 use App\Models\Backend\Document;
 use App\Models\Backend\Clients;
+use App\Models\Backend\DownloadCategory;
+use App\Models\Backend\Downloads;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -100,7 +102,8 @@ class HomeController extends Controller
                 $downloads[$key]['guidelines'] = Storage::url($value['guidelines']);
             }
         }
-        return view('frontend.pages.downloads', compact('services', 'downloads'));
+        $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory'));
     }
 
     public function media_cover() {

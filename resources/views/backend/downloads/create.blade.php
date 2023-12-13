@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'New Download Category'])
+@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'New Download'])
 @section('content')
 <form class="form-horizontal" method="POST" action="{{route('downloads.store')}}" enctype="multipart/form-data">
     @csrf

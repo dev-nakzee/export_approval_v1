@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'Edit Client'])
+@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'Edit Download'])
 @section('content')
 <form class="form-horizontal" method="POST" action="{{route('clients.update', $client->client_id)}}" enctype="multipart/form-data">
     @csrf
