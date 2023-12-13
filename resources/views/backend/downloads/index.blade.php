@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'Download Categories'])
+@extends('backend.layouts.app', ['module' => 'Downloads', 'title' => 'Downloads'])
 @section('content')
 <div>
     <div class="container-fluid row">
