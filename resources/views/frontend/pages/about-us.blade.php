@@ -25,8 +25,8 @@
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
-            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span> {{'About us'}}</span></li>
+            <li><div class="uk-panel"><a href="{{route('frontend.site.home')}}">Home</a></div></li>
+            <li><div class="uk-panel"><span> {{'About us'}}</span></div></li>
         </ul>
     </div>
 </section>
@@ -66,39 +66,39 @@
                             <div class="uk-position-relative">
                         
                                 <div class="uk-slider-container uk-light">
-                                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                                        <li>
+                                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
+                                        <li><div class="uk-panel">
                                             <img src="https://two.exportapproval.com/storage/media/Rajesh-Kumar_Director_Brand-Liaison_SEPC-1702360461.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rajesh Kumar</strong><br>Founder - Director</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider2.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anil Kumar</strong><br>Director - Operations</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider2.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nupur Monga</strong><br>Manager - Key Account</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider4.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>P. Padma Lata</strong><br>Manager - Finance</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider3.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Dhaka</strong><br>Tech Executive</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider5.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince</strong><br>Tech Executive</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider1.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush Sharma</strong><br>Tech Executive</div>
-                                        </li>
-                                        <li>
+                                        </div></li>
+                                        <li><div class="uk-panel">
                                             <img src="images/slider4.jpg" width="320" height="400" alt="">
                                             <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kojol Kumari</strong><br>Tech Executive</div>
-                                        </li>
+                                        </div></li>
                                     </ul>
                                 </div>
                         
