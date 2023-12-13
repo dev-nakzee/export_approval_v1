@@ -26,7 +26,7 @@
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right uk-margin-remove-bottom">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span>{{'holiday-list'}}</span></li>
+            <li><span>{{'holiday-list'}}</li>
         </ul>
     </div>
 </section>
@@ -41,7 +41,7 @@
             <div class="month">      
                 <ul>
                 <li class="prev">&#10094;</li>
-                <li class="next">&#10095;</li>
+            
                 <li style="">
                     November<br>
                     <span style="font-size:18px">2023</span>
@@ -66,30 +66,30 @@
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
-                <li><span class="holiday">4</span></li>
-                <li><span class="holiday">5</span></li>
+                <li class="holiday">4</li>
+                <li class="holiday">5</li>
                 <li>6</li>
                 <li>7</li>
                 <li>8</li>
                 <li>9</li>
                 <li>10</li>
-                <li><span class="holiday">11</span></li>
-                <li><span class="holiday">12</span></li>
-                <li><span class="holiday">13</span></li>
-                <li><span class="holiday">14</span></li>
+                <li class="holiday">11</li>
+                <li class="holiday">12</li>
+                <li class="holiday">13</li>
+                <li class="holiday">14</li>
                 <li>15</li>
                 <li>16</li>
                 <li>17</li>
-                <li><span class="holiday">18</span></li>
-                <li><span class="holiday">19</span></li>
+                <li class="holiday">18</li>
+                <li class="holiday">19</li>
                 <li>20</li>
                 <li>21</li>
                 <li>22</li>
                 <li>23</li>
                 <li>24</li>
-                <li><span class="holiday">25</span></li>
-                <li><span class="holiday">26</span></li>
-                <li><span class="holiday">27</span></li>
+                <li class="holiday">25</li>
+                <li class="holiday">26</li>
+                <li class="holiday">27</li>
                 <li>28</li>
                 <li>29</li>
                 <li>30</li>
@@ -98,8 +98,7 @@
             <div class="uk-width-1-3">
                 <div class="month">      
                     <ul>
-                      <li class="prev">&#10094;</li>
-                      <li class="next">&#10095;</li>
+                
                       <li style="">
                         December<br>
                         <span style="font-size:18px">2023</span>
@@ -124,42 +123,42 @@
                     <li></li>
                     <li></li>
                     <li>1</li>
-                    <li><span class="holiday">2</span></li>
-                    <li><span class="holiday">3</span></li>
+                    <li class="holiday">2</li>
+                    <li class="holiday">3</li>
                     <li>4</li>
                     <li>5</li>
                     <li>6</li>
                     <li>7</li>
                     <li>8</li>
-                    <li><span class="holiday">9</span></li>
-                    <li><span class="holiday">10</span></li>
+                    <li class="holiday">9</li>
+                    <li class="holiday">10</li>
                     <li>11</li>
                     <li>12</li>
                     <li>13</li>
                     <li>14</li>
                     <li>15</li>
-                    <li><span class="holiday">16</span></li>
-                    <li><span class="holiday">17</span></li>
+                    <li class="holiday">16</li>
+                    <li class="holiday">17</li>
                     <li>18</li>
                     <li>19</li>
                     <li>20</li>
                     <li>21</li>
                     <li>22</li>
-                    <li><span class="holiday">23</span></li>
-                    <li>24</li>
-                    <li><span class="holiday">25<br><i>Christmas</i></span></li>
+                    <li class="holiday">23</li>
+                    <li class="holiday">24</li>
+                    <li class="holiday">25<br><i>Christmas</i></li>
                     <li>26</li>
                     <li>27</li>
                     <li>28</li>
                     <li>29</li>
-                    <li><span class="holiday">30</span></li>
-                    <li><span class="holiday">31<br><i>New Year's Eve</i></span></li>
+                    <li class="holiday">30</li>
+                    <li class="holiday">31<br><i>New Year's Eve</i></li>
                   </ul>
             </div>
             <div class="uk-width-1-3">
                 <div class="month">      
                     <ul>
-                      <li class="prev">&#10094;</li>
+                 
                       <li class="next">&#10095;</li>
                       <li style="">
                         January<br>
@@ -180,34 +179,34 @@
                   
                   <ul class="days">
                     <li></li>
-                    <li><span class="holiday">1</span></li>
+                    <li class="holiday">1</li>
                     <li>2</li>
                     <li>3</li>
                     <li>4</li>
                     <li>5</li>
-                    <li><span class="holiday">9</span></li>
-                    <li><span class="holiday">9</span></li>
+                    <li class="holiday">9</li>
+                    <li class="holiday">9</li>
                     <li>8</li>
                     <li>9</li>
                     <li>10</li>
                     <li>11</li>
                     <li>12</li>
-                    <li><span class="holiday">13</span></li>
-                    <li><span class="holiday">14</span></li>
-                    <li><span class="holiday">15</span></li>
+                    <li class="holiday">13</li>
+                    <li class="holiday">14</li>
+                    <li class="holiday">15</li>
                     <li>16</li>
                     <li>17</li>
                     <li>18</li>
                     <li>19</li>
-                    <li><span class="holiday">20</span></li>
-                    <li><span class="holiday">21</span></li>
+                    <li class="holiday">20</li>
+                    <li class="holiday">21</li>
                     <li>22</li>
                     <li>23</li>
                     <li>24</li>
                     <li>25</li>
-                    <li><span class="holiday">26</span></li>
-                    <li><span class="holiday">27</span></li>
-                    <li><span class="holiday">28</span></li>
+                    <li class="holiday">26</li>
+                    <li class="holiday">27</li>
+                    <li class="holiday">28</li>
                     <li>29</li>
                     <li>30</li>
                     <li>31</li>
@@ -303,10 +302,10 @@
     }
 
     .holiday {
-        color: red;
+        color: red !important;
     }
     .holiday i {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     </style>
