@@ -25,8 +25,8 @@
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
-            <li><div class="uk-panel"><a href="{{route('frontend.site.home')}}">Home</a></div></li>
-            <li><div class="uk-panel"><span> {{'About us'}}</span></div></li>
+            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><span> {{'About Us'}}</span></li>
         </ul>
     </div>
 </section>

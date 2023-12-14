@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use App\Models\Countries;
 use App\Models\Backend\GalleryImages;
+use App\Models\Backend\Holidays;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -194,6 +196,12 @@ class HomeController extends Controller
     }
 
     public function holidays() {
-        return view('frontend.pages.holiday-list');
+        $holidays = Holidays::orderBy('holiday_date', 'asc')->get();
+        foreach ($holidays as $key => $value) {
+            $holidays[$key]['holiday_show'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('d/m/Y');
+            $holidays[$key]['holiday_month'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('F');
+            $holidays[$key]['holiday_year'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('Y');
+        }
+        return view('frontend.pages.holiday-list', compact('holidays'));
     }
 }
