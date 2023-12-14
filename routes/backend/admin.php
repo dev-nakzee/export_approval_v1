@@ -230,3 +230,13 @@ Route::controller(DownloadsController::class)->group(function(){
     Route::post('/downloads/update/{id}', 'update')->name('downloads.update');
     Route::post('/downloads/delete/{id}', 'delete')->name('downloads.delete');
 });
+
+Route::controller(HolidayController::class)->group(function(){
+    Route::get('/holidays', 'index')->name('holidays.list.index');
+    Route::get('/holidays/show', 'show')->name('holidays.list.show');
+    Route::get('/holidays/create', 'create')->name('holidays.list.create');
+    Route::get('/holidays/edit/{id}', 'edit')->name('holidays.list.edit');
+    Route::post('/holidays/store', 'store')->name('holidays.list.store');
+    Route::post('/holidays/update/{id}', 'update')->name('holidays.list.update');
+    Route::get('/holidays/delete/{id}', 'delete')->name('holidays.list.delete');
+});
