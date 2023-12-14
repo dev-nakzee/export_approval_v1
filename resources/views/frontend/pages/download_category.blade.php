@@ -100,7 +100,11 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search"
+                searchPlaceholder: "Search",
+                paginate: {
+                    "previous": "<"
+                    "next": ">"
+                }
             }
         });
     });

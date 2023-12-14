@@ -84,7 +84,11 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search {{$notice_service->service_name}} notifications"
+                searchPlaceholder: "Search {{$notice_service->service_name}} notifications",
+                "paginate": {
+                    "previous": "<span uk-icon='chevron-left'></span>",
+                    "next": "<span uk-icon='chevron-right'></span>",
+                }
             }
         });
         $(window).scroll(function(){

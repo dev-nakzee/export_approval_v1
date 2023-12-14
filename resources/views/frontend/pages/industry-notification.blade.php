@@ -87,7 +87,11 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search notifications"
+                searchPlaceholder: "Search notifications",
+                "paginate": {
+                    "previous": "<span uk-icon='chevron-left'></span>",
+                    "next": "<span uk-icon='chevron-right'></span>",
+                }
             }
         });
         $(window).scroll(function(){

@@ -118,15 +118,9 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search"
+                searchPlaceholder: "Search",
             }
         });
     });
-    // $(document).on('click', '.product-page-link', function() {
-    //     var slug = $(this).data('slug');
-    //     var url = "{{route('frontend.site.product', ":slug")}}";
-    //     url = url.replace(':slug', slug);
-    //     window.location.href = url;
-    // });
 </script>
 @endsection

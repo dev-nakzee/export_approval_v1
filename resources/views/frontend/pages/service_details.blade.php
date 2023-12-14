@@ -151,7 +151,11 @@
                 "sSearch": ""
             },
             language: {
-                searchPlaceholder: "Search {{$service->service_name}} products"
+                searchPlaceholder: "Search {{$service->service_name}} products",
+                "paginate": {
+                    "previous": "<span uk-icon='chevron-left'></span>",
+                    "next": "<span uk-icon='chevron-right'></span>",
+                }
             }
         });
         $(window).scroll(function(){
