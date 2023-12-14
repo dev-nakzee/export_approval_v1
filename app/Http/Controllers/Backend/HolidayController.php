@@ -80,7 +80,7 @@ class HolidayController extends Controller
                     return $type;
                 })
                 ->addColumn('action', function($row){
-                    $actionBtn = '<a href="'.route('clients.edit', $row->holiday_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('clients.delete', $row->holiday_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
+                    $actionBtn = '<a href="'.route('holidays.list.edit', $row->holiday_id).'" class="btn btn-outline-secondary btn-sm py-0 px-1 me-1"><i class="fa-light fa-edit"></i></a><a href="'.route('holidays.list.delete', $row->holiday_id).'" class="btn btn-outline-danger btn-sm py-0 px-1 me-1"><i class="fa-light fa-trash"></i></a>';
                     return $actionBtn;
                 })
                 ->rawColumns(['action', 'type'])
@@ -92,17 +92,30 @@ class HolidayController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
+        $holiday = Holidays::where('holiday_id', $id)->first();
+        return view('frontend.holiday.edit', compact('holiday'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $validate = Validator::make($request->all(), [
+            'holiday_name' => 'required',
+            'holiday_date' => 'required',
+        ]);
+        $data = [
+            'holiday_name' => $request->holiday_name,
+            'holiday_date' => $request->holiday_date,
+            'holiday_type' => $request->holiday_type,
+        ];
+        Holidays::where('holiday_id', $id)->update($data);
+        return redirect()->route('holidays.list.index')->with([200, 'response', 'status'=>'success','message'=>'Holiday updated successfully.']);
     }
 
     /**

@@ -1,6 +1,6 @@
 @extends('backend.layouts.app', ['module' => 'Holidays', 'title' => 'Edit Holiday'])
 @section('content')
-<form class="form-horizontal" method="POST" action="{{route('holidays.list.store')}}" enctype="multipart/form-data">
+<form class="form-horizontal" method="POST" action="{{route('holidays.list.update', $holiday->holiday_id)}}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="mb-2 col-md-12">
@@ -9,15 +9,16 @@
         </div>
         <div class="mb-3 col-md-6">
             <label for="holiday_name" class="form-label">Holiday name</label>
-            <input type="text" class="form-control form-control-sm" id="holiday_name" name="holiday_name">
+            <input type="text" class="form-control form-control-sm" id="holiday_name" name="holiday_name" value="{{$holiday->holiday_name}}">
         </div>
         <div class="mb-3 col-md-6">
             <label for="holiday_date" class="form-label">Holiday date</label>
-            <input type="date" class="form-control form-control-sm" id="holiday_date" name="holiday_date">
+            <input type="date" class="form-control form-control-sm" id="holiday_date" name="holiday_date" value="{{$holiday->holiday_date}}">
         </div>
         <div class="mb-3 col-md-6">
-            <label for="holiday_date" class="form-label">Holiday date</label>
-            <select class="form-control form-control-sm" id="holiday_date" name="holiday_date">
+            <label for="holiday_type" class="form-label">Holiday date</label>
+            <select class="form-control form-control-sm" id="holiday_type" name="holiday_type" value="{{$holiday->holiday_type}}">
+                <option value="{{$holiday->holiday_type}}">@if($holiday->holiday_type == 1){{'Restricted'}} @else {{'Normal'}} @endif</option>
                 <option value="0">Normal</option>
                 <option value="1">Restricted</option>
             </select>
