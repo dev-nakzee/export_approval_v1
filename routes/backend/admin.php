@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\GalleryImageController;
 use App\Http\Controllers\Backend\GalleryVideoController;
 use App\Http\Controllers\Backend\DownloadCategoryController;
 use App\Http\Controllers\Backend\DownloadsController;
+use App\Http\Controllers\Backend\HolidayController;
 
 Route::get('/login', [AdminController::class,'Index'])->name('login_from');
 Route::POST('/login/owner', [AdminController::class,'Login'])->name('admin.login');
