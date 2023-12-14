@@ -42,7 +42,7 @@
             @foreach($images as $img)
             <div>
                 <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
-                    <div data-src="{{$img->media_path}}" class="uk-height-medium" alt="{{$img->img_alt}}">
+                    <div data-src="{{$img->media_path}}" class="uk-height-medium" alt="{{$img->img_alt}}"></div>
                 </a>
             </div>
             @endforeach
