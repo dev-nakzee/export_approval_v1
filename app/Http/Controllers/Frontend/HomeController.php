@@ -13,6 +13,7 @@ use App\Models\Backend\Document;
 use App\Models\Backend\Clients;
 use App\Models\Backend\DownloadCategory;
 use App\Models\Backend\Downloads;
+use App\Models\Backend\News;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -160,7 +161,13 @@ class HomeController extends Controller
     }
 
     public function media_cover() {
-        
+        $news = News::select('news.*', 'media_path')
+            ->join('media', 'media.media_id', 'news.media_id')
+            ->get();
+        foreach ($news as $key => $value) {
+            $news[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        return view('frontend.pages.media_coverage', compact('news'));
     }
 
     public function contact() {
