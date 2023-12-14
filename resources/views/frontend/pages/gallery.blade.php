@@ -18,7 +18,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1 class="uk-padding-small">
-            {{'Media Coverage'}}
+            {{'Contact Us'}}
         </h1>
     </div>
 </section>
@@ -26,21 +26,15 @@
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right uk-margin-remove-bottom">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span>{{'Media Coverage'}}</span></li>
+            <li><span>{{'Gallery'}}</span></li>
         </ul>
     </div>
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <div uk-grid class="uk-child-width-1-4 uk-container uk-width-1-1 uk-padding-large uk-padding-remove-vertical">
-        @if($news)
-        @foreach($news as $news)
-        <a href="{{$news->news_url}}" target="blank">
-            <img class="" src="{{$news->media_path}}" uk-img />
-        </a>
-        @endforeach
-        @endif
-        </div>
+        <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
+            {{'Complete Gallery'}} 
+        </p>
     </div>
 </section>
 @endsection

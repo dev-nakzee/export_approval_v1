@@ -170,6 +170,11 @@ class HomeController extends Controller
         return view('frontend.pages.media_coverage', compact('news'));
     }
 
+    public function gallery()
+    {
+        return view('frontend.pages.gallery');
+    }
+
     public function contact() {
         $countries = Countries::select('id','name', 'iso', 'iso3', 'phonecode')->get();
         $sections = StaticPageSection::select('static_page_sections.*','media_path')
