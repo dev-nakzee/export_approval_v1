@@ -96,7 +96,7 @@ class HolidayController extends Controller
     {
         //
         $holiday = Holidays::where('holiday_id', $id)->first();
-        return view('frontend.holiday.edit', compact('holiday'));
+        return view('backend.holiday.edit', compact('holiday'));
     }
 
     /**
