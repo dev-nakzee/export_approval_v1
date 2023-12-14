@@ -12,7 +12,7 @@
                 </button>
             </div>
             @endif
-            <a href="{{route('clients.create')}}" class="float-end btn btn-outline-primary btn-sm">
+            <a href="{{route('gallery.images.create')}}" class="float-end btn btn-outline-primary btn-sm">
                 <i class="fas fa-plus"></i>
             </a>
         </div>
@@ -41,9 +41,9 @@
 <script src="{{asset('datatables/datatables.min.js')}}"></script>
 <script>
     $(document).ready(function() {  
-        clientsDatatable();
+        imageDatatable();
     });
-    function clientsDatatable() {
+    function imageDatatable() {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')

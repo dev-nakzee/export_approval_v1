@@ -32,7 +32,7 @@
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <div uk-grid class="uk-child-width-1-4 uk-container uk-width-1-1 uk-padding uk-margin-remove-right uk-padding-remove-vertical uk-margin-large-top">
+        <div uk-grid class="uk-child-width-1-4 uk-container uk-width-1-1 uk-padding uk-padding-remove-right uk-padding-remove-vertical uk-margin-large-top">
         @if($news)
         @foreach($news as $news)
         <a href="{{$news->news_url}}" target="blank">

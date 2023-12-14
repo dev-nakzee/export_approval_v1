@@ -41,6 +41,18 @@ class GalleryImageController extends Controller
     public function store(Request $request)
     {
         //
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+        $data = [
+            'gallery_image_title' => $request->name,
+            'gallery_image_slug' => $request->slug,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+        ];
+        GalleryImages::create($data);
+        return redirect()->route('gallery.images.index')->with([200, 'response', 'status'=>'success','message'=>'Gallery Image added successfully.']);
     }
 
     /**
@@ -58,7 +70,7 @@ class GalleryImageController extends Controller
                     return $row->gallery_image_title;
                 })
                 ->addColumn('action', function($row){
-                    $removeBtn = '<a class="btn btn-outline-danger btn-sm" href="'.route("document.delete", $row->gallery_image_id).'"><i class="fa fa-trash-can"></i></a>';
+                    $removeBtn = '<a class="btn btn-outline-danger btn-sm" href="'.route("gallery.images.delete", $row->gallery_image_id).'"><i class="fa fa-trash-can"></i></a>';
                     return $removeBtn;
                 })
                 ->rawColumns(['action'])
