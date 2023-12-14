@@ -36,6 +36,19 @@
             {{'Complete Gallery'}} 
         </p>
     </div>
+    <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
+        <div class="uk-child-width-1-4@m" uk-grid uk-lightbox="animation: scale">
+            @if($images)
+            @foreach($images as $img)
+            <div>
+                <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
+                    <img src="{{$img->media_path}}" width="1800" height="1200" alt="">
+                </a>
+            </div>
+            @endforeach
+            @endif
+        </div>
+    </div>
 </section>
 @endsection
 @section('scripts')

@@ -22,6 +22,7 @@
                     <tr>
                         <th>#</th>
                         <th>Image Name</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>

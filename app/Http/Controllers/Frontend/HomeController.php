@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use App\Models\Countries;
+use App\Models\Backend\GalleryImages;
 
 class HomeController extends Controller
 {
@@ -172,7 +173,13 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('frontend.pages.gallery');
+        $images = GalleryImages::select('gallery_images.*', 'media_path')
+            ->join('media', 'media.media_id', 'gallery_images.media_id')
+            ->get();
+        foreach ($images as $key => $value) {
+            $images[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        return view('frontend.pages.gallery', compact('images'));
     }
 
     public function contact() {
