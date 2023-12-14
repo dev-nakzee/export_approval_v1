@@ -50,19 +50,19 @@
             </div>
             
             <ul class="weekdays">
-                <li>Sunday</li>
-                <li>Monday</li>
-                <li>Tuesday</li>
-                <li>Wednesday</li>
-                <li>Thursday</li>
-                <li>Friday</li>
-                <li>Saturday</li>
-            </ul>
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tues</li>
+                <li>Wed</li>
+                <li>Thur</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
             
             <ul class="days"> 
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -107,21 +107,21 @@
                   </div>
                   
                   <ul class="weekdays">
-                    <li>Sunday</li>
-                    <li>Monday</li>
-                    <li>Tuesday</li>
-                    <li>Wednesday</li>
-                    <li>Thursday</li>
-                    <li>Friday</li>
-                    <li>Saturday</li>
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tues</li>
+                    <li>Wed</li>
+                    <li>Thur</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
                   </ul>
                   
                   <ul class="days"> 
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
                     <li>1</li>
                     <li class="holiday">2</li>
                     <li class="holiday">3</li>
@@ -168,17 +168,17 @@
                   </div>
                   
                   <ul class="weekdays">
-                    <li>Sunday</li>
-                    <li>Monday</li>
-                    <li>Tuesday</li>
-                    <li>Wednesday</li>
-                    <li>Thursday</li>
-                    <li>Friday</li>
-                    <li>Saturday</li>
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tues</li>
+                    <li>Wed</li>
+                    <li>Thur</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
                   </ul>
                   
                   <ul class="days">
-                    <li></li>
+                    <li>&nbsp;</li>
                     <li class="holiday">1</li>
                     <li>2</li>
                     <li>3</li>
@@ -279,6 +279,7 @@
       margin-bottom: 5px;
       font-size:20px;
       color: #777;
+      border: 1px solid #5f5f5f;
     }
     
     .days li .active {
@@ -301,10 +302,10 @@
       .weekdays li, .days li {width: 12.2%;}
     }
 
-    .holiday {
+    .days li.holiday {
         color: red !important;
     }
-    .holiday i {
+    .days li.holiday i {
         font-size: 12px !important;
     }
 

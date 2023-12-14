@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'All Clients'])
+@extends('backend.layouts.app', ['module' => 'Gallery', 'title' => 'All Gallery'])
 @section('content')
 <div>
     <div class="container-fluid row">
@@ -17,12 +17,11 @@
             </a>
         </div>
         <div class="col-md-12 pt-1">
-            <table class="table table-secondary table-bordered table-hover table-sm" id="clients-table">
+            <table class="table table-secondary table-bordered table-hover table-sm" id="images-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Clients</th>
-                        <th>Action</th>
+                        <th>Image Name</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,16 +49,16 @@
                 'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
             }
         });
-        var table = $('#clients-table').DataTable({
+        var table = $('#images-table').DataTable({
             paging: true,
             retrieve: true,
             processing: true,
             serverSide: true,
             responsive: true,
-            ajax: "{{ route('clients.show') }}",
+            ajax: "{{ route('gallery.images.show') }}",
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-                {data: 'client_name', name: 'client_name'},
+                {data: 'gallery_image_title', name: 'gallery_image_title'},
                 {data: 'action', name: 'action', orderable: false, searchable: false},
             ]
         });

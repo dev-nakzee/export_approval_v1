@@ -148,12 +148,12 @@
                                 <li>
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
-                                {{-- <li>
+                                <li>
                                     <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
                                     <a href="{{route('frontend.site.gallery')}}">Gallery</a>
-                                </li> --}}
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -309,8 +309,8 @@
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="location"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small"><strong>Brand Liaison</strong><br>, Sharma Complex<br> A-2, Guru Nanak Pura<br> Laxmi Nagar<br>
-                            Delhi 110092, India</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small"><strong>Brand Liaison</strong><br>110, Sharma Complex<br> A-2, Guru Nanak Pura<br> Laxmi Nagar<br>
+                            Delhi - 110092, India</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="receiver"></i>
