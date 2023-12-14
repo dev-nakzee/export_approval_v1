@@ -62,7 +62,9 @@
                             @if(unserialize($product->product_compliance) == null)
                             @else
                             @foreach(unserialize($product->product_compliance) as $key => $value)
+                            @if($key != 0)
                             <li><b>{{$key}}</b> : {{$value}}</li>
+                            @endif
                             @endforeach
                             @endif
                         </ul>
@@ -90,17 +92,4 @@
 </section>
 @endsection
 @section('scripts')
-<script>
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            var scrollTop = 80;
-            if($(window).scrollTop() >= scrollTop){
-                $('.ps-details-section').addClass('ps-sidebar-fixed');  
-            }
-            if($(window).scrollTop() < scrollTop){
-                $('.ps-details-section').removeClass('ps-sidebar-fixed');  
-            }
-        })
-    });
-</script>
 @endsection
