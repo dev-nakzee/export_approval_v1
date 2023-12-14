@@ -1,4 +1,4 @@
-@extends('backend.layouts.app', ['module' => 'Clients', 'title' => 'New Client'])
+@extends('backend.layouts.app', ['module' => 'Gallery', 'title' => 'New Image'])
 @section('content')
 <form class="form-horizontal" method="POST" action="{{route('gallery.images.store')}}" enctype="multipart/form-data">
     @csrf
