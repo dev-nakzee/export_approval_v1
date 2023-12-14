@@ -41,9 +41,9 @@
             @if($images)
             @foreach($images as $img)
             <div>
-                <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
+                <a class="uk-inline uk-link-heading uk-link-reset" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
                     <img class="uk-height-medium" alt="{{$img->img_alt}}" src="{{$img->media_path}}" width="600" height="400" uk-img>
-                    <span class="uk-heading">{{$img->gallary_image_title}}</h1>
+                    <h4 class="uk-margin-small">{{$img->gallery_image_title}}</h4>
                 </a>
             </div>
             @endforeach

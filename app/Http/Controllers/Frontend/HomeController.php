@@ -179,7 +179,6 @@ class HomeController extends Controller
         foreach ($images as $key => $value) {
             $images[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        dd($images);
         return view('frontend.pages.gallery', compact('images'));
     }
 
