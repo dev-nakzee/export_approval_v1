@@ -401,6 +401,7 @@ iframe {
 .slider-arrows {
     background-color: #afafaf !important;
     color: #000000 !important;
+    border: 1px #052faa solid !important;
 }
 .blog-content p:first-child span {
     font-size: 14px !important;
