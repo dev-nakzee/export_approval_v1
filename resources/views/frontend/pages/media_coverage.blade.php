@@ -39,10 +39,10 @@
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <div uk-grid class="uk-child-width-1-4">
+        <div uk-grid class="uk-child-width-1-4 uk-container uk-width-1-1 uk-padding-large uk-padding-remove-vertical">
         @if($news)
         @foreach($news as $news)
-        <a href="{{$news->news_url}}" class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-contain uk-light" data-src="{{$news->media_path}}" uk-img>
+        <a href="{{$news->news_url}}" class="uk-flex uk-flex-center uk-flex-middle uk-background-contain uk-light" target="blank" data-src="{{$news->media_path}}" uk-img>
         </a>
         @endforeach
         @endif
