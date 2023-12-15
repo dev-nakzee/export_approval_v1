@@ -333,7 +333,7 @@
                     </div>
                     
                 </div>
-                <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
+                <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text uk-margin-bottom-small">
                     <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
                 </div>
             </div>
