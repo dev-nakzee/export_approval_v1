@@ -93,7 +93,7 @@ class BrochureFormController extends Controller
             mail($to, $subject, $message, $headers);
             mail($data['email'], $subject1, $thanks, $headers);
 
-            return $pdf->download('Brochure'.$id.'.pdf');
+            return $pdf->download('Brochure -'.$service['service_name'].'.pdf');
         } else {
             return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
         }
