@@ -74,7 +74,7 @@ class BrochureFormController extends Controller
 
             // Subject
             $subject1 = 'Thank you for your Interest';
-            $subject = $data['contact_person_name'].' requested for '.$service['service_name'];
+            $subject = $data['name'].' requested for '.$service['service_name'];
 
             // Message
             $thanks = '<p>Thank you for your interest.</p>';
