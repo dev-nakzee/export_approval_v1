@@ -34,9 +34,7 @@
   <div class="uk-container uk-margin-remove uk-width-1-1" bis_skin_checked="1">
     <div uk-grid>
         <h2>List of Holidays in <b>2023</b></h2>
-        <p class="uk-width-1-1">Office will remain closed on the holidays denoted by Red Colour:</p>       
-       
-       
+        <p class="uk-width-1-1 uk-margin-remove-top">Office will remain closed on the holidays denoted by Red Colour</p>       
        <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
               <table class="uk-table uk-table-bordered" style="border: 1px solid #e9b6b68a;">      
                 <tbody>
@@ -234,7 +232,7 @@
        </div>
        
         <h2>List of Holidays in <b>2024</b></h2>
-        <p class="uk-width-1-1">Office will remain closed on the holidays denoted by Red Colour:</p>       
+        <p class="uk-width-1-1">Office will remain closed on the holidays denoted by Red Colour</p>       
        
        
         <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
