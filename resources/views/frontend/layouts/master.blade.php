@@ -12,34 +12,9 @@
         @yield('scripts')
         <script>
             $(document).on('submit', '#brochure-form', function(e){
-                e.preventDefault();
-                var form = $(this);
-                var formData = new FormData(form[0]);
-                console.log(formData);
-                $.ajax({
-                    url: "{{route('frontend.site.brochure.store')}}",
-                    type: "POST",
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    dataType: 'JSON',
-                    success: function(response){
-                        $data = JSON.parse(response);
-                        download($data.download);
-                    }
-                });
+                document.getElementById("brochure-form").reset();
             });
-
-            function download(link) {
-                var element = document.createElement('a');
-                element.setAttribute('href', link);
-                element.setAttribute('target', '_blank');
-                element.style.display = 'none';
-                document.body.appendChild(element);
-                element.click();
-                document.body.removeChild(element);
-            }
-
+            // $('#download-brochure-error-success').reload();
             function captcha(){
                 var x = Math.floor((Math.random() * 9) + 1);
                 var y = Math.floor((Math.random() * 9) + 1);
@@ -171,7 +146,29 @@
                 </p>
                 <span class="section-tagline">Process &amp; Guidelines</span>
             </div>
-            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
+            <div id="download-brochure-error-success">
+            @if ($errors->any())
+                <div class="uk-margin-small uk-width-1-1">
+                    <div class="uk-alert-warning" uk-alert>
+                        <a href class="uk-alert-close" uk-close></a>
+                        @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+                @if (session()->has('success'))
+                <div class="uk-margin-small uk-width-1-1">
+                    <div class="uk-alert-success" uk-alert>
+                        <a href class="uk-alert-close" uk-close></a>
+                        @foreach (session('success') as $message)
+                            <p>{{ $message }}</p>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+            </div>
+            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" target="blank" action="{{route('frontend.site.brochure.store')}}">
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">

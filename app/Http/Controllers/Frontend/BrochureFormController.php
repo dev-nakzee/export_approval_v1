@@ -30,7 +30,7 @@ class BrochureFormController extends Controller
         return view('frontend.pdf.index', compact(['countries', 'services']));
     }
 
-    public function store(Request $request): JsonResponse
+    public function store(Request $request)
     {
         if($request->captcha === $request->captcha_answer) {
             $request->validate([
@@ -58,14 +58,16 @@ class BrochureFormController extends Controller
             ];
             $lead = Leads::create($data);
             $id = $lead->id;
-            $service = Services::where('services.service_id', $request->service)->select('services.service_name', 'services.service_description', 'services.faqs', 'service_sections.service_section_name', 'service_sections.service_section_content')->join('service_sections', 'services.service_id', 'service_sections.service_id')->first();
+            $service = Services::where('services.service_id', $request->service)
+            ->select('services.service_name', 'services.service_description', 'services.faqs')
+            ->first();
+            $sections = ServiceSection::where('service_id', $request->service)
+            ->orderBy('service_section_order', 'asc')
+            ->get();
             $data['service'] = $service;
-            $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data']));
-            Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
-            Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
-            $download = Storage::url('brochure/Brochure-'.$id.'.pdf');
-            $files = json_encode(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
-
+            $data['sections'] = $sections;
+            $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data', 'sections']));
+           
             $to  = 'info@bl-india.com';
 
             // Subject
@@ -88,7 +90,7 @@ class BrochureFormController extends Controller
             mail($to, $subject, $message, $headers);
             mail($data['email'], $subject1, $thanks, $headers);
 
-            return response()->json($files);
+            return $pdf->download('Brochure'.$id.'.pdf');
         }
     }
 }
