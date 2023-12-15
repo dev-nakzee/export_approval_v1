@@ -35,7 +35,7 @@
         <div uk-grid class="uk-child-width-1-5@m uk-container uk-width-1-1 uk-padding uk-padding-remove-right uk-padding-remove-vertical uk-margin-large-top">
         @if($news)
         @foreach($news as $news)
-        <a href="{{$news->news_url}}" target="blank">
+        <a href="{{$news->news_url}}" class="uk-height-small" target="blank">
             <img class="" src="{{$news->media_path}}" uk-img />
         </a>
         @endforeach
