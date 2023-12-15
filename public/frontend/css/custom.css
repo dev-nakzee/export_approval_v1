@@ -471,6 +471,7 @@ iframe {
 }
 .social-share-section span {
     font-size: 12px !important;
+    margin-bottom: 20px !important;
 }
 .social-share-section a.twitter:hover {
     border: 1px solid #a3a3a3;
