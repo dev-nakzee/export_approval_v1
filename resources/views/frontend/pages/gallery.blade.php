@@ -18,7 +18,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1 class="uk-padding-small">
-            {{'Contact Us'}}
+            {{'Gallery'}}
         </h1>
     </div>
 </section>
@@ -33,7 +33,7 @@
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
         <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
-            {{'Complete Gallery'}} 
+
         </p>
     </div>
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
