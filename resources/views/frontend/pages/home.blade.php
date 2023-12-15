@@ -121,7 +121,49 @@
             <p class="section-description">{!! $sections[3]->section_description !!}</p>
         </div>
         <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
-        {!! $sections[3]->section_content !!}
+        {{-- {!! $sections[3]->section_content !!} --}}
+        <div class="uk-section">
+            <div class="uk-container"><!-- grid content begin -->
+            <div class="uk-grid-divider uk-grid" data-uk-grid="">
+            <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/cost-effective-1702021109.svg" alt="cost-effective" width="70" height="70" data-uk-img=""></div>
+                <div class="uk-width-expand">
+                <h3>Cost effective<br>solutions</h3>
+                </div>
+            </div>
+            <div class="wcu-one wcu-tabs" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/step-payment-1702021109.svg" alt="part-payment" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>Make Payment<br>step-by-step</h3>
+            </div>
+            </div>
+            <div class="wcu-two wcu-tabs" hidden="">We offer flexible installment plans to let you pay at your own pace.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Experience" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>10+ years of experience</h3>
+            </div>
+            </div>
+            <div class="wcu-three wcu-tabs" hidden="">We bring over 10 years of proven experience to achieve success in every project.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>1000+ projects completed</h3>
+            </div>
+            </div>
+            <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
+            </div>
+            <!-- grid content end --></div>
+            </div>
+            </div>
         </div>
     </section>
     @endif
