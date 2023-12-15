@@ -5,7 +5,29 @@
         </p>
         <span class="section-tagline">Process &amp; Guidelines</span>
     </div>
-    <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST">
+    <div id="download-brochure-error-success">
+    @if ($errors->any())
+        <div class="uk-margin-small uk-width-1-1">
+            <div class="uk-alert-warning" uk-alert>
+                <a href class="uk-alert-close" uk-close></a>
+                @foreach ($errors->all() as $error)
+                <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        </div>
+        @endif
+        @if (session()->has('success'))
+        <div class="uk-margin-small uk-width-1-1">
+            <div class="uk-alert-success" uk-alert>
+                <a href class="uk-alert-close" uk-close></a>
+                @foreach (session('success') as $message)
+                    <p>{{ $message }}</p>
+                @endforeach
+            </div>
+        </div>
+        @endif
+    </div>
+    <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
         @csrf
         <div uk-grid>
             <div class="uk-width-1-2@m">
@@ -63,7 +85,6 @@
                     </select>
                 </div>
             </div>
-            <div id="brochure" style="margin: 0; padding: 0;"></div>
             <div class="uk-width-1-1@m uk-margin-small-top">    
 
                 <div class="uk-form-controls">

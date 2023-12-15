@@ -11,10 +11,6 @@
 
         @yield('scripts')
         <script>
-            $(document).on('submit', '#brochure-form', function(e){
-                document.getElementById("brochure-form").reset();
-            });
-            // $('#download-brochure-error-success').reload();
             function captcha(){
                 var x = Math.floor((Math.random() * 9) + 1);
                 var y = Math.floor((Math.random() * 9) + 1);
@@ -168,7 +164,7 @@
                 </div>
                 @endif
             </div>
-            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" target="blank" action="{{route('frontend.site.brochure.store')}}">
+            <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
                 @csrf
                 <div uk-grid>
                     <div class="uk-width-1-2@m">

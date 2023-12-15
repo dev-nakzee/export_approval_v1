@@ -67,7 +67,13 @@ class BrochureFormController extends Controller
             $data['service'] = $service;
             $data['sections'] = $sections;
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data', 'sections']));
-           
+            return $pdf->download('Brochure'.$id.'.pdf');
+            //return redirect()->back()->withSuccess(['Form submitted successfully.']);
+            // Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
+            // Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
+            // $download = Storage::url('brochure/Brochure-'.$id.'.pdf');
+            // $files = json_encode(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
+
             // $to  = 'info@bl-india.com';
 
             // // Subject
@@ -90,7 +96,6 @@ class BrochureFormController extends Controller
             // mail($to, $subject, $message, $headers);
             // mail($data['email'], $subject1, $thanks, $headers);
 
-            return $pdf->download('Brochure'.$id.'.pdf');
         }
     }
 }
