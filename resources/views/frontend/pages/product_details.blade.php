@@ -23,7 +23,7 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <<span class="uk-margin-small-left uk-text-bold">{{$product->product_name}}</span>
+                    <span class="uk-margin-small-left uk-text-bold">{{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>
                             <a href="#overview">{{'Product Overview'}}</a>
