@@ -121,7 +121,7 @@ class HomeController extends Controller
         ->orWhere('guidelines', '!=', null)
         ->distinct()
         ->get();
-        $serviceDownload = Services::select('services.service_id', 'services.service_slug')->where('service_slug', $service_slug)->first();
+        $serviceDownload = Services::select('services.service_id', 'services.service_name', 'services.service_slug')->where('service_slug', $service_slug)->first();
         $downloads = Product::select('product_id', 'product_name', DB::raw('(SELECT doc_path FROM documents WHERE doc_id=information) AS information'), DB::raw('(SELECT doc_path FROM documents WHERE doc_id=guidelines) AS guidelines'))
             ->where('product_service_id', $serviceDownload['service_id'])
             ->where('information', '!=', null)
