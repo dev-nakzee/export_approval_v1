@@ -56,8 +56,8 @@
                 </tr>
 
                 <tr>
-                  <td class="red">26-01-2023</td>
-                  <td class="red">Thursday</td>
+                  <td style="color: red;">26-01-2023</td>
+                  <td style="color: red;">Thursday</td>
                   <td>Republic Day of India</td>
                 </tr>
                 
@@ -80,8 +80,8 @@
                     <td>RH* - Holika Dahan</td>
                   </tr>
                   <tr>
-                    <td class="red">08-03-2023</td>
-                    <td class="red">Wednesday</td>
+                    <td style="color: red;">08-03-2023</td>
+                    <td style="color: red;">Wednesday</td>
                     <td>Holi</td>
                   </tr>
                   <tr>
@@ -93,13 +93,13 @@
                     <td colspan="3"><strong style="font-weight: 600;">April 2023</strong></td>
                   </tr>
                   <tr>
-                    <td class="red">04-04-2023 </td>
-                    <td class="red">Tuesday</td>
+                    <td style="color: red;">04-04-2023 </td>
+                    <td style="color: red;">Tuesday</td>
                     <td> Mahavir Jayanti</td>
                   </tr>
                   <tr>
-                    <td class="red">07-04-2023</td>
-                    <td class="red">Friday</td>
+                    <td style="color: red;">07-04-2023</td>
+                    <td style="color: red;">Friday</td>
                     <td>Good Friday</td>
                   </tr>
                   <tr>
@@ -108,8 +108,8 @@
                     <td>RH* - Ambedkar Jayanti</td>
                   </tr>
                   <tr>
-                    <td class="red">22-04-2023</td>
-                    <td class="red">Saturday</td>
+                    <td style="color: red;">22-04-2023</td>
+                    <td style="color: red;">Saturday</td>
                     <td>Eid ul-Fitr</td>
                   </tr>
                   
@@ -117,16 +117,16 @@
                     <td colspan="3"><strong style="font-weight: 600;">May 2023</strong></td>
                   </tr>
                   <tr>
-                    <td class="red">05-05-2023</td>
-                    <td class="red">Friday</td>
+                    <td style="color: red;">05-05-2023</td>
+                    <td style="color: red;">Friday</td>
                     <td>Buddha Purnima</td>
                   </tr>
                   <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                     <td colspan="3"><strong style="font-weight: 600;">June 2023</strong></td>
                   </tr>
                   <tr>
-                    <td class="red">29-06-2023</td>
-                    <td class="red">Thursday</td>
+                    <td style="color: red;">29-06-2023</td>
+                    <td style="color: red;">Thursday</td>
                     <td>Eid ul-Zuha</td>
                   </tr> 
 
@@ -142,16 +142,16 @@
                 <td colspan="3"><strong style="font-weight: 600;">July 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">29-07-2023</td>
-                <td class="red">Saturday</td>
+                <td style="color: red;">29-07-2023</td>
+                <td style="color: red;">Saturday</td>
                 <td>Muharram</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong>August 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">15-08-2023</td>
-                <td class="red">Tuesday</td>
+                <td style="color: red;">15-08-2023</td>
+                <td style="color: red;">Tuesday</td>
                 <td>Independence Day of India</td>
               </tr>
               <tr>
@@ -163,21 +163,21 @@
                 <td colspan="3"><strong style="font-weight: 600;">September 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">07-09-2023</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">07-09-2023</td>
+                <td style="color: red;">Thursday</td>
                 <td>Krishna Janmashtami</td>
               </tr>
               <tr>
-                <td class="red">28-09-2023</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">28-09-2023</td>
+                <td style="color: red;">Thursday</td>
                 <td>Eid-Milad (Milad un-Nabi)</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">October 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">02-10-2023</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">02-10-2023</td>
+                <td style="color: red;">Monday</td>
                 <td>Gandhi Jayanti</td>
               </tr>
               <tr>
@@ -186,8 +186,8 @@
                 <td> RH* - Dussehra Navami</td>
               </tr>
               <tr>
-                <td class="red">24-10-2023</td>
-                <td class="red">Tuesday</td>
+                <td style="color: red;">24-10-2023</td>
+                <td style="color: red;">Tuesday</td>
                 <td>Dussehra</td>
               </tr>
 
@@ -195,18 +195,18 @@
                 <td colspan="3"><strong style="font-weight: 600;">November 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">12-11-2023</td>
-                <td class="red">Sunday</td>
+                <td style="color: red;">12-11-2023</td>
+                <td style="color: red;">Sunday</td>
                 <td>Diwali</td>
               </tr>
               <tr>
-                <td class="red">13-11-2023</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">13-11-2023</td>
+                <td style="color: red;">Monday</td>
                 <td>Govardhan Puja</td>
               </tr>
               <tr>
-                <td class="red">14-11-2023</td>
-                <td class="red">Tuesday</td>
+                <td style="color: red;">14-11-2023</td>
+                <td style="color: red;">Tuesday</td>
                 <td>Bhai Duja</td>
               </tr>
               <tr>
@@ -215,8 +215,8 @@
                 <td>RH* - Chatt Puja</td>
               </tr>
               <tr>
-                <td class="red">27-11-2023</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">27-11-2023</td>
+                <td style="color: red;">Monday</td>
                 <td>Guru Nanak Jayanti</td>
               </tr>
 
@@ -224,8 +224,8 @@
                 <td colspan="3"><strong style="font-weight: 600;">December 2023</strong></td>
               </tr>
               <tr>
-                <td class="red">25-12-2023</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">25-12-2023</td>
+                <td style="color: red;">Monday</td>
                 <td>Christmas Day</td>
               </tr>
             </tbody>
@@ -257,8 +257,8 @@
               </tr>
 
               <tr>
-                <td class="red">26-01-2024</td>
-                <td class="red">Friday</td>
+                <td style="color: red;">26-01-2024</td>
+                <td style="color: red;">Friday</td>
                 <td>Republic Day of India</td>
               </tr>
             
@@ -277,21 +277,21 @@
                 <td>RH* - Holika Dahan</td>
               </tr>
               <tr>
-                <td class="red">25-03-2024</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">25-03-2024</td>
+                <td style="color: red;">Monday</td>
                 <td>Holi</td>
               </tr>
               <tr>
-                <td class="red">29-03-2024</td>
-                <td class="red">Friday</td>
+                <td style="color: red;">29-03-2024</td>
+                <td style="color: red;">Friday</td>
                 <td>Good Friday</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">April 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">11-04-2024</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">11-04-2024</td>
+                <td style="color: red;">Thursday</td>
                 <td>Eid ul-Fitr</td>
               </tr>
               <tr>
@@ -300,13 +300,13 @@
                 <td>RH* - Ambedkar Jayanti</td>
               </tr>
               <tr>
-                <td class="red">17-04-2024</td>
-                <td class="red">Wednesday</td>
+                <td style="color: red;">17-04-2024</td>
+                <td style="color: red;">Wednesday</td>
                 <td> Ram Navami</td>
               </tr>
               <tr>
-                <td class="red">21-04-2024 </td>
-                <td class="red">Sunday</td>
+                <td style="color: red;">21-04-2024 </td>
+                <td style="color: red;">Sunday</td>
                 <td> Mahavir Jayanti</td>
               </tr>
             
@@ -315,24 +315,24 @@
                 <td colspan="3"><strong style="font-weight: 600;">May 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">23-05-2024</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">23-05-2024</td>
+                <td style="color: red;">Thursday</td>
                 <td>Buddha Purnima</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">June 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">17-06-2024</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">17-06-2024</td>
+                <td style="color: red;">Monday</td>
                 <td>Eid ul-Zuha</td>
               </tr> 
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">July 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">17-07-2024</td>
-                <td class="red">Wednesday</td>
+                <td style="color: red;">17-07-2024</td>
+                <td style="color: red;">Wednesday</td>
                 <td>Muharram</td>
               </tr>
 
@@ -348,8 +348,8 @@
                 <td colspan="3"><strong style="font-weight: 600;">August 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">15-08-2024</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">15-08-2024</td>
+                <td style="color: red;">Thursday</td>
                 <td>Independence Day of India</td>
               </tr>
               <tr>
@@ -358,24 +358,24 @@
                 <td>RH* - Raksha Bandhan</td>
               </tr>
               <tr>
-                <td class="red">26-08-2024</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">26-08-2024</td>
+                <td style="color: red;">Monday</td>
                 <td>Krishna Janmashtami</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">September 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">16-09-2024</td>
-                <td class="red">Monday</td>
+                <td style="color: red;">16-09-2024</td>
+                <td style="color: red;">Monday</td>
                 <td>Eid-Milad (Milad un-Nabi)</td>
               </tr>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">October 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">02-10-2024</td>
-                <td class="red">Wednesday</td>
+                <td style="color: red;">02-10-2024</td>
+                <td style="color: red;">Wednesday</td>
                 <td>Gandhi Jayanti</td>
               </tr>
               <tr>
@@ -384,8 +384,8 @@
                 <td> RH* - Dussehra Navami</td>
               </tr>
               <tr>
-                <td class="red">12-10-2024</td>
-                <td class="red">Saturday</td>
+                <td style="color: red;">12-10-2024</td>
+                <td style="color: red;">Saturday</td>
                 <td>Dussehra</td>
               </tr>
               <tr>
@@ -394,8 +394,8 @@
                 <td>RH* - Diwali Eve</td>
               </tr>
               <tr>
-                <td class="red">31-10-2024</td>
-                <td class="red">Thursday</td>
+                <td style="color: red;">31-10-2024</td>
+                <td style="color: red;">Thursday</td>
                 <td>Diwali</td>
               </tr>
 
@@ -404,13 +404,13 @@
               </tr>
 
               <tr>
-                <td class="red">01-11-2024</td>
-                <td class="red">Friday</td>
+                <td style="color: red;">01-11-2024</td>
+                <td style="color: red;">Friday</td>
                 <td>Govardhan Puja</td>
               </tr>
               <tr>
-                <td class="red">03-11-2024</td>
-                <td class="red">Sunday</td>
+                <td style="color: red;">03-11-2024</td>
+                <td style="color: red;">Sunday</td>
                 <td>Bhai Duja</td>
               </tr>
               <tr>
@@ -419,8 +419,8 @@
                 <td>RH* - Chatt Puja</td>
               </tr>
               <tr>
-                <td class="red">15-11-2024</td>
-                <td class="red">Friday</td>
+                <td style="color: red;">15-11-2024</td>
+                <td style="color: red;">Friday</td>
                 <td>Guru Nanak Jayanti</td>
               </tr>
 
@@ -428,8 +428,8 @@
                 <td colspan="3"><strong style="font-weight: 600;">December 2024</strong></td>
               </tr>
               <tr>
-                <td class="red">25-12-2024</td>
-                <td class="red">Wednesday</td>
+                <td style="color: red;">25-12-2024</td>
+                <td style="color: red;">Wednesday</td>
                 <td>Christmas Day</td>
               </tr>
             </tbody>
