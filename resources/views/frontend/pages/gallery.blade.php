@@ -31,10 +31,7 @@
     </div>
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
-    <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
-
-        </p>
+    <div class="section-two-heading uk-text-center uk-padding ">
     </div>
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
         <div class="uk-child-width-1-4@m" uk-grid uk-height-match=".gallery-image">
