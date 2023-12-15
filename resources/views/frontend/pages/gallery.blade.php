@@ -43,7 +43,7 @@
                 <div uk-lightbox="animation: scale">
                     <a class="uk-card uk-card-default uk-card-body gallery-image" alt="{{$img->img_alt}}" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
                         <img alt="{{$img->img_alt}}" src="{{$img->media_path}}" width="600" height="400" uk-img>
-                        <h4 class="uk-margin-small">{{$img->gallery_image_title}}</h4>
+                        <h4 class="uk-link-reset uk-position-bottom">{{$img->gallery_image_title}}</h4>
                     </a>
                 </div>
             @endforeach
