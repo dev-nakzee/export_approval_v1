@@ -313,9 +313,9 @@
                             Delhi - 110092, India</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="receiver"></i>
+                            <i uk-icon="whatsapp"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988 (Whatsapp prefered)</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988 (Whatsapp call)</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
                             <i uk-icon="mail"></i>
