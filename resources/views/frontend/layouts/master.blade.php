@@ -163,7 +163,7 @@
             </div>
         </nav>
         @yield('content')
-        @if (request()->route()->getName() === 'frontend.site.home' && request()->route()->getName() === 'frontend.site.gallery')
+        @if (request()->route()->getName() === 'frontend.site.home' || request()->route()->getName() === 'frontend.site.gallery')
         <section class="uk-box-shadow-medium brochure-section uk-section uk-background-muted uk-padding-large uk-padding-remove-vertical" id="download-brochure">
             <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
                 <p class="section-heading uk-margin-remove-bottom">
