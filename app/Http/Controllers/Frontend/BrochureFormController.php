@@ -68,27 +68,27 @@ class BrochureFormController extends Controller
             $data['sections'] = $sections;
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data', 'sections']));
            
-            $to  = 'info@bl-india.com';
+            // $to  = 'info@bl-india.com';
 
-            // Subject
-            $subject1 = 'Thank you for your Interest';
-            $subject = $data['contact_person_name'].' requested for '.$service['service_name'];
+            // // Subject
+            // $subject1 = 'Thank you for your Interest';
+            // $subject = $data['contact_person_name'].' requested for '.$service['service_name'];
 
-            // Message
-            $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Interest in '.$service['service_name'].' service brochure.<strong><br>'.$data['name'].'<br>'.$data['organisation'].'<br>'.$data['email'].'<br>'.$data['country'].'<br>'.$data['phone'].'<br>'.$service['service_name'].'<br>'.$data['source'].'<br>'.$data['message'].'</p>';
+            // // Message
+            // $thanks = '<p>Thank you for your interest.</p>';
+            // $message = '<p><strong>Interest in '.$service['service_name'].' service brochure.<strong><br>'.$data['name'].'<br>'.$data['organisation'].'<br>'.$data['email'].'<br>'.$data['country'].'<br>'.$data['phone'].'<br>'.$service['service_name'].'<br>'.$data['source'].'<br>'.$data['message'].'</p>';
 
-            // To send HTML mail, the Content-type header must be set
-            $headers  = 'MIME-Version: 1.0' . "\r\n";
-            $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+            // // To send HTML mail, the Content-type header must be set
+            // $headers  = 'MIME-Version: 1.0' . "\r\n";
+            // $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
-            // Additional headers
-            $headers .= 'From: Team Export Approval <no-reply@exportapproval.com>' . "\r\n";
+            // // Additional headers
+            // $headers .= 'From: Team Export Approval <no-reply@exportapproval.com>' . "\r\n";
 
 
-            // Mail it
-            mail($to, $subject, $message, $headers);
-            mail($data['email'], $subject1, $thanks, $headers);
+            // // Mail it
+            // mail($to, $subject, $message, $headers);
+            // mail($data['email'], $subject1, $thanks, $headers);
 
             return $pdf->download('Brochure'.$id.'.pdf');
         }
