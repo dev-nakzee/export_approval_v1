@@ -40,6 +40,7 @@ class BrochureFormController extends Controller
                 'country' => 'required',
                 'mobile' => 'required|numeric',
                 'service' => 'required',
+                'captcha' => 'required',
             ]);
             $json = $request->country;
             $country = json_decode($json)[0];
@@ -93,7 +94,8 @@ class BrochureFormController extends Controller
             mail($data['email'], $subject1, $thanks, $headers);
 
             return $pdf->download('Brochure'.$id.'.pdf');
-
+        } else {
+            return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
         }
     }
 }
