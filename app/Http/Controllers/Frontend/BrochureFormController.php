@@ -67,34 +67,32 @@ class BrochureFormController extends Controller
             $data['service'] = $service;
             $data['sections'] = $sections;
             $pdf = PDF::loadView('frontend.pdf.brochure', compact(['service', 'data', 'sections']));
+       
+
+
+            $to  = 'info@bl-india.com';
+
+            // Subject
+            $subject1 = 'Thank you for your Interest';
+            $subject = $data['contact_person_name'].' requested for '.$service['service_name'];
+
+            // Message
+            $thanks = '<p>Thank you for your interest.</p>';
+            $message = '<p><strong>Interest in '.$service['service_name'].' service brochure.<strong><br>'.$data['name'].'<br>'.$data['organisation'].'<br>'.$data['email'].'<br>'.$data['country'].'<br>'.$data['phone'].'<br>'.$service['service_name'].'<br>'.$data['source'].'<br>'.$data['message'].'</p>';
+
+            // To send HTML mail, the Content-type header must be set
+            $headers  = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+
+            // Additional headers
+            $headers .= 'From: Team Export Approval <no-reply@exportapproval.com>' . "\r\n";
+
+
+            // Mail it
+            mail($to, $subject, $message, $headers);
+            mail($data['email'], $subject1, $thanks, $headers);
+
             return $pdf->download('Brochure'.$id.'.pdf');
-            //return redirect()->back()->withSuccess(['Form submitted successfully.']);
-            // Storage::disk('public')->put('brochure/Brochure-'.$id , $pdf->download('Brochure-'.$id.'.pdf'));
-            // Leads::where('lead_id', $id)->update(['pdf_path' => 'brochure/Brochure-'.$id.'.pdf']);
-            // $download = Storage::url('brochure/Brochure-'.$id.'.pdf');
-            // $files = json_encode(['status'=>200, 'message'=> 'Form is successfully submitted!', 'download' => $download]);
-
-            // $to  = 'info@bl-india.com';
-
-            // // Subject
-            // $subject1 = 'Thank you for your Interest';
-            // $subject = $data['contact_person_name'].' requested for '.$service['service_name'];
-
-            // // Message
-            // $thanks = '<p>Thank you for your interest.</p>';
-            // $message = '<p><strong>Interest in '.$service['service_name'].' service brochure.<strong><br>'.$data['name'].'<br>'.$data['organisation'].'<br>'.$data['email'].'<br>'.$data['country'].'<br>'.$data['phone'].'<br>'.$service['service_name'].'<br>'.$data['source'].'<br>'.$data['message'].'</p>';
-
-            // // To send HTML mail, the Content-type header must be set
-            // $headers  = 'MIME-Version: 1.0' . "\r\n";
-            // $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-
-            // // Additional headers
-            // $headers .= 'From: Team Export Approval <no-reply@exportapproval.com>' . "\r\n";
-
-
-            // // Mail it
-            // mail($to, $subject, $message, $headers);
-            // mail($data['email'], $subject1, $thanks, $headers);
 
         }
     }
