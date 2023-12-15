@@ -134,7 +134,7 @@
             </div>
             <div class="wcu-one wcu-tabs" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
             </div>
-            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/step-payment-1702021109.svg" alt="part-payment" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
@@ -143,7 +143,7 @@
             </div>
             <div class="wcu-two wcu-tabs" hidden="">We offer flexible installment plans to let you pay at your own pace.</div>
             </div>
-            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Experience" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
@@ -152,7 +152,7 @@
             </div>
             <div class="wcu-three wcu-tabs" hidden="">We bring over 10 years of proven experience to achieve success in every project.</div>
             </div>
-            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
