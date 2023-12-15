@@ -361,6 +361,18 @@ iframe {
     text-decoration: none !important;
 
 }
+.media-blocks {
+    padding: 0px !important;
+}
+.media-blocks img {
+    height: 70px !important;
+    width: 90% !important;
+    border: #a3a3a3 solid 1px !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+}
+
+
 .powered-by {
     font-size: 10px !important;
     font-weight: 500;
