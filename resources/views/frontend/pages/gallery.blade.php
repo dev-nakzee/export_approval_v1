@@ -37,7 +37,7 @@
         </p>
     </div>
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <div class="uk-child-width-1-4@m" uk-grid uk-lightbox="animation: scale">
+        <div class="uk-child-width-1-4@m" uk-grid uk-lightbox="animation: scale" uk-height-match=".gallery-image">
             @if($images)
             @foreach($images as $img)
             <div>
