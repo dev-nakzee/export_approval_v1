@@ -134,7 +134,7 @@
 
        <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
 
-          <table class="uk-table uk-table-bordered uk-table-striped" style="border: 1px solid #e9b6b68a;">      
+          <table class="uk-table uk-table-bordered " style="border: 1px solid #e9b6b68a;">      
             <tbody>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">July 2023</strong></td>
@@ -237,7 +237,7 @@
        
         <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
 
-          <table class="uk-table uk-table-bordered uk-table-striped" style="border: 1px solid #e9b6b68a;">      
+          <table class="uk-table uk-table-bordered " style="border: 1px solid #e9b6b68a;">      
             <tbody>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
                 <td colspan="3"><strong style="font-weight: 600;">January 2024</strong></td>
@@ -339,7 +339,7 @@
        </div>
 
        <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
-          <table class="uk-table uk-table-bordered uk-table-striped" style="border: 1px solid #e9b6b68a;">      
+          <table class="uk-table uk-table-bordered " style="border: 1px solid #e9b6b68a;">      
             <tbody>
                 
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
