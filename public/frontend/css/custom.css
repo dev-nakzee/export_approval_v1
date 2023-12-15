@@ -467,6 +467,7 @@ iframe {
     border: 1px solid #a3a3a3;
     padding: 3px !important;
     border-radius: 5px;
+    font-size: 12px !important;
 }
 .social-share-section a.twitter:hover {
     border: 1px solid #a3a3a3;
