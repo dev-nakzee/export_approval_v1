@@ -462,7 +462,10 @@ iframe {
 .blog-pagination nav ul.pagination li:hover {
     color: #ed462f;
 }
-
+.uk-lightbox-caption {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
 .social-share-section a {
     border: 1px solid #a3a3a3;
     padding: 3px !important;

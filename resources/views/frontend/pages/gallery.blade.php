@@ -40,12 +40,12 @@
         <div class="uk-child-width-1-4@m" uk-grid uk-height-match=".gallery-image">
             @if($images)
             @foreach($images as $img)
-            <div uk-lightbox="animation: scale">
-                <a class="uk-button uk-button-default" alt="{{$img->img_alt}}" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
-                    <img alt="{{$img->img_alt}}" src="{{$img->media_path}}" width="600" height="400" uk-img>
-                    <h4 class="uk-margin-small">{{$img->gallery_image_title}}</h4>
-                </a>
-            </div>
+                <div uk-lightbox="animation: scale">
+                    <a class="uk-card uk-card-default uk-card-body" alt="{{$img->img_alt}}" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
+                        <img alt="{{$img->img_alt}}" src="{{$img->media_path}}" width="600" height="400" uk-img>
+                        <h4 class="uk-margin-small">{{$img->gallery_image_title}}</h4>
+                    </a>
+                </div>
             @endforeach
             @endif
         </div>
