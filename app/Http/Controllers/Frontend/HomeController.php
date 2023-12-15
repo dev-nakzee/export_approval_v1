@@ -201,6 +201,7 @@ class HomeController extends Controller
             $holidays[$key]['holiday_show'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('d/m/Y');
             $holidays[$key]['holiday_month'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('F');
             $holidays[$key]['holiday_year'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('Y');
+            $holidays[$key]['holiday_day'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('l');
         }
         return view('frontend.pages.holiday-list', compact('holidays'));
     }

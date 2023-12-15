@@ -35,10 +35,11 @@
         <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
           Working Hours on Weekdays : 10:00 AM - 6:30 PM (IST)<br>Weekly Holidays: Saturday & Sunday
         </p>
-        <p>* RH - Restricted Holiday (optional)<br>
+        <p style="color: orange;">* RH - Restricted Holiday (optional)<br>
           Office work may be affected on RH* holidays denoted by Orange Colour</p>
     </div>
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
+      <div class="uk-container uk-width-1-1 uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
         @if($holidays)
         @php
         $year ='';
@@ -46,12 +47,32 @@
         @endphp
         @foreach($holidays as $holiday)
         @if($holiday->holiday_year != $year)
-        <p><strong>List of Holidays in {{$holiday->holiday_year}}</strong><br>Office will remain closed on the holidays dentoed by Red Colour:</p>       
+        <p class="uk-width-1-1" style="color: red;"><strong>List of Holidays in {{$holiday->holiday_year}}</strong><br>Office will remain closed on the holidays denoted by Red Colour:</p>       
         @endif
-        
         @if ($holiday->holiday_month != $month)
-        {{ $holiday->holiday_month }}<br>
+          <h4 class="uk-width-1-1">{{$holiday->holiday_month}} {{$holiday->holiday_year}}</h4>
+          <table class="uk-table uk-width-1-2 uk-margin-remove uk-text-bolder" border="1">
+            <tr>
+              <td class="uk-width-1-5">{{'Date'}}</td>
+              <td class="uk-width-1-5">{{'Day'}}</td>
+              <td class="uk-width-2-5">{{'Holiday'}}</td>
+            </tr>
+          </table>
+          <table class="uk-table uk-width-1-2 uk-margin-remove uk-text-bolder" border="1">
+            <tr>
+              <td class="uk-width-1-5">{{'Date'}}</td>
+              <td class="uk-width-1-5">{{'Day'}}</td>
+              <td class="uk-width-2-5">{{'Holiday'}}</td>
+            </tr>
+          </table>
         @endif
+        <table class="uk-table uk-width-1-2 uk-margin-remove" border="1">
+          <tr class="uk-text-bolder" @if($holiday->holiday_type === 1)style="color: orange;"@else style="color: red;" @endif>
+            <td class="uk-width-1-5">{{$holiday->holiday_show}}</td>
+            <td class="uk-width-1-5">{{$holiday->holiday_day}}</td>
+            <td class="uk-width-2-5">@if($holiday->holiday_type === 1) *RH - @endif{{$holiday->holiday_name}}</td>
+          </tr>
+        </table>
         @php
         $month = $holiday->holiday_month;
         @endphp
@@ -60,6 +81,7 @@
         @endphp
         @endforeach
         @endif
+      </div>
     </div>
 </section>
 
