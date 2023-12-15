@@ -333,9 +333,12 @@
                     </div>
                     
                 </div>
-                <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text uk-margin-bottom-small">
-                    <p>Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
+                <div class="uk-width-1-1 uk-text-center uk-text-small copyright-text">
+                    <p class="">Copyright © 2023 Brand Liaison India Pvt Ltd.</p>
                 </div>
+                <div class="uk-width-1-1">
+                </div>
+
             </div>
         </section>
         <div class="back-to-top uk-border-circle uk-position-small uk-position-fixed uk-position-bottom-right uk-overlay uk-overlay-default uk-background-primary uk-margin uk-hidden uk-padding-small">
