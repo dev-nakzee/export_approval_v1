@@ -149,7 +149,7 @@ class HomeController extends Controller
         ->orWhere('guidelines', '!=', null)
         ->distinct()
         ->get();
-        $categoryDownload = DownloadCategory::select('download_category_id','download_category_slug')->where('download_category_slug', $category_slug)->first();
+        $categoryDownload = DownloadCategory::select('download_category_id', 'download_category','download_category_slug')->where('download_category_slug', $category_slug)->first();
       
         $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
 
