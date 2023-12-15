@@ -18,7 +18,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1 class="uk-padding-small">
-            {{'Holiday list'}}
+            {{'Holiday List'}}
         </h1>
     </div>
 </section>
