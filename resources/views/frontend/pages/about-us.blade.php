@@ -35,7 +35,7 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-heading-bullet uk-text-bold">{{'About us'}}</span>
+                    <span class="uk-margin-small-left uk-text-bold">{{'About us'}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($sections)
                         @foreach($sections as $section)
@@ -62,7 +62,7 @@
                     <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
                         @if ($section->static_page_section_id === 7)
                         {!! $section->section_description !!}
-                        <div uk-slider class="uk-container">
+                        {{-- <div uk-slider class="uk-container">
                             <div class="uk-position-relative">
                         
                                 <div class="uk-slider-container uk-light">
@@ -116,7 +116,7 @@
                         
                             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                         
-                        </div>
+                        </div> --}}
                         
                         @else
                         {!! $section->section_description !!}

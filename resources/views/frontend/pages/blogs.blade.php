@@ -21,7 +21,7 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-padding-remove-left uk-heading-bullet uk-text-bold">{{'Blog Categories'}}</span>
+                    <span class="uk-padding-remove-left uk-text-bold">{{'Blog Categories'}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($categories)
                         @foreach($categories as $category)
