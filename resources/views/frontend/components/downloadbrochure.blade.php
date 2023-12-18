@@ -7,7 +7,7 @@
     </div>
 
         @if(Session::has('message'))
-        <div class="uk-margin-small uk-width-1-1 uk-section uk-padding-large">
+        <div class="uk-margin-small uk-width-1-1 uk-section uk-padding-large uk-padding-remove-vertical">
             <div class="uk-alert-success" uk-alert>
                 <a href class="uk-alert-close" uk-close></a>
                 <p>{{Session::get('message') }}</p>
