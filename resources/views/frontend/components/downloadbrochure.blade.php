@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="uk-width-1-2@m uk-margin-small-top">
-                <button class="uk-border-rounded uk-button uk-button-primary brochure-form-submit" type="submit">Submit</button>
+                <button class="uk-border-rounded uk-button uk-button-primary brochure-form-submit" id="form-submit" type="submit">Submit</button>
                 <div uk-spinner class="uk-margin-left uk-hidden loading" style="color: #052faa;"></div>
             </div>
         </div>
@@ -120,6 +120,7 @@ $(document).on("submit", "#brochure-form", function(e) {
     inputs.forEach(field => {
         field.classList.remove('form-error');
     });
+    $('#form-submit').addClass('uk-hidden');
     $('.loading').removeClass('uk-hidden');
     $error = 0;
     if($('#fullname').val() === '') {
