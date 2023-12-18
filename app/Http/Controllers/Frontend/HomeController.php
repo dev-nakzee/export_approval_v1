@@ -53,18 +53,8 @@ class HomeController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        $clients = Clients::select('client_name', 'client_slug', 'img_alt', 'media_path')
-        ->leftJoin('media', 'clients.media_id', 'media.media_id')
-        ->orderBy('client_id', 'asc')
-        ->limit(12)
-        ->get();
-        foreach ($clients as $client)
-        {
-            if($client['media_path'] != null) {
-                $client['media_path'] = Storage::url($client['media_path']);
-            }
-        }
-        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'clients'));
+     
+        return view('frontend.pages.home', compact('services', 'sections', 'blogs'));
     }
 
     public function about()

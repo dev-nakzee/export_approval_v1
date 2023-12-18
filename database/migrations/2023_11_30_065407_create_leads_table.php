@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('country');
             $table->string('phone');
             $table->string('service');
-            $table->string('message');
+            $table->string('message')->nullable();
             $table->string('status')->default('open');
             $table->string('source')->default('website');
             $table->string('ip_address')->nullable();

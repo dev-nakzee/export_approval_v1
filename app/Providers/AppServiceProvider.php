@@ -7,6 +7,7 @@ use App\Models\Backend\Module;
 use App\Models\Backend\SubModule;
 use App\Models\Backend\Services;
 use App\Models\Countries;
+use App\Models\Backend\Clients;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Pagination\Paginator;
@@ -43,6 +44,21 @@ class AppServiceProvider extends ServiceProvider
             ->get();
 
             $view->with(['services' => $services, 'countries' => $countries]);
+        });
+        view()->composer('frontend.components.clients', function ($view) {
+            $clients = Clients::select('client_name', 'client_slug', 'img_alt', 'media_path')
+            ->leftJoin('media', 'clients.media_id', 'media.media_id')
+            ->orderBy('client_id', 'asc')
+            ->limit(12)
+            ->get();
+            foreach ($clients as $client)
+            {
+                if($client['media_path'] != null) {
+                    $client['media_path'] = Storage::url($client['media_path']);
+                }
+            }
+
+            $view->with(['clients' => $clients]);
         });
         view()->composer('frontend.components.downloadbrochure', function ($view) {
             $countries = Countries::select('id','name', 'iso', 'iso3', 'phonecode')->get();

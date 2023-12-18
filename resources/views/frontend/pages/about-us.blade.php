@@ -62,62 +62,6 @@
                     <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
                         @if ($section->static_page_section_id === 7)
                         {!! $section->section_description !!}
-                        {{-- <div uk-slider class="uk-container">
-                            <div class="uk-position-relative">
-                        
-                                <div class="uk-slider-container uk-light">
-                                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
-                                        <li><div class="uk-panel">
-                                            <img src="https://two.exportapproval.com/storage/media/Rajesh-Kumar_Director_Brand-Liaison_SEPC-1702360461.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Rajesh Kumar</strong><br>Founder - Director</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider2.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Anil Kumar</strong><br>Director - Operations</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider2.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Nupur Monga</strong><br>Manager - Key Account</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>P. Padma Lata</strong><br>Manager - Finance</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider3.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Renu Dhaka</strong><br>Tech Executive</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider5.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Prince</strong><br>Tech Executive</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider1.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Ayush Sharma</strong><br>Tech Executive</div>
-                                        </div></li>
-                                        <li><div class="uk-panel">
-                                            <img src="images/slider4.jpg" width="320" height="400" alt="">
-                                            <div class="uk-position-bottom uk-panel uk-overlay-primary"><strong>Kojol Kumari</strong><br>Tech Executive</div>
-                                        </div></li>
-                                    </ul>
-                                </div>
-                        
-                                <div class="uk-hidden@s uk-light">
-                                    <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
-                                    <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
-                                </div>
-                        
-                                <div class="uk-visible@s">
-                                    <a class="uk-position-center-left-out uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
-                                    <a class="uk-position-center-right-out uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
-                                </div>
-                        
-                            </div>
-                        
-                            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-                        
-                        </div> --}}
-                        
                         @else
                         {!! $section->section_description !!}
                         @endif  

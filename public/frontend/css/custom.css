@@ -505,6 +505,14 @@ iframe {
     color: #075e54;
 }
 
+.form-error {
+    border-color: red !important;
+    color: red !important;
+}
+.form-error::placeholder {
+    color: red !important;
+}
+
 /* Footer */
 .brochure-section {
     z-index: 99 !important;
@@ -562,6 +570,11 @@ iframe {
 
 .clients-scroll {
     z-index: 99 !important;
+}
+.clients-scroll h3 {
+    font-weight: 500;
+    color: #052faa;
+    margin-top: 10px !important;
 }
  
 section.website-footer {
