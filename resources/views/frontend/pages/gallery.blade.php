@@ -37,10 +37,12 @@
         @if($images)
         @foreach($images as $img)
         <div>
-            <a class="uk-inline uk-card uk-card-default uk-card-body gallery-image uk-margin-small-bottom uk-padding-small" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
-                <img src="{{$img->media_path}}" width="1800" height="1200" alt="{{$img->img_alt}}">
-            </a>
-            <h3>{{$img->gallary_image_title}}</h3>
+            <div class="uk-card uk-card-default uk-card-body gallery-image uk-margin-small-bottom uk-padding-small">
+                <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallery_image_title}}">
+                    <img src="{{$img->media_path}}" width="1800" height="1200" alt="{{$img->img_alt}}">
+                </a>
+                <h3 class="uk-margin-small uk-text-center">{{$img->gallery_image_title}}</h3>
+            </div>
         </div>
         @endforeach
         @endif
