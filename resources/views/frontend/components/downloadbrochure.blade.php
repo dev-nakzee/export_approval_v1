@@ -5,16 +5,15 @@
         </p>
         <span class="section-tagline">Process &amp; Guidelines</span>
     </div>
-    <div id="download-brochure-error-success">
+
         @if(Session::has('message'))
-        <div class="uk-margin-small uk-width-1-1">
+        <div class="uk-margin-small uk-width-1-1 uk-section uk-padding-large">
             <div class="uk-alert-success" uk-alert>
                 <a href class="uk-alert-close" uk-close></a>
                 <p>{{Session::get('message') }}</p>
             </div>
         </div>
         @endif
-    </div>
     <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
         @csrf
         <div uk-grid>
