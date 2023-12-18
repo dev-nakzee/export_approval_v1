@@ -85,7 +85,7 @@ class GalleryImageController extends Controller
     public function edit(string $id)
     {
         //
-        $galleryImage = GalleryImages::select('gallery-images.*', 'media.media_name')
+        $galleryImage = GalleryImages::select('gallery_images.*', 'media.media_name')
             ->where('gallery_image_id', $id)
             ->join('media', 'media.media_id', 'gallery_images.media_id')
             ->first();
