@@ -70,7 +70,7 @@ class GalleryImageController extends Controller
                     return $row->gallery_image_title;
                 })
                 ->addColumn('action', function($row){
-                    $removeBtn = '<a class="btn btn-outline-danger btn-sm" href="'.route("gallery.images.update", $row->gallery_image_id).'"><i class="fa fa-trash-can"></i></a><a class="btn btn-outline-danger btn-sm" href="'.route("gallery.images.delete", $row->gallery_image_id).'"><i class="fa fa-trash-can"></i></a>';
+                    $removeBtn = '<a class="btn btn-outline-primary btn-sm" href="'.route("gallery.images.update", $row->gallery_image_id).'"><i class="fa fa-edit"></i></a>&nbsp;<a class="btn btn-outline-danger btn-sm" href="'.route("gallery.images.delete", $row->gallery_image_id).'"><i class="fa fa-trash-can"></i></a>';
                     return $removeBtn;
                 })
                 ->rawColumns(['action'])
