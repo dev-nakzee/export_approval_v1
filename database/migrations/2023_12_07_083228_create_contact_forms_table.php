@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('organisation');
             $table->string('country');
-            $table->string('message');
+            $table->string('message')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

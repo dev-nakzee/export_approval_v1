@@ -84,7 +84,6 @@ class BrochureFormController extends Controller
         mail($to, $subject, $message, $headers);
         mail($data['email'], $subject1, $thanks, $headers);
 
-        Session::flash('message','For successfully submitted. Find information in Downloads!'); 
         return $pdf->download('Brochure -'.$service['service_name'].'.pdf');
 
     }

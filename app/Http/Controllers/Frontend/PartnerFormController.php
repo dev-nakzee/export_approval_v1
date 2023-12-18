@@ -24,23 +24,7 @@ class PartnerFormController extends Controller
 
     public function ba_save(Request $request): RedirectResponse
     {
-        $validate = $request->validate([
-            'organisation' => 'required',
-            'industry' => 'required',
-            'salutation' => 'required',
-            'contact' => 'required',
-            'designation' => 'required',
-            'address' => 'required|string',
-            'state' => 'required|string',
-            'city' => 'required|string',
-            'country' => 'required|string',
-            'zip' => 'required|string',
-            'countrycode' => 'required',
-            'phone' => 'required|numeric',
-            'email' => 'required|email',
-            'captcha' => 'required|numeric',
-        ]);
-        if($request->captcha_answer === $request->captcha) {
+
             $data = [
                 'organization' => $request->organization,
                 'industry' => $request->industry,
@@ -82,9 +66,6 @@ class PartnerFormController extends Controller
             mail($to, $subject, $message, $headers);
             mail($data['email'], $subject1, $thanks, $headers);
             return redirect()->back()->withSuccess(['Form submitted successfully.']);
-        } else {
-            return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
-        }
     }
 
     public function resident_executive() 
@@ -95,22 +76,7 @@ class PartnerFormController extends Controller
 
     public function re_save(Request $request): RedirectResponse
     {
-        $validate = $request->validate([
-            'salutation' => 'required',
-            'contact' => 'required',
-            'expertise' => 'required',
-            'address' => 'required|string',
-            'state' => 'required|string',
-            'city' => 'required|string',
-            'country' => 'required|string',
-            'zip' => 'required|string',
-            'countrycode' => 'required',
-            'phone' => 'required|numeric',
-            'email' => 'required|email',
-            'experience' => 'required|string',
-            'captcha' => 'required|numeric',
-        ]);
-        if($request->captcha_answer === $request->captcha) {
+      
             $data = [
                 'contact_person_name' => $request->salutation.'. '.$request->contact,
                 'designation_name' => $request->expertise,
@@ -149,8 +115,5 @@ class PartnerFormController extends Controller
             mail($to, $subject, $message, $headers);
             mail($data['email'], $subject1, $thanks, $headers);
             return redirect()->back()->withSuccess(['Form submitted successfully.']);
-        } else {
-            return redirect()->back()->withInput()->with(['status'=>'error','message'=>'Captcha validation failed.']);
-        }
     }
 }

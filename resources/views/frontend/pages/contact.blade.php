@@ -46,16 +46,16 @@
         </div>
         <div>
             <div class="uk-card-body uk-padding-remove-vertical">
-               <form method="POST" action="" class="uk-background-muted uk-border-rounded contact-box uk-padding-small uk-padding-remove-vertical">
+               <form method="POST" action="{{route('frontend.site.contact-us.save')}}" id="contact_form" class="uk-background-muted uk-border-rounded contact-box uk-padding-small uk-padding-remove-vertical">
                 @csrf
                 <div class="uk-margin">
-                    <input class="uk-input" type="text" placeholder="Name" name="name" required>
+                    <input class="uk-input" type="text" placeholder="Name" name="name" id="name">
                 </div>
                 <div class="uk-margin">
-                    <input class="uk-input" type="text" placeholder="Organisation" name="organisation" required>
+                    <input class="uk-input" type="text" placeholder="Organisation" name="organisation" id="organisation">
                 </div>
                 <div class="uk-margin">
-                    <input class="uk-input" type="email" placeholder="Email" name="email" required>
+                    <input class="uk-input" type="email" placeholder="Email" name="email" id="email">
                 </div>
                 <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                     <select class="uk-select uk-width-2-5 uk-padding-small uk-padding-remove-vertical" id="country" name="country" style="font-size: 12px;">
@@ -69,7 +69,7 @@
                     <input class="uk-input uk-width-3-5 uk-padding-small uk-padding-remove-vertical" name="mobile" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="mobile" type="text" placeholder="mobile number">
                 </div>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea" placeholder="Message" name="message" required></textarea>
+                    <textarea class="uk-textarea" placeholder="Message" name="message"></textarea>
                 </div>
                 <div class="uk-margin">
 
@@ -82,7 +82,8 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <button class="uk-button contact-form-submit uk-border-rounded" type="submit">Submit</button>
+                    <button class="uk-button contact-form-submit uk-border-rounded" type="submit" id="form-submit">Submit</button>
+                    <div uk-spinner class="uk-margin-left uk-hidden loading" style="color: #052faa;"></div>
                 </div>
                </form>
             </div>
@@ -90,7 +91,93 @@
     </div>
 </section>
 {!! $sections[0]->section_content !!}
-@endsection
-@section('scripts')
 
+<script>
+    function captcha(){
+       var x = Math.floor((Math.random() * 9) + 1);
+       var y = Math.floor((Math.random() * 9) + 1);
+       var canvas = document.getElementById("captcha_image");
+       var ctx=canvas.getContext("2d");
+       ctx.clearRect(0, 0, canvas.width, canvas.height);
+       ctx.fillStyle = "Blue";
+       ctx.textAlign = "center";
+       ctx.font = "12px Arial";
+       ctx.strokeText(x+" + "+y+"   =",60,20);
+       var answer = document.getElementById("captcha_answer");
+       answer.value = x + y;
+   }
+   $(document).on("click", "#reload_captcha", function(){
+       captcha();
+   });
+   $(document).ready(function(){
+       captcha();
+   });
+   $(document).on("submit", "#contact_form", function(e) {
+       e.preventDefault();
+       formData = $('#contact_form').serialize();
+       var inputs = Array.from(document.getElementsByClassName('form-inputs'));
+       inputs.forEach(field => {
+           field.classList.remove('form-error');
+       });
+    //    $('#form-submit').addClass('uk-hidden');
+       $('.loading').removeClass('uk-hidden');
+       $error = 0;
+       if($('#name').val() === '') {
+           $('#name').addClass('form-error');
+           $('#name').attr("placeholder", "Please enter full name");
+           $error = 1;
+       }
+       if($('#organisation').val() === '') {
+           $('#organisation').addClass('form-error');
+           $('#organisation').attr("placeholder", "Please enter an organisation name");
+           $error = 1;
+       }
+       if($('#email').val() === '') {
+           $('#email').addClass('form-error');
+           $('#email').attr("placeholder", "Please enter email address");
+           $error = 1;
+       }
+       if($('#country').val() === '') {
+           $('#country').addClass('form-error');
+           $('#country').attr("placeholder", "Select country");
+           $error = 1;
+       }
+       if($('#mobile').val() === '') {
+           $('#mobile').addClass('form-error');
+           $('#mobile').attr("placeholder", "Please enter phone number");
+           $error = 1;
+       }
+       if($('#captcha').val() === '') {
+           $('#captcha').addClass('form-error');
+           $('#captcha').attr("placeholder", "Please enter a captcha");
+           $error = 1;
+       }
+       if($('#captcha').val() != $('#captcha_answer').val()) {
+           $('#captcha').addClass('form-error');
+           $('#captcha').val('');
+           captcha();
+           $('#captcha').attr("placeholder", "Incorrect captcha");
+           $error = 1;
+       }
+       if($error === 0) {
+           e.currentTarget.submit();
+           fetch(e.currentTarget.action, {
+               method: 'POST',
+               body: formData
+           })
+           .then(response => {
+               UIkit.notification({
+                   message: "<h3 class='uk-text-success'><span uk-icon='icon: check; ratio: 2;'></span> Form successfully submitted!</h3>",
+                   status: 'primary',
+                   pos: 'bottom-center',
+                   timeout: 10000
+               });
+               setTimeout(function () { location.reload(1); }, 10500);
+           })
+           .catch(error => {
+               console.error('There has been a problem with your fetch operation:', error);
+           });
+       }  
+   });
+   </script>
 @endsection

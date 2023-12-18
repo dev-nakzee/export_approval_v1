@@ -5,15 +5,6 @@
         </p>
         <span class="section-tagline">Process &amp; Guidelines</span>
     </div>
-
-        @if(Session::has('message'))
-        <div class="uk-margin-small uk-width-1-1 uk-section uk-padding-large uk-padding-remove-vertical">
-            <div class="uk-alert-success" uk-alert>
-                <a href class="uk-alert-close" uk-close></a>
-                <p>{{Session::get('message') }}</p>
-            </div>
-        </div>
-        @endif
     <form class="uk-form-stacked uk-padding" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
         @csrf
         <div uk-grid>
@@ -170,19 +161,26 @@ $(document).on("submit", "#brochure-form", function(e) {
         $error = 1;
     }
     if($error === 0) {
-        e.currentTarget.submit()
+        e.currentTarget.submit();
+        fetch(e.currentTarget.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            UIkit.notification({
+                message: "<h3 class='uk-text-success'><span uk-icon='icon: check; ratio: 2;'></span> Form successfully submitted. Find information in Downloads!</h3>",
+                status: 'primary',
+                pos: 'bottom-center',
+                timeout: 10000
+            });
+            setTimeout(function () { location.reload(1); }, 10500);
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
     }
 
-    fetch(e.currentTarget.action, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        setTimeout(function () { location.reload(1); }, 12500);
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+    
     
 });
 </script>

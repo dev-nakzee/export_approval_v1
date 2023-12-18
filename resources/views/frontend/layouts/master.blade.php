@@ -178,7 +178,7 @@
                     <div uk-grid class="uk-margin-remove-top uk-margin-remove-left uk-margin-bottom uk-margin-remove-right">
                         <span class="uk-nav-header uk-width-1-1 uk-margin-small">Contact us</span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="location"></i>
+                            <i uk-icon="location" style="margin-top: 5px;"></i>
                         </span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small"><strong>Brand Liaison India Pvt. Ltd.</strong><br>110, Sharma Complex<br> A-2, Guru Nanak Pura, Laxmi Nagar<br>
                             Delhi - 110092, India</p>

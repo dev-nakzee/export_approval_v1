@@ -15,6 +15,7 @@ use App\Http\Controllers\Frontend\IndustryNotificationController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\BrochureFormController;
 use App\Http\Controllers\Frontend\PartnerFormController;
+use App\Http\Controllers\Frontend\ContactController;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
@@ -26,6 +27,11 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/gallery', 'gallery')->name('frontend.site.gallery');
     Route::get('/contact-us', 'contact')->name('frontend.site.contact-us');
     Route::get('/holiday-list', 'holidays')->name('frontend.site.holiday.list');
+});
+
+
+Route::controller(ContactController::class)->group(function (){
+    Route::post('/contact/save', 'contact')->name('frontend.site.contact-us.save');
 });
 
 Route::controller(ServiceController::class)->group(function (){
