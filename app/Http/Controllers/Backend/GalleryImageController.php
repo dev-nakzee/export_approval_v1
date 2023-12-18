@@ -95,9 +95,21 @@ class GalleryImageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+        $data = [
+            'gallery_image_title' => $request->name,
+            'gallery_image_slug' => $request->slug,
+            'media_id' => $request->media_id,
+            'img_alt' => $request->img_alt,
+        ];
+        GalleryImages::where('gallery_image_id', $id)->update($data);
+        return redirect()->route('gallery.images.index')->with([200, 'response', 'status'=>'success','message'=>'Gallery Image updated successfully.']);
     }
 
     /**
