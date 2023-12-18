@@ -36,8 +36,8 @@
     <div class="uk-child-width-1-4@m uk-padding uk-padding-remove-vertical" uk-height-match=".gallery-image" uk-grid uk-lightbox="animation: scale">
         @if($images)
         @foreach($images as $img)
-        <div class="uk-padding-small">
-            <a class="uk-inline uk-card uk-card-default uk-card-body gallery-image uk-margin-small-bottom" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
+        <div>
+            <a class="uk-inline uk-card uk-card-default uk-card-body gallery-image uk-margin-small-bottom uk-padding-small" href="{{$img->media_path}}" data-caption="{{$img->gallary_image_title}}">
                 <img src="{{$img->media_path}}" width="1800" height="1200" alt="{{$img->img_alt}}">
             </a>
         </div>
