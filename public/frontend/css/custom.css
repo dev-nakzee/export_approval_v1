@@ -8,9 +8,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
-html, body {
-    overflow-x: hidden;
-}
 body {
     color: #000 !important;
 }
@@ -18,17 +15,6 @@ body {
     height: 60px !important;
     margin-bottom: 5px !important;
 }
-.uk-img-logo-m {
-    width: 70% !important;
-    margin-bottom: 5px !important;
-}
-.mobile-menu-tab {
-    border: 1px #052faa solid !important;
-    color: #052faa;
-    border-radius: 5px !important;
-    padding: 2px 5px !important;
-}
-
 .uk-navbar-container.uk-background-transparent {
     background: #fff !important;
 }

@@ -68,27 +68,75 @@
         </script>
     </head>
     <body>
-        <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-small uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-            <a href="{{route('frontend.site.home')}}" class="uk-navbar-item uk-logo">
-                <img class="uk-img-logo-m" src="{{asset('frontend/images/logo.png')}}">
-            </a>
-            <div class="uk-navbar-item">
-                <a href="#main_menu" uk-toggle class="mobile-menu-tab">
-                    <span uk-icon="icon: menu; ratio: 2.5"></span>
-                </a>
-            </div>
-            <div id="main_menu" class="uk-offcanvas" uk-offcanvas>
-                <div class="uk-offcanvas-bar">
-                    <button class="uk-offcanvas-close" type="button" uk-close></button>
-                    Your content goes here.
-                </div>
-            </div>
-        </nav>
-        <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-visible@s uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
-                    <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
+                    <img class="uk-img-logo uk-visible@s" src="{{asset('frontend/images/logo.png')}}">
+                    <img class="uk-img-logo-m uk-hidden@s" src="{{asset('frontend/images/logo.png')}}">
                 </a>
+                <button class="uk-button uk-button-default uk-margin-small-right uk-hidden@s" type="button" uk-toggle="target: #offcanvas-nav-primary">
+                    <span uk-icon="menu"></span>
+                </button>
+                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true;">
+                    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                
+                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li class="uk-parent">
+                                <a href="#">Parent</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">Sub item</a></li>
+                                    <li><a href="#">Sub item</a></li>
+                                </ul>
+                            </li>
+                            <li class="uk-nav-header">Header</li>
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+                        </ul>
+                
+                    </div>
+                </div>
+                {{-- <div id="offcanvas-nav-primary uk-hidden@s" uk-offcanvas="overlay: true">
+                    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                
+                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+                            <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
+                            <li class="uk-parent">
+                                <a href="#">Services <span uk-navbar-parent-icon></span></a>
+                                <ul class="uk-nav-sub">
+                                    @if($services)
+                                    @foreach($services as $service)
+                                    <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                    @endforeach
+                                    @endif
+                                </ul>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#">Resources <span uk-navbar-parent-icon></span></a>
+                                <ul class="uk-nav-sub">
+                                    <li>
+                                        <a href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                            <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
+                        </ul>
+                
+                    </div>
+                </div> --}}
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav top-navbar uk-visible@s">
@@ -180,10 +228,10 @@
                             <a href="{{route('frontend.site.blog')}}">Blogs</a>
                         </li>
                         <li>
-                            <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                            <a href="#">Media Coverage</a>
                         </li>
                         <li>
-                            <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                            <a href="#">Gallery</a>
                         </li>
                         
                         <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
