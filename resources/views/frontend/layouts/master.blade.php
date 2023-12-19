@@ -72,28 +72,45 @@
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
                     <img class="uk-img-logo uk-visible@s" src="{{asset('frontend/images/logo.png')}}">
-                    <img class="uk-img-logo-m uk-hidden@s" src="{{asset('frontend/images/logo.png')}}">
                 </a>
-                <button class="uk-button uk-button-default uk-margin-small-right uk-hidden@s" type="button" uk-toggle="target: #offcanvas-nav-primary">
+                <a class="uk-hidden@s" uk-toggle="target: #main_menu">
                     <span uk-icon="menu"></span>
-                </button>
-                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true;">
+                </a>
+                <div id="main_menu" uk-offcanvas="overlay: true; flip: true;">
                     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-                
-                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                            <li class="uk-active"><a href="#">Active</a></li>
+                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+                        <ul class="uk-nav uk-nav-default uk-nav-center uk-margin-auto-vertical">
+                            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+                            <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
                             <li class="uk-parent">
-                                <a href="#">Parent</a>
+                                <a href="#">Services</a>
                                 <ul class="uk-nav-sub">
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
+                                    @if($services)
+                                    @foreach($services as $service)
+                                    <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                    @endforeach
+                                    @endif
                                 </ul>
                             </li>
-                            <li class="uk-nav-header">Header</li>
-                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
-                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+                            <li class="uk-parent">
+                                <a href="#">Resources</a>
+                                <ul class="uk-nav-sub">
+                                    <li>
+                                        <a href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                            <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                         </ul>
                 
                     </div>

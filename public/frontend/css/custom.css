@@ -8,11 +8,18 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
+html, body {
+    overflow-x: hidden;
+  }
 body {
     color: #000 !important;
 }
 .uk-img-logo {
     height: 60px !important;
+    margin-bottom: 5px !important;
+}
+.uk-img-logo-m {
+    width: 70% !important;
     margin-bottom: 5px !important;
 }
 .uk-navbar-container.uk-background-transparent {
