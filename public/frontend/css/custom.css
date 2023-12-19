@@ -204,12 +204,12 @@ iframe {
     background-color: #fff !important;
 }
 .ps-sidebar-absolute {
-    position: sticky !important;
+    position: absolute !important;
     bottom: 0px !important;
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
-    width: 90%;
+    width: 20%;
     z-index: 10 !important;
     background-color: #fff !important;
 }
