@@ -41,7 +41,7 @@
                 <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallery_image_title}}">
                     <img src="{{$img->media_path}}" width="1800" height="1200" alt="{{$img->img_alt}}">
                 </a>
-                <h3 class="uk-margin-small uk-text-center">{{$img->gallery_image_title}}</h3>
+                <h4 class="uk-margin-small uk-text-center">{{$img->gallery_image_title}}</h4>
             </div>
         </div>
         @endforeach

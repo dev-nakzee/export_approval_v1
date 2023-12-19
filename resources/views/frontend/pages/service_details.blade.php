@@ -34,7 +34,7 @@
                             @if($loop->first)
                                 @if($service->service_product_show === 1) 
                                 <li class="nav-item">
-                                    <a href="#{{'mandatory-product-list'}}">Mandetory Product List</a>
+                                    <a href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
                                 </li>
                                 @endif
                             @endif
