@@ -11,6 +11,7 @@ use App\Models\Backend\Clients;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Pagination\Paginator;
+use Jenssegers\Agent\Agent;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -42,8 +43,8 @@ class AppServiceProvider extends ServiceProvider
             ->where('service_status', 1)
             ->orderBy('service_order', 'asc')
             ->get();
-
-            $view->with(['services' => $services, 'countries' => $countries]);
+            $agent = new Agent();
+            $view->with(['services' => $services, 'countries' => $countries, 'agent' => $agent]);
         });
         view()->composer('frontend.components.clients', function ($view) {
             $clients = Clients::select('client_name', 'client_slug', 'img_alt', 'media_path')
