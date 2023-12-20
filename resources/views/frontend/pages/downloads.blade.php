@@ -42,6 +42,9 @@
             </ul>
         </div>
     </div>
+    <div class="uk-margin-bottom uk-width-1-1">
+        <span class="downloads_list">{{"All Categories"}}</span>
+    </div>
     <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
         <thead>
             <tr>
