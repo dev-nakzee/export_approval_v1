@@ -28,6 +28,33 @@ body {
     padding: none;
 }
 
+/* Page */
+.page-header {
+    background-color: #FFE8E5;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.page-header div h2 {
+    font-size: 22px !important;
+    font-weight: 700;
+    color: #052faa;
+}
+.service-details-image {
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+}
+.mobile-section-heading {
+    font-size: 18px !important;
+    font-weight : bold !important;
+}
+.section-title {
+    font-weight: 500;
+    background-color: #e0e0e0;
+}
+.section-content {
+
+}
 /* Home Page */
 .home-services-img {
     width: 60px !important;

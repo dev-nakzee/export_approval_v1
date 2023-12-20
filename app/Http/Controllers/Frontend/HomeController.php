@@ -74,7 +74,8 @@ class HomeController extends Controller
         foreach($sections as $key => $value) {
             $sections[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        return view('frontend.pages.about-us', compact('sections', 'static_page'));
+        $agent = new Agent;
+        return view('frontend.pages.about-us', compact('sections', 'static_page', 'agent'));
     }
 
     public function downloads() {
