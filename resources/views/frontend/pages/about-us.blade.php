@@ -15,10 +15,10 @@
 @endsection
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <h2 class="uk-margin-remove">
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
+            <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
             {{$static_page->page_name}}
         </h2>
     </div>
@@ -32,7 +32,6 @@
     </div>
 </section>
 <section class="uk-section uk-padding-small">
-    <div class="uk-text-center mobile-page-heading uk-background-default uk-padding-small" uk-sticky="offset: 80">{{'About us'}}</div>
     <ul uk-accordion>
         @if($sections)
         @foreach($sections as $section)
@@ -74,7 +73,10 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-text-bold">{{'About us'}}</span>
+                    <span class="uk-margin-small-left uk-text-bold">
+                        <img class="uk-margin-right uk-border-circle service-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}"> 
+                        {{'About us'}}
+                    </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($sections)
                         @foreach($sections as $section)
