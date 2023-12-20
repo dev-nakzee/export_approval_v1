@@ -76,7 +76,11 @@ body {
 .home-search-button {
     background-color: #ed462f;
 }
-
+.title-page-image {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+}
 .section-heading {
     font-size: 24px;
     font-weight: 700;

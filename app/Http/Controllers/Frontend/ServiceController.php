@@ -11,6 +11,7 @@ use App\Models\Backend\ProductCategory;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
+use Jenssegers\Agent\Agent;
 
 class ServiceController extends Controller
 {
@@ -29,9 +30,9 @@ class ServiceController extends Controller
             ->where('products.product_service_id', $service->service_id)
             ->orderBy('products.product_category_id')
             ->get();
-
+        $agent = new Agent;
         $sections = ServiceSection::where('service_id', $service->service_id)
             ->orderBy('service_section_order', 'asc')->get();
-        return view('frontend.pages.service_details', compact('service', 'sections', 'products'));
+        return view('frontend.pages.service_details', compact('service', 'sections', 'products', 'agent'));
     }
 }

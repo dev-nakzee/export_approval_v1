@@ -74,7 +74,7 @@
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
                     <span class="uk-margin-small-left uk-text-bold">
-                        <img class="uk-margin-right uk-border-circle service-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}"> 
+                        <img class="uk-margin-right uk-border-circle title-page-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}"> 
                         {{'About us'}}
                     </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
