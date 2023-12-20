@@ -14,6 +14,50 @@
     <meta name="format-detection" content="telephone=no" />
 
     @endsection
+
+    @section('content')
+    @if ($agent->isMobile())
+    <section class="uk-section uk-padding-small">
+        <span style="text-align: center !important;">
+        {!! $sections[0]->section_content !!}
+        </span>
+        <div class="uk-margin-medium-bottom">
+            <div class="uk-inline uk-width-expanded">
+                <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                </button>
+                <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
+                <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
+            </div>
+        </div>
+        <span style="text-align: center !important;">
+        {!! $sections[0]->section_description !!}
+        </span>
+            @if($services)
+            @foreach($services as $service)
+            <div class="uk-background-transparent uk-margin-remove">
+                <div class="uk-card-header uk-padding-remove">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <img class="uk-border-circle uk-box-shadow-medium home-services-img uk-background-default" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+                        </div>
+                        <div class="uk-width-expand uk-margin-top">
+                            <a class="uk-text-decoration-none" href="{{route('frontend.site.service', $service->service_slug)}}">
+                                <h3 class="uk-card-title uk-margin-remove-bottom home-services-tabs">{{$service->service_name}}</h3>
+                                <span class="home-service-description">{!!$service->service_description!!}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            @endif
+            <div data-src="{{asset('frontend/images/indiamap.png')}}" uk-img class="uk-background-contain uk-padding-remove home-banner-image">
+            </div>
+            <div class="uk-width-1-1 uk-padding-remove">{!! $sections[0]->section_tagline !!}</div>
+
+    </section>
+    @endsection
+    @else
     @section('content')
     <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid style="background-color: {{$sections[0]->section_color}}">
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
@@ -207,6 +251,7 @@
     </section>
     @endif
     @endsection
+    @endif
     @section('scripts')
 
     <script>

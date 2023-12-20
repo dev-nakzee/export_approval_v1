@@ -22,6 +22,7 @@ use App\Models\Countries;
 use App\Models\Backend\GalleryImages;
 use App\Models\Backend\Holidays;
 use Carbon\Carbon;
+use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
 {
@@ -53,8 +54,8 @@ class HomeController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
-     
-        return view('frontend.pages.home', compact('services', 'sections', 'blogs'));
+        $agent = new Agent;
+        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent'));
     }
 
     public function about()
@@ -187,13 +188,6 @@ class HomeController extends Controller
     }
 
     public function holidays() {
-        $holidays = Holidays::orderBy('holiday_date', 'asc')->get();
-        foreach ($holidays as $key => $value) {
-            $holidays[$key]['holiday_show'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('d/m/Y');
-            $holidays[$key]['holiday_month'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('F');
-            $holidays[$key]['holiday_year'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('Y');
-            $holidays[$key]['holiday_day'] = Carbon::createFromFormat('Y-m-d', $holidays[$key]['holiday_date'])->format('l');
-        }
         return view('frontend.pages.holiday-list', compact('holidays'));
     }
 }

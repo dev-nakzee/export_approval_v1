@@ -21,3 +21,12 @@ body {
 .mobile-menu ul li a {
     color: #052faa !important;
 }
+
+/* Home Page */
+.home-services-img {
+    width: 60px !important;
+}
+
+.home-banner-image {
+    height: 50% !important;
+}
