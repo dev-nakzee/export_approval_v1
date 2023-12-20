@@ -26,6 +26,76 @@
         </div>
     </div>
 </section>
+<section class="uk-section uk-padding-small uk-padding-remove-vertical">
+    <div class="uk-padding-small">
+        <ul class="uk-breadcrumb uk-text-center uk-margin-remove">
+            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+            <li><a href="{{route('frontend.site.service', $service->service_slug)}}#{{'mandatory-product-list'}}">{{"Mandatory List"}}</a></li>
+            <li><span>{{$product->product_name}}</span></li>
+        </ul>
+    </div>
+</section>
+<section class="uk-section uk-padding-small">
+    <ul uk-accordion>
+        @if($sections)
+        <li class="uk-open" id="{{'overview'}}">
+            <a class="uk-accordion-title section-title uk-padding-small" href="#{{'overview'}}">{{'Product Overview'}}</a>
+            <div class="uk-accordion-content section-content">
+                <div class="uk-padding-small" uk-grid>
+                    <div class="uk-width-2-5@m uk-background-contain uk-padding-remove-right">
+                        <img class="uk-width-1-1" src="{{$product->media_path}}" alt="{{$product->img_alt}}">
+                    </div>
+                    <div class="uk-width-3-5@m">
+                        <ul class="uk-list uk-list-divider">
+                            <li><b>General Product Name</b> : {{$product->product_name}}</li>
+                            @if($product->product_technical_name != null)
+                            <li><b>Technical Product Name</b> : <span>{{$product->product_technical_name}}</span></li>
+                            @endif
+                            <li><b>Product Category</b> : {{$product->product_category_name}}</li>
+                            <li><b>Compliance Name</b> : {{$service->service_name}}</li>
+                            @if(unserialize($product->product_compliance) == null)
+                            @else
+                            @foreach(unserialize($product->product_compliance) as $key => $value)
+                            @if($key != 0)
+                            <li><b>{{$key}}</b> : {{$value}}</li>
+                            @endif
+                            @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+                <div class="uk-padding-small">
+                        {!! $product->product_content !!}
+                </div> 
+            </div>
+        </li>
+        @foreach($sections as $section)
+        <li id="{{$section->product_section_slug}}">
+            <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
+            <div class="uk-accordion-content section-content">
+                @if ($section->static_page_section_id === 7)
+                {!! $section->section_description !!}
+                @else
+                {!! $section->section_description !!}
+                @endif  
+            </div>
+        </li>
+        @endforeach
+        @foreach($sections as $section)
+        <div class="ps-sections" id="{{$section->product_section_slug}}">
+            <div class="uk-padding-small ps-tab-header">
+                <span>{{$section->product_section_name}}</span>
+            </div>
+            <div class="uk-padding-small">
+                {!! $section->product_section_content !!}
+            </div>
+        </div>
+        @endforeach
+        @endif
+    </ul>
+</section>
+@include('frontend.components.downloadbrochure')
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical" id="overview">
     <div class="uk-container uk-text-center">

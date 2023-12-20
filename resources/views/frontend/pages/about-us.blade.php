@@ -44,7 +44,6 @@
                     {!! $section->section_description !!}
                     @endif  
                 </div>
-                
             </li>
         @endforeach
         @endif
