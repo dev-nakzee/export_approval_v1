@@ -74,23 +74,9 @@
         <li id="{{$section->product_section_slug}}">
             <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
             <div class="uk-accordion-content section-content">
-                @if ($section->static_page_section_id === 7)
-                {!! $section->section_description !!}
-                @else
-                {!! $section->section_description !!}
-                @endif  
-            </div>
-        </li>
-        @endforeach
-        @foreach($sections as $section)
-        <div class="ps-sections" id="{{$section->product_section_slug}}">
-            <div class="uk-padding-small ps-tab-header">
-                <span>{{$section->product_section_name}}</span>
-            </div>
-            <div class="uk-padding-small">
                 {!! $section->product_section_content !!}
             </div>
-        </div>
+        </li>
         @endforeach
         @endif
     </ul>
