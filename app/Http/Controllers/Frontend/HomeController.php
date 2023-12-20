@@ -104,7 +104,7 @@ class HomeController extends Controller
             ->join('documents', 'documents.doc_id', 'downloads.download_document')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', ));
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', 'agent'));
     }
 
     public function download_service($service_slug) {
@@ -130,8 +130,8 @@ class HomeController extends Controller
             }
         }
         $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
-
-        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload'));
+        $agent = new Agent;
+        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload','agent'));
     }
 
     public function download_category($category_slug) {
@@ -153,7 +153,8 @@ class HomeController extends Controller
         foreach($downloads as $key => $value) {
             $downloads[$key]['doc_path'] = Storage::url($value['doc_path']);
         }
-        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload'));
+        $agent = new Agent;
+        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload', 'agent'));
     }
 
     public function media_cover() {

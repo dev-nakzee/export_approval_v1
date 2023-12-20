@@ -131,12 +131,12 @@
                         @if($sections)
                         @foreach($sections as $section)
                             <li>
-                                <a href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
+                                <a class="uk-link-reset" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
                             </li>
                             @if($loop->first)
                                 @if($service->service_product_show === 1) 
                                 <li class="nav-item">
-                                    <a href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                                    <a class="uk-link-reset" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
                                 </li>
                                 @endif
                             @endif
@@ -144,7 +144,7 @@
                         @endif
                         @if($service->faqs) 
                         <li class="nav-item">
-                            <a href="#{{'frequently-asked-questions'}}">F.A.Q.</a>
+                            <a class="uk-link-reset" href="#{{'frequently-asked-questions'}}">F.A.Q.</a>
                         </li>
                         @endif
                     </ul>

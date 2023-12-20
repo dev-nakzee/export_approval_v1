@@ -115,12 +115,12 @@
                         {{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>
-                            <a href="#overview">{{'Product Overview'}}</a>
+                            <a class="uk-link-reset" href="#overview">{{'Product Overview'}}</a>
                         </li>
                         @if($sections)
                         @foreach($sections as $section)
                             <li>
-                                <a href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
+                                <a class="uk-link-reset" href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
                             </li>
                         @endforeach
                         @endif
