@@ -42,14 +42,12 @@
             </ul>
         </div>
     </div>
-    <div class="uk-margin-bottom uk-width-1-1 uk-text-center">
-        <span class="downloads_list">{{"All Categories"}}</span>
-    </div>
+    <div class="uk-width-1-1"></div>
     <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
         <thead>
             <tr>
                 <th>#</th>
-                <th>Product</th>
+                <th class="uk-table-expand">Product</th>
                 <th>Infomation</th>
                 <th>Guidelines</th>
             </tr>
