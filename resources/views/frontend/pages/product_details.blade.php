@@ -1,11 +1,41 @@
-@extends('frontend.layouts.master', ['pages' => 'Services'])
+@extends('frontend.layouts.master', ['pages' => 'Product'])
+@section('seo')
+<title>"title"</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta property="og:title" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="{{env('APP_URL')}}" />
+<meta property="og:site_name" content="" />
+<meta property="og:image" content="" />
+<meta name="format-detection" content="telephone=no" />
+@endsection
 @section('content')
+@if($agent->isMobile())
+<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" id="overview" uk-sticky="offset: 80;">
+    <div class="uk-text-center">
+        <div>
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
+                <br>{{$product->product_name}}
+            </h2>
+        </div>
+    </div>
+</section>
+@else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical" id="overview">
     <div class="uk-container uk-text-center">
-        <h1>
-            <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
-            <br>{{$product->product_name}}
-        </h1>
+        <div>
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
+                <br>{{$product->product_name}}
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
@@ -23,7 +53,10 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-text-bold">{{$product->product_name}}</span>
+
+                    <span class="uk-margin-small-left uk-text-bold">
+                        <img class="uk-margin-remove uk-border-circle title-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
+                        {{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>
                             <a href="#overview">{{'Product Overview'}}</a>
@@ -90,6 +123,7 @@
         </div>
     </div>
 </section>
+@endif
 @endsection
 @section('scripts')
 @endsection

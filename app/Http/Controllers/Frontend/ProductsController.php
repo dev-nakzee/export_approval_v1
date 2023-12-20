@@ -13,6 +13,7 @@ use App\Models\Backend\ProductCategory;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
+use Jenssegers\Agent\Agent;
 
 class ProductsController extends Controller
 {
@@ -36,6 +37,7 @@ class ProductsController extends Controller
         $sections = ProductSection::where('product_id', $product->product_id)
             ->orderBy('product_section_order', 'asc')
             ->get();
-        return view('frontend.pages.product_details', compact('product', 'service', 'sections'));
+        $agent = new Agent;
+        return view('frontend.pages.product_details', compact('product', 'service', 'sections', 'agent'));
     }
 }

@@ -1,5 +1,107 @@
 @extends('frontend.layouts.master', ['pages' => 'Services'])
+@section('seo')
+<title>"title"</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta property="og:title" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="{{env('APP_URL')}}" />
+<meta property="og:site_name" content="" />
+<meta property="og:image" content="" />
+<meta name="format-detection" content="telephone=no" />
+
+@endsection
+
 @section('content')
+@if($agent->isMobile())
+<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical">
+    <div class="uk-container uk-text-center">
+        <h2>
+            <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
+            {{$service->service_name}}
+        </h2>
+    </div>
+</section>
+<section class="uk-section uk-padding-large uk-padding-remove-vertical">
+    <div class="uk-padding-small">
+        <ul class="uk-breadcrumb uk-text-center uk-margin-remove">
+            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><span>Services</span></li>
+            <li><span>{{$service->service_slug}}</span></li>
+        </ul>
+    </div>
+</section>
+<section class="uk-section uk-padding-small">
+    <ul uk-accordion>
+        @if($sections)
+        @foreach($sections as $section)
+            <li @if($loop->first)class="uk-open"@endif id="{{$section->service_section_slug}}">
+                <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
+                <div class="uk-accordion-content section-content">
+                    {!! $section->service_section_content !!}
+                </div>
+            </li>
+            @if($loop->first)
+            <li id="{{'mandatory-product-list'}}">
+                <a class="uk-accordion-title section-title uk-padding-small" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                <div class="uk-accordion-content section-content">
+                    <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Product Name</th>
+                                <th>category</th>
+                                @if($service->service_compliance)
+                                @foreach(explode(',',$service->service_compliance) as $compliance)
+                                @if($compliance)
+                                <th>{{$compliance}}</th>
+                                @endif
+                                @endforeach
+                                @endif
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($products as $product)
+                            <tr class="product-page-link" data-slug="{{$product->product_slug}}">
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$product->product_name}}</td>
+                                <td>{{$product->product_category_name}}</td>
+                                @if($service->service_compliance)
+                                @foreach(unserialize($product->product_compliance) as $compliance)
+                                    <td>{{$compliance}}</td>
+                                @endforeach
+                                @endif
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            @endif
+        @endforeach
+        <li id="{{'frequently-asked-questions'}}">
+            <a class="uk-accordion-title section-title uk-padding-small" href="#{{'frequently-asked-questions'}}">{{'Frequently Asked Questions'}}</a>
+            <div class="uk-accordion-content section-content">
+                <ul uk-accordion class="uk-margin-large-bottom">
+                    @foreach(json_decode($service->faqs, true) as $que=>$ans)
+                    <li class="faq-element">
+                        <a class="uk-accordion-title faq-question uk-margin-top uk-margin-bottom" href>{{$loop->iteration}}. {{$que}}</a>
+                        <div class="uk-accordion-content faq-answer uk-margin-remove-top uk-margin-bottom">
+                            {{ $ans }}
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </li>
+        @endif
+    </ul>
+</section>
+@include('frontend.components.downloadbrochure')
+@else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1>
@@ -133,14 +235,19 @@
         </div>
     </div>
 </section>
+@endif
 @endsection
 @section('scripts')
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/responsive.dataTables.min.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/rowReorder.dataTables.min.css')}}" />
 <style>
 
 </style>
 <script type="text/javascript" src="{{asset('frontend/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('frontend/datatables/dataTables.responsive.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('frontend/datatables/dataTables.rowReorder.min.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#mandatory-list').DataTable({
@@ -149,6 +256,10 @@
             "searching": true,
             "oLanguage": {
                 "sSearch": ""
+            },
+            responsive: true,
+            rowReorder: {
+                selector: 'td:nth-child(2)'
             },
             language: {
                 searchPlaceholder: "Search {{$service->service_name}} products",
