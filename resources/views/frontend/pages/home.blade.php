@@ -168,12 +168,12 @@
     </section>
     @endif
     @if($sections[4]->section_status == 1)
-    <section class="uk-section home-section-3 uk-padding-small uk-padding-remove-vertical" style="background-color: {{$sections[4]->section_color}}">
-        <div class="section-two-heading uk-text-center uk-padding-small">
+    <section class="uk-section home-section-3 uk-padding-small" style="background-color: {{$sections[4]->section_color}}">
+        <div class="section-two-heading uk-text-center">
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[4]->section_name}} 
             </p>
-            <span class="section-tagline">{!!$sections[4]->section_tagline!!}</span>
+            <span class="section-tagline uk-margin-remove-bottom">{!!$sections[4]->section_tagline!!}</span>
         </div>
         <div class="section-description uk-text-justify">{!! $sections[4]->section_description !!}</div>
         @if($blogs)
@@ -368,10 +368,10 @@
                 {{$sections[4]->section_name}} 
             </p>
             <span class="section-tagline">{!!$sections[4]->section_tagline!!}</span>
-            <p class="section-description">{!! $sections[4]->section_description !!}</p>
+            <div class="section-description uk-padding-large uk-padding-remove-vertical">{!! $sections[4]->section_description !!}</div>
         </div>
         @if($blogs)
-        <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-bottom" tabindex="-1" uk-slider>
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-bottom uk-padding uk-padding-remove-vertical" tabindex="-1" uk-slider>
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid" uk-height-match=".home-blog-tabs">
                 @foreach($blogs as $blog)
                 <li>

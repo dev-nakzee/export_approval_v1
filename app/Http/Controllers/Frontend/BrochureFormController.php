@@ -19,16 +19,17 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use PDF;
-
+use Jenssegers\Agent\Agent;
 
 class BrochureFormController extends Controller
 {
     //
     public function index()
     {
+        $agent = new Agent();
         $countries = Countries::get();
         $services = Services::select('service_id', 'service_name')->get();
-        return view('frontend.pdf.index', compact(['countries', 'services']));
+        return view('frontend.pdf.index', compact(['countries', 'services', 'agent']));
     }
 
     public function store(Request $request)

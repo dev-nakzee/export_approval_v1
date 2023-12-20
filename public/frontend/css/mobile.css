@@ -22,6 +22,12 @@ body {
     color: #052faa !important;
 }
 
+/* Captcha */
+#captcha_image {
+    background-image: url(../images/captacha-bg.svg) !important;
+    padding: none;
+}
+
 /* Home Page */
 .home-services-img {
     width: 60px !important;
@@ -104,4 +110,82 @@ body {
 .wcu-tabs div.uk-width-expand h3 {
     font-size: 20px !important;
     font-weight: 500;
+}
+
+/* Contact Page */
+.contact-form-submit {
+    border: 2px #052faa solid;
+    background-color: #ffffff;
+    color: #052faa;
+}
+.contact-form-submit:hover {
+    background-color: #052faa;
+    border: 2px #052faa solid;
+    color: #ffffff;
+}
+
+/* Brochure form  */
+.brochure-form-submit {
+    border: 2px #052faa solid;
+    background-color: #ffffff;
+    color: #052faa;
+}
+.brochure-form-submit:hover {
+    background-color: #052faa;
+    border: 2px #052faa solid;
+    color: #ffffff;
+}
+
+/* Footer section */
+
+.clients-scroll {
+    z-index: 99 !important;
+}
+.clients-scroll h3 {
+    font-weight: 500;
+    color: #052faa;
+    margin-top: 10px !important;
+}
+ 
+section.website-footer {
+    background-color: #052faa;
+    color: #fff;
+    z-index: 99 !important;
+    position: relative;
+}
+
+.uk-footer .uk-nav-header {
+    font-size: 16px !important;
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.footer-logo {
+    background: #ffffff;
+    border-radius: 5px;
+    height: 50px;
+}
+.footer-social a {
+    border: 1px solid #ffffff;
+    padding: 3px !important;
+    border-radius: 5px;
+    margin-right: 5px;;
+}
+
+.back-to-top {
+    background-color: #e7e7e7 !important;
+    color: #052faa !important;
+    border: #052faa solid 2px;
+    z-index: 99 !important;
+}
+.back-to-top a {
+    font-weight: 900;
+    color: #052faa !important;
+}
+.back-to-top:hover {
+    background-color: #9c9c9c !important;
+    color: #ffffff;
+}
+.back-to-top:hover a span {
+    color: #ffffff;
 }
