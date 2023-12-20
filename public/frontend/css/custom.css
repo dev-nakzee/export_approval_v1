@@ -298,6 +298,7 @@ iframe {
 .ps-tab-content {
     font-size: 12px !important;
     padding: 10px !important;
+    padding-top: 30px !important;
     font-weight: 300;
     color: #303030;
 }
