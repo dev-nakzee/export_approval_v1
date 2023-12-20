@@ -36,7 +36,7 @@
     <ul uk-accordion>
         @if($sections)
         @foreach($sections as $section)
-            <li @if($loop->first)class="uk-open"@endif>
+            <li @if($loop->first)class="uk-open"@endif id="#{{$section->section_slug}}">
                 <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->section_slug}}">{{$section->section_name}}</a>
                 <div class="uk-accordion-content section-content">
                     @if ($section->static_page_section_id === 7)
