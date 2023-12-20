@@ -103,6 +103,7 @@ class HomeController extends Controller
         $otherDownload = Downloads::select('downloads.*', 'doc_path as downloads')
             ->join('documents', 'documents.doc_id', 'downloads.download_document')
             ->get();
+        $agent = new Agent;
         return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload'));
     }
 
