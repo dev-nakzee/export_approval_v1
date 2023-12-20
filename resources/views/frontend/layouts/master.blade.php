@@ -3,7 +3,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
+        @if ($agent->isMobile())
+        <link rel="stylesheet" href="{{asset('frontend/css/mobile.css')}}" />
+        @else
         <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
+        @endif
         <link rel="stylesheet" href="{{asset('fontawesome/css/all.min.css')}}" />
         <script src="{{asset('frontend/js/jquery-3.7.1.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
@@ -68,11 +72,62 @@
         </script>
     </head>
     <body>
+        @if ($agent->isMobile())
+        <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-small uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
+                <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
+            </a>
+            <div class="uk-navbar-item">
+                <a href="#main_menu" uk-toggle>
+                    <span uk-icon="icon: menu; ratio: 2.5"></span>
+                </a>
+            </div>
+            <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column mobile-menu">
+                    <ul class="uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
+                        <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+                        <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
+                        <li class="uk-parent">
+                            <a href="#">Services <span uk-nav-parent-icon></span></a>
+                            <ul class="uk-nav-sub">
+                                @if($services)
+            
+                                @foreach($services as $service)
+                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                @endforeach
+    
+                                @endif
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Resources <span uk-nav-parent-icon></span></a>
+                            <ul class="uk-nav-sub">
+                                <li>
+                                    <a href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                        <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
+                    </ul>
+            
+                </div>
+            </div>
+        </nav>
+        @else
         <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
                     <img class="uk-img-logo uk-visible@s" src="{{asset('frontend/images/logo.png')}}">
-                    <img class="uk-img-logo-m uk-hidden@s" src="{{asset('frontend/images/logo.png')}}">
                 </a>
             </div>
             <div class="uk-navbar-right">
@@ -117,6 +172,7 @@
                 </ul>
             </div>
         </nav>
+        @endif
         @yield('content')
         @if (request()->route()->getName() === 'frontend.site.home' || request()->route()->getName() === 'frontend.site.gallery')
             @include('frontend.components.downloadbrochure')

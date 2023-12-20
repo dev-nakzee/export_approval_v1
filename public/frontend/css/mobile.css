@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap'); */
+@font-face {
+    font-family: captcha;
+    src: url(captcha.ttf);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+}
+body {
+    color: #000 !important;
+}
+.uk-img-logo {
+    width: 80% !important;
+    margin-bottom: 5px !important;
+}
+.mobile-menu {
+    background-color: #fff !important;
+}
+.mobile-menu ul li a {
+    color: #052faa !important;
+}

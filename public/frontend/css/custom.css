@@ -8,9 +8,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
-html, body {
-    overflow-x: hidden;
-}
 body {
     color: #000 !important;
 }
