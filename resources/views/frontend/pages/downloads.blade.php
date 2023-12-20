@@ -42,7 +42,9 @@
             </ul>
         </div>
     </div>
-    <div>
+    <div class="uk-margin">
+        {{ 'All Downloads' }}
+    </div>
     <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
         <thead>
             <tr>
@@ -85,7 +87,6 @@
             @endif
         </tbody>
     </table>
-    </div>
 </section>
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
