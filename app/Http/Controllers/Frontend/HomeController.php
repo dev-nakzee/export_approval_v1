@@ -104,7 +104,7 @@ class HomeController extends Controller
             ->join('documents', 'documents.doc_id', 'downloads.download_document')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload'));
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', ));
     }
 
     public function download_service($service_slug) {
