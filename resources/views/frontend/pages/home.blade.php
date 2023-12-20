@@ -112,7 +112,7 @@
     </section>
     @endif
     @if($sections[3]->section_status == 1)
-    <section class="uk-section home-section-3 uk-padding-small uk-padding-remove-vertical" style="background-color: {{$sections[3]->section_color}}">
+    <section class="uk-section home-section-3 uk-padding-small" style="background-color: {{$sections[3]->section_color}}">
         <div class="section-two-heading uk-text-center">
             <p class="section-heading uk-margin-remove-bottom">
                 {{$sections[3]->section_name}} 
