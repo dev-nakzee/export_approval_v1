@@ -30,3 +30,40 @@ body {
 .home-banner-image {
     height: 50% !important;
 }
+
+.section-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #052faa;
+    display: block;
+}
+
+.home-ml-section article {
+    border: 2px #052faa solid;
+    background-color: #ffffff;
+}
+.home-ml-section article img.uk-comment-avatar{
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    
+}
+.home-ml-section article h4.uk-comment-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #052faa;
+}
+.home-ml-section article p.view-all-products {
+    margin-top: 5px !important;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ed462f;
+}
+.home-ml-section article span {
+    margin-bottom: 5px !important;
+}
+.home-ml-section article span p {
+    border-bottom: #7d99ec solid 2px;
+    padding-bottom: 5px;
+    margin-bottom: 0px !important;  
+}
