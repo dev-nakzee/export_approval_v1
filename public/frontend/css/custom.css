@@ -8,9 +8,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
-html, body {
-    overflow-x: hidden;
-}
 body {
     color: #000 !important;
 }
@@ -18,15 +15,6 @@ body {
     height: 60px !important;
     margin-bottom: 5px !important;
 }
-
-.uk-offcanvas-bar {
-    background-color: #ffffff !important;
-}
-
-.uk-offcanvas-bar ul li a {
-    color: #052faa !important;
-}
-
 .uk-navbar-container.uk-background-transparent {
     background: #fff !important;
 }
