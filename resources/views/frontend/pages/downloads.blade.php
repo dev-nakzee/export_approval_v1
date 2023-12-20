@@ -42,7 +42,8 @@
             </ul>
         </div>
     </div>
-    <table id="downloads-list" class="uk-margin-top uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+    <div>
+    <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
         <thead>
             <tr>
                 <th>#</th>
@@ -84,6 +85,7 @@
             @endif
         </tbody>
     </table>
+    </div>
 </section>
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
