@@ -216,7 +216,7 @@
             "searching": true,
             responsive: true,
             rowReorder: {
-                selector: 'td:nth-child(1)'
+                selector: 'td:nth-child(2)'
             },
             "oLanguage": {
                 "sSearch": ""
