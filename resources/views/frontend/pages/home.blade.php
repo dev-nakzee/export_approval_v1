@@ -89,6 +89,123 @@
             </div>
         </div>
     </section>
+    @if($sections[2]->section_status == 1)
+    <section class="uk-section home-section-3 uk-padding-remove" style="background-color: {{$sections[2]->section_color}}">
+        <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-bottom">
+            <p class="section-heading uk-margin-remove-bottom">
+                {{$sections[2]->section_name}} 
+            </p>
+            <span class="section-tagline">{!!$sections[2]->section_tagline!!}</span>
+            <p class="section-description">{!! $sections[2]->section_description !!}</p>
+        </div>
+        <div class="uk-card uk-grid-collapse uk-margin" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container uk-width-2-5@m uk-border-rounded">
+                <img src="{{$sections[2]->media_path}} " alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div class="uk-width-3-5@m">
+                <div class="uk-card-body uk-padding-small">
+                    {!! $sections[2]->section_content !!}
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+    @if($sections[3]->section_status == 1)
+    <section class="uk-section home-section-3 uk-padding-small uk-padding-remove-vertical" style="background-color: {{$sections[3]->section_color}}">
+        <div class="section-two-heading uk-text-center">
+            <p class="section-heading uk-margin-remove-bottom">
+                {{$sections[3]->section_name}} 
+            </p>
+            <span class="section-tagline">{!!$sections[3]->section_tagline!!}</span>
+        </div>
+        <div class="section-description uk-text-justify">{!! $sections[3]->section_description !!}</div>
+        <div class="uk-padding-remove uk-margin-remove uk-margin-bottom">
+        {{-- {!! $sections[3]->section_content !!} --}}
+        <div class="uk-section">
+            <div class="uk-container">
+            <div class="uk-grid-divider uk-grid" data-uk-grid="">
+            <div class="uk-width-1-1 uk-width-1-4@m uk-first-column" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/cost-effective-1702021109.svg" alt="cost-effective" width="70" height="70" data-uk-img=""></div>
+                <div class="uk-width-expand">
+                <h3>Cost effective<br>solutions</h3>
+                </div>
+            </div>
+            <div class="wcu-one wcu-tabs" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/step-payment-1702021109.svg" alt="part-payment" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>Make Payment<br>step-by-step</h3>
+            </div>
+            </div>
+            <div class="wcu-two wcu-tabs" hidden="">We offer flexible installment plans to let you pay at your own pace.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Experience" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>10+ years of experience</h3>
+            </div>
+            </div>
+            <div class="wcu-three wcu-tabs" hidden="">We bring over 10 years of proven experience to achieve success in every project.</div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
+            <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
+            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
+            <div class="uk-width-expand">
+            <h3>1000+ projects completed</h3>
+            </div>
+            </div>
+            <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
+            </div>
+            <!-- grid content end --></div>
+            </div>
+            </div>
+        </div>
+    </section>
+    @endif
+    @if($sections[4]->section_status == 1)
+    <section class="uk-section home-section-3 uk-padding-small uk-padding-remove-vertical" style="background-color: {{$sections[4]->section_color}}">
+        <div class="section-two-heading uk-text-center uk-padding">
+            <p class="section-heading uk-margin-remove-bottom">
+                {{$sections[4]->section_name}} 
+            </p>
+            <span class="section-tagline">{!!$sections[4]->section_tagline!!}</span>
+        </div>
+        <div class="section-description uk-text-justify">{!! $sections[4]->section_description !!}</div>
+        @if($blogs)
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-large-bottom" tabindex="-1" uk-slider>
+            <ul class="uk-slider-items uk-child-width-1-1@s uk-child-width-1-4@m uk-grid" uk-height-match=".home-blog-tabs">
+                @foreach($blogs as $blog)
+                <li>
+                    <div class="uk-card uk-card-default home-blog-tabs">
+                        <div class="uk-card-media-top">
+                            <img src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">
+                        </div>
+                        <div class="uk-card-body uk-padding-small uk-padding-remove-bottom">
+                            <span class="home-blog-title"><a class="uk-link-reset" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">{{$blog->blog_title}}</a></span>
+                            <span class="home-blog-content">
+                                {!! $blog->blog_content !!}
+                            </span>                
+                            <div class="uk-margin-bottom">
+                                <a class="home-blog-link" href="{{route('frontend.site.blog.detail', [$blog->blog_category_slug, $blog->blog_slug])}}">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
+        
+            <a class="slider-arrows uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="slider-arrows uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+        
+        </div>
+        @endif
+    </section>
+    @endif
     @endsection
     @else
     @section('content')
