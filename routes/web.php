@@ -54,8 +54,8 @@ Route::controller(IndustryNotificationController::class)->group(function (){
 });
 
 Route::controller(SearchController::class)->group(function (){
-    Route::get('/search', 'index')->name('frontend.site.search');
-    Route::get('/search/{search}', 'search')->name('frontend.site.search.page');
+    Route::post('/search/one', 'index')->name('frontend.site.search');
+    Route::post('/search', 'search')->name('frontend.site.search.page');
 });
 
 Route::controller(BrochureFormController::class)->group(function (){

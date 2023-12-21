@@ -22,12 +22,15 @@
         {!! $sections[0]->section_content !!}
         </span>
         <div class="uk-margin-medium-bottom">
+            <form id="search_form">
+            @csrf
             <div class="uk-inline uk-width-expanded">
                 <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
-                <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
+                <input id="home_search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
+                <div id="home_search_result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
             </div>
+            </form>
         </div>
         <span style="text-align: center !important;">
         {!! $sections[0]->section_description !!}
@@ -213,12 +216,16 @@
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
+                <form id="search_form" action="{{route('frontend.site.search.page')}}" method="POST">
+                @csrf
                 <div class="uk-inline uk-width-expanded">
-                    <button uk-icon="icon: search" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                    <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                     </button>
-                    <input id="home-search" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
-                    <div id="home-search-result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small"></div>
+                    <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
+                    <div id="home_search_result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small uk-overflow-auto">
+                    </div>
                 </div>
+                </form>
             </div>
             {!! $sections[0]->section_description !!}
             <div class="uk-container uk-child-width-1-2 uk-padding-remove uk-width-expand uk-flex-center" uk-grid>
@@ -403,27 +410,32 @@
     
 @endif
 @endsection
-    @section('scripts')
-
-    <script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    $(document).keyup('#home-search', function(e) {
-        var search = $(this).val();
-        if(search != ''){
-            $.ajax({
-                url:"{{route('frontend.site.search')}}",
-                method:"POST",
-                data:{search:search},
-                success:function(response){
-                    $('#home-search-result').html(response);
-                    $('#home-search-result').removeClass('uk-hidden');
-                }
-            });
-        }
-    });
-    </script>
+@section('scripts')
+<script>
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+$(document).keyup('#home_search', function(e) {
+    var search = $('#home_search').val();
+    var searchData = $('#search_form').serialize();
+    if(search.length > 2){
+        $('#home_search_result').removeClass('uk-hidden');
+        $('#home_search_result').html('<div class="uk-text-center"><span uk-spinner="ratio: 3"></span></div>');
+        $.ajax({
+            url:"{{route('frontend.site.search')}}",
+            method:"POST",
+            data: searchData,
+            success:function(response){
+                $('#home_search_result').html(response);
+            }
+        });
+        
+    } else {
+        $('#home_search_result').empty();
+        $('#home_search_result').addClass('uk-hidden');
+    }
+});
+</script>
 @endsection

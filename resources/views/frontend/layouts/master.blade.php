@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         @if ($agent->isMobile())
         <link rel="stylesheet" href="{{asset('frontend/css/mobile.css')}}" />
