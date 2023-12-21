@@ -193,6 +193,7 @@ class HomeController extends Controller
     }
 
     public function holidays() {
-        return view('frontend.pages.holiday-list');
+        $agent = new Agent;
+        return view('frontend.pages.holiday-list', compact('agent'));
     }
 }
