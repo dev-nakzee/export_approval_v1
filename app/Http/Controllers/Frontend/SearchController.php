@@ -56,6 +56,7 @@ class SearchController extends Controller
         $product_table = Product::select('product_id')
             ->where('product_name', 'LIKE', "%{$keywords}%")
             ->orWhere('product_compliance', 'LIKE', "%{$keywords}%")
+            ->orWhere('product_technical_name', 'LIKE', "%{$keywords}%")
             ->orWhere('product_content', 'LIKE', "%{$keywords}%")
             ->orWhere('seo_keywords', 'LIKE', "%{$keywords}%")
             ->get();
