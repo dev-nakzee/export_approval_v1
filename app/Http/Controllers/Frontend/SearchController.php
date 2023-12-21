@@ -114,7 +114,7 @@ class SearchController extends Controller
         $html = $html.'</ul>';
 
         if (strpos($html, '<li>') === false) {
-            $html = "<h3 class='uk-heading'>No result found</h3>";
+            $html = "<h3 class='uk-heading uk-text-center'>No result found</h3>";
         }
         return response($html);
     }
