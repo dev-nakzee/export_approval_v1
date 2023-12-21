@@ -127,7 +127,7 @@
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
                     <span class="uk-margin-small uk-text-bold">
-                        <img class="uk-margin-remove uk-border-circle title-page-image" src="{{asset('frontend/images/file.png')}}" alt="Download Image">
+                        <img class="uk-margin-right uk-border-circle title-page-image" src="{{asset('frontend/images/file.png')}}" alt="Download Image">
                         {{'Downloads'}}
                     </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>

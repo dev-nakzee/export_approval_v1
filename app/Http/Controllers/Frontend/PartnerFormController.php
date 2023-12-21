@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Validator;
+use Jenssegers\Agent\Agent;
 
 class PartnerFormController extends Controller
 {
@@ -19,7 +20,8 @@ class PartnerFormController extends Controller
     public function business_associate() 
     {
         $countries = Countries::get();
-        return view('frontend.pages.ba', compact('countries'));
+        $agent = new Agent;
+        return view('frontend.pages.ba', compact('countries', 'agent'));
     }
 
     public function ba_save(Request $request): RedirectResponse
@@ -71,7 +73,8 @@ class PartnerFormController extends Controller
     public function resident_executive() 
     {
         $countries = Countries::get();
-        return view('frontend.pages.re', compact('countries'));
+        $agent = new Agent;
+        return view('frontend.pages.re', compact('countries', 'agent'));
     }
 
     public function re_save(Request $request): RedirectResponse

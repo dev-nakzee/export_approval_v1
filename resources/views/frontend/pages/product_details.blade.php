@@ -110,8 +110,8 @@
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
 
-                    <span class="uk-margin-small-left uk-text-bold">
-                        <img class="uk-margin-remove uk-border-circle title-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
+                    <span class="uk-text-bold">
+                        <img class="uk-margin-right uk-border-circle title-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
                         {{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>

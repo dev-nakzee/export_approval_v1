@@ -75,17 +75,21 @@
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
-        <h1>
-            <span class="uk-text-small" style="color: #8b8b8b;">{{'Info & Guidelines'}}</span>
-            <br>{{'Downloads'}}
-        </h1>
+        <div>
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/file.png')}}" alt="Download Image">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$categoryDownload->download_category}}</span>
+                <br>{{'Downloads'}}
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-            <li><span>{{'frontend.site.downloads'}}</span></li>
+            <li><a href="{{route('frontend.site.downloads')}}"><span>{{'Downloads'}}</span></a></li>
+            <li><span>{{$categoryDownload->download_category}}</span></li>
         </ul>
     </div>
 </section>
@@ -94,19 +98,22 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small uk-text-bold">{{'Downloads'}}</span>
+                    <span class="uk-margin-small uk-text-bold">
+                        <img class="uk-margin-right uk-border-circle title-page-image" src="{{asset('frontend/images/file.png')}}" alt="Download Image">
+                        {{'Downloads'}}
+                    </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
                             <li>
-                                <a href="{{route('frontend.site.download.service',$service->service_slug)}}">{{$service->service_name}}</a>
+                                <a class="uk-link-reset" href="{{route('frontend.site.download.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
                         @endif
                         @if($downloadCategory)
                         @foreach($downloadCategory as $category)
                         <li {{ ($category->download_category_slug === $categoryDownload->download_category_slug) ? 'class=uk-active':'' }}>
-                            <a href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
+                            <a class="uk-link-reset" href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
                         </li>
                         @endforeach
                         @endif

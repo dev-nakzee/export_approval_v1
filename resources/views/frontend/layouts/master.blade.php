@@ -181,17 +181,17 @@
             @include('frontend.components.clients')
         @endif
         @yield('clients')
-        <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom">
+        <section class="uk-section uk-background-default uk-footer website-footer uk-padding-remove-bottom uk-light">
             <div class="uk-padding-large uk-padding-remove-vertical" uk-grid id="footer">
                 <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Powered by</li>
                     </ul>
                     <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
-                    <p class="uk-text-small">Export Approval is a trusted platform for foreign manufacturers entering the Indian market. Our platform simplifies necessary Indian certifications and approvals for seamless product exportation to India.                    </p>
+                    <p class="">Export Approval is a trusted platform for foreign manufacturers entering the Indian market. Our platform simplifies necessary Indian certifications and approvals for seamless product exportation to India.                    </p>
                 </div>
                 <div class="uk-width-1-4@s">
-                    <ul class="uk-nav uk-nav-default">
+                    <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default">
                         <li class="uk-nav-header">Services</li>
                         @if($services)
                         @foreach($services as $service)
@@ -203,14 +203,14 @@
                         @endforeach
                         @endif
                     </ul>
-                    <ul class="uk-nav uk-nav-default">
+                    <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default">
                         <li class="uk-nav-header">Partner with us</li>
                         <li><a href="{{route('frontend.site.business.associate')}}">Business Associate</a></li>
                         <li><a href="{{route('frontend.site.resident.executive')}}">Resident Executive</a></li>
                     </ul>
                 </div>
                 <div class="uk-width-1-4@s">
-                    <ul class="uk-nav uk-nav-default">
+                    <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default">
                         <li class="uk-nav-header">Important Links</li>
                         <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
@@ -235,22 +235,24 @@
                     <div uk-grid class="uk-margin-remove-top uk-margin-remove-left uk-margin-bottom uk-margin-remove-right">
                         <span class="uk-nav-header uk-width-1-1 uk-margin-small">Contact us</span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="location" style="margin-top: 5px;"></i>
+                            <i uk-icon="icon:location; ratio: 1.25;" style="margin-top: 5px;"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small"><strong>Brand Liaison India Pvt. Ltd.</strong><br>110, Sharma Complex<br> A-2, Guru Nanak Pura, Laxmi Nagar<br>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove"><strong>Brand Liaison India Pvt. Ltd.</strong><br>110, Sharma Complex<br> A-2, Guru Nanak Pura, Laxmi Nagar<br>
                             Delhi - 110092, India</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="whatsapp"></i>
+                            <i uk-icon="icon:whatsapp; ratio: 1.25;"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">+91-9810363988</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove">+91-9810363988</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
                         <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="mail"></i>
+                            <i uk-icon="icon:mail; ratio: 1.25;"></i>
                         </span>
-                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove uk-text-small">info@bl-india.com</p>
+                        <p class="uk-width-4-5 uk-padding-remove uk-margin-remove">info@bl-india.com</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
-                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove"></span>
+                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
+                            <i uk-icon="icon:social; ratio: 1.25;"></i>
+                        </span>
                         <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
                             <a href="" class="facebook" uk-icon="facebook"></a>
                             <a href="" class="twitter" uk-icon="instagram"></a>

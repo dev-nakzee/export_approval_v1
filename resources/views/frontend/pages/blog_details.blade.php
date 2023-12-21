@@ -47,9 +47,13 @@
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
-        <h1 class="uk-padding-small">
-            {{'Blog - '. $blog->blog_category_name}}
-        </h1>
+        <div>
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/blog.png')}}" alt="Blogs Image">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$blog->blog_category_name}}</span>
+                <br>  {{'Blogs'}}
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
@@ -67,12 +71,15 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-margin-small-left uk-text-bold">{{'Blog categories'}}</span>
+                    <span class="uk-text-bold">
+                        <img class="uk-border-circle title-page-image uk-margin-right" src="{{asset('frontend/images/blog.png')}}" alt="Blog Image">
+                        {{'Blog Categories'}}
+                    </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($categories)
                         @foreach($categories as $category)
                             <li>
-                                <a href="{{route('frontend.site.blog.category',$category->blog_category_slug)}}">{{$category->blog_category_name}}</a>
+                                <a class="uk-link-reset" href="{{route('frontend.site.blog.category',$category->blog_category_slug)}}">{{$category->blog_category_name}}</a>
                             </li>
                         @endforeach
                         @endif

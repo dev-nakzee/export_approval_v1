@@ -295,6 +295,19 @@ body {
     color: #ffffff;
 }
 
+/* Partner form */
+.partner-form-btn {
+    border: 2px solid #052faa;
+    background-color: #ffffff;
+    color: #052faa;
+}
+
+.partner-form-btn:hover {
+    border: 2px solid #052faa;
+    background-color: #052faa;
+    color: #ffffff;
+}
+
 /* Footer section */
 
 .clients-scroll {

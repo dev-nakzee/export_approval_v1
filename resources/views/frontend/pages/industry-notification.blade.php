@@ -78,7 +78,7 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <div>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/governance.png')}}" alt="Blogs Image">
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/governance.png')}}" alt="Notifications Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{'All Compliances'}}</span>
             <br>{{'Industrial Notifications'}}
@@ -100,14 +100,14 @@
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
                     <span class="uk-text-bold">
-                        <img class="uk-margin-remove uk-border-circle title-page-image uk-margin-right" src="{{asset('frontend/images/governance.png')}}" alt="notification Image">
+                        <img class="uk-border-circle title-page-image uk-margin-right" src="{{asset('frontend/images/governance.png')}}" alt="notification Image">
                         {{'Industrial Notifications'}}
                     </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
                             <li>
-                                <a href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
+                                <a class="uk-link-reset" href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
                         @endif

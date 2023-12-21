@@ -48,9 +48,13 @@
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
-        <h1 class="uk-padding-small">
-            {{'Media Coverage'}}
-        </h1>
+        <div>
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/microphone.png')}}" alt="Media Coverage Image">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
+                <br> {{'Media Coverage'}}
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
