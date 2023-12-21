@@ -14,9 +14,9 @@
     <meta name="format-detection" content="telephone=no" />
 
     @endsection
+@section('content')
+@if ($agent->isMobile())
 
-    @section('content')
-    @if ($agent->isMobile())
     <section class="uk-section uk-padding-small" style="background-color: {{$sections[0]->section_color}}">
         <span style="text-align: center !important;">
         {!! $sections[0]->section_content !!}
@@ -206,9 +206,9 @@
         @endif
     </section>
     @endif
-    @endsection
+
     @else
-    @section('content')
+
     <section class="uk-section home-section-1 uk-child-width-expand@s uk-padding-large uk-padding-remove-vertical uk-padding-remove-right" uk-grid style="background-color: {{$sections[0]->section_color}}">
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
@@ -400,8 +400,9 @@
         @endif
     </section>
     @endif
-    @endsection
-    @endif
+    
+@endif
+@endsection
     @section('scripts')
 
     <script>
@@ -425,4 +426,4 @@
         }
     });
     </script>
-    @endsection
+@endsection
