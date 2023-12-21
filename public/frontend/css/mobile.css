@@ -275,6 +275,13 @@ body {
     color: #075e54;
 }
 
+/* Media coverage images */
+
+.media-blocks img {
+    border: #a3a3a3 solid 1px !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+}
 
 /* Brochure form  */
 .brochure-form-submit {
