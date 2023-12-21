@@ -95,8 +95,8 @@
         <div uk-grid>
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
-                    <span class="uk-padding-remove-left uk-text-bold">
-                        <img class="uk-margin-remove uk-border-circle title-page-image" src="{{asset('frontend/images/blog.png')}}" alt="Blog Image">
+                    <span class="uk-text-bold">
+                        <img class="uk-border-circle title-page-image uk-margin" src="{{asset('frontend/images/blog.png')}}" alt="Blog Image">
                         {{'Blog Categories'}}
                     </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>

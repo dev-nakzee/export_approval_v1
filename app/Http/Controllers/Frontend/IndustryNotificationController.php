@@ -28,7 +28,7 @@ class IndustryNotificationController extends Controller
         ->orderBy('notices.created_at', 'DESC')
         ->get();
         $agent = new Agent;
-        return view('frontend.pages.industry-notification', compact('services', 'notices'));
+        return view('frontend.pages.industry-notification', compact('services', 'notices', 'agent'));
     }
 
     public function service(Request $request, $service)

@@ -19,7 +19,7 @@
 <section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
-            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/microphone.png')}}" alt="">
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/gallery.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
                 <br> {{'Gallery'}}
