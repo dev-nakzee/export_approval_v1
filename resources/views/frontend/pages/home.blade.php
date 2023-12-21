@@ -22,10 +22,10 @@
         {!! $sections[0]->section_content !!}
         </span>
         <div class="uk-margin-medium-bottom">
-            <form id="search_form" action="{{route('frontend.site.search.page')}}" method="POST">
+            <form id="search_form">
             @csrf
             <div class="uk-inline uk-width-expanded">
-                <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+                <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" disabled style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
                 <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
                 <div id="home_search_result" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small uk-overflow-auto">
@@ -217,7 +217,7 @@
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
-                <form id="search_form" action="{{route('frontend.site.search.page')}}" method="POST">
+                <form id="search_form">
                 @csrf
                 <div class="uk-inline uk-width-expanded">
                     <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
