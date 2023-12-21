@@ -235,6 +235,47 @@ body {
     color: #ffffff;
 }
 
+/* Social section */
+.social-share-section a {
+    border: 1px solid #a3a3a3;
+    padding: 3px !important;
+    border-radius: 5px;
+    font-size: 12px !important;
+}
+.social-share-section span {
+    font-size: 12px !important;
+    margin-bottom: 20px !important;
+}
+.social-share-section a.twitter:hover {
+    border: 1px solid #a3a3a3;
+    padding: 3px !important;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+    color: #000;
+}
+.social-share-section a.facebook:hover {
+    border: 1px solid #a3a3a3;
+    padding: 3px !important;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+    color: #1877F2;
+}
+.social-share-section a.linkedin:hover {
+    border: 1px solid #a3a3a3;
+    padding: 3px !important;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+    color: #0077b5;
+}
+.social-share-section a.whatsapp:hover {
+    border: 1px solid #a3a3a3;
+    padding: 3px !important;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+    color: #075e54;
+}
+
+
 /* Brochure form  */
 .brochure-form-submit {
     border: 2px #052faa solid;

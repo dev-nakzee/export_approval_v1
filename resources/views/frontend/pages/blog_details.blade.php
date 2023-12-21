@@ -1,5 +1,50 @@
 @extends('frontend.layouts.master', ['pages' => 'Blog Details'])
 @section('content')
+@if($agent->isMobile())
+<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
+    <div class="uk-container uk-text-center">
+        <div>
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/blog.png')}}" alt="">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$blog->blog_category_name}}</span>
+                <br>{{'Blogs'}}
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="uk-section uk-padding-small uk-padding-remove-vertical">
+    <div class="uk-padding-small">
+        <ul class="uk-breadcrumb uk-text-center uk-margin-remove">
+            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><a href="{{route('frontend.site.blog')}}">Blogs</a></li>
+            <li><a href="{{route('frontend.site.blog.category', $category_slug)}}">{{$category_slug}}</a></li>
+            <li><span>{{$blog->blog_title}}</span></li>
+        </ul>
+    </div>
+</section>
+<section class="uk-section uk-padding-small">
+    <div class="uk-section uk-padding-remove">
+        @if($blog)
+        <article class="uk-article">
+            <h1 class="uk-article-title blog-detail-title">{{$blog->blog_title}}</h1>
+            <p class="uk-article-meta">Written by Export Approval on {{$blog->created_at}}</p>
+            <img class="uk-margin-bottom uk-width-1-1" src="{{$blog->media_path}}" alt="{{$blog->img_alt}}">                   
+            <div>
+                {!! $blog->blog_content !!}
+            </div>
+        
+        </article>
+        @endif
+    </div>
+    <div class="uk-margin-top uk-margin-bottom social-share-section uk-text-center">
+        <span class="uk-text-bold">Share this blog</span><br>
+        <a href="" class="twitter" uk-icon="twitter"></a>
+        <a href="" class="facebook" uk-icon="facebook"></a>
+        <a href="" class="linkedin" uk-icon="linkedin"></a>
+    </div>
+</section>
+@include('frontend.components.downloadbrochure')
+@else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1 class="uk-padding-small">
@@ -67,6 +112,7 @@
         </div>
     </div>
 </section>
+@endif
 @endsection
 @section('scripts')
 <script type="text/javascript">

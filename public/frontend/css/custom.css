@@ -201,7 +201,7 @@ iframe {
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
-    width: 90%;
+    width: 100%;
     z-index: 10 !important;
     background-color: #fff !important;
 }
@@ -211,7 +211,7 @@ iframe {
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
-    width: 90%;
+    width: 100%;
     z-index: 10 !important;
     background-color: #fff !important;
 }

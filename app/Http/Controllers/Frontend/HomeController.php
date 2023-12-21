@@ -164,7 +164,8 @@ class HomeController extends Controller
         foreach ($news as $key => $value) {
             $news[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        return view('frontend.pages.media_coverage', compact('news'));
+        $agent = new Agent;
+        return view('frontend.pages.media_coverage', compact('news', 'agent'));
     }
 
     public function gallery()
