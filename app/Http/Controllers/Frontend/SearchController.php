@@ -108,7 +108,7 @@ class SearchController extends Controller
             $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.product', $product->product_slug).'">Product - '.$product->product_name.'</a></li>';
         }
         foreach ($notices as $notice) {
-            $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.service', $notice->notice_slug).'">Notice - '.$notice->notice_title.'</a></li>';
+            $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.industry-notification.detail', [$notice->service_slug, $notice->notice_slug]).'">Notice - '.$notice->notice_title.'</a></li>';
         }
         $html = $html.'</ul>';
         return response($html);
