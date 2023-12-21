@@ -101,6 +101,7 @@ class SearchController extends Controller
             ->whereIn('notice_id', $notice_id)
             ->get();
         $html = '<ul class="uk-list uk-list-collapse uk-list-striped">';
+        
         foreach ($services as $service) {
             $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.service', $service->service_slug).'">Service - '.$service->service_name.'</a></li>';
         }
@@ -111,6 +112,10 @@ class SearchController extends Controller
             $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.industry-notification.detail', [$notice->service_slug, $notice->notice_slug]).'">Notice - '.$notice->notice_title.'</a></li>';
         }
         $html = $html.'</ul>';
+
+        if (strpos($html, '<li>') === false) {
+            $html = "<h3 class='uk-heading'>No result found</h3>";
+        }
         return response($html);
     }
 }
