@@ -42,24 +42,27 @@
             </ul>
         </div>
     </div>
-    <div class="uk-margin">
+    <div class="uk-margin uk-text-center uk-text-bold">
         {{ 'All Downloads' }}
     </div>
     <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
         <thead>
             <tr>
-                <th>#</th>
-                <th class="uk-table-expand">Product</th>
+                <th class="uk-table-small">#</th>
+                <th class="uk-table-expand uk-text-nowrap">Product</th>
                 <th>Infomation</th>
                 <th>Guidelines</th>
             </tr>
         </thead>
         <tbody>
+            @php
+            $i = 0;
+            @endphp
             @if($downloads)
             @foreach($downloads as $download)
             <tr>
-                <td>{{$loop->iteration}}</td>
-                <td>{{$download->product_name}}</td>
+                <td class="uk-table-shrink">{{$loop->iteration}}</td>
+                <td class="uk-table-nowrap">{{$download->product_name}}</td>
                 <td>
                     @if($download->information)
                     <a class="view-file" href="{{$download->information}}" target="black">View</a> / <a class="download-file" href="{{$download->information}}" download>Downloads</a>
@@ -71,23 +74,33 @@
                     @endif
                 </td>
             </tr>
+            @if($loop->last)
+            @php
+            $i = $loop->iteration + 1;
+            @endphp
+            @endif
             @endforeach
             @endif
             @if($otherDownload)
             @foreach($otherDownload as $other)
             <tr>
-                <td>{{$loop->iteration}}</td>
+                <td>{{$i}}</td>
                 <td>{{$other->download_name}}</td>
                 <td colspan="2">
                     <a class="view-file" href="{{$other->doc_path}}" target="black">View</a> / <a class="download-file" href="{{$other->doc_path}}" download>Downloads</a>
                 </td>
                 <td hidden></td>
             </tr>
+            @php
+            $i = $i + 1;
+            @endphp
             @endforeach
             @endif
         </tbody>
     </table>
+
 </section>
+@include('frontend.components.downloadbrochure')
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
@@ -158,6 +171,9 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                $i = 0;
+                                @endphp
                                 @if($downloads)
                                 @foreach($downloads as $download)
                                 <tr>
@@ -174,18 +190,26 @@
                                         @endif
                                     </td>
                                 </tr>
+                                @if($loop->last)
+                                @php
+                                $i = $loop->iteration + 1;
+                                @endphp
+                                @endif
                                 @endforeach
                                 @endif
                                 @if($otherDownload)
                                 @foreach($otherDownload as $other)
                                 <tr>
-                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$i}}</td>
                                     <td>{{$other->download_name}}</td>
                                     <td colspan="2">
                                         <a class="view-file" href="{{$other->doc_path}}" target="black">View</a> / <a class="download-file" href="{{$other->doc_path}}" download>Downloads</a>
                                     </td>
                                     <td hidden></td>
                                 </tr>
+                                @php
+                                $i = $i + 1;
+                                @endphp
                                 @endforeach
                                 @endif
                             </tbody>
@@ -203,9 +227,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/dataTables.uikit.min.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/responsive.dataTables.min.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('frontend/datatables/rowReorder.dataTables.min.css')}}" />
-<style>
 
-</style>
 <script type="text/javascript" src="{{asset('frontend/datatables/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.uikit.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/datatables/dataTables.responsive.min.js')}}"></script>
@@ -225,6 +247,10 @@
             },
             language: {
                 searchPlaceholder: "Search",
+                "paginate": {
+                    "previous": "<",
+                    "next": ">",
+                }
             }
         });
     });

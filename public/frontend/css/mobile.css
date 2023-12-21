@@ -140,6 +140,89 @@ body {
     font-weight: 500;
 }
 
+/* Blogs */
+.blogs-group-title {
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+.blogs-group-image {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    object-fit: fill;
+}
+.blog-detail-image {
+    width: 100% !important;
+}
+.blog-content p {
+    display: none;
+}
+.blog-content p:first-child {
+    display: block;
+    font-size: 14px !important;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}
+.slider-arrows {
+    background-color: #e7e7e7 !important;
+    color: #000000 !important;
+    border: 1px #052faa solid !important;
+}
+.blog-content p:first-child span {
+    font-size: 14px !important;
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}
+.blog-content ol, .blog-content ul, .blog-content div, .blog-content p, .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6, .blog-content blockquote, .blog-content pre, .blog-content table, .blog-content dl, .blog-content address, .blog-content fieldset, .blog-content form, .blog-content hr, .blog-content noscript, .blog-content iframe, .blog-content figure, .blog-content figcaption, .blog-content audio, .blog-content video, .blog-content canvas, .blog-content details, .blog-content marquee, .blog-content template {
+    display: none;
+}
+
+.blog-detail-title {
+    font-size: 24px !important;
+    font-weight: 500;
+    color: #000;
+}
+
+.blog-pagination nav ul.pagination{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.blog-pagination nav ul.pagination li {
+    display: inline-block;
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #052faa;
+    padding: 5px 15px !important;
+    border: 1px solid #c6c6c6;
+}
+
+.blog-pagination nav ul.pagination li.active {
+    display: inline-block;
+    padding: 5px 15px !important;
+    border: 1px solid #ed462f;
+    color: #ed462f;
+}
+
+.blog-pagination nav ul.pagination li.disabled {
+    display: inline-block;
+    padding: 5px 15px !important;
+    border: 1px solid #c6c6c6;
+}
+
+.blog-pagination nav ul.pagination li:hover {
+    color: #ed462f;
+}
+
 /* Contact Page */
 .contact-form-submit {
     border: 2px #052faa solid;
