@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use App\Models\Backend\Document;
 use DataTables;
+use Jenssegers\Agent\Agent;
 
 class IndustryNotificationController extends Controller
 {
@@ -26,6 +27,7 @@ class IndustryNotificationController extends Controller
         ->join('services', 'services.service_id', '=', 'notices.service_id')
         ->orderBy('notices.created_at', 'DESC')
         ->get();
+        $agent = new Agent;
         return view('frontend.pages.industry-notification', compact('services', 'notices'));
     }
 
@@ -38,7 +40,8 @@ class IndustryNotificationController extends Controller
             ->where('notices.service_id', $notice_service->service_id)
             ->orderBy('notices.created_at', 'DESC')
             ->get();
-        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service'));
+        $agent = new Agent;
+        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service', 'agent'));
     }
 
     public function detail(Request $request, $service, $notice_slug)
@@ -48,6 +51,7 @@ class IndustryNotificationController extends Controller
         $notice = Notices::where('notice_slug', $notice_slug)->first();
         $document = Document::where('doc_id', $notice->notice_document)->first();
         $media = Media::where('media_id', $notice->media_id)->first();
-        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media'));
+        $agent = new Agent;
+        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media', 'agent'));
     }
 }

@@ -15,6 +15,43 @@
 
 @endsection
 @section('content')
+@if($agent->isMobile())
+<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" uk-sticky="offset: 80">
+    <div class="uk-text-center">
+        <div>
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/microphone.png')}}" alt="">
+            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
+                <br> {{'Gallery'}}
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="uk-section uk-padding-small uk-padding-remove-vertical">
+    <div class="uk-padding-small">
+        <ul class="uk-breadcrumb uk-text-center uk-margin-remove">
+            <li><a href="{{route('frontend.site.home')}}">Home</a></li>
+            <li><span>{{'Gallery'}}</span></li>
+        </ul>
+    </div>
+</section>
+<section class="uk-section uk-padding-small">
+    <div class="uk-child-width-1-4@m uk-padding-remove-vertical" uk-height-match=".gallery-image" uk-grid uk-lightbox="animation: scale">
+        @if($images)
+        @foreach($images as $img)
+        <div>
+            <div class="uk-card uk-card-default uk-card-body gallery-image uk-margin-small-bottom uk-padding-small">
+                <a class="uk-inline" href="{{$img->media_path}}" data-caption="{{$img->gallery_image_title}}">
+                    <img src="{{$img->media_path}}" width="1800" height="1200" alt="{{$img->img_alt}}">
+                </a>
+                <h4 class="uk-margin-small uk-text-center">{{$img->gallery_image_title}}</h4>
+            </div>
+        </div>
+        @endforeach
+        @endif
+    </div>
+</section>
+@else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
     <div class="uk-container uk-text-center">
         <h1 class="uk-padding-small">
@@ -48,6 +85,7 @@
         @endif
     </div>
 </section>
+@endif
 @endsection
 @section('scripts')
 
