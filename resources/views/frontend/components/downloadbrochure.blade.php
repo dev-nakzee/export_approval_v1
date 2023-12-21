@@ -64,7 +64,6 @@
                 </div>
             </div>
             <div class="uk-width-1-1@m uk-margin-small-top">    
-
                 <div class="uk-form-controls">
                     <textarea name="message" class="uk-textarea" placeholder="Enter you query along with product details"></textarea>
                 </div>

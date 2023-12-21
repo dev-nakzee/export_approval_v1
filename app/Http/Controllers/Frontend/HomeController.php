@@ -188,10 +188,11 @@ class HomeController extends Controller
             ->where('section_status', 1)
             ->orderBy('section_order', 'asc')
             ->get();
-        return view('frontend.pages.contact', compact('sections', 'countries'));
+        $agent = new Agent;
+        return view('frontend.pages.contact', compact('sections', 'countries', 'agent'));
     }
 
     public function holidays() {
-        return view('frontend.pages.holiday-list', compact('holidays'));
+        return view('frontend.pages.holiday-list');
     }
 }
