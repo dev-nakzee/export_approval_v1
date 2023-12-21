@@ -101,13 +101,13 @@ class SearchController extends Controller
             ->get();
         $html = '<ul class="uk-list uk-list-collapse uk-list-striped">';
         foreach ($services as $service) {
-            $html = $html. '<li><a href="'.route('frontend.site.service', $service->service_slug).'">Service - '.$service->service_name.'</a></li>';
+            $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.service', $service->service_slug).'">Service - '.$service->service_name.'</a></li>';
         }
         foreach ($products as $product) {
-            $html = $html. '<li><a href="'.route('frontend.site.product', $product->product_slug).'">Product - '.$product->product_name.'</a></li>';
+            $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.product', $product->product_slug).'">Product - '.$product->product_name.'</a></li>';
         }
         foreach ($notices as $notice) {
-            $html = $html. '<li><a href="'.route('frontend.site.service', $notice->notice_slug).'">Notice - '.$notice->notice_title.'</a></li>';
+            $html = $html. '<li><a class="uk-link-reset" href="'.route('frontend.site.service', $notice->notice_slug).'">Notice - '.$notice->notice_title.'</a></li>';
         }
         $html = $html.'</ul>';
         return response($html);
