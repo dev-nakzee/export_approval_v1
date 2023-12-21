@@ -183,9 +183,9 @@
             },
             language: {
                 searchPlaceholder: "Search",
-                paginate: {
-                    "previous": "<",
-                    "next": ">",
+                "paginate": {
+                    "previous": "<span uk-icon='chevron-left'></span>",
+                    "next": "<span uk-icon='chevron-right'></span>",
                 }
             }
         });
