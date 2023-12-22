@@ -265,6 +265,9 @@ $(document).on("submit", "#brochure-form", function(e) {
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         });
+    } else {
+        $('#form-submit').removeClass('uk-hidden');
+        $('.loading').addClass('uk-hidden');
     }
     
 });
