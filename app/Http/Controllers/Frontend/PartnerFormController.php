@@ -50,11 +50,41 @@ class PartnerFormController extends Controller
 
             // Subject
             $subject1 = 'Your application is submitted';
-            $subject = $data['contact_person_name'].' form for '. $data['partner_type'];
+            $subject = "Business Associate Interest by ".$data['contact_person_name'];
 
             // Message
-            $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Application for position of Business Associate<strong><br>'.$data['organization'].'<br>'.$data['industry'].'<br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['website'].'<br>'.$data['partner_details'].'</p>';
+            $thanks = "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Hello ".$data['contact_person_name'].",</p>".
+
+            "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Thank you for your interest in becoming a Business Associate Partner with Export Approval!</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We recognize and value the time and effort you have invested in completing the form to initiate this partnership with Export Approval, powered by Brand Liaison - a compliance consultant company. We specialize in providing comprehensive assistance and support to foreign manufacturers for required Indian approvals and certifications to export their products to India. Our commitment to facilitating seamless export approval processes for our clients sets us apart in the industry.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We are thrilled about the prospect of having you as a valued Business Associate Partner, and we believe that your expertise will contribute significantly to the success of our collaborative efforts. Our team is currently reviewing the information you provided, and we will get back to you soon to discuss potential next steps and answer any questions you may have.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>If you have any immediate inquiries or wish to reach out to us, please feel free to contact us at +91-9810363988.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We look forward to working together and creating mutually beneficial relationships. Wishing you a great day ahead!</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Best regards,<br>
+            Team Brand Liaison<br>
+            Contact No: +91-9250056788, +91-8130615678<br>
+            Email: info@bl-india.com </p>";
+
+            $message = '<table style="width:100%; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">'.
+            '<tr><th colspan="2">Application for position of Resident Executive</th></tr>'.
+            '<tr><th>Organisation</th><td>'.$data['organization'].'</td></tr>'.
+            '<tr><th>Industry</th><td>'.$data['industry'].'</td></tr>'.
+            '<tr><th>Full Name</th><td>'.$data['contact_person_name'].'</td></tr>'.
+            '<tr><th>Designation</th><td>'.$data['designation_name'].'</td></tr>'.
+            '<tr><th>Address</th><td>'.$data['address_street'].'</td></tr>'.
+            '<tr><th>City</th><td>'.$data['city'].'</td></tr>'.
+            '<tr><th>State</th><td>'.$data['state'].'</td></tr>'.
+            '<tr><th>Country</th><td>'.$data['country'].'</td></tr>'.
+            '<tr><th>Zip Code</th><td>'.$data['zip'].'</td></tr>'.
+            '<tr><th>Phone</th><td>'.$data['country_code'].$data['phone_number'].'</td></tr>'.
+            '<tr><th>Email</th><td>'.$data['email'].'</td></tr>'.
+            '<tr><th>Website</th><td>'.$data['website'].'</td></tr>'.
+            '<tr><th>partner_details</th><td>'.$data['partner_details'].'</td></tr></table>';
 
             // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -100,11 +130,41 @@ class PartnerFormController extends Controller
 
             // Subject
             $subject1 = 'Your application is submitted';
-            $subject = $data['contact_person_name'].' form for '. $data['partner_type'];
+            $subject = "Resident Executive Interest by ".$data['contact_person_name'];
 
             // Message
-            $thanks = '<p>Thank you for your interest.</p>';
-            $message = '<p><strong>Application for position of Resident Executive<strong><br>'.$data['contact_person_name'].'<br>'.$data['designation_name'].'<br>'.$data['address_street'].'<br>'.$data['address_street'].'<br>'.$data['city'].'<br>'.$data['state'].'<br>'.$data['country'].'<br>'.$data['zip'].'<br>'.$data['country_code'].$data['phone_number'].'<br>'.$data['email'].'<br>'.$data['experience'].'<br>'.$data['partner_details'].'</p>';
+            $thanks = "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Dear ".$data['contact_person_name'].",</p>".
+
+            "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Thank you for your interest in becoming a Resident Executive Partner with Export Approval!</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We sincerely appreciate the time and effort you dedicated to completing the form, demonstrating your commitment to contributing as an Authorized Indian Representative (AIR) for foreign manufacturers.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Export Approval platform, powered by Brand Liaison - a compliance consultant company, specializes in providing invaluable assistance and support to foreign manufacturers for essential Indian approvals and certifications required to export their products to India. As a Resident Executive Partner, your role will be crucial in connecting foreign manufacturers with the regulatory framework in India.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Our team is currently reviewing the information you provided, and we will get back to you shortly with the next steps in the onboarding process.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>If you have any immediate questions or concerns, please feel free to reach out to us at +91-9810363988.</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We look forward to the opportunity to collaborate with you. Wishing you a great day ahead!</p>
+            
+            <p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Best regards,<br/>
+            Team Brand Liaison</br>
+            Contact No: +91-9250056788, +91-8130615678</br>
+            Email: info@bl-india.com </p>";
+
+            $message = '<table style="width:100%; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">'.
+            '<tr><th colspan="2">Application for position of Resident Executive</th></tr>'.
+            '<tr><th>Full Name</th><td>'.$data['contact_person_name'].'</td></tr>'.
+            '<tr><th>Organisation</th><td>'.$data['designation_name'].'</td></tr>'.
+            '<tr><th>Address</th><td>'.$data['address_street'].'</td></tr>'.
+            '<tr><th>City</th><td>'.$data['city'].'</td></tr>'.
+            '<tr><th>State</th><td>'.$data['state'].'</td></tr>'.
+            '<tr><th>Country</th><td>'.$data['country'].'</td></tr>'.
+            '<tr><th>Zip Code</th><td>'.$data['zip'].'</td></tr>'.
+            '<tr><th>Phone</th><td>'.$data['country_code'].$data['phone_number'].'</td></tr>'.
+            '<tr><th>Email</th><td>'.$data['email'].'</td></tr>'.
+            '<tr><th>experience</th><td>'.$data['experience'].'</td></tr>'.
+            '<tr><th>partner_details</th><td>'.$data['partner_details'].'</td></tr></table>';
 
             // To send HTML mail, the Content-type header must be set
             $headers  = 'MIME-Version: 1.0' . "\r\n";

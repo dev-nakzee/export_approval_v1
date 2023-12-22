@@ -72,7 +72,7 @@ class BrochureFormController extends Controller
 
         // Message
         $thanks = "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Hello ".$data['name'].",<br/>".
-        "Thank you for downloading our brochure for <b>".$service['service_name']."<b>!</p>".
+        "Thank you for downloading our brochure for <b>".$service['service_name']."</b>!</p>".
         "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>We appreciate your interest in Export Approval, powered by Brand Liaison - a compliance consultant company offering comprehensive support to foreign manufacturers in obtaining required Indian approvals and certifications to export their products to India. Our Export Approval platform is designed to provide seamless assistance, ensuring that your products meet the required standards for successful international trade.</p>".
         "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>Our team has received your interest, and we want to assure you that we are here to assist you promptly. You can expect to hear from us within the next 6 working hours.</p>".
         "<p style='font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #000;'>If you have any immediate questions or concerns, feel free to reach out to us at +91-9810363988.</p>".
@@ -82,16 +82,16 @@ class BrochureFormController extends Controller
         "Contact No: +91-9250056788, +91-8130615678<br>".
         "Email: info@bl-india.com</p>";
 
-        $message = '<table style="width:100%; font-family: Arial, Helvetica, sans-serif;">'.
-        '<tr><td colspan="2">Interest in '.$service['service_name'].' service brochure.</td></tr>'.
-        '<tr><td>Full Name</td><td>'.$data['name'].'</td></tr>'.
-        '<tr><td>Organisation</td><td>'.$data['organisation'].'</td></tr>'.
-        '<tr><td>Email</td><td>'.$data['email'].'</td></tr>'.
-        '<tr><td>Country</td><td>'.$data['country'].'</td></tr>'.
-        '<tr><td>Phone</td><td>'.$data['phone'].'</td></tr>'.
-        '<tr><td>Interested Service</td><td>'.$service['service_name'].'</td></tr>'.
-        '<tr><td>Source</td><td>'.$data['source'].'</td></tr>'.
-        '<tr><td>Message</td><td>'.$data['message'].'</td></tr></table>';
+        $message = '<table style="width:100%; font-family: Arial, Helvetica, sans-serif; font-size: 18px;">'.
+        '<tr><th colspan="2">Interest in '.$service['service_name'].' service brochure.</th></tr>'.
+        '<tr><th>Full Name</th><td>'.$data['name'].'</td></tr>'.
+        '<tr><th>Organisation</th><td>'.$data['organisation'].'</td></tr>'.
+        '<tr><th>Email</th><td>'.$data['email'].'</td></tr>'.
+        '<tr><th>Country</th><td>'.$data['country'].'</td></tr>'.
+        '<tr><th>Phone</th><td>'.$data['phone'].'</td></tr>'.
+        '<tr><th>Interested Service</th><td>'.$service['service_name'].'</td></tr>'.
+        '<tr><th>Source</th><td>'.$data['source'].'</td></tr>'.
+        '<tr><th>Message</th><td>'.$data['message'].'</td></tr></table>';
 
         // To send HTML mail, the Content-type header must be set
         $headers  = 'MIME-Version: 1.0' . "\r\n";
