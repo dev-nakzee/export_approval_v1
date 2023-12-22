@@ -17,7 +17,6 @@
         @yield('scripts')
         <script>
             $(document).ready(function(){
-                captcha();
                 $(window).scroll(function(){
                     var scrollTop = 80;
                     if($(window).scrollTop() >= scrollTop){
@@ -36,7 +35,7 @@
                         $('.ps-details-section').removeClass('ps-sidebar-fixed');  
                     }
                 });
-                // UIkit.modal('#site-pop-up').show();
+                UIkit.modal('#site-pop-up').show();
 
                 UIkit.icon.add('twitter','<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>');
 
@@ -277,7 +276,7 @@
                 <span uk-icon="icon: chevron-up; ratio: 1.5"></span>
             </a>
         </div>
-        {{-- <div id="site-pop-up" uk-modal>
+        <div id="site-pop-up" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
                 <h2 class="uk-modal-title">Headline</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -285,6 +284,6 @@
                     <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
                 </p>
             </div>
-        </div> --}}
+        </div>
     </body>
 </html>

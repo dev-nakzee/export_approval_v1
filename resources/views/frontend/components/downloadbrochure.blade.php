@@ -266,8 +266,6 @@ $(document).on("submit", "#brochure-form", function(e) {
             console.error('There has been a problem with your fetch operation:', error);
         });
     }
-
-    
     
 });
 </script>
