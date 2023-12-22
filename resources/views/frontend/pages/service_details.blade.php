@@ -22,7 +22,7 @@
         <div>
             <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_description}} For</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{!!$service->service_description!!} For</span>
                 <br> {{$service->service_name}}
             </h2>
         </div>
