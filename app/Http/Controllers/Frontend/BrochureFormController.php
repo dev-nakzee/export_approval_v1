@@ -66,27 +66,22 @@ class BrochureFormController extends Controller
         $to  = 'info@bl-india.com';
 
         // Subject
-        $subject1 = "<p>Hello ".$data['name'].",<br/>".
+        $subject1 = "Thank you for your interest";
 
+        $subject = $data['name'].' requested for '.$service['service_name'];
+
+        // Message
+        $thanks = "<p>Hello ".$data['name'].",<br/>".
         "Thank you for downloading our brochure for ".$service['service_name']."!</p>".
-        
         "<p>We appreciate your interest in Export Approval, powered by Brand Liaison - a compliance consultant company offering comprehensive support to foreign manufacturers in obtaining required Indian approvals and certifications to export their products to India. Our Export Approval platform is designed to provide seamless assistance, ensuring that your products meet the required standards for successful international trade.</p>".
-        
         "<p>Our team has received your interest, and we want to assure you that we are here to assist you promptly. You can expect to hear from us within the next 6 working hours.</p>".
-        
         "<p>If you have any immediate questions or concerns, feel free to reach out to us at +91-9810363988.</p>".
-        
         "<p>Wishing you a great day ahead!</p>".
-        
         "<p>Best regards,<br>".
         "Team Brand Liaison<br>".
         "Contact No: +91-9250056788, +91-8130615678<br>".
         "Email: info@bl-india.com</p>";
 
-        $subject = $data['name'].' requested for '.$service['service_name'];
-
-        // Message
-        $thanks = '<p>Thank you for your interest.</p>';
         $message = '<table style="width:100%">'.
         '<tr><td colspan="2">Interest in '.$service['service_name'].' service brochure.</td></tr>'.
         '<tr><td>Full Name</td><td>'.$data['name'].'</td></tr>'.
