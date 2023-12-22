@@ -201,7 +201,7 @@ iframe {
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
-    width: 100%;
+    width: 110%;
     z-index: 10 !important;
     background-color: #fff !important;
 }
@@ -211,7 +211,7 @@ iframe {
     left: 4.5%;
     padding: 15px;
     padding-left: 5px;
-    width: 100%;
+    width: 110%;
     z-index: 10 !important;
     background-color: #fff !important;
 }
@@ -222,7 +222,7 @@ iframe {
         bottom: 0;
         left: 2.5%;
         padding: 15px;
-        width: 90%;
+        width: 110%;
         z-index: 10 !important;
         background-color: #fff !important;
     }
