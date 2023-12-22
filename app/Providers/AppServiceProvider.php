@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Pagination\Paginator;
 use Jenssegers\Agent\Agent;
 
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -37,12 +36,12 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer('frontend.layouts.master', function($view){
-            // $countries = Countries::select('id','name', 'iso', 'iso3', 'phonecode')->get();
             $services = Services::select('service_id','service_name', 'service_slug', 'img_alt', 'media_path')
             ->join('media', 'services.media_id', 'media.media_id')
             ->where('service_status', 1)
             ->orderBy('service_order', 'asc')
             ->get();
+
             $agent = new Agent;
             $view->with(['services' => $services, 'agent' => $agent]);
         });
