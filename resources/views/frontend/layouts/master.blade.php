@@ -82,7 +82,7 @@
                 <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
             </a>
             <div class="uk-navbar-item">
-                <a href="#main_menu" uk-toggle>
+                <a href="#main_menu" uk-toggle class="mobile-nav-toggle">
                     <span uk-icon="icon: menu; ratio: 2.5"></span>
                 </a>
             </div>
