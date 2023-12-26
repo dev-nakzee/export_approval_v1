@@ -7,7 +7,7 @@
         </p>
         <span class="section-tagline">Process &amp; Guidelines</span>
     </div>
-    <form class="uk-margin-bottom" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
+    <form class="uk-margin-large-bottom" id="brochure-form" method="POST" action="{{route('frontend.site.brochure.store')}}">
         @csrf
         <div uk-grid>
             <div class="uk-width-1-2@m uk-margin-small-top">

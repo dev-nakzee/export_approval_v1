@@ -66,7 +66,6 @@
         </div>
         @endforeach
         @endif
-        @include('frontend.components.downloadbrochure')
     </div>
 </section>
 @include('frontend.components.downloadbrochure')

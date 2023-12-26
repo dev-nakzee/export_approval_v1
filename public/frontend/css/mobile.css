@@ -28,7 +28,7 @@ body {
 }
 
 .mobile-menu-poweredby {
-    padding-left: 25px !important;
+    padding-left: 12px !important;
     font-size: 16px !important;
     font-weight: 500;
     color: #052faa;
@@ -380,6 +380,11 @@ table.dataTable {
     border: 2px #052faa solid;
     color: #ffffff;
 }
+.brochure-section {
+    box-shadow: 1px 3px 7px #a8a8a8 !important;
+    z-index: 97 !important;
+    position: relative !important;
+}
 
 /* Partner form */
 .partner-form-btn {
@@ -402,8 +407,7 @@ table.dataTable {
 /* Footer section */
 
 .clients-scroll {
-    padding-top: 80px !important;
-    z-index: 99 !important;
+    z-index: 90 !important; position: relative !important;
 }
 .clients-scroll h3 {
     font-weight: 500;

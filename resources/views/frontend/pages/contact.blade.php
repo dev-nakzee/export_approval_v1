@@ -21,7 +21,7 @@
         <div>
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/communicate.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$sections[0]->section_name}}</span>
                 <br>  {{'Contact Us'}}
             </h2>
         </div>
@@ -38,9 +38,6 @@
 
 <section class="uk-section uk-padding-small">
     <div class="uk-text-center">
-        <p class="section-heading uk-margin-remove" style="color: #8a8a8a">
-            {{$sections[0]->section_name}} 
-        </p>
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
         <p class="section-description">{!! $sections[0]->section_description !!}</p>
     </div>
@@ -99,7 +96,7 @@
         <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/communicate.png')}}" alt="Blogs Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$sections[0]->section_name}}</span>
                 <br>  {{'Contact Us'}}
             </h2>
         </div>
@@ -113,13 +110,12 @@
         </ul>
     </div>
 </section>
-<section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
+<section class="uk-section home-section-3 uk-padding" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
         <p class="section-heading uk-margin-remove uk-padding-remove-vertical" style="color: #8a8a8a">
-            {{$sections[0]->section_name}} 
+
         </p>
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
-        <p class="section-description">{!! $sections[0]->section_description !!}</p>
     </div>
     <div class="uk-section uk-child-width-1-2@s uk-margin-right" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
