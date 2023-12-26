@@ -37,7 +37,7 @@
         </ul>
     </div>
 </section>
-<section class="uk-section uk-padding-small">
+{{-- <section class="uk-section uk-padding-small">
     <ul uk-accordion>
         @if($sections)
         @foreach($sections as $section)
@@ -102,6 +102,106 @@
         </li>
         @endif
     </ul>
+</section> --}}
+<section class="uk-section uk-padding-small">
+    <div class="uk-text-center">
+        <button class="uk-button uk-button-default uk-text-bolder" type="button">Download Categories <span uk-drop-parent-icon></span></button>
+        <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
+            <ul class="uk-list uk-list-divider uk-text-bolder">
+                @if($sections)
+                @foreach($sections as $section)
+                    <li>
+                        <a class="uk-link-reset" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
+                    </li>
+                    @if($loop->first)
+                        @if($service->service_product_show === 1) 
+                        <li>
+                            <a class="uk-link-reset" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                        </li>
+                        @endif
+                    @endif
+                @endforeach
+                @endif
+                <li>
+                    <a class="reset" href="#{{'download-brochure'}}">Download Brochure</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-width-3-4@m uk-padding-remove-right">
+        @if($sections)
+        @foreach($sections as $section)
+            <div class="ps-sections" id="{{$section->service_section_slug}}">
+                <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                    <span>{{$section->service_section_name}}<span>
+                </div>
+                <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                    {!! $section->service_section_content !!}
+                </div>
+            </div>
+            @if($loop->first)
+                @if($service->service_product_show === 1) 
+                <div class="ps-sections" id="mandatory-product-list">
+                    <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                        <span>Mandatory Product list<span>
+                    </div>
+                    <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                        <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Product Name</th>
+                                    <th>category</th>
+                                    @if($service->service_compliance)
+                                    @foreach(explode(',',$service->service_compliance) as $compliance)
+                                    @if($compliance)
+                                    <th>{{$compliance}}</th>
+                                    @endif
+                                    @endforeach
+                                    @endif
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($products as $product)
+                                <tr class="product-page-link" data-slug="{{$product->product_slug}}">
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$product->product_name}}</td>
+                                    <td>{{$product->product_category_name}}</td>
+                                    @if($service->service_compliance)
+                                    @foreach(unserialize($product->product_compliance) as $compliance)
+                                        <td>{{$compliance}}</td>
+                                    @endforeach
+                                    @endif
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @endif
+            @endif
+        @endforeach
+        @endif
+        @if($service->faqs) 
+        <div class="ps-sections" id="{{'frequently-asked-questions'}}">
+            <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                <span>{{'Frequently Asked Questions'}}<span>
+            </div>
+            <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                <ul uk-accordion class="uk-margin-large-bottom">
+                    @foreach(json_decode($service->faqs, true) as $que=>$ans)
+                    <li class="faq-element @if ($loop->first) uk-open @endif">
+                        <a class="uk-accordion-title faq-question uk-margin-top uk-margin-bottom" href>{{$loop->iteration}}. {{$que}}</a>
+                        <div class="uk-accordion-content faq-answer uk-margin-remove-top uk-margin-bottom">
+                            {{ $ans }}
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        @endif
+    </div>
 </section>
 @include('frontend.components.downloadbrochure')
 @else
@@ -118,7 +218,7 @@
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
-        
+
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
             <li><span>Services</span></li>
@@ -263,10 +363,6 @@
             "searching": true,
             "oLanguage": {
                 "sSearch": ""
-            },
-            responsive: true,
-            rowReorder: {
-                selector: 'td:nth-child(1)'
             },
             language: {
                 searchPlaceholder: "Search {{$service->service_name}} products",

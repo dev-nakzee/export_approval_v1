@@ -52,7 +52,7 @@
     <div class="uk-margin uk-text-center uk-text-bold">
 
     </div>
-    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
         <thead>
             <tr>
                 <th>#</th>
@@ -174,10 +174,6 @@
             "searching": true,
             "oLanguage": {
                 "sSearch": ""
-            },
-            responsive: true,
-            rowReorder: {
-                selector: 'td:nth-child(1)'
             },
             language: {
                 searchPlaceholder: "Search notifications",

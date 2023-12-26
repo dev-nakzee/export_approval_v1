@@ -257,6 +257,40 @@ body {
     margin: 0;
     padding: 0;
 }
+.ps-tab-header {
+    color: #052faa !important;
+    background-color: #e0e0e0;
+    font-size: 24px !important;
+    font-weight: 500;
+    padding: 10px !important;
+}
+
+.faq-element:first {
+    margin-top: 30px !important;
+}
+
+.faq-element {
+    border: 1px solid #b4b4b4;
+}
+
+.faq-question {
+    font-weight: 500;
+    font-size: 12pt;
+    padding: 5px;
+    color : #000;
+}
+.faq-answer {
+    font-size: 12pt;
+    padding: 5px;
+}
+
+/* Datatables */
+.dt-merge-grid div.uk-width-1-1 {
+    overflow-x: scroll;
+}
+table.dataTable {
+    width: 150% !important;
+} 
 
 /* View & Download */
 .view-file {

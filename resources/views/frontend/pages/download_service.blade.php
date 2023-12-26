@@ -46,7 +46,7 @@
     <div class="uk-margin uk-text-center uk-text-bold">
         {{"Downloads for ". $serviceDownload->service_name}}
     </div>
-    <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+    <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
         <thead>
             <tr>
                 <th class="uk-table-small">#</th>
@@ -195,10 +195,6 @@
             "searching": true,
             "oLanguage": {
                 "sSearch": ""
-            },
-            responsive: true,
-            rowReorder: {
-                selector: 'td:nth-child(2)'
             },
             language: {
                 searchPlaceholder: "Search",

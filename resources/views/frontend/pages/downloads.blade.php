@@ -45,7 +45,7 @@
     <div class="uk-margin uk-text-center uk-text-bold">
         {{ 'All Downloads' }}
     </div>
-    <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+    <table id="downloads-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
         <thead>
             <tr>
                 <th class="uk-table-small">#</th>
@@ -238,10 +238,6 @@
             "paging":   true,
             "ordering": false,
             "searching": true,
-            responsive: true,
-            rowReorder: {
-                selector: 'td:nth-child(2)'
-            },
             "oLanguage": {
                 "sSearch": ""
             },

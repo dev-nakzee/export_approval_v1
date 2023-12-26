@@ -114,7 +114,7 @@
                     <div class="uk-margin-bottom">
                         <span class="notification_title">Industrial Notifications for {{$notice_service->service_name}}</span>
                     </div>
-                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
+                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -154,10 +154,6 @@
             "searching": true,
             "oLanguage": {
                 "sSearch": ""
-            },
-            responsive: true,
-            rowReorder: {
-                selector: 'td:nth-child(1)'
             },
             language: {
                 searchPlaceholder: "Search {{$notice_service->service_name}} notifications",
