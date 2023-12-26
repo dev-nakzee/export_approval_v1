@@ -90,7 +90,7 @@
     </div>
 </div>
 <section class="uk-section">
-    {!! $sections[0]->section_content !!}
+    {!! $sections[0]->section_description !!}
 </section>
 
 @else
