@@ -135,4 +135,9 @@
         });
     });
 </script>
+<style>
+    .ps-sidebar-fixed {
+        width: 105% !important;
+    }
+</style>
 @endsection

@@ -17,7 +17,7 @@
 
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" uk-sticky="offset: 80">
     <div class="uk-container uk-text-center">
         <div>
             <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
@@ -37,98 +37,32 @@
         </ul>
     </div>
 </section>
-{{-- <section class="uk-section uk-padding-small">
-    <ul uk-accordion>
-        @if($sections)
-        @foreach($sections as $section)
-            <li @if($loop->first)class="uk-open"@endif id="{{$section->service_section_slug}}">
-                <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
-                <div class="uk-accordion-content section-content">
-                    {!! $section->service_section_content !!}
-                </div>
-            </li>
-            @if($loop->first)
-            <li id="{{'mandatory-product-list'}}">
-                <a class="uk-accordion-title section-title uk-padding-small" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
-                <div class="uk-accordion-content section-content">
-                    <table id="mandatory-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Product Name</th>
-                                <th>category</th>
-                                @if($service->service_compliance)
-                                @foreach(explode(',',$service->service_compliance) as $compliance)
-                                @if($compliance)
-                                <th>{{$compliance}}</th>
-                                @endif
-                                @endforeach
-                                @endif
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($products as $product)
-                            <tr class="product-page-link" data-slug="{{$product->product_slug}}">
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$product->product_name}}</td>
-                                <td>{{$product->product_category_name}}</td>
-                                @if($service->service_compliance)
-                                @foreach(unserialize($product->product_compliance) as $compliance)
-                                    <td>{{$compliance}}</td>
-                                @endforeach
-                                @endif
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </li>
-            @endif
-        @endforeach
-        <li id="{{'frequently-asked-questions'}}">
-            <a class="uk-accordion-title section-title uk-padding-small" href="#{{'frequently-asked-questions'}}">{{'Frequently Asked Questions'}}</a>
-            <div class="uk-accordion-content section-content">
-                <ul uk-accordion class="uk-margin-large-bottom">
-                    @foreach(json_decode($service->faqs, true) as $que=>$ans)
-                    <li class="faq-element">
-                        <a class="uk-accordion-title faq-question uk-margin-top uk-margin-bottom" href>{{$loop->iteration}}. {{$que}}</a>
-                        <div class="uk-accordion-content faq-answer uk-margin-remove-top uk-margin-bottom">
-                            {{ $ans }}
-                        </div>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-        </li>
-        @endif
-    </ul>
-</section> --}}
-<section class="uk-section uk-padding-small">
-    <div class="uk-text-center">
-        <button class="uk-button uk-button-default uk-text-bolder" type="button">Download Categories <span uk-drop-parent-icon></span></button>
-        <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
-            <ul class="uk-list uk-list-divider uk-text-bolder">
-                @if($sections)
-                @foreach($sections as $section)
-                    <li>
-                        <a class="uk-link-reset" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
-                    </li>
-                    @if($loop->first)
-                        @if($service->service_product_show === 1) 
-                        <li>
-                            <a class="uk-link-reset" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
-                        </li>
-                        @endif
-                    @endif
-                @endforeach
-                @endif
+<div class="uk-text-center uk-background-default uk-padding-small" uk-sticky="offset: 150">
+    <button class="uk-button uk-button-default uk-text-bolder uk-width-1-1" type="button">Select Menu <span uk-drop-parent-icon></span></button>
+    <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
+        <ul class="uk-list uk-list-divider uk-text-bolder">
+            @if($sections)
+            @foreach($sections as $section)
                 <li>
-                    <a class="reset" href="#{{'download-brochure'}}">Download Brochure</a>
+                    <a class="uk-link-reset" href="#{{$section->service_section_slug}}">{{$section->service_section_name}}</a>
                 </li>
-            </ul>
-        </div>
+                @if($loop->first)
+                    @if($service->service_product_show === 1) 
+                    <li>
+                        <a class="uk-link-reset" href="#{{'mandatory-product-list'}}">Mandatory Product List</a>
+                    </li>
+                    @endif
+                @endif
+            @endforeach
+            @endif
+            <li>
+                <a class="uk-link-reset" href="#{{'download-brochure'}}">Download Brochure</a>
+            </li>
+        </ul>
     </div>
-    <div class="uk-width-3-4@m uk-padding-remove-right">
+</div>
+<section class="uk-section uk-padding-small">
+    <div class="uk-margin-top">
         @if($sections)
         @foreach($sections as $section)
             <div class="ps-sections" id="{{$section->service_section_slug}}">

@@ -61,7 +61,7 @@
                 $('a[href*="#"]:not([href="#"])').click(function() {
                     var target = $(this.hash);
                         $('html,body').stop().animate({
-                        scrollTop: target.offset().top - 170
+                        scrollTop: target.offset().top - 220
                         }, 'linear');   
                 });    
                 if (location.hash){
@@ -69,7 +69,7 @@
                 }
                 $(window).on('load', function() {
                     if (location.hash){
-                        $('html,body').animate({scrollTop: id.offset().top - 170}, 'linear')
+                        $('html,body').animate({scrollTop: id.offset().top - 220}, 'linear')
                     };
                 });
             });
@@ -106,6 +106,7 @@
             </div>
             <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
                 <div class="uk-offcanvas-bar uk-flex uk-flex-column mobile-menu">
+                    <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
                     <ul class="uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
                         <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
@@ -141,7 +142,8 @@
                         <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
                         <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                     </ul>
-            
+                    <span class="mobile-menu-poweredby">Powered by</span>
+                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
                 </div>
             </div>
         </nav>

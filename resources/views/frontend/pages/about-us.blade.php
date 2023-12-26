@@ -31,23 +31,43 @@
         </ul>
     </div>
 </section>
+<div class="uk-text-center uk-background-default uk-padding-small" uk-sticky="offset: 150">
+    <button class="uk-button uk-button-default uk-text-bolder uk-width-1-1" type="button">Select Menu <span uk-drop-parent-icon></span></button>
+    <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
+        <ul class="uk-list uk-list-divider uk-text-bolder">
+            @if($sections)
+            @foreach($sections as $section)
+            <li>
+                <a class="uk-link-reset" href="#{{$section->section_slug}}">{{$section->section_name}}</a>
+            </li>
+            @endforeach
+            @endif
+            <li>
+                <a class="uk-link-reset" href="#{{'download-brochure'}}">Download Brochure</a>
+            </li>
+        </ul>
+    </div>
+</div>
 <section class="uk-section uk-padding-small">
-    <ul uk-accordion>
+    <div class="">
         @if($sections)
         @foreach($sections as $section)
-            <li @if($loop->first)class="uk-open"@endif id="{{$section->section_slug}}">
-                <a class="uk-accordion-title section-title uk-padding-small" href="#{{$section->section_slug}}">{{$section->section_name}}</a>
-                <div class="uk-accordion-content section-content">
-                    @if ($section->static_page_section_id === 7)
-                    {!! $section->section_description !!}
-                    @else
-                    {!! $section->section_description !!}
-                    @endif  
-                </div>
-            </li>
+        <div class="ps-sections" id="{{$section->section_slug}}">
+            <div class="uk-section ps-tab-header uk-margin-remove-left uk-margin-remove-right">
+                <span>{{$section->section_name}}<span>
+            </div>
+            <div class="uk-section ps-tab-content uk-margin-remove-left uk-margin-remove-right">
+                @if ($section->static_page_section_id === 7)
+                {!! $section->section_description !!}
+                @else
+                {!! $section->section_description !!}
+                @endif  
+            </div>
+        </div>
         @endforeach
         @endif
-    </ul>
+        @include('frontend.components.downloadbrochure')
+    </div>
 </section>
 @include('frontend.components.downloadbrochure')
 @else
@@ -80,7 +100,7 @@
                         @if($sections)
                         @foreach($sections as $section)
                             <li>
-                                <a href="#{{$section->section_slug}}">{{$section->section_name}}</a>
+                                <a class="uk-link-reset" href="#{{$section->section_slug}}">{{$section->section_name}}</a>
                             </li>
                         @endforeach
                         @endif

@@ -27,6 +27,17 @@ body {
     color: #052faa !important;
 }
 
+.mobile-menu-poweredby {
+    padding-left: 25px !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    color: #052faa;
+}
+
+.uk-offcanvas-close {
+    color: #052faa !important;
+}
+
 /* Captcha */
 #captcha_image {
     background-image: url(../images/captacha-bg.svg) !important;
@@ -291,6 +302,10 @@ body {
 table.dataTable {
     width: 150% !important;
 } 
+.dataTables_wrapper div.dt-merge-grid:nth-child(2) div {
+    display: block !important;
+    width:  100% !important;
+}
 
 /* View & Download */
 .view-file {
@@ -377,6 +392,11 @@ table.dataTable {
     border: 2px solid #052faa;
     background-color: #052faa;
     color: #ffffff;
+}
+
+/* breadcrumbs */
+.uk-breadcrumb>:nth-child(n+2):not(.uk-first-column)::before {
+    margin: 0 5px 0 calc(5px - 4px) !important;
 }
 
 /* Footer section */

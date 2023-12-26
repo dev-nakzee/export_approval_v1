@@ -206,4 +206,9 @@
         });
     });
 </script>
+<style>
+    .ps-sidebar-fixed {
+        width: 100% !important;
+    }
+</style>
 @endsection
