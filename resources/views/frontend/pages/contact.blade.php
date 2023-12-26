@@ -39,7 +39,6 @@
 <section class="uk-section uk-padding-small">
     <div class="uk-text-center">
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
-        <p class="section-description">{!! $sections[0]->section_description !!}</p>
     </div>
 </section>
 <form method="POST" action="{{route('frontend.site.contact-us.save')}}" id="contact_form" class="uk-background-muted uk-border-rounded contact-box uk-padding uk-margin-remove-bottom">

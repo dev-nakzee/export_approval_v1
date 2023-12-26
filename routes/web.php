@@ -28,6 +28,7 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/gallery', 'gallery')->name('frontend.site.gallery');
     Route::get('/contact-us', 'contact')->name('frontend.site.contact-us');
     Route::get('/holiday-list', 'holidays')->name('frontend.site.holiday.list');
+    Route::get('/calendar/{year}', 'calendar')->name('frontend.site.calender.download');
 });
 
 Route::controller(PopupController::class)->group(function (){
