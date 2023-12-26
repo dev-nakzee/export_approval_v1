@@ -18,7 +18,6 @@
 <section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" id="overview" uk-sticky="offset: 80;">
     <div class="uk-text-center">
         <div>
-            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
                 <br>{{$product->product_name}}
@@ -106,7 +105,6 @@
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical" id="overview">
     <div class="uk-container uk-text-center">
         <div>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
                 <br>{{$product->product_name}}
@@ -131,7 +129,6 @@
                 <div class="ps-details-section">
 
                     <span class="uk-text-bold">
-                        <img class="uk-margin-right uk-border-circle title-page-image" src="{{asset('frontend/images/best-product.png')}}" alt="{{$product->img_alt}}">
                         {{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>

@@ -40,7 +40,7 @@ Route::controller(ContactController::class)->group(function (){
 });
 
 Route::controller(ServiceController::class)->group(function (){
-    Route::get('services', 'index')->name('frontend.site.services');
+    Route::get('services', 'index')->name('frontend.site.services.all');
     Route::get('/service/{service_slug}', 'service')->name('frontend.site.service');
 });
 

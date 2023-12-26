@@ -8,6 +8,8 @@ use App\Models\Backend\Services;
 use App\Models\Backend\ServiceSection;
 use App\Models\Backend\Product;
 use App\Models\Backend\ProductCategory;
+use App\Models\Backend\StaticPages;
+use App\Models\Backend\StaticPageSection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
@@ -18,14 +20,25 @@ class ServiceController extends Controller
     //
     public function index()
     {
-        $service = Services::select('services.*', 'media_path')
-            ->join('media', 'services.media_id', 'media.media_id')
-            ->where('service_slug', $service_slug)
-            ->orderBy('service_id', 'desc')
-            ->first();
-        $service['media_path'] = Storage::url($service['media_path']);
-
-        return view('frontend.pages.services', compact('service'));
+        $services = Services::select('service_name', 'service_slug', 'service_description','img_alt', 'media_path')
+        ->join('media', 'services.media_id', 'media.media_id')
+        ->where('service_status', 1)
+        ->orderBy('service_id', 'asc')
+        ->get();
+        foreach($services as $key => $value) {
+            $services[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        $page = StaticPages::where('static_page_id', 7)->first();
+        $sections = StaticPageSection::select('static_page_sections.*','media_path')
+            ->leftJoin('media', 'static_page_sections.media_id', 'media.media_id')
+            ->where('static_page_id', 7)
+            ->orderBy('section_order', 'asc')
+            ->get();
+        foreach($sections as $key => $value) {
+            $sections[$key]['media_path'] = Storage::url($value['media_path']);
+        }
+        $agent = new Agent;
+        return view('frontend.pages.services', compact('services', 'page', 'sections', 'agent'));
     }
 
     //

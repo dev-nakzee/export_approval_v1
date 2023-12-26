@@ -302,9 +302,8 @@ body {
 table.dataTable {
     width: 150% !important;
 } 
-.dataTables_wrapper div.dt-merge-grid:nth-child(2) div {
-    display: block !important;
-    width:  100% !important;
+.dt-merge-grid div.uk-width-2-5 {
+    display: none !important;
 }
 
 /* View & Download */
