@@ -196,4 +196,8 @@ class HomeController extends Controller
         $agent = new Agent;
         return view('frontend.pages.holiday-list', compact('agent'));
     }
+
+    public function calender($year) {
+        
+    }
 }

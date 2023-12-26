@@ -89,7 +89,7 @@
                 <td colspan="2">
                     <a class="view-file" href="{{$other->doc_path}}" target="black">View</a> / <a class="download-file" href="{{$other->doc_path}}" download>Downloads</a>
                 </td>
-                <td hidden></td>
+                <td></td>
             </tr>
             @php
             $i = $i + 1;
