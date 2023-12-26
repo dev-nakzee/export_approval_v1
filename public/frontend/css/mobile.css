@@ -15,6 +15,11 @@ body {
     width: 80% !important;
     margin-bottom: 5px !important;
 }
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+    justify-content: left !important;
+}
+
 .mobile-menu {
     background-color: #fff !important;
 }
