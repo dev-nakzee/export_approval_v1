@@ -455,13 +455,13 @@
     </div>
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
-  <div class="uk-container uk-margin-remove uk-width-1-1" bis_skin_checked="1">
+  <div class="uk-container uk-margin-remove uk-width-1-1" >
     <div uk-grid class="uk-child-width-1-2@m">
       <div class="uk-width-1-1">
         <h2 class="uk-margin-remove">List of Holidays in <b>2023</b></h2>
         <p class="uk-width-1-1 uk-margin-remove">Office will remain closed on the holidays denoted by Red Colour</p>     
       </div>  
-       <div class="uk-margin-small-top uk-margin-bottom" bis_skin_checked="1">
+       <div class="uk-margin-small-top uk-margin-bottom" >
               <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
                 <tbody>
                 <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
@@ -558,7 +558,7 @@
               </table>
        </div>
 
-       <div class="uk-margin-small-top" bis_skin_checked="1">
+       <div class="uk-margin-small-top" >
 
           <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
             <tbody>
@@ -661,7 +661,7 @@
         <p class="uk-margin-remove uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour</p>       
        </div>
        
-        <div class="" style="margin-top: 8px;" bis_skin_checked="1">
+        <div class="" style="margin-top: 8px;" >
           <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
             <tbody>
               <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
@@ -763,7 +763,7 @@
           </table>
        </div>
 
-       <div class="uk-width-1-2" style="margin-top: 8px;" bis_skin_checked="1">
+       <div class="uk-width-1-2" style="margin-top: 8px;" >
           <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
             <tbody>
                 
@@ -860,15 +860,15 @@
        </div>
       
     </div>
-    <div class="uk-margin-large-top uk-width-1-1" bis_skin_checked="1">
+    <div class="uk-margin-large-top uk-width-1-1" >
       <div uk-grid>
-          <div class="uk-width-1-2" bis_skin_checked="1">
-            <div class="calnder-dys" bis_skin_checked="1">
-                <p><strong>Working Hours on Weekdays :</strong><br>10:00 AM - 6:30 PM (IST)</p>
+          <div class="uk-width-1-2" >
+            <div class="calnder-dys">
+                <p><strong>Working Hours on Weekdays :</strong><br/>10:00 AM - 6:30 PM (IST)</p>
                 <p class="calnder-pa"><strong>Weekly Holidays:</strong><span style="color: red;"> Saturday</span> &amp; <span style="color: red;">Sunday</span></p>
             </div>
           </div>
-          <div class="uk-width-1-2" bis_skin_checked="1">
+          <div class="uk-width-1-2" >
             <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
             <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
           </div>
