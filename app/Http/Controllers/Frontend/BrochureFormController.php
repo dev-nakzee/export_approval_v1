@@ -66,7 +66,7 @@ class BrochureFormController extends Controller
         $to  = 'info@bl-india.com';
 
         // Subject
-        $subject1 = "Thank you for your interest";
+        $subject1 = "Thanks for downloading brochure";
 
         $subject = $data['name'].' requested for '.$service['service_name'];
 
