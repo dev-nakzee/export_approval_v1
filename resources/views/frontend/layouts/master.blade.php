@@ -110,7 +110,7 @@
                         <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
                         <li class="uk-parent">
-                            <a href="#">Services <span uk-nav-parent-icon></span></a>
+                            <a href="{{route('frontend.site.services')}}">Services <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 @if($services)
             

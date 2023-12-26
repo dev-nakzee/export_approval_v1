@@ -16,7 +16,7 @@ use Jenssegers\Agent\Agent;
 class ServiceController extends Controller
 {
     //
-    public function index($service_slug)
+    public function service($service_slug)
     {
         $service = Services::select('services.*', 'media_path')
             ->join('media', 'services.media_id', 'media.media_id')
@@ -35,4 +35,6 @@ class ServiceController extends Controller
             ->orderBy('service_section_order', 'asc')->get();
         return view('frontend.pages.service_details', compact('service', 'sections', 'products', 'agent'));
     }
+
+
 }
