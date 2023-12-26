@@ -235,6 +235,15 @@ body {
     color: #ffffff;
 }
 
+/* Service Section */
+.page-header div h2 {
+    line-height: 0.5;
+}
+.service-heading span p {
+    margin: 0;
+    padding: 0;
+}
+
 /* Social section */
 .social-share-section a {
     border: 1px solid #a3a3a3;

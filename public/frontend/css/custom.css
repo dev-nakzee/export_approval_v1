@@ -227,12 +227,21 @@ iframe {
         background-color: #fff !important;
     }
 }
+.page-header div h2 {
+    line-height: 0.5;
+}
 .service-details-image {
     height: 70px;
     width: 70px;
     background-color: #fff;
     border: 1px solid #052faa;
 }
+
+.service-heading span p {
+    margin: 0;
+    padding: 0;
+}
+
 .ps-tab-header {
     color: #052faa !important;
     background-color: #e0e0e0;
