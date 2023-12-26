@@ -118,6 +118,7 @@
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
     <div class="uk-padding-small">
+        
         <ul class="uk-breadcrumb uk-align-right">
             <li><a href="{{route('frontend.site.home')}}">Home</a></li>
             <li><span>Services</span></li>

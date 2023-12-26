@@ -424,18 +424,14 @@
       </tr>
     </tbody>
   </table>
-  <div uk-grid>
-    <div class="uk-width-1-1" bis_skin_checked="1">
-      <div class="calnder-dys" bis_skin_checked="1">
+    <div class="uk-width-1-1">
+      <div class="calnder-dys">
           <p><strong>Working Hours on Weekdays :</strong> 10:00 AM - 6:30 PM (IST)</p>
           <p class="calnder-pa"><strong>Weekly Holidays:</strong><span style="color: red;"> Saturday</span> &amp; <span style="color: red;">Sunday</span></p>
       </div>
-    </div>
-    <div class="uk-width-1-1" bis_skin_checked="1">
       <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
       <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
     </div>
-</div>
 </section>
 @else
 <section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">

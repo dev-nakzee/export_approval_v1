@@ -89,7 +89,7 @@
         <div style="overflow:hidden;max-width:100%;width:100%;height:100%;"><div id="google-maps-display" style="height:500%; width:100%;max-width:100%;"><iframe style="height:500%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Brand+Liaison+India+Private+Limited,+Veer+Savarkar+Block,+Guru+Nanak+Pura,+Laxmi+Nagar,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="enable-map-info">premium bootstrap themes</a><style>#google-maps-display .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;}</style></div>
     </div>
 </div>
-<section class="uk-section uk-padding-small">
+<section class="uk-section">
     {!! $sections[0]->section_content !!}
 </section>
 
