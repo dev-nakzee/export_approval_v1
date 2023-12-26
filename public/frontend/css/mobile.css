@@ -348,6 +348,7 @@ body {
 /* Footer section */
 
 .clients-scroll {
+    padding-top: 100px !important;
     z-index: 99 !important;
 }
 .clients-scroll h3 {
