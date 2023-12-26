@@ -253,6 +253,20 @@ body {
     padding: 0;
 }
 
+/* View & Download */
+.view-file {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #052faa !important;
+    text-decoration: none !important;
+}
+.download-file {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: #ed462f !important;
+    text-decoration: none !important;
+}
+
 /* Social section */
 .social-share-section a {
     border: 1px solid #a3a3a3;
