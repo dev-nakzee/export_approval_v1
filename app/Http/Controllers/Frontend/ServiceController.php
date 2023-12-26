@@ -16,6 +16,19 @@ use Jenssegers\Agent\Agent;
 class ServiceController extends Controller
 {
     //
+    public function index()
+    {
+        $service = Services::select('services.*', 'media_path')
+            ->join('media', 'services.media_id', 'media.media_id')
+            ->where('service_slug', $service_slug)
+            ->orderBy('service_id', 'desc')
+            ->first();
+        $service['media_path'] = Storage::url($service['media_path']);
+
+        return view('frontend.pages.services', compact('service'));
+    }
+
+    //
     public function service($service_slug)
     {
         $service = Services::select('services.*', 'media_path')
