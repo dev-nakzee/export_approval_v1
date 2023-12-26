@@ -22,9 +22,9 @@
 </section>
 <section class="uk-section uk-padding-small">
     <div class="uk-text-center">
-        <button class="uk-button uk-button-default" type="button">Download Categories <span uk-drop-parent-icon></span></button>
+        <button class="uk-button uk-button-default uk-text-bolder" type="button">Download Categories <span uk-drop-parent-icon></span></button>
         <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
-            <ul class="uk-list uk-list-divider">
+            <ul class="uk-list uk-list-divider uk-text-bolder">
                 @if($services)
                 @foreach($services as $service)
                     <li>
