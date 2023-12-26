@@ -86,7 +86,7 @@
             <tr>
                 <td>{{$i}}</td>
                 <td>{{$other->download_name}}</td>
-                <td colspan="2">
+                <td>
                     <a class="view-file" href="{{$other->doc_path}}" target="black">View</a> / <a class="download-file" href="{{$other->doc_path}}" download>Downloads</a>
                 </td>
                 <td></td>
