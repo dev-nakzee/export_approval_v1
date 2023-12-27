@@ -143,3 +143,30 @@
 </section>
 @endif
 @endsection
+@section('scripts')
+<script>
+$(function () {
+  var currentHash = "#";
+  var blocksArr = $('.ps-sections');
+
+  $(document).scroll(function () {
+     var currentTop = window.pageYOffset/1;
+     for (var i=0; blocksArr.length; i++){
+         var currentElementTop = $(blocksArr[i]).offset().top - 100;
+         var hash = $(blocksArr[i]).attr('id');
+         if (currentElementTop < currentTop && currentTop < currentElementTop + $(blocksArr[i]).height() && currentHash!=hash){
+                if(history.pushState) {
+                history.pushState(null, null, '#'+hash);
+        }
+        else {
+            location.hash = '#'+hash;
+        }
+                currentHash = hash;
+         }
+
+     }
+
+  });
+});
+</script>
+@endsection
