@@ -110,7 +110,7 @@
                 <div class="uk-margin-top uk-margin-bottom social-share-section">
                     <span class="uk-text-bold">Share this blog</span><br>
                     <a href="" class="twitter" uk-icon="twitter"></a>
-                    <a href="" class="facebook" uk-icon="facebook"></a>
+                    <a class="w-inline-block social-share-btn fb facebook" uk-icon="facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"> </a>
                     <a href="" class="linkedin" uk-icon="linkedin"></a>
                     
                 </div>

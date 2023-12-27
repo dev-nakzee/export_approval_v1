@@ -8,7 +8,7 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{$product->seo_description}}" />
-<meta property="og:url" content="{{env('APP_URL')}}" />
+<meta property="og:url" content="{{url()->full()}}" />
 <meta property="og:site_name" content="Export Approval" />
 <meta property="og:image" content="" />
 <meta name="format-detection" content="telephone=no" />
