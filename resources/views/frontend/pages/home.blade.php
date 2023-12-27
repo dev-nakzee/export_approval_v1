@@ -151,7 +151,7 @@
             <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
-            <h3>Authorized Indian <br>Representative (AIR) Services</h3>
+            <h3 style="font-size: 16px !important;">Authorized Indian <br>Representative (AIR) Services</h3>
             </div>
             </div>
             <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
@@ -349,7 +349,7 @@
             <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
-            <h3>Authorized Indian <br>Representative (AIR) Services</h3>
+            <h3 style="font-size: 16px !important; font-weight: 700 !important;">Authorized Indian Representative (AIR) Services</h3>
             </div>
             </div>
             <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
