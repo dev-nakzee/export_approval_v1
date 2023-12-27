@@ -23,7 +23,7 @@
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/governance.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 {{'Industrial Notifications'}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'All Compliances'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'Government Circular & Gazette'}}</span>
             </h2>
         </div>
     </div>
@@ -38,7 +38,7 @@
 </section>
 <section class="uk-section uk-padding-small">
     <div class="uk-text-center">
-        <button class="uk-button uk-button-default uk-text-bolder" type="button">Notification Services <span uk-drop-parent-icon></span></button>
+        <button class="uk-button uk-button-default uk-text-bolder" type="button" style="text-transform:capitalize !important;">Latest Notification <span uk-drop-parent-icon></span></button>
         <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
             <ul class="uk-list uk-list-divider uk-text-bolder">
                 @if($services)

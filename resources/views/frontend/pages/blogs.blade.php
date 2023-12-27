@@ -36,7 +36,7 @@
 </section>
 <section class="uk-section uk-padding-small">
     <div class="uk-text-center">
-        <button class="uk-button uk-button-default" type="button">Blog Categories <span uk-drop-parent-icon></span></button>
+        <button class="uk-button uk-button-default" type="button" style="text-transform:capitalize !important;">Blog Categories <span uk-drop-parent-icon></span></button>
         <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
             <ul class="uk-list uk-list-divider">
                 @if($categories)
