@@ -20,8 +20,9 @@
         <div>
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/handshake.png')}}" alt="Partner with us Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                {{'Business Associate'}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{'Partner with us'}}</span>
-                <br>{{'Business Associate'}}
+                
             </h2>
         </div>
     </div>
@@ -127,8 +128,8 @@
         <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/handshake.png')}}" alt="Partner with us Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                {{'Business Associate'}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{'Partner with us'}}</span>
-                <br>{{'Business Associate'}}
             </h2>
         </div>
     </div>

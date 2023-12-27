@@ -21,8 +21,8 @@
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{"NEED CONTENT"}}</span>
-                <br> {{'Services'}}
+                {{'Services'}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{"Indian Approvals & Certifications"}}</span>
             </h2>
         </div>
     </div>
@@ -75,8 +75,8 @@
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{"NEED CONTENT"}}</span>
-                <br>{{'Services'}}
+                {{'Services'}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{"Indian Approvals & Certifications"}}</span>
             </h2>
         </div>
     </div>

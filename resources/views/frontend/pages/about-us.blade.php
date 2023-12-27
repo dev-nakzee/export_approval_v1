@@ -17,10 +17,13 @@
 @if($agent->isMobile())
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
-        <h2 class="uk-margin-remove">
+        <div>
             <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
-            {{$static_page->page_name}}
-        </h2>
+            <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
+                {{$static_page->page_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{"Need Content"}}</span>
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">
@@ -72,10 +75,13 @@
 @else
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
-        <h2>
+        <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
-            {{$static_page->page_name}}
-        </h2>
+            <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
+                {{$static_page->page_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'Need Content'}}</span>
+            </h2>
+        </div>
     </div>
 </section>
 <section class="uk-section uk-padding-large uk-padding-remove-vertical">

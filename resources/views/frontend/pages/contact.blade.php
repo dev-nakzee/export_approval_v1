@@ -21,8 +21,8 @@
         <div>
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/communicate.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                {{'Contact Us'}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$sections[0]->section_name}}</span>
-                <br>  {{'Contact Us'}}
             </h2>
         </div>
     </div>
@@ -95,8 +95,8 @@
         <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/communicate.png')}}" alt="Blogs Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                {{'Contact Us'}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$sections[0]->section_name}}</span>
-                <br>  {{'Contact Us'}}
             </h2>
         </div>
     </div>

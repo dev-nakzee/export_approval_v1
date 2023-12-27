@@ -21,9 +21,9 @@
     <div class="uk-container uk-text-center">
         <div>
             <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-            <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading" style="line-height: 0.8 !important;">
-                <span class="uk-text-small" style="color: #8b8b8b; line-height: 0.5 !important;">{!!$service->service_description!!}</span>
-                <br> {{$service->service_name}}
+            <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
+                {{$service->service_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{!!$service->service_description!!}</span>
             </h2>
         </div>
     </div>
@@ -144,8 +144,8 @@
         <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
-                <span class="uk-text-small" style="color: #8b8b8b;>{!!$service->service_description!!}</span>
-                <br>{{$service->service_name}}
+                {{$service->service_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{!!$service->service_description!!}</span>
             </h2>
         </div>
     </div>

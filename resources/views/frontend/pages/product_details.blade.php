@@ -19,8 +19,8 @@
     <div class="uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
-                <br>{{$product->product_name}}
+                {{$product->product_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}}</span>
             </h2>
         </div>
     </div>
@@ -106,8 +106,8 @@
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
-                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} For</span>
-                <br>{{$product->product_name}}
+                {{$product->product_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}}</span>
             </h2>
         </div>
     </div>

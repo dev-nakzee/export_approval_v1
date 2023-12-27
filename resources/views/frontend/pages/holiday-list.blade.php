@@ -21,8 +21,8 @@
       <div>
           <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/calendar.png')}}" alt="">
           <h2 class="uk-text-middle uk-inline uk-margin-remove">
+            {{'Holiday list'}}<br>
               <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
-              <br>  {{'Holiday list'}}
           </h2>
       </div>
   </div>
@@ -439,8 +439,8 @@
       <div>
         <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/calendar.png')}}" alt="Holiday list Image">
         <h2 class="uk-text-middle uk-inline uk-margin-remove">
-            <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
-            <br>  {{'Holiday List'}}
+          {{'Holiday list'}}<br>
+          <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
         </h2>
       </div>
    
