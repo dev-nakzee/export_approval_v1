@@ -107,12 +107,12 @@
                 </a>
             </div>
             <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
-                <div class="uk-offcanvas-bar uk-flex uk-flex-column mobile-menu">
+                <div class="uk-offcanvas-bar mobile-menu">
                     <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
-                    <ul class="uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
-                        <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-                        <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
-                        <li class="uk-parent">
+                    <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-large-top" uk-nav>
+                        <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">Home</a></li>
+                        <li><a href="{{route('frontend.site.about-us')}}" style="border-bottom: 1px #c6c6c6 solid;">About us</a></li>
+                        <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
                             <a href="#">Services <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 @if($services)
@@ -120,10 +120,9 @@
                                 <li><a style="color: #ed462f !important;" href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
                                 @endforeach
                                 @endif
-                                <li><a style="color: #ed462f !important;" href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </li>
-                        <li class="uk-parent">
+                        <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
                             <a href="#">Resources <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 <li>
@@ -140,11 +139,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                        <li style="border-bottom: 1px #c6c6c6 solid;"><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
                         <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                     </ul>
-                    <span class="mobile-menu-poweredby">Powered by</span>
-                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
+                    <div class="uk-position-bottom">
+                        <span class="mobile-menu-poweredby">Powered by</span>
+                        <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
+                    </div>
                 </div>
             </div>
         </nav>
@@ -170,7 +171,6 @@
                                     @endforeach
         
                                 @endif
-                                <li><a href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </div>
                     </li>
@@ -218,7 +218,9 @@
                 </div>
                 <div class="uk-width-1-4@s">
                     <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default">
-                        <li class="uk-nav-header">Services</li>
+                        <li class="uk-nav-header">
+                            <a style="color: #fff;" href="{{route('frontend.site.services.all')}}">All Services</a>
+                        </li>
                         @if($services)
                         @foreach($services as $service)
                         <li>
