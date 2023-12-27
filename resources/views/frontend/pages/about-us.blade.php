@@ -137,19 +137,3 @@
 </section>
 @endif
 @endsection
-
-@section('scripts')
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(window).scroll(function(){
-            var scrollTop = 80;
-            if($(window).scrollTop() >= scrollTop){
-                $('.ps-details-section').addClass('ps-sidebar-fixed');  
-            }
-            if($(window).scrollTop() < scrollTop){
-                $('.ps-details-section').removeClass('ps-sidebar-fixed');  
-            }
-        });
-    });
-</script>
-@endsection

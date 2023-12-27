@@ -172,8 +172,8 @@ iframe {
 
 .page-header {
     background-color: #ff1f001a;
-    /* padding-top: 10px !important;
-    padding-bottom: 10px !important; */
+    line-height: 1;
+
 }
 .page-header div h1 {
     font-size: 22px !important;
@@ -227,9 +227,7 @@ iframe {
         background-color: #fff !important;
     }
 }
-.page-header div h2 {
-    line-height: 0.5;
-}
+
 .service-details-image {
     height: 70px;
     width: 70px;

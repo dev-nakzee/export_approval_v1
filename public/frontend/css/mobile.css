@@ -47,8 +47,7 @@ body {
 /* Page */
 .page-header {
     background-color: #FFE8E5;
-    /* padding-top: 10px !important;
-    padding-bottom: 10px !important; */
+    line-height: 1;
 }
 .page-header div h2 {
     font-size: 22px !important;
