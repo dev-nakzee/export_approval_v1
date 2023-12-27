@@ -30,7 +30,7 @@
   <div class="uk-padding-small">
       <ul class="uk-breadcrumb uk-text-center uk-margin-remove">
           <li><a href="{{route('frontend.site.home')}}">Home</a></li>
-          <li><span>{{'Holiday list'}}</span></li>
+          <li><span>{{'Holiday List'}}</span></li>
       </ul>
   </div>
 </section>
@@ -438,7 +438,7 @@
       <div>
         <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/calendar.png')}}" alt="Holiday list Image">
         <h2 class="uk-text-middle uk-inline uk-margin-remove">
-          {{'Holiday list'}}<br>
+          {{'Holiday List'}}<br>
           <span class="uk-text-small" style="color: #8b8b8b;">{{'NEED CONTENT'}}</span>
         </h2>
       </div>
