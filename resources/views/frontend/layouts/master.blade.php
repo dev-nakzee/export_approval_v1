@@ -108,8 +108,8 @@
             </div>
             <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
                 <div class="uk-offcanvas-bar mobile-menu">
-                    <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close class="font-size: 23px"></button>
-                    <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-large-top" uk-nav>
+                    <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
+                    <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top" uk-nav>
                         <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}" style="border-bottom: 1px #c6c6c6 solid;">About us</a></li>
                         <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
@@ -142,7 +142,7 @@
                         <li style="border-bottom: 1px #c6c6c6 solid;"><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
                         <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                     </ul>
-                    <div class="uk-position-bottom">
+                    <div class="uk-position-small uk-position-bottom-center">
                         <span class="mobile-menu-poweredby">Powered by</span>
                         <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
                     </div>
