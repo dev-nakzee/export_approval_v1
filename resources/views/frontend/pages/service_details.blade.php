@@ -37,7 +37,7 @@
     </div>
 </section>
 <div class="uk-text-center uk-background-default uk-padding-small" uk-sticky="offset: 150">
-    <button class="uk-button uk-button-default uk-text-bolder uk-width-1-1" type="button">Select Menu <span uk-drop-parent-icon></span></button>
+    <button class="uk-button uk-button-default uk-text-bolder uk-width-1-1" type="button">Explore The Info <span uk-drop-parent-icon></span></button>
     <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
         <ul class="uk-list uk-list-divider uk-text-bolder">
             @if($sections)
