@@ -159,7 +159,7 @@
                 <ul class="uk-navbar-nav top-navbar uk-visible@s">
                     <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                     <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
-                    <li style="margin-left: 0px !important;">
+                    <li>
                         <a href="#">Services <span uk-navbar-parent-icon></span></a>
                         <div class="uk-navbar-dropdown" style="top: -20px !important;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
