@@ -55,8 +55,9 @@ class HomeController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
+        $page = StaticPages::where('static_page_id', 1)->first();
         $agent = new Agent;
-        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent'));
+        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent', 'page'));
     }
 
     public function about()
@@ -76,6 +77,7 @@ class HomeController extends Controller
             $sections[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $agent = new Agent;
+        
         return view('frontend.pages.about-us', compact('sections', 'static_page', 'agent'));
     }
 
@@ -105,7 +107,8 @@ class HomeController extends Controller
             ->join('documents', 'documents.doc_id', 'downloads.download_document')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', 'agent'));
+        $page = StaticPages::where('static_page_id', 6)->first();
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', 'agent', 'page'));
     }
 
     public function download_service($service_slug) {

@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
+        @yield('seo')
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         @if ($agent->isMobile())
         <link rel="stylesheet" href="{{asset('frontend/css/mobile.css')}}" />
@@ -14,7 +15,7 @@
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
 
-        @yield('scripts')
+       
         <script>
             $(document).ready(function(){
                 var scrollTop = 80;
@@ -92,6 +93,7 @@
             });
             @endif
         </script>
+         @yield('scripts')
     </head>
     <body>
         @if ($agent->isMobile())
@@ -114,29 +116,27 @@
                             <a href="#">Services <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 @if($services)
-            
                                 @foreach($services as $service)
-                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                <li><a style="color: #ed462f !important;" href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
                                 @endforeach
-    
                                 @endif
-                                <li><a href="{{route('frontend.site.services.all')}}">All Services</li>
+                                <li><a style="color: #ed462f !important;" href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </li>
                         <li class="uk-parent">
                             <a href="#">Resources <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 <li>
-                                    <a href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.downloads')}}">Downloads</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.gallery')}}">Gallery</a>
                                 </li>
                             </ul>
                         </li>
