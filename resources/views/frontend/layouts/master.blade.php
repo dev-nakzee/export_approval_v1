@@ -161,7 +161,7 @@
                     <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
                     <li>
                         <a href="#">Services <span uk-navbar-parent-icon></span></a>
-                        <div class="uk-navbar-dropdown" style="top: -20px !important;">
+                        <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 @if($services)
             
@@ -170,7 +170,7 @@
                                     @endforeach
         
                                 @endif
-                                <li><a href="{{route('frontend.site.services.all')}}">All Services</li>
+                                <li><a href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </div>
                     </li>
