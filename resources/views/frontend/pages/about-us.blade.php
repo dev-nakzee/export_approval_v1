@@ -21,7 +21,7 @@
             <img class="uk-margin-right uk-border-circle mobile-page-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
                 {{$static_page->page_name}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{"Need Content"}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{"Founded in 2014"}}</span>
             </h2>
         </div>
     </div>
@@ -79,7 +79,7 @@
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{$static_page->media_path}}" alt="{{$static_page->img_alt}}">
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
                 {{$static_page->page_name}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'Need Content'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'Founded in 2014'}}</span>
             </h2>
         </div>
     </div>

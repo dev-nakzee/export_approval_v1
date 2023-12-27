@@ -22,7 +22,7 @@
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/gallery.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 {{'Gallery'}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'Our Events & Celebrations'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'Our Events & Activities'}}</span>
             </h2>
         </div>
     </div>
@@ -58,7 +58,7 @@
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/gallery.png')}}" alt="Blogs Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 {{'Gallery'}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{'Our Events & Celebrations'}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{'Our Events & Activities'}}</span>
             </h2>
         </div>
     </div>
