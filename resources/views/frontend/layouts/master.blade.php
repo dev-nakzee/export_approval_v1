@@ -108,7 +108,7 @@
             </div>
             <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
                 <div class="uk-offcanvas-bar mobile-menu">
-                    <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
+                    <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close class="font-size: 23px"></button>
                     <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-large-top" uk-nav>
                         <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}" style="border-bottom: 1px #c6c6c6 solid;">About us</a></li>
@@ -117,7 +117,7 @@
                             <ul class="uk-nav-sub">
                                 @if($services)
                                 @foreach($services as $service)
-                                <li><a style="color: #ed462f !important;" href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
                                 @endforeach
                                 @endif
                             </ul>
@@ -126,16 +126,16 @@
                             <a href="#">Resources <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 <li>
-                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                    <a href="{{route('frontend.site.downloads')}}">Downloads</a>
                                 </li>
                                 <li>
-                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.blog')}}">Blogs</a>
+                                    <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                    <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
-                                    <a style="color: #ed462f !important;" href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                    <a href="{{route('frontend.site.gallery')}}">Gallery</a>
                                 </li>
                             </ul>
                         </li>
