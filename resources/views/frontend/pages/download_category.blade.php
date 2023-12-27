@@ -112,8 +112,8 @@
                         @endif
                         @if($downloadCategory)
                         @foreach($downloadCategory as $category)
-                        <li {{ ($category->download_category_slug === $categoryDownload->download_category_slug) ? 'class=uk-active':'' }}>
-                            <a class="uk-link-reset" href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
+                        <li>
+                            <a @if($category->download_category_slug === $categoryDownload->download_category_slug) style="font-weight: 700; color: #ed462f !important;" @endif class="uk-link-reset" href="{{route('frontend.site.download.category',$category->download_category_slug)}}">{{$category->download_category}}</a>
                         </li>
                         @endforeach
                         @endif

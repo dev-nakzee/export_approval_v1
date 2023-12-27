@@ -103,8 +103,8 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($categories)
                         @foreach($categories as $category)
-                            <li {{ ($category->blog_category_slug === $category_slug) ? 'class=uk-active':'' }}>
-                                <a class="uk-link-reset" href="{{route('frontend.site.blog.category',$category->blog_category_slug)}}">{{$category->blog_category_name}}</a>
+                            <li>
+                                <a @if($category->blog_category_slug === $category_slug) style="font-weight: 700; color: #ed462f !important;" @endif  class="uk-link-reset" href="{{route('frontend.site.blog.category',$category->blog_category_slug)}}">{{$category->blog_category_name}}</a>
                             </li>
                         @endforeach
                         @endif

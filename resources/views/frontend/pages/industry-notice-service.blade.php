@@ -6,8 +6,8 @@
         <div>
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/governance.png')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
+                {{'Industrial Notifications'}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$notice_service->service_name}}</span>
-                <br>{{'Industrial Notifications'}}
             </h2>
         </div>
     </div>
@@ -94,8 +94,8 @@
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         @if($services)
                         @foreach($services as $service)
-                            <li {{ ($service->service_slug === $notice_service->service_slug) ? 'class=uk-active':'' }}>
-                                <a class="uk-link-reset" href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
+                            <li>
+                                <a @if($service->service_slug === $notice_service->service_slug)style="font-weight: 700; color: #ed462f !important;" @endif  class="uk-link-reset" href="{{route('frontend.site.industry-notification.service',$service->service_slug)}}">{{$service->service_name}}</a>
                             </li>
                         @endforeach
                         @endif
