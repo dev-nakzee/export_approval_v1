@@ -17,7 +17,7 @@
 
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small" uk-sticky="offset:80;">
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
@@ -71,12 +71,12 @@
 </section>
 @include('frontend.components.downloadbrochure')
 @else
-<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{"NEED CONTENT"}}</span>
-                <br>{{'All services'}}
+                <br>{{'Services'}}
             </h2>
         </div>
     </div>
@@ -90,7 +90,7 @@
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding uk-padding-remove-vertical">
-    <div class="section-two-heading uk-text-center uk-padding">
+    <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
         <p class="section-heading uk-margin-remove-bottom">
             {{$sections[0]->section_name}} 
         </p>

@@ -110,31 +110,33 @@
                     <ul class="uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
                         <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
+
                         <li class="uk-parent">
-                            <a href="{{route('frontend.site.services.all')}}">Services <span uk-nav-parent-icon></span></a>
+                            <a href="#">Services <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 @if($services)
             
                                 @foreach($services as $service)
-                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                <li style="color: #ed462f !important;"><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
                                 @endforeach
     
                                 @endif
+                                <li style="color: #ed462f !important;"><a href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </li>
                         <li class="uk-parent">
                             <a href="#">Resources <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
-                                <li>
+                                <li style="color: #ed462f !important;">
                                     <a href="{{route('frontend.site.downloads')}}">Downloads</a>
                                 </li>
-                                <li>
+                                <li style="color: #ed462f !important;">
                                     <a href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
-                                <li>
+                                <li style="color: #ed462f !important;">
                                     <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
-                                <li>
+                                <li style="color: #ed462f !important;">
                                     <a href="{{route('frontend.site.gallery')}}">Gallery</a>
                                 </li>
                             </ul>
@@ -158,9 +160,9 @@
                 <ul class="uk-navbar-nav top-navbar uk-visible@s">
                     <li><a href="{{route('frontend.site.home')}}">Home</a></li>
                     <li><a href="{{route('frontend.site.about-us')}}">About us</a></li>
-                    <li><a href="{{route('frontend.site.services.all')}}">Services</a></li>
+
                     <li style="margin-left: 0px !important;">
-                        <a href="#"><span uk-navbar-parent-icon></span></a>
+                        <a href="#">Services <span uk-navbar-parent-icon></span></a>
                         <div class="uk-navbar-dropdown" style="top: -20px !important;">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 @if($services)
@@ -170,6 +172,7 @@
                                     @endforeach
         
                                 @endif
+                                <li><a href="{{route('frontend.site.services.all')}}">All Services</a></li>
                             </ul>
                         </div>
                     </li>
