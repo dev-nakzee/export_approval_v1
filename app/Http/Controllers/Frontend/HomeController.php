@@ -22,6 +22,7 @@ use App\Models\Countries;
 use App\Models\Backend\GalleryImages;
 use App\Models\Backend\Holidays;
 use Carbon\Carbon;
+use PDF;
 use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
@@ -197,7 +198,8 @@ class HomeController extends Controller
         return view('frontend.pages.holiday-list', compact('agent'));
     }
 
-    public function calender($year) {
-        
+    public function calendar($year) {
+        $pdf = PDF::loadView('frontend.pdf.calender', compact(['year']));
+        return $pdf->download('Holiday-list-'.$year.'.pdf');
     }
 }

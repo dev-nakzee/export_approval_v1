@@ -232,7 +232,7 @@ Explain
         
                 </div>
                 @endif
-                @if($year === 2024)
+                @if($year == 2024)
                 <div class="uk-width-1-1">
                     <h2  class="uk-margin-remove">List of Holidays in <b>2024</b></h2>
                     <p class="uk-margin-remove uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour</p>       
@@ -436,6 +436,14 @@ Explain
                 </table>
                 </div>
                 @endif
+              </div>
+              <div class="uk-width-1-1">
+                <div class="calnder-dys">
+                    <p><strong>Working Hours on Weekdays :</strong><br> 10:00 AM - 6:30 PM (IST)</p>
+                    <p class="calnder-pa"><strong>Weekly Holidays:</strong><span style="color: red;"> Saturday</span> &amp; <span style="color: red;">Sunday</span></p>
+                </div>
+                <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
+                <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
               </div>
         </div>
     </body>

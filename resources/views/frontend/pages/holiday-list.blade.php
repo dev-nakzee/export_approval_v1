@@ -38,7 +38,7 @@
 <section class="uk-section uk-padding-small">
   <div class="uk-width-1-1">
     <h2>List of Holidays in <b>2023</b></h2>
-    <p class="uk-width-1-1 uk-margin-remove-top uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour</p>     
+    <p class="uk-width-1-1 uk-margin-remove-top uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2023)}}">Download List</a></p>     
   </div>
   <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
     <tbody>
@@ -230,7 +230,7 @@
   </table>
   <div class="uk-width-1-1">
     <h2>List of Holidays in <b>2024</b></h2>
-    <p class="uk-margin-remove-top uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour</p>       
+    <p class="uk-margin-remove-top uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2024)}}">Download List</a></p>       
    </div>
    <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
     <tbody>
@@ -459,7 +459,7 @@
     <div uk-grid class="uk-child-width-1-2@m">
       <div class="uk-width-1-1">
         <h2 class="uk-margin-remove">List of Holidays in <b>2023</b></h2>
-        <p class="uk-width-1-1 uk-margin-remove">Office will remain closed on the holidays denoted by Red Colour</p>     
+        <p class="uk-width-1-1 uk-margin-remove">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2023)}}">Download List</a></p>     
       </div>  
        <div class="uk-margin-small-top uk-margin-bottom" >
               <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
@@ -658,7 +658,7 @@
        </div>
        <div class="uk-width-1-1">
         <h2  class="uk-margin-remove">List of Holidays in <b>2024</b></h2>
-        <p class="uk-margin-remove uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour</p>       
+        <p class="uk-margin-remove uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2024)}}">Download List</a></p>       
        </div>
        
         <div class="" style="margin-top: 8px;" >
