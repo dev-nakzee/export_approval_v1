@@ -231,8 +231,8 @@
                         @endforeach
                         @endif
                     </ul>
-                    <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default">
-                        <li class="uk-nav-header">Partner with us</li>
+                    <ul class="uk-nav uk-nav-default uk-text-bolder uk-text-default uk-margin-top">
+                        <li class="uk-nav-header">Join us</li>
                         <li><a href="{{route('frontend.site.business.associate')}}">Business Associate</a></li>
                         <li><a href="{{route('frontend.site.resident.executive')}}">Resident Executive</a></li>
                     </ul>
