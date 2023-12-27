@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\Notices;
 use App\Models\Backend\NoticeMap;
 use App\Models\Backend\Services;
+use App\Models\Backend\StaticPages;
 use App\Models\Backend\Product;
 use App\Models\Backend\ProductCategory;
 use Illuminate\Support\Facades\Storage;
@@ -28,7 +29,8 @@ class IndustryNotificationController extends Controller
         ->orderBy('notices.created_at', 'DESC')
         ->get();
         $agent = new Agent;
-        return view('frontend.pages.industry-notification', compact('services', 'notices', 'agent'));
+        $page = StaticPages::where('static_page_id', 9)->first();
+        return view('frontend.pages.industry-notification', compact('services', 'notices', 'agent', 'page'));
     }
 
     public function service(Request $request, $service)
@@ -41,7 +43,8 @@ class IndustryNotificationController extends Controller
             ->orderBy('notices.created_at', 'DESC')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service', 'agent'));
+        $page = StaticPages::where('static_page_id', 9)->first();
+        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service', 'agent', 'page'));
     }
 
     public function detail(Request $request, $service, $notice_slug)

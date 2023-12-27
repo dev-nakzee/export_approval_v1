@@ -4,7 +4,7 @@
 <meta name="keywords" content="{{$service->seo_keywords}}" />
 <meta name="description" content="{{$service->seo_description}}" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta property="og:title" content="{{$service->page_name}}" />
+<meta property="og:title" content="{{$service->service_name}}" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{$service->seo_description}}" />

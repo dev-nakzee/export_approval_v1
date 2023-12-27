@@ -135,7 +135,8 @@ class HomeController extends Controller
         }
         $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
         $agent = new Agent;
-        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload','agent'));
+        $page = StaticPages::where('static_page_id', 6)->first();
+        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload','agent', 'page'));
     }
 
     public function download_category($category_slug) {
@@ -158,7 +159,8 @@ class HomeController extends Controller
             $downloads[$key]['doc_path'] = Storage::url($value['doc_path']);
         }
         $agent = new Agent;
-        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload', 'agent'));
+        $page = StaticPages::where('static_page_id', 6)->first();
+        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload', 'agent', 'page'));
     }
 
     public function media_cover() {
@@ -169,7 +171,8 @@ class HomeController extends Controller
             $news[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $agent = new Agent;
-        return view('frontend.pages.media_coverage', compact('news', 'agent'));
+        $page = StaticPages::where('static_page_id', 4)->first();
+        return view('frontend.pages.media_coverage', compact('news', 'agent', 'page'));
     }
 
     public function gallery()
@@ -181,7 +184,8 @@ class HomeController extends Controller
             $images[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $agent = new Agent;
-        return view('frontend.pages.gallery', compact('images', 'agent'));
+        $page = StaticPages::where('static_page_id', 5)->first();
+        return view('frontend.pages.gallery', compact('images', 'agent', 'page'));
     }
 
     public function contact() {
@@ -193,12 +197,14 @@ class HomeController extends Controller
             ->orderBy('section_order', 'asc')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.contact', compact('sections', 'countries', 'agent'));
+        $page = StaticPages::where('static_page_id', 3)->first();
+        return view('frontend.pages.contact', compact('sections', 'countries', 'agent', 'page'));
     }
 
     public function holidays() {
         $agent = new Agent;
-        return view('frontend.pages.holiday-list', compact('agent'));
+        $page = StaticPages::where('static_page_id', 8)->first();
+        return view('frontend.pages.holiday-list', compact('agent', 'page'));
     }
 
     public function calendar($year) {

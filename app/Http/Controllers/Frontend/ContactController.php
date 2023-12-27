@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Backend\StaticPages;
 
 use App\Models\Backend\ContactForm;
 
@@ -11,8 +12,9 @@ class ContactController extends Controller
 {
     //
     public function index()
-    {       
-        return view('frontend.pages.contact', compact('countries'));
+    {   
+        $page = StaticPages::where('static_page_id', 3)->get();
+        return view('frontend.pages.contact', compact('countries', 'page'));
     }
 
     public function contact(Request $request)

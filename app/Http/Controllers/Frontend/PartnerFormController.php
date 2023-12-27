@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Countries;
 use App\Models\Frontend\PartnerForm;
+use App\Models\Backend\StaticPages;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\JsonResponse;
@@ -21,7 +22,8 @@ class PartnerFormController extends Controller
     {
         $countries = Countries::get();
         $agent = new Agent;
-        return view('frontend.pages.ba', compact('countries', 'agent'));
+        $page = StaticPages::where('static_page_id', 1)->first();
+        return view('frontend.pages.ba', compact('countries', 'agent', 'page'));
     }
 
     public function ba_save(Request $request): RedirectResponse
@@ -104,7 +106,8 @@ class PartnerFormController extends Controller
     {
         $countries = Countries::get();
         $agent = new Agent;
-        return view('frontend.pages.re', compact('countries', 'agent'));
+        $page = StaticPages::where('static_page_id', 1)->first();
+        return view('frontend.pages.re', compact('countries', 'agent', 'page'));
     }
 
     public function re_save(Request $request): RedirectResponse
