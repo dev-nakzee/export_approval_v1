@@ -71,9 +71,9 @@
             <div class="uk-width-1-2@m uk-margin-small-top">
                 <div class="uk-form-controls uk-padding uk-padding-remove-vertical uk-padding-remove-right" uk-grid>
                     <input id="captcha_answer" name="captcha_answer" class="uk-input uk-padding-small uk-width-2-5 uk-padding-remove-vertical" hidden>
-                    <canvas id="captcha_image" class="uk-padding-small uk-width-3-5 uk-padding-remove-vertical" width="120" height="25"></canvas>
-                    <button type="button" class="uk-button uk-padding-remove uk-button-small" style="width: 36px; height: 36px;" id="reload_captcha" uk-icon="refresh"></button>
-                    <input class="uk-input uk-width-1-1 uk-margin-small-top form-inputs uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha value">
+                    <canvas id="captcha_image" class="uk-padding-small uk-width-2-5 uk-padding-remove-vertical" width="80" height="25"></canvas>
+                    <button type="button" class="uk-button uk-padding-remove uk-width-1-5 uk-button-small" id="reload_captcha" uk-icon="refresh"></button>
+                    <input class="uk-input uk-width-2-5 uk-margin-small-top form-inputs uk-padding-small uk-padding-remove-vertical" name="captcha" id="captcha" type="text" placeholder="Enter captcha value">
                 </div>
             </div>
             <div class="uk-width-1-2@m uk-margin-small-top  uk-text-center">
