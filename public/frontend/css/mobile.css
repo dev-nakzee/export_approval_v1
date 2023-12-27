@@ -47,8 +47,8 @@ body {
 /* Page */
 .page-header {
     background-color: #FFE8E5;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    /* padding-top: 10px !important;
+    padding-bottom: 10px !important; */
 }
 .page-header div h2 {
     font-size: 22px !important;
@@ -261,9 +261,6 @@ body {
 }
 
 /* Service Section */
-.page-header div h2 {
-    line-height: 0.5;
-}
 .service-heading span p {
     margin: 0;
     padding: 0;

@@ -17,12 +17,12 @@
 
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{"NEED CONTENT"}}</span>
-                <br> {{'All services'}}
+                <br> {{'Services'}}
             </h2>
         </div>
     </div>
@@ -55,9 +55,9 @@
                                 <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                             </div>
                             <div class="uk-width-expand uk-padding-small uk-padding-remove-left">
-                                <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}#mandatory-product-list"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
+                                <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
                                 <span>{!!$service->service_description!!}</span>
-                                <p class="uk-margin-remove-vertical uk-padding-remove uk-text-small view-all-products">View All Products</p>
+                                <p class="uk-margin-remove-vertical uk-padding-remove uk-text-small view-all-products">View Details</p>
                                 </a>
                             </div>
                         </div>
@@ -71,12 +71,12 @@
 </section>
 @include('frontend.components.downloadbrochure')
 @else
-<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove service-heading">
                 <span class="uk-text-small" style="color: #8b8b8b;">{{"NEED CONTENT"}}</span>
-                <br>{{'All services'}}
+                <br>{{'Services'}}
             </h2>
         </div>
     </div>
@@ -123,6 +123,7 @@
         </div>
     </div>
 </section>
+@include('frontend.components.downloadbrochure')
 @endif
 @endsection
 @section('scripts')

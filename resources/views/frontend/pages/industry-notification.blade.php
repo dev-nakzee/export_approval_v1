@@ -15,7 +15,7 @@
 @endsection
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" uk-sticky="offset: 80">
+<section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
             <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/governance.png')}}" alt="">
@@ -75,7 +75,7 @@
 </section>
 @include('frontend.components.downloadbrochure')
 @else
-<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical">
+<section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
             <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/governance.png')}}" alt="Notifications Image">

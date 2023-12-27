@@ -15,7 +15,7 @@
 @endsection
 @section('content')
 @if($agent->isMobile())
-<section class="uk-section page-header uk-padding-small uk-padding-remove-vertical" id="overview" uk-sticky="offset: 80;">
+<section class="uk-section page-header uk-padding-small" id="overview" uk-sticky="offset: 80;">
     <div class="uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
@@ -102,7 +102,7 @@
 </section>
 @include('frontend.components.downloadbrochure')
 @else
-<section class="uk-section page-header uk-padding-large uk-padding-remove-vertical" id="overview">
+<section class="uk-section page-header uk-padding-small" id="overview">
     <div class="uk-container uk-text-center">
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">

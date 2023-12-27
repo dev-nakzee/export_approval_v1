@@ -172,8 +172,8 @@ iframe {
 
 .page-header {
     background-color: #ff1f001a;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    /* padding-top: 10px !important;
+    padding-bottom: 10px !important; */
 }
 .page-header div h1 {
     font-size: 22px !important;
