@@ -109,10 +109,9 @@
                 </div>
                 <div class="uk-margin-top uk-margin-bottom social-share-section">
                     <span class="uk-text-bold">Share this blog</span><br>
-                    <a href="" class="twitter" uk-icon="twitter"></a>
+                    <a class="w-inline-block social-share-btn tw twitter" uk-icon="twitter" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"></a>
                     <a class="w-inline-block social-share-btn fb facebook" uk-icon="facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"> </a>
-                    <a href="" class="linkedin" uk-icon="linkedin"></a>
-                    
+                    <a class="w-inline-block social-share-btn lnk linkedin" uk-icon="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"></a>                    
                 </div>
                 @include('frontend.components.downloadbrochure')
             </div>
