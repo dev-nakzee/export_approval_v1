@@ -1,4 +1,18 @@
 @extends('frontend.layouts.master', ['pages' => 'Industrial Notifications'])
+@section('seo')
+<title>{{$category_name->seo_title}}</title>
+<meta name="keywords" content="{{$category_name->seo_keywords}}" />
+<meta name="description" content="{{$category_name->seo_description}}" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta property="og:title" content="{{$category_name->page_name}}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{$category_name->blog_category_name}}" />
+<meta property="og:url" content="{{url()->full()}}" />
+<meta property="og:site_name" content="Export Approval" />
+<meta property="og:image" content="" />
+<meta name="format-detection" content="telephone=no" />
+@endsection
 @section('content')
 @if($agent->isMobile())
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">

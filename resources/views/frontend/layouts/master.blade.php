@@ -280,11 +280,11 @@
                             <i uk-icon="icon:social; ratio: 1.25;"></i>
                         </span>
                         <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
-                            <a href="" class="facebook" uk-icon="facebook"></a>
-                            <a href="" class="twitter" uk-icon="instagram"></a>
-                            <a href="" class="linkedin" uk-icon="linkedin"></a>
-                            <a href="" class="pinterest" uk-icon="pinterest"></a>
-                            <a href="" class="twitter" uk-icon="twitter"></a>
+                            <a target="blank" href="https://www.facebook.com/Exportapproval1" class="facebook" uk-icon="facebook"></a>
+                            <a target="blank" href="" class="instagram" uk-icon="instagram"></a>
+                            <a target="blank" href="https://www.linkedin.com/company/101070178/admin/feed/posts/" class="linkedin" uk-icon="linkedin"></a>
+                            <a target="blank" href="" class="pinterest" uk-icon="pinterest"></a>
+                            <a target="blank" href="" class="twitter" uk-icon="twitter"></a>
                         </div>
                     </div>
                     

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Backend\Blog;
 use App\Models\Backend\BlogCategory;
+use App\Models\Backend\StaticPages;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
@@ -28,7 +29,8 @@ class BlogsController extends Controller
         }
         $categories = BlogCategory::get();
         $agent = new Agent;
-        return view('frontend.pages.blogs', compact('blogs', 'categories', 'agent'));
+        $page = StaticPages::where('static_page_id', 10)->first();
+        return view('frontend.pages.blogs', compact('blogs', 'categories', 'agent', 'page'));
     }
 
     public function category ($category)
@@ -43,7 +45,7 @@ class BlogsController extends Controller
         foreach($blogs as $key => $value) {
             $blogs[$key]['media_path'] = Storage::url($value['media_path']);
         }
-        $category_name = BlogCategory::select('blog_category_name')->where('blog_category_slug', $category)->first();
+        $category_name = BlogCategory::where('blog_category_slug', $category)->first();
         $category_slug = $category;
         $categories = BlogCategory::get();
         $agent = new Agent;
