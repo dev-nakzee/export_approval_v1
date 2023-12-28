@@ -40,12 +40,12 @@
     <div class="uk-card uk-card-body uk-card-default" uk-drop="mode: click; pos: bottom-center;">
         <ul class="uk-list uk-list-divider uk-text-bolder">
             <li>
-                <a class="uk-link-reset" href="#overview">{{'Product Overview'}}</a>
+                <a href="#overview">{{'Product Overview'}}</a>
             </li>
             @if($sections)
             @foreach($sections as $section)
                 <li>
-                    <a class="uk-link-reset" href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
+                    <a href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
                 </li>
             @endforeach
             @endif
@@ -132,12 +132,12 @@
                         {{$product->product_name}}</span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>
                         <li>
-                            <a class="uk-link-reset" href="#overview">{{'Product Overview'}}</a>
+                            <a href="#overview">{{'Product Overview'}}</a>
                         </li>
                         @if($sections)
                         @foreach($sections as $section)
                             <li>
-                                <a class="uk-link-reset" href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
+                                <a href="#{{$section->product_section_slug}}">{{$section->product_section_name}}</a>
                             </li>
                         @endforeach
                         @endif
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="uk-width-3-4@m uk-padding-remove-right">
-                <div class="uk-padding-small ps-tab-header">
+                <div class="uk-padding-small ps-tab-header ps-sections" id="overview">
                     <span>{{'Product Overview'}}</span>
                 </div>
                 <div class="uk-padding-small" uk-grid>

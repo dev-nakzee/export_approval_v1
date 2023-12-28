@@ -215,6 +215,14 @@ iframe {
     z-index: 10 !important;
     background-color: #fff !important;
 }
+.ps-details-section ul li a {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+.nav-highlight {
+    color: #ed462f !important;
+}
 @media screen and (min-width: 1600px) {
     .ps-sidebar-fixed {
         position: fixed;

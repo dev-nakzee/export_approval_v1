@@ -20,6 +20,25 @@
             $(document).ready(function(){
                 var scrollTop = 80;
                 $(window).scroll(function(){
+                    var currentHash = "#";
+                    var blocksArr = $('.ps-sections');
+                    var currentTop = window.pageYOffset/1;
+                    for (var i=0; blocksArr.length; i++){
+                        var currentElementTop = $(blocksArr[i]).offset().top;
+                        currentElementTop = currentElementTop - 100; 
+                        var hash = $(blocksArr[i]).attr('id');
+                        if (currentElementTop < currentTop && currentTop < currentElementTop + $(blocksArr[i]).height() && currentHash!=hash){
+                            if(history.pushState) {
+                                history.pushState(null, null, '#'+hash);
+                                $('.ps-sidebar-fixed ul li a').removeClass('nav-highlight');
+                                $('a[href$="#'+hash+'"]').addClass('nav-highlight');
+                            }
+                            else {
+                                    location.hash = '#'+hash;
+                            }
+                            currentHash = hash;
+                        }
+                    }
                     if($(window).scrollTop() >= scrollTop){
                         $('.back-to-top').removeClass('uk-hidden');
                     }

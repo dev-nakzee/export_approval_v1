@@ -125,7 +125,3 @@
 @include('frontend.components.downloadbrochure')
 @endif
 @endsection
-@section('scripts')
-
-
-@endsection

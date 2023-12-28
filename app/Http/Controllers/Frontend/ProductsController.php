@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class ProductsController extends Controller
 {
@@ -38,6 +39,8 @@ class ProductsController extends Controller
             ->orderBy('product_section_order', 'asc')
             ->get();
         $agent = new Agent;
-        return view('frontend.pages.product_details', compact('product', 'service', 'sections', 'agent'));
+        $service_slug = '';
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.product_details', compact('product', 'service', 'sections', 'agent', 'service_slug', 'routeName'));
     }
 }
