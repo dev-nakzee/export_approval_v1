@@ -17,6 +17,7 @@ use App\Models\Backend\Media;
 use App\Models\Backend\Document;
 use DataTables;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class IndustryNotificationController extends Controller
 {
@@ -30,7 +31,9 @@ class IndustryNotificationController extends Controller
         ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 9)->first();
-        return view('frontend.pages.industry-notification', compact('services', 'notices', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.industry-notification', compact('services', 'notices', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function service(Request $request, $service)
@@ -44,7 +47,9 @@ class IndustryNotificationController extends Controller
             ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 9)->first();
-        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.industry-notice-service', compact('services', 'notices', 'notice_service', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function detail(Request $request, $service, $notice_slug)
@@ -55,6 +60,8 @@ class IndustryNotificationController extends Controller
         $document = Document::where('doc_id', $notice->notice_document)->first();
         $media = Media::where('media_id', $notice->media_id)->first();
         $agent = new Agent;
-        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media', 'agent'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media', 'agent', 'routeName', 'service_slug'));
     }
 }

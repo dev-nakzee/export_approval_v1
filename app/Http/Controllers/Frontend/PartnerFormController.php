@@ -14,6 +14,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Validator;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class PartnerFormController extends Controller
 {
@@ -23,7 +24,9 @@ class PartnerFormController extends Controller
         $countries = Countries::get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 1)->first();
-        return view('frontend.pages.ba', compact('countries', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.ba', compact('countries', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function ba_save(Request $request): RedirectResponse
@@ -107,7 +110,9 @@ class PartnerFormController extends Controller
         $countries = Countries::get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 1)->first();
-        return view('frontend.pages.re', compact('countries', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.re', compact('countries', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function re_save(Request $request): RedirectResponse

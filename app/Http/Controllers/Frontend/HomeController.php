@@ -59,7 +59,8 @@ class HomeController extends Controller
         $page = StaticPages::where('static_page_id', 1)->first();
         $agent = new Agent;
         $routeName = Route::currentRouteName();
-        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent', 'page', 'routeName'));
+        $service_slug = '';
+        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function about()
@@ -79,8 +80,9 @@ class HomeController extends Controller
             $sections[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $agent = new Agent;
-        
-        return view('frontend.pages.about-us', compact('sections', 'static_page', 'agent'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.about-us', compact('sections', 'static_page', 'agent', 'routeName'));
     }
 
     public function downloads() {
@@ -110,7 +112,9 @@ class HomeController extends Controller
             ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 6)->first();
-        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.downloads', compact('services', 'downloads', 'downloadCategory', 'otherDownload', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function download_service($service_slug) {
@@ -138,7 +142,9 @@ class HomeController extends Controller
         $downloadCategory = DownloadCategory::orderBy('download_category_id', 'asc')->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 6)->first();
-        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload','agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.download_service', compact('services', 'downloads', 'downloadCategory', 'serviceDownload','agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function download_category($category_slug) {
@@ -162,7 +168,9 @@ class HomeController extends Controller
         }
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 6)->first();
-        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.download_category', compact('services', 'downloads', 'downloadCategory', 'categoryDownload', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function media_cover() {
@@ -174,7 +182,9 @@ class HomeController extends Controller
         }
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 4)->first();
-        return view('frontend.pages.media_coverage', compact('news', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.media_coverage', compact('news', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function gallery()
@@ -187,7 +197,9 @@ class HomeController extends Controller
         }
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 5)->first();
-        return view('frontend.pages.gallery', compact('images', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.gallery', compact('images', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function contact() {
@@ -200,13 +212,17 @@ class HomeController extends Controller
             ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 3)->first();
-        return view('frontend.pages.contact', compact('sections', 'countries', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.contact', compact('sections', 'countries', 'agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function holidays() {
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 8)->first();
-        return view('frontend.pages.holiday-list', compact('agent', 'page'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.holiday-list', compact('agent', 'page', 'routeName', 'service_slug'));
     }
 
     public function calendar($year) {

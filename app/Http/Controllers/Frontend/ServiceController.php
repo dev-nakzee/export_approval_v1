@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class ServiceController extends Controller
 {
@@ -38,7 +39,9 @@ class ServiceController extends Controller
             $sections[$key]['media_path'] = Storage::url($value['media_path']);
         }
         $agent = new Agent;
-        return view('frontend.pages.services', compact('services', 'page', 'sections', 'agent'));
+        $routeName = Route::currentRouteName();
+        $service_slug = '';
+        return view('frontend.pages.services', compact('services', 'page', 'sections', 'agent', 'routeName'));
     }
 
     //
@@ -59,7 +62,8 @@ class ServiceController extends Controller
         $agent = new Agent;
         $sections = ServiceSection::where('service_id', $service->service_id)
             ->orderBy('service_section_order', 'asc')->get();
-        return view('frontend.pages.service_details', compact('service', 'sections', 'products', 'agent'));
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.service_details', compact('service', 'sections', 'products', 'agent', 'routeName', 'service_slug'));
     }
 
 

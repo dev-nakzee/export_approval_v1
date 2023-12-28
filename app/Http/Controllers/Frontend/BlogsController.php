@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Models\Backend\Media;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class BlogsController extends Controller
 {
@@ -30,7 +31,9 @@ class BlogsController extends Controller
         $categories = BlogCategory::get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 10)->first();
-        return view('frontend.pages.blogs', compact('blogs', 'categories', 'agent', 'page'));
+        $service_slug = '';
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.blogs', compact('blogs', 'categories', 'agent', 'page', 'service_slug', 'service_slug', 'routeName'));
     }
 
     public function category ($category)
@@ -49,7 +52,9 @@ class BlogsController extends Controller
         $category_slug = $category;
         $categories = BlogCategory::get();
         $agent = new Agent;
-        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug', 'category_name', 'agent'));
+        $service_slug = '';
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug', 'category_name', 'agent', 'service_slug', 'routeName'));
     }
 
     public function detail ($category, $slug)
@@ -64,6 +69,8 @@ class BlogsController extends Controller
         $categories = BlogCategory::get();
         $category_slug = $category;
         $agent = new Agent;
-        return view('frontend.pages.blog_details', compact('blog', 'categories', 'category_slug', 'agent'));
+        $service_slug = '';
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.blog_details', compact('blog', 'categories', 'category_slug', 'agent', 'service_slug', 'routeName'));
     }
 }
