@@ -127,7 +127,7 @@
 
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
+                <img src="{{$sections[1]->media_path}}" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
             <div>
@@ -140,7 +140,7 @@
 
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
+                <img src="{{$sections[2]->media_path}}" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
             <div>
@@ -152,7 +152,7 @@
         </div>
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
+                <img src="{{$sections[3]->media_path}}" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
             <div>
@@ -164,7 +164,7 @@
         </div>
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img src="images/light.jpg" alt="" uk-cover>
+                <img src="{{$sections[4]->media_path}}" alt="" uk-cover>
                 <canvas width="600" height="400"></canvas>
             </div>
             <div>
