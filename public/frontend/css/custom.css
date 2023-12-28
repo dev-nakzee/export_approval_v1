@@ -8,6 +8,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
+.site-blue {
+    color: #052faa !important;
+}
+
+.site-orange {
+    color: #ed462f !important;
+}
+
 body {
     color: #000 !important;
 }
