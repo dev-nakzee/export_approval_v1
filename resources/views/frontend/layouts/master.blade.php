@@ -110,7 +110,7 @@
                 <div class="uk-offcanvas-bar mobile-menu">
                     <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
                     <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top" uk-nav>
-                        <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">Home</a></li>
+                        <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">{{Route::currentRouteName()}}Home</a></li>
                         <li><a href="{{route('frontend.site.about-us')}}" style="border-bottom: 1px #c6c6c6 solid;">About us</a></li>
                         <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
                             <a href="#">Services <span uk-nav-parent-icon></span></a>

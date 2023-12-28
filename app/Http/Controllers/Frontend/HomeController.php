@@ -24,6 +24,7 @@ use App\Models\Backend\Holidays;
 use Carbon\Carbon;
 use PDF;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\Route;
 
 class HomeController extends Controller
 {
@@ -57,7 +58,8 @@ class HomeController extends Controller
         }
         $page = StaticPages::where('static_page_id', 1)->first();
         $agent = new Agent;
-        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent', 'page'));
+        $routeName = Route::currentRouteName();
+        return view('frontend.pages.home', compact('services', 'sections', 'blogs', 'agent', 'page', 'routeName'));
     }
 
     public function about()
