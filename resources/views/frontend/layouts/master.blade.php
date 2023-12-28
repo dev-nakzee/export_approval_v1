@@ -110,37 +110,37 @@
                 <div class="uk-offcanvas-bar mobile-menu">
                     <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
                     <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top" uk-nav>
-                        <li><a href="{{route('frontend.site.home')}}" style="border-bottom: 1px #c6c6c6 solid;">Home</a></li>
-                        <li><a href="{{route('frontend.site.about-us')}}" style="border-bottom: 1px #c6c6c6 solid;">About us</a></li>
-                        <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
-                            <a href="#">Services <span uk-nav-parent-icon></span></a>
+                        <li><a @if(strtolower($routeName) === 'frontend.site.home') style="color: #ed462f !important;"@endif href="{{route('frontend.site.home')}}">Home</a></li>
+                        <li><a @if(strtolower($routeName) === 'frontend.site.about-us') style="color: #ed462f !important;"@endif href="{{route('frontend.site.about-us')}}">About us</a></li>
+                        <li class="uk-parent">
+                            <a href="#" @if(strtolower($routeName) === 'frontend.site.service' || strtolower($routeName) ==='frontend.site.services.all') style="color: #ed462f !important;"@endif>Services <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 @if($services)
                                 @foreach($services as $service)
-                                <li><a href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
+                                <li><a @if(strtolower($routeName) === 'frontend.site.service') @if($service_slug === $service->service_slug) style="color: #ed462f !important;" @endif @endif href="{{route('frontend.site.service', $service->service_slug)}}">{{$service->service_name}}</a></li>
                                 @endforeach
                                 @endif
                             </ul>
                         </li>
-                        <li class="uk-parent" style="border-bottom: 1px #c6c6c6 solid;">
-                            <a href="#">Resources <span uk-nav-parent-icon></span></a>
+                        <li class="uk-parent">
+                            <a href="#" @if(strtolower($routeName) === 'frontend.site.downloads' || strtolower($routeName) === 'frontend.site.download.service' || strtolower($routeName) === 'frontend.site.download.category' || strtolower($routeName) === 'frontend.site.media-cover' || strtolower($routeName) === 'frontend.site.gallery' || strtolower($routeName) === 'frontend.site.blog' || strtolower($routeName) === 'frontend.site.blog.category' || strtolower($routeName) === 'frontend.site.blog.detail') style="color: #ed462f !important;"@endif>Resources <span uk-nav-parent-icon></span></a>
                             <ul class="uk-nav-sub">
                                 <li>
-                                    <a href="{{route('frontend.site.downloads')}}">Downloads</a>
+                                    <a @if(strtolower($routeName) === 'frontend.site.downloads' || strtolower($routeName) === 'frontend.site.download.service' || strtolower($routeName) === 'frontend.site.download.category') style="color: #ed462f !important;" @endif href="{{route('frontend.site.downloads')}}">Downloads</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.blog')}}">Blogs</a>
+                                    <a @if(strtolower($routeName) === 'frontend.site.blog' || strtolower($routeName) === 'frontend.site.blog.category' || strtolower($routeName) === 'frontend.site.blog.detail') style="color: #ed462f !important;" @endif href="{{route('frontend.site.blog')}}">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
+                                    <a @if(strtolower($routeName) === 'frontend.site.media-cover') style="color: #ed462f !important;" @endif href="{{route('frontend.site.media-cover')}}">Media Coverage</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('frontend.site.gallery')}}">Gallery</a>
+                                    <a @if(strtolower($routeName) === 'frontend.site.gallery') style="color: #ed462f !important;" @endif href="{{route('frontend.site.gallery')}}">Gallery</a>
                                 </li>
                             </ul>
                         </li>
-                        <li style="border-bottom: 1px #c6c6c6 solid;"><a href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
-                        <li><a href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
+                        <li><a @if(strtolower($routeName) === 'frontend.site.industry-notification' || strtolower($routeName) === 'frontend.site.industry-notification.service' || strtolower($routeName) === 'frontend.site.industry-notification.detail') style="color: #ed462f !important;" @endif href="{{route('frontend.site.industry-notification')}}">Industry Notifications</a></li>
+                        <li><a @if(strtolower($routeName) === 'frontend.site.contact-us') style="color: #ed462f !important;" @endif href="{{route('frontend.site.contact-us')}}">Contact us</a></li>
                     </ul>
                     <div class="uk-position-small uk-position-bottom-center">
                         <span class="mobile-menu-poweredby">Powered by</span>
@@ -161,7 +161,7 @@
                     <li><a @if(strtolower($routeName) === 'frontend.site.home') style="color: #ed462f !important;"@endif href="{{route('frontend.site.home')}}">Home</a></li>
                     <li><a @if(strtolower($routeName) === 'frontend.site.about-us') style="color: #ed462f !important;"@endif href="{{route('frontend.site.about-us')}}">About us</a></li>
                     <li>
-                        <a href="#" @if(strtolower($routeName) === 'frontend.site.service') style="color: #ed462f !important;"@endif>Services <span uk-navbar-parent-icon></span></a>
+                        <a href="#" @if(strtolower($routeName) === 'frontend.site.service' || strtolower($routeName) ==='frontend.site.services.all') style="color: #ed462f !important;"@endif>Services <span uk-navbar-parent-icon></span></a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 @if($services)
@@ -175,7 +175,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" @if(strtolower($routeName) === 'frontend.site.service' || strtolower($routeName) === 'frontend.site.downloads' || strtolower($routeName) === 'frontend.site.download.service' || strtolower($routeName) === 'frontend.site.download.category' || strtolower($routeName) === 'frontend.site.media-cover' || strtolower($routeName) === 'frontend.site.gallery' || strtolower($routeName) === 'frontend.site.blog' || strtolower($routeName) === 'frontend.site.blog.category' || strtolower($routeName) === 'frontend.site.blog.detail') style="color: #ed462f !important;"@endif>Resources <span uk-navbar-parent-icon></span></a>
+                        <a href="#" @if(strtolower($routeName) === 'frontend.site.downloads' || strtolower($routeName) === 'frontend.site.download.service' || strtolower($routeName) === 'frontend.site.download.category' || strtolower($routeName) === 'frontend.site.media-cover' || strtolower($routeName) === 'frontend.site.gallery' || strtolower($routeName) === 'frontend.site.blog' || strtolower($routeName) === 'frontend.site.blog.category' || strtolower($routeName) === 'frontend.site.blog.detail') style="color: #ed462f !important;"@endif>Resources <span uk-navbar-parent-icon></span></a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li>

@@ -24,8 +24,20 @@ body {
     background-color: #fff !important;
 }
 .mobile-menu ul li a {
-    font-size: large;
+    font-size: 20px;
     color: #052faa !important;
+}
+.mobile-menu ul li ul li a::before  {
+    content: "➤ ";
+}
+.mobile-menu ul li {
+    border-bottom: 1px solid #052faa;
+}
+.mobile-menu ul li:last-child,  .mobile-menu ul li ul li {
+    border-bottom: none;
+}
+.mobile-menu ul li ul li a {
+    font-size: 16px;
 }
 
 .uk-offcanvas-close svg {

@@ -67,7 +67,7 @@
             <span class="section-tagline">{!!$sections[1]->section_tagline!!}</span>
             <p class="section-description">{!! $sections[1]->section_description !!}</p>
         </div>
-        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-large-bottom">
+        <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-horizontal uk-margin-large-bottom">
             <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
                 @if($services)
                 @foreach($services as $service)
@@ -136,7 +136,7 @@
                 <h3>Cost effective<br>solutions</h3>
                 </div>
             </div>
-            <div class="wcu-one wcu-tabs" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
+            <div class="wcu-one wcu-tabs" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-two wcu-tabs" data-uk-grid="">
@@ -145,7 +145,7 @@
             <h3>Make Payment<br>step-by-step</h3>
             </div>
             </div>
-            <div class="wcu-two wcu-tabs" hidden="">We offer flexible installment plans to let you pay at your own pace.</div>
+            <div class="wcu-two wcu-tabs" uk-toggle="target: .wcu-two; mode: hover; animation: uk-animation-slide-left-small" hidden="">We offer flexible installment plans to let you pay at your own pace.</div>
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
@@ -154,7 +154,7 @@
             <h3 style="font-size: 16px !important;">Authorized Indian <br>Representative (AIR) Services</h3>
             </div>
             </div>
-            <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
+            <div class="wcu-four wcu-tabs" hidden="" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">We facilitate seamless market access for foreign manufacturers in India.</div>
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
@@ -163,7 +163,7 @@
             <h3>10+ years of experience</h3>
             </div>
             </div>
-            <div class="wcu-three wcu-tabs" hidden="">We bring over 10 years of proven experience to achieve success in every project.</div>
+            <div class="wcu-three wcu-tabs" hidden="" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">We bring over 10 years of proven experience to achieve success in every project.</div>
             </div>
             </div>
             </div>
@@ -352,7 +352,7 @@
             <h3 style="font-size: 16px !important; font-weight: 700 !important;">Authorized Indian Representative (AIR) Services</h3>
             </div>
             </div>
-            <div class="wcu-four wcu-tabs" hidden="">Trust in our track record of successfully completing over 1000 projects.</div>
+            <div class="wcu-four wcu-tabs" hidden="">We facilitate seamless market access for foreign manufacturers in India.</div>
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
