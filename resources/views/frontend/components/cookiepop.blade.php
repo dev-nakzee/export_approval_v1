@@ -1,4 +1,4 @@
-<div class="uk-width-1-1 uk-position-fixed uk-position-bottom uk-overlay uk-overlay-default uk-box-shadow-large cookie-pop" uk-height-match=".cookie-pop-div">
+<div class="uk-width-1-1 uk-position-fixed uk-position-bottom uk-overlay uk-overlay-primary uk-box-shadow-large cookie-pop" uk-height-match=".cookie-pop-div">
     <div uk-grid>
             <div class="uk-width-4-5@m"><span class="uk-text-small uk-text-bold cookie-pop-div">We value your privacy</span>
             <p class="uk-small">We use cookies and tracking technologies to enhance your website experience. Personal data like IP address and browsing information may be processed for personalized ads, content measurement, and services development.</p>
