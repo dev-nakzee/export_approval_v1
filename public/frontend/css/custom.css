@@ -9,7 +9,7 @@
     font-family: 'Roboto', sans-serif !important;
 }
 .cookie-pop {
-    z-index: 9999;
+    z-index: 999;
     border-bottom: 1px #7a7a7a solid;
 }
 .site-blue {
@@ -643,7 +643,7 @@ section.website-footer {
     background-color: #e7e7e7 !important;
     color: #052faa !important;
     border: #052faa solid 2px;
-    z-index: 99 !important;
+    z-index: 9999 !important;
 }
 .back-to-top a {
     font-weight: 900;
