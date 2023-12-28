@@ -36,12 +36,19 @@
     </div>
 </section>
 <section class="uk-section uk-padding-small">
-    <div uk-grid class="uk-child-width-1-5@m uk-grid uk-container uk-width-1-1 uk-padding uk-padding-remove-right uk-padding-remove-vertical">
+    <div uk-grid class="uk-child-width-1-5@m uk-grid">
     @if($news)
     @foreach($news as $news)
-    <a href="{{$news->news_url}}" class="media-blocks" target="blank">
-        <img class="" src="{{$news->media_path}}" uk-img />
-    </a>
+    <div>
+            <a href="{{$news->news_url}}" class="uk-card uk-card-default uk-card-body uk-padding-small uk-link-reset news-articles" target="blank">
+                <div class="uk-card-media-top">
+                    <img class="" src="{{$news->media_path}}" uk-img />
+                </div>
+                <div class="uk-card-body uk-padding-remove-horizontal uk-text-middle">
+                    <h3 class="uk-card-title">{{$news->news_title}}</h3>
+                </div>
+            </a>
+    </div>
     @endforeach
     @endif
     </div>
@@ -68,12 +75,19 @@
 </section>
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
     <div class="section-two-heading uk-text-center uk-padding uk-padding-remove-vertical">
-        <div uk-grid class="uk-child-width-1-5@m uk-grid uk-container uk-width-1-1 uk-padding uk-padding-remove-right uk-padding-remove-vertical uk-margin-large-top">
+        <div uk-grid class="uk-child-width-1-5@m uk-grid uk-container uk-width-1-1 uk-padding uk-padding-remove-right uk-padding-remove-vertical uk-margin-large-top" uk-height-match=".news-articles">
         @if($news)
         @foreach($news as $news)
-        <a href="{{$news->news_url}}" class="media-blocks" target="blank">
-            <img class="" src="{{$news->media_path}}" uk-img />
-        </a>
+        <div>
+            <a href="{{$news->news_url}}" class="uk-card uk-card-default uk-card-body uk-padding-small uk-link-reset news-articles" target="blank">
+                <div class="uk-card-media-top">
+                    <img class="" src="{{$news->media_path}}" uk-img />
+                </div>
+                <div class="uk-card-body uk-padding-remove-horizontal uk-text-middle">
+                    <h3 class="uk-card-title">{{$news->news_title}}</h3>
+                </div>
+            </a>
+        </div>
         @endforeach
         @endif
         </div>

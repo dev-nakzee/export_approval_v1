@@ -184,6 +184,7 @@ class HomeController extends Controller
         $page = StaticPages::where('static_page_id', 4)->first();
         $routeName = Route::currentRouteName();
         $service_slug = '';
+        // dd($news);
         return view('frontend.pages.media_coverage', compact('news', 'agent', 'page', 'routeName', 'service_slug'));
     }
 

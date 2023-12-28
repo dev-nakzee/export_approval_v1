@@ -376,10 +376,12 @@ table.dataTable {
 
 /* Media coverage images */
 
-.media-blocks img {
-    border: #a3a3a3 solid 1px !important;
-    border-radius: 5px !important;
-    padding: 10px !important;
+.news-articles h3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
 }
 
 /* Brochure form  */
