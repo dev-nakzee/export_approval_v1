@@ -328,19 +328,8 @@
         @if(!Cookie::has('popup'))
             @include('frontend.components.popup')
         @endif
-        @if(!Cookie::has('cookies'))
-        <div class="uk-width-1-1 uk-position-fixed uk-position-bottom uk-overlay uk-overlay-default uk-box-shadow-large cookie-pop">
-            <div uk-grid>
-            <div class="uk-width-4-5"><span class="uk-text-small uk-text-bold">We value your privacy</span>
-            <p class="uk-small">We and our partners use cookies and other tracking technologies to improve your experience on our website. We may store and/or access information on a device and process personal data, such as your IP address and browsing data, for personalised advertising and content, advertising and content measurement, audience research and services development. Additionally, we may utilize precise geolocation data and identification through device scanning.</p>
-            <p class="uk-small">
-        Please note that your consent will be valid across all our subdomains. You can change or withdraw your consent at any time by clicking the “Consent Preferences” button at the bottom of your screen. We respect your choices and are committed to providing you with a transparent and secure browsing experience.</p>
-        </div>
-        <div class="uk-width-1-5">
-            <button class="uk-button uk-button-default">Accept All</button>
-            <button class="uk-button uk-button-default">Reject</button>
-        </div></div>
-        </div>
+        @if(!Cookie::has('cookiepop'))
+            @include('frontend.components.cookiepop')
         @endif
     </body>
 </html>

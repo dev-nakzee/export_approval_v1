@@ -8,6 +8,11 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
+.cookie-pop {
+    z-index: 9999;
+    border-bottom: 1px #7a7a7a solid;
+    background-color: #a3a3a3 !important;
+}
 .site-blue {
     color: #052faa !important;
 }

@@ -17,6 +17,7 @@ use App\Http\Controllers\Frontend\BrochureFormController;
 use App\Http\Controllers\Frontend\PartnerFormController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\PopupController;
+use App\Http\Controllers\Frontend\CookiesController;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
@@ -33,6 +34,11 @@ Route::controller(HomeController::class)->group(function (){
 
 Route::controller(PopupController::class)->group(function (){
     Route::get('/pop-up/close', 'close')->name('frontend.site.popup.close');
+});
+
+Route::controller(CookiesController::class)->group(function (){
+    Route::get('/cookie/accept', 'accept')->name('frontend.site.cookie.accept');
+    Route::get('/cookie/reject', 'reject')->name('frontend.site.cookie.reject');
 });
 
 Route::controller(ContactController::class)->group(function (){
