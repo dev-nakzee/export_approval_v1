@@ -217,7 +217,7 @@
         <div class="uk-margin-top uk-margin-bottom home-banner-left">
             {!! $sections[0]->section_content !!}
             <div class="uk-margin-medium-bottom">
-                <form id="search_form">
+                <form id="search_form" class="uk-width-4-5">
                 @csrf
                 <div class="uk-inline uk-width-expanded">
                     <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
