@@ -42,29 +42,56 @@
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
         <p class="section-description">{!! $sections[0]->section_description !!}</p>
     </div>
-    <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-large-bottom">
-        <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
-            @if($services)
-            @foreach($services as $service)
-            <div class="uk-margin-small-bottom home-ml-section">
-                <article class="uk-comment uk-padding-remove uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
-                    <header class="uk-comment-header">
-                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                            <div class="uk-width-1-3">
-                                <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-                            </div>
-                            <div class="uk-width-expand uk-padding-small uk-padding-remove-left">
-                                <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
-                                <span>{!!$service->service_description!!}</span>
-                                <p class="uk-margin-remove-vertical uk-padding-remove uk-text-small view-all-products">View Details</p>
-                                </a>
-                            </div>
-                        </div>
-                    </header>
-                </article>
+    <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="{{$sections[1]->media_path}}" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
             </div>
-            @endforeach
-            @endif
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{$sections[1]->section_name}}</h3>
+                    <p>{!! $sections[1]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="{{$sections[2]->media_path}}" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{$sections[2]->section_name}}</h3>
+                    <p>{!! $sections[2]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="{{$sections[3]->media_path}}" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                <h3 class="uk-card-title">{{$sections[3]->section_name}}</h3>
+                    <p>{!! $sections[3]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="{{$sections[4]->media_path}}" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                <h3 class="uk-card-title">{{$sections[4]->section_name}}</h3>
+                    <p>{!! $sections[4]->section_description !!}</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -96,29 +123,56 @@
         <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
         <p class="section-description">{!! $sections[0]->section_description !!}</p>
     </div>
-    <div class="uk-section uk-padding-small uk-padding-remove-top uk-padding-remove-right uk-margin-large-bottom">
-        <div class="uk-child-width-1-4@m uk-grid-match uk-flex-center" uk-grid>
-            @if($services)
-            @foreach($services as $service)
-            <div class="uk-margin-remove home-ml-section">
-                <article class="uk-comment uk-padding-remove uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
-                    <header class="uk-comment-header">
-                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
-                            </div>
-                            <div class="uk-width-expand uk-padding-small uk-padding-remove-left">
-                                <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}#mandatory-product-list"><h4 class="uk-comment-title uk-margin-remove">{{$service->service_name}}</h4>
-                                <span>{!!$service->service_description!!}</span>
-                                <p class="uk-margin-remove-vertical uk-padding-remove uk-text-small view-all-products">View All Products</p>
-                                </a>
-                            </div>
-                        </div>
-                    </header>
-                </article>
+    <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="images/light.jpg" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
             </div>
-            @endforeach
-            @endif
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{$sections[1]->section_name}}</h3>
+                    <p>{!! $sections[1]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="images/light.jpg" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{$sections[2]->section_name}}</h3>
+                    <p>{!! $sections[2]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="images/light.jpg" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                <h3 class="uk-card-title">{{$sections[3]->section_name}}</h3>
+                    <p>{!! $sections[3]->section_description !!}</p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="images/light.jpg" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                <h3 class="uk-card-title">{{$sections[4]->section_name}}</h3>
+                    <p>{!! $sections[4]->section_description !!}</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
