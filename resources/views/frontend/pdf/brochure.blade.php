@@ -127,12 +127,27 @@
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container uk-text-center">
-                <h4 class="uk-h3 uk-text-bold">This Brochure is created for</h4>
+                <h4 class="uk-h4">This Brochure is created for</h4>
                 <p class="uk-h4 uk-text-bold">{{$data['name']}}<br>
                 {{$data['organisation']}}<br>
                 {{$data['email']}}<br>
                 {{$data['phone']}}<br>
                 {{$data['country']}}
+                </p>
+                <h4 class="uk-h4" style="margin-top: 90mm;">Connect with us for further assistance</h4>
+                <h3 class="uk-h3 uk-text-bold uk-margin-remove site-blue">Brand Liaison India Pvt. Ltd.</h3>
+                <p class="uk-h4 uk-text-bold uk-margin-remove">
+                            110, Sharma Complex<br>
+                            A-2, Guru Nanak Pura, Laxmi Nagar<br>
+                            Delhi - 110092, India
+                </p>
+                <p class="uk-h4 uk-text-bold">
+                            M : +91-9810363988 &nbsp;&nbsp;&nbsp;
+                            E: info@bl-india.com<br>
+                            www.exportapproval.com
+                </p>
+                <p class="uk-h5" style="margin-top: 20mm;">
+                    This brochure is created on {{date('d-m-Y')}} at {{date('H:i:s')}} GMT.
                 </p>
             </div>
         </div>
