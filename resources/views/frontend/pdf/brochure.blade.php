@@ -66,12 +66,19 @@
                 height: 70px;
             }
             .service-description {
-                font-size: 30px !important;
-                font-weight: bold !important;
+                font-size: 22px !important;
                 color: #000;
             }
             .middle-text {
-                margin-top: 50mm;
+                margin-top: 50mm !important;
+                margin-bottom: 10mm !important;
+            }
+            .site-blue {
+                color: #052faa !important;
+            }
+
+            .site-orange {
+                color: #ed462f !important;
             }
         </style>
         <!-- UIkit CSS -->
@@ -85,9 +92,9 @@
     <body>
         <div class="uk-section uk-margin-remove uk-padding-large uk-text-center">
             <img class="uk-margin-xlarge-bottom" src="https://ik.imagekit.io/bimma/exportapproval/logo.png?updatedAt=1703831191033">
-            <h3 class="uk-text-bold middle-text">Enabling your products for export to India</h3>
+            <h3 class="uk-text-bold uk-h3 middle-text site-blue">Enabling your products for export to India</h3>
             <h2 class="uk-margin-top uk-margin-remove-bottom uk-h2 uk-text-bold">Obtain {{$data['service']['service_name']}}</h2>
-            <div class="service-description">{!!$data['service']['service_description']!!}</div>
+            <div class="service-description uk-margin-small-top">{!!$data['service']['service_description']!!}</div>
             <div class="uk-position-bottom brandliaison">
                 <span class="uk-text-bold uk-text-small">Powered By</span><br>
                 <img src="https://ik.imagekit.io/bimma/exportapproval/bl-logo-hq.jpg?updatedAt=1703831190940">
@@ -102,29 +109,12 @@
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
-            {!!$data['sections']['page3']!!}
             </div>
         </div>
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
-                <h2 class="uk-h3 uk-text-bold uk-margin-remove-bottom">{{$data['service']['service_name']}} : Mandatory Product Categories</h2>
-                <table class="uk-table uk-table-small uk-table-striped uk-table-divider" style="border: 1px #ccc solid">
-                    <thead>
-                        <tr>
-                            <th class="uk-text-bold">Sr. No.</th>
-                            <th class="uk-text-bold">Category</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($data['products'] as $product)
-                        <tr>
-                            <td>{{$loop->iteration}} </td>
-                            <td>{{$product->product_category_name}}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+            {!!$data['sections']['page3']!!}
             </div>
         </div>
         <div class="page-break"></div>
