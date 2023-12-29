@@ -36,7 +36,6 @@
             url:"{{route('frontend.site.cookie.reject')}}",
             method:"GET",
             success:function(response){
-                alert();
                 $('.cookie-pop').addClass('uk-hidden');
             }
         });
