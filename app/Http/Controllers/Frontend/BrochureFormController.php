@@ -102,7 +102,7 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">A letter designating an authorized representative in India.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Trademark/Brand Authorization</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Authorization for the use of trademarks or brand names associated with the product.</p>
-                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Sample Product</h3>
+                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Product Sample</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">In some cases, a sample of the product may be required for further evaluation.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Proof of Payment</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Receipt or proof of payment for the applicable registration fees.<strong> </strong></p>
@@ -278,8 +278,6 @@ class BrochureFormController extends Controller
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Receipt or proof of payment for the applicable WPC ETA certification fees.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Declaration of Conformity</h3>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">A formal declaration affirming that the product conforms to the relevant WPC standards.</p>
-                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Factory Inspection Report</h3>
-                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">If applicable, a report detailing the findings of the factory inspection conducted by WPC authorities.</p>
                 <h2 class="uk-h3 uk-text-bold">WPC ETA Approval Timeline</h2>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Standard Timeline</strong>: Within 10 working days<strong><br></strong></p>
                 <h2 class="uk-h3 uk-text-bold">WPC ETA Approval Costing</h2>
@@ -318,7 +316,7 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Compile comprehensive technical documentation, including circuit diagrams, specifications, and user manuals.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Test Reports</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Provide test reports from accredited laboratories, demonstrating the product`s conformity with TEC standards.</p>
-                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Sample Product</h3>
+                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Product Sample</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Submit samples of the telecommunication equipment for testing and evaluation by the designated laboratory.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Frequency Allocation Details</h3>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Specify the frequency bands and other wireless parameters associated with the product. Obtain the necessary frequency allocation from TEC, if applicable.</p>
