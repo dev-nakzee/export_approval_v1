@@ -12,7 +12,6 @@
     <meta property="og:site_name" content="Export Approval" />
     <meta property="og:image" content="" />
     <meta name="format-detection" content="telephone=no" />
-
     @endsection
 @section('content')
 @if ($agent->isMobile())

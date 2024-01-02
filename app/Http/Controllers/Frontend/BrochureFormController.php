@@ -68,7 +68,9 @@ class BrochureFormController extends Controller
                 'page2' => '<h2 class="uk-h3 uk-text-bold">BIS/CRS Registration: Mandatory Before Export to India</h2>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">The Bureau of Indian Standards (BIS) is the national standards body of India, responsible for developing and maintaining quality standards for various products before export to India. BIS Registration ensures that products meet the specified quality and safety criteria, promoting consumer protection and industry excellence. Within the framework of BIS, there is a specific scheme called the Compulsory Registration Scheme (CRS) for certain IT and electronic products. CRS is designed to regulate the quality of these products, and compliance with CRS is mandatory for manufacturers and exporters. If you are looking to export IT and electronic products to India, obtaining BIS/CRS Registration from BIS is a mandatory requirement. Without this necessary registration, you will not be able to export your products to India, emphasizing the importance of compliance with BIS standards for seamless international trade.</p>
                 <h2 class="uk-h3 uk-text-bold">Products Requiring BIS/CRS Registration for Export to India</h2>
-                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">BIS/CRS Registration is mandatory for various IT and electronic products while exporting to India. This registration ensures that the products meet the prescribed quality and safety standards set by the Bureau of Indian Standards. It is important for exporters to identify the specific product categories covered by BIS/CRS and ensure compliance before exporting to India. Click here to view the mandatory product list of BIS/CRS Registration.</p>',
+                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">BIS/CRS Registration is mandatory for various IT and electronic products while exporting to India. This registration ensures that the products meet the prescribed quality and safety standards set by the Bureau of Indian Standards. It is important for exporters to identify the specific product categories covered by BIS/CRS and ensure compliance before exporting to India. Click here to view the mandatory product list of BIS/CRS Registration.</p>
+                
+                ',
                 'page3' => '<h2 class="uk-h3 uk-text-bold">BIS/CRS Registration Procedure</h2>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">The BIS/CRS Registration procedure involves several steps to ensure that IT and electronic products comply with the required quality and safety standards for export to India.</p>
                 <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Step 1: Product Categorization</h3>
@@ -113,7 +115,17 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top">As per government guidelines, the fee for new application of BIS/CRS Registration is <strong>approximately INR 15,000.</strong></p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note:</strong> This cost may vary depending on the specific product category and the quantity of units that need to be marked with the IS label.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of BIS/CRS Registration costing, feel free contact us at +91-9250056788 or +91-8130856678.</p>',
-                'products' => '<tr>
+                'products' => '<table class="uk-table uk-table-divider uk-table-striped uk-table-small">
+                <thead>
+                    <tr>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
                 <td>1</td>
                 <td>Mobile</td>
                 <td>2</td>
@@ -172,7 +184,16 @@ class BrochureFormController extends Controller
                 <td>Musical System</td>
                 <td>20</td>
                 <td>Microwave Ovens</td>
-                </tr>',
+                </tr></tbody>
+                </table>
+                <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
+                <strong>Our Role</strong><br>
+                At Brand Liaison, our key role is to provide valuable assistance and support to
+manufacturers aiming to export their products to India by facilitating the process of
+obtaining BIS/CRS Registration. We make sure that your products get the required Indian
+certifications to let you export them to India seamlessly. Our expert team ensures that
+manufacturers adhere to the necessary quality and safety criteria mandated by BIS, guiding
+them through the complete process of BIS/CRS Registration.</p>',
             ],
             4 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">BIS/ISI Certification: Mandatory Before Export to India</h2>
@@ -291,7 +312,17 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">
                 For customized quotations of BIS/ISI Certification costing, feel free contact us at +91-
                 9250056788 or +91-8130856678.</p>',
-                'products' => '<tr>
+                'products' => '<table class="uk-table uk-table-divider uk-table-striped uk-table-small">
+                <thead>
+                    <tr>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
                 <td>1</td>
                 <td>Foot Wear</td>
                 <td>2</td>
@@ -350,7 +381,16 @@ class BrochureFormController extends Controller
                 <td>Copper Products</td>
                 <td>20</td>
                 <td>Steel Wires or Strands, Nylon or Wire Ropes and Wire mesh</td>
-                </tr>'
+                </tr></tbody>
+                </table>
+                <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
+                <strong>Our Role</strong><br>
+                At Brand Liaison, our key role is to provide valuable assistance and support to
+                manufacturers aiming to export their products to India by facilitating the process of
+                obtaining BIS/ISI Certification. We make sure that your products get the required Indian
+                certifications to let you export them to India seamlessly. Our expert team ensures that
+                manufacturers adhere to the necessary quality and safety criteria mandated by BIS, guiding
+                them through the complete process of BIS/ISI Certification.</p>'
             ],
             5 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">WPC ETA Approval: Mandatory Before Export to India</h2>
@@ -402,7 +442,17 @@ class BrochureFormController extends Controller
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for WPC ETA Approval is<strong> approximately INR 10,000</strong>.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the WPC certificate.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of WPC ETA Approval costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
-                 'products' => '<tr>
+                 'products' => '<table class="uk-table uk-table-divider uk-table-striped uk-table-small">
+                 <thead>
+                     <tr>
+                         <th width="10%">Sr. No.</th>
+                         <th width="40%">Products</th>
+                         <th width="10%">Sr. No.</th>
+                         <th width="40%">Products</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
                  <td>1</td>
                  <td>Wireless Mouse</td>
                  <td>2</td>
@@ -461,7 +511,16 @@ class BrochureFormController extends Controller
                  <td>Musical System</td>
                  <td>20</td>
                  <td>Tracking Device</td>
-                 </tr>'
+                 </tr></tbody>
+                 </table>
+                 <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
+                 <strong>Our Role</strong><br>
+                 At Brand Liaison, our key role is to provide valuable assistance and support to
+ manufacturers aiming to export their products to India by facilitating the process of
+ obtaining WPC ETA Approval. We make sure that your products get the required Indian
+ certifications to let you export them to India seamlessly. Our expert team ensures that
+ manufacturers adhere to the necessary quality and safety criteria mandated by WPC,
+ guiding them through the complete process of WPC ETA Approval.</p>'
             ],
             6 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">TEC Certification: Mandatory Before Export to India</h2>
@@ -510,7 +569,17 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for TEC Certification is&nbsp;<strong>approximately INR 50,000</strong>.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the TEC certificate.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of TEC Certification costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
-                'products' => '<tr>
+                'products' => '<table class="uk-table uk-table-divider uk-table-striped uk-table-small">
+                <thead>
+                    <tr>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                        <th width="10%">Sr. No.</th>
+                        <th width="40%">Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
                 <td>1</td>
                 <td>2 Wire Telephone Equipment</td>
                 <td>2</td>
@@ -569,7 +638,15 @@ class BrochureFormController extends Controller
                 <td>LAN Switch</td>
                 <td>20</td>
                 <td>Mobile User Equipment</td>
-                </tr>'
+                </tr></tbody>
+                </table>
+                <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
+                <strong>Our Role</strong><br>At Brand Liaison, our key role is to provide valuable assistance and support to
+                manufacturers aiming to export their products to India by facilitating the process of
+                obtaining TEC Certification. We make sure that your products get the required Indian
+                certifications to let you export them to India seamlessly. Our expert team ensures that
+                manufacturers adhere to the necessary quality and safety criteria mandated by TEC, guiding
+                them through the complete process of TEC Certification.</p>'
             ]
             ];
         $data['sections'] = $section[$request->service];

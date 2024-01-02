@@ -80,6 +80,9 @@
             .site-orange {
                 color: #ed462f !important;
             }
+            .site-grey-bg {
+                background-color: #e6e6e6;
+            }
         </style>
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
@@ -110,19 +113,7 @@
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
             <h3 class="uk-h3 uk-text-bold">List of Mandatory Products</h3>
-                <table class="uk-table uk-table-divider uk-table-bordered uk-table-striped">
-                    <thead>
-                        <tr>
-                            <th width="10%">Sr. No.</th>
-                            <th width="40%">Products</th>
-                            <th width="10%">Sr. No.</th>
-                            <th width="40%">Products</th>
-                        </tr>
-                    </thead>
-                    <tbody>
                     {!!$data['sections']['products']!!}
-                </tbody>
-                </table>
             </div>
         </div>
         <div class="page-break"></div>
@@ -134,35 +125,64 @@
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
-                <h3 class="uk-h3 uk-text-bold">About Brand Liaison</h3>
-                <p class="uk-h4 uk-text-justify">Brand Liaison, founded in 2014, is one of the top 10 compliance consultant company, registered with the ROC (Registrar of Companies), Ministry of Corporate Affairs, Government of India. With the Export Approval platform, we offer comprehensive assistance and support to foreign manufacturers aiming to export their products to India seamlessly. Our team of compliance experts streamlines the process of obtaining essential approvals and certifications necessary for a diverse range of products. Brand Liaison understands the challenges of Indian compliance services and serves as a trusted partner in navigating these complexities. We provide tailored solutions for various product certifications crucial for market entry. Our expertise lies in facilitating a smooth and efficient approval process, ensuring that foreign manufacturers meet all regulatory standards and enabling them to establish a strong presence in the Indian market. We have established enduring partnerships with over 150 renowned global brands. These collaborations represent our ability to meet diverse needs and exceed expectations successfully. Though our esteemed clientele is extensive, we wish to highlight some of our partners, including Aquilstar, C-net, CBS Chemicals, CCDT, Desko, Exza, HID, Hitachi, Jjiuzhou, Willet, QNAP, Secure-VU, Samsung-STS, Skyworth, and many more.</p>
+                <h2 class="uk-h3 uk-text-bold">About Brand Liaison</h2>
+                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">Brand Liaison, founded in 2014, is one of the top 10 compliance consultant companies,
+officially registered with the ROC (Registrar of Companies), Ministry of Corporate Affairs,
+Government of India. Our commitment to excellence is reflected in our mission to provide
+comprehensive assistance and support to deliver exceptional compliance services for
+manufacturers.</p>
+                <h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Export Assistance</h3>
+                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">With our Export Approval platform, we offer comprehensive assistance and support to
+foreign manufacturers aiming to export their products to India seamlessly. Our team of
+compliance experts streamlines the process of obtaining essential approvals and
+certifications necessary for a diverse range of products. Our expertise lies in facilitating a
+smooth and efficient approval process, ensuring that foreign manufacturers meet all
+regulatory standards and enabling them to establish a strong presence in the Indian market.</p>
+<h3 class="uk-h4 uk-text-bold uk-margin-remove-bottom">Global Partnerships</h3>
+                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As a trusted partner, Brand Liaison comprehends the challenges of Indian compliance
+services and provides tailored solutions for crucial product certifications necessary for
+successful market entry. With an established track record, we have formed enduring
+partnerships with over 150 renowned global brands. Our esteemed clientele, such as<br><br>
+
+Aquilstar, C-net, CBS Chemicals, CCDT, Desko, Exza, HID, Hitachi, Jjiuzhou, Willet, QNAP,
+Secure-VU, Samsung-STS, Skyworth, and many more, represents our ability to exceed
+expectations and meet diverse client needs.</p>
             </div>
         </div>
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
-            <div class="uk-container uk-text-center">
-                <h4 class="uk-h4">This Brochure is created for</h4>
-                <p class="uk-h4 uk-text-bold uk-margin-remove">{{$data['name']}}</p>
-                <p class="uk-h4 uk-margin-remove">
+            <div class="uk-container">
+                <h4 class="uk-h4 uk-text-center">This Brochure is created for</h4>
+                <p class="uk-h4 uk-text-bold uk-margin-remove uk-text-center">{{$data['name']}}</p>
+                <p class="uk-h4 uk-margin-remove uk-text-center">
                 {{$data['organisation']}}<br>
                 {{$data['email']}}<br>
                 {{$data['phone']}}<br>
                 {{$data['country']}}
                 </p>
-                
-                <h4 class="uk-h4" style="margin-top: 90mm;">Connect with us for further assistance</h4>
-                <h3 class="uk-h3 uk-text-bold uk-margin-remove site-blue">Brand Liaison India Pvt. Ltd.</h3>
-                <p class="uk-h4 uk-text-bold uk-margin-remove">
+                <h4 class="uk-h5 uk-text-bold uk-text-center">Internal Remarks</h4>
+                <p class="uk-h6 uk-margin-remove-top uk-text-bold">1.</p>
+                <hr>
+                <p class="uk-h6 uk-margin-remove-top uk-text-bold">Remark by & Date</p>
+                <hr>
+                <p class="uk-h6 uk-margin-remove-top uk-text-bold">2.</p>
+                <hr>
+                <p class="uk-h6 uk-margin-remove-top uk-text-bold">Remark by & Date</p>
+                <hr>
+                <br>
+                <h4 class="uk-h4 uk-text-center">Connect with us for further assistance</h4>
+                <h3 class="uk-h3 uk-text-bold uk-margin-remove site-blue uk-text-center">Brand Liaison India Pvt. Ltd.</h3>
+                <p class="uk-h4 uk-text-bold uk-margin-remove uk-text-center">
                             110, Sharma Complex<br>
                             A-2, Guru Nanak Pura, Laxmi Nagar<br>
                             Delhi - 110092, India
                 </p>
-                <p class="uk-h4 uk-text-bold">
+                <p class="uk-h4 uk-text-bold uk-text-center">
                             M : +91-9810363988 &nbsp;&nbsp;&nbsp;
                             E: info@bl-india.com<br>
                             www.exportapproval.com
                 </p>
-                <p class="uk-h5" style="margin-top: 20mm;">
+                <p class="uk-h5 uk-text-center" style="margin-top: 20mm;">
                     This brochure is created on {{date('d-m-Y')}} at {{date('H:i:s')}} GMT.
                 </p>
             </div>
