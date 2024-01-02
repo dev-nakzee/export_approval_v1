@@ -113,8 +113,66 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top">As per government guidelines, the fee for new application of BIS/CRS Registration is <strong>approximately INR 15,000.</strong></p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note:</strong> This cost may vary depending on the specific product category and the quantity of units that need to be marked with the IS label.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of BIS/CRS Registration costing, feel free contact us at +91-9250056788 or +91-8130856678.</p>',
-                'products' => ['Mobile','LED TV','Printer','Scanner','Bluetooth Speakers','Bluetooth Headphones','Power Adaptor','Leptop','Notbook','Visual Display Unit','CCTV Camera','Video Camera','Digital Camera','Rice Cooker','Automatic Data Processing Machine (ADPM)','LED Light','LED Street Light','LED Lamp','Musical System','Microwave Ovens'],
-                
+                'products' => '<tr>
+                <td>1</td>
+                <td>Mobile</td>
+                <td>2</td>
+                <td>LED TV</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>Printer</td>
+                <td>4</td>
+                <td>Scanner</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>Bluetooth Speakers</td>
+                <td>6</td>
+                <td>Bluetooth Headphones</td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>Power Adaptor</td>
+                <td>8</td>
+                <td>Leptop</td>
+                </tr>
+                <tr>
+                <td>9</td>
+                <td>Notbook</td>
+                <td>10</td>
+                <td>Visual Display Unit</td>
+                </tr>
+                <tr>
+                <td>11</td>
+                <td>CCTV Camera</td>
+                <td>12</td>
+                <td>Video Camera</td>
+                </tr>
+                <tr>
+                <td>13</td>
+                <td>Digital Camera</td>
+                <td>14</td>
+                <td>Rice Cooker</td>
+                </tr>
+                <tr>
+                <td>15</td>
+                <td>Automatic Data Processing Machine (ADPM)</td>
+                <td>16</td>
+                <td>LED Light</td>
+                </tr>
+                <tr>
+                <td>17</td>
+                <td>LED Street Light</td>
+                <td>18</td>
+                <td>LED Lamp</td>
+                </tr>
+                <tr>
+                <td>19</td>
+                <td>Musical System</td>
+                <td>20</td>
+                <td>Microwave Ovens</td>
+                </tr>',
             ],
             4 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">BIS/ISI Certification: Mandatory Before Export to India</h2>
@@ -233,7 +291,66 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">
                 For customized quotations of BIS/ISI Certification costing, feel free contact us at +91-
                 9250056788 or +91-8130856678.</p>',
-                'products' => ['Foot Wear','Paper','Automobile Wheel Rim Component','Helmet for riders of Two Wheeler Motor Vehicles','Refrigerating Appliances','Jute Bag','Chemicals/Fertilizers/Polymers & Textiles','Domestic Gas Stoves for use with Liquefied Petroleum Gases','Plugs and Socket-Outlets and Alternating Current Direct Connected Static','Prepayment Meters for Active Energy','Cables','Aluminium Foil','Non Electric Toys','Safety Glass','Woven Sacks','Steel and Iron Products','Household Electrical goods','Medical Textiles','Copper Products','Steel Wires or Strands, Nylon or Wire Ropes and Wire mesh']
+                'products' => '<tr>
+                <td>1</td>
+                <td>Foot Wear</td>
+                <td>2</td>
+                <td>Paper</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>Automobile Wheel Rim Component</td>
+                <td>4</td>
+                <td>Helmet for riders of Two Wheeler Motor Vehicles</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>Refrigerating Appliances</td>
+                <td>6</td>
+                <td>Jute Bag</td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>Chemicals/Fertilizers/Polymers & Textiles</td>
+                <td>8</td>
+                <td>Domestic Gas Stoves for use with Liquefied Petroleum Gases</td>
+                </tr>
+                <tr>
+                <td>9</td>
+                <td>Plugs and Socket-Outlets and Alternating Current Direct Connected Static</td>
+                <td>10</td>
+                <td>Prepayment Meters for Active Energy</td>
+                </tr>
+                <tr>
+                <td>11</td>
+                <td>Cables</td>
+                <td>12</td>
+                <td>Aluminium Foil</td>
+                </tr>
+                <tr>
+                <td>13</td>
+                <td>Non Electric Toys</td>
+                <td>14</td>
+                <td>Safety Glass</td>
+                </tr>
+                <tr>
+                <td>15</td>
+                <td>Woven Sacks</td>
+                <td>16</td>
+                <td>Steel and Iron Products</td>
+                </tr>
+                <tr>
+                <td>17</td>
+                <td>Household Electrical goods</td>
+                <td>18</td>
+                <td>Medical Textiles</td>
+                </tr>
+                <tr>
+                <td>19</td>
+                <td>Copper Products</td>
+                <td>20</td>
+                <td>Steel Wires or Strands, Nylon or Wire Ropes and Wire mesh</td>
+                </tr>'
             ],
             5 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">WPC ETA Approval: Mandatory Before Export to India</h2>
@@ -285,7 +402,66 @@ class BrochureFormController extends Controller
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for WPC ETA Approval is<strong> approximately INR 10,000</strong>.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the WPC certificate.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of WPC ETA Approval costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
-                 'products' => ['Wireless Mouse','Wireless Speakers','Bluetooth Headphones','Scanner','Wireless Pendrive','WiFi Smart Watch','Wireless Nano USB','Wireless Keyboard','Hotspot Devices','Smart Home Gateway','CCTV Camera','Video Camera','Digital Camera','Wireless Terminal','Wireless POS Terminal','WiFi Router','Smart TV','Bluetooth Earbuds','Musical System','Tracking Device']
+                 'products' => '<tr>
+                 <td>1</td>
+                 <td>Wireless Mouse</td>
+                 <td>2</td>
+                 <td>Wireless Speakers</td>
+                 </tr>
+                 <tr>
+                 <td>3</td>
+                 <td>Bluetooth Headphones</td>
+                 <td>4</td>
+                 <td>Scanner</td>
+                 </tr>
+                 <tr>
+                 <td>5</td>
+                 <td>Wireless Pendrive</td>
+                 <td>6</td>
+                 <td>WiFi Smart Watch</td>
+                 </tr>
+                 <tr>
+                 <td>7</td>
+                 <td>Wireless Nano USB</td>
+                 <td>8</td>
+                 <td>Wireless Keyboard</td>
+                 </tr>
+                 <tr>
+                 <td>9</td>
+                 <td>Hotspot Devices</td>
+                 <td>10</td>
+                 <td>Smart Home Gateway</td>
+                 </tr>
+                 <tr>
+                 <td>11</td>
+                 <td>CCTV Camera</td>
+                 <td>12</td>
+                 <td>Video Camera</td>
+                 </tr>
+                 <tr>
+                 <td>13</td>
+                 <td>Digital Camera</td>
+                 <td>14</td>
+                 <td>Wireless Terminal</td>
+                 </tr>
+                 <tr>
+                 <td>15</td>
+                 <td>Wireless POS Terminal</td>
+                 <td>16</td>
+                 <td>WiFi Router</td>
+                 </tr>
+                 <tr>
+                 <td>17</td>
+                 <td>Smart TV</td>
+                 <td>18</td>
+                 <td>Bluetooth Earbuds</td>
+                 </tr>
+                 <tr>
+                 <td>19</td>
+                 <td>Musical System</td>
+                 <td>20</td>
+                 <td>Tracking Device</td>
+                 </tr>'
             ],
             6 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">TEC Certification: Mandatory Before Export to India</h2>
@@ -334,7 +510,66 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for TEC Certification is&nbsp;<strong>approximately INR 50,000</strong>.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the TEC certificate.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of TEC Certification costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
-                'products' => ['2 Wire Telephone Equipment','Conferencing Equipment','Conferencing and Presentation Equipment','Group 3 Fax Machine','Data Modem (Connectable on 2-wire Analog Line)','Point of Sale Devices (POS)','Cordless Telephone','PON Family of Broadband Equipment','Media Converter','IoT Gateway with Cellular Connectivity','End Point Device for Environmental Monitoring','Feedback Devices','Tracking Device','Smart Electricity Meter','Smart Watch','Smart Camera','HF Radio','Router','LAN Switch','Mobile User Equipment']
+                'products' => '<tr>
+                <td>1</td>
+                <td>2 Wire Telephone Equipment</td>
+                <td>2</td>
+                <td>Conferencing Equipment</td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>Conferencing and Presentation Equipment</td>
+                <td>4</td>
+                <td>Group 3 Fax Machine</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>Data Modem (Connectable on 2-wire Analog Line)</td>
+                <td>6</td>
+                <td>Point of Sale Devices (POS)</td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>Cordless Telephone</td>
+                <td>8</td>
+                <td>PON Family of Broadband Equipment</td>
+                </tr>
+                <tr>
+                <td>9</td>
+                <td>Media Converter</td>
+                <td>10</td>
+                <td>IoT Gateway with Cellular Connectivity</td>
+                </tr>
+                <tr>
+                <td>11</td>
+                <td>End Point Device for Environmental Monitoring</td>
+                <td>12</td>
+                <td>Feedback Devices</td>
+                </tr>
+                <tr>
+                <td>13</td>
+                <td>Tracking Device</td>
+                <td>14</td>
+                <td>Smart Electricity Meter</td>
+                </tr>
+                <tr>
+                <td>15</td>
+                <td>Smart Watch</td>
+                <td>16</td>
+                <td>Smart Camera</td>
+                </tr>
+                <tr>
+                <td>17</td>
+                <td>HF Radio</td>
+                <td>18</td>
+                <td>Router</td>
+                </tr>
+                <tr>
+                <td>19</td>
+                <td>LAN Switch</td>
+                <td>20</td>
+                <td>Mobile User Equipment</td>
+                </tr>'
             ]
             ];
         $data['sections'] = $section[$request->service];

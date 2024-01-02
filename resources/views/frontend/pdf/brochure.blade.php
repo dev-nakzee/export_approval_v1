@@ -109,18 +109,19 @@
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
-                <table>
+            <h3 class="uk-h3 uk-text-bold">List of Mandatory Products</h3>
+                <table class="uk-table uk-table-divider uk-table-bordered uk-table-striped">
                     <thead>
                         <tr>
-                            <th>Sr. No.<th>
-                            <th>Products</th>
+                            <th width="10%">Sr. No.</th>
+                            <th width="40%">Products</th>
+                            <th width="10%">Sr. No.</th>
+                            <th width="40%">Products</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($data['sections']['products'] as $product)
-                            $product
-                        @endforeach
-                    <tbody>
+                    {!!$data['sections']['products']!!}
+                </tbody>
                 </table>
             </div>
         </div>
