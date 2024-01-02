@@ -128,12 +128,14 @@
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container uk-text-center">
                 <h4 class="uk-h4">This Brochure is created for</h4>
-                <p class="uk-h4 uk-text-bold">{{$data['name']}}<br>
+                <p class="uk-h4 uk-text-bold uk-margin-remove">{{$data['name']}}</p>
+                <p class="uk-h4 uk-margin-remove">
                 {{$data['organisation']}}<br>
                 {{$data['email']}}<br>
                 {{$data['phone']}}<br>
                 {{$data['country']}}
                 </p>
+                
                 <h4 class="uk-h4" style="margin-top: 90mm;">Connect with us for further assistance</h4>
                 <h3 class="uk-h3 uk-text-bold uk-margin-remove site-blue">Brand Liaison India Pvt. Ltd.</h3>
                 <p class="uk-h4 uk-text-bold uk-margin-remove">
