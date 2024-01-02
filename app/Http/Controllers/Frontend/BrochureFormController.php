@@ -113,7 +113,7 @@ class BrochureFormController extends Controller
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top">As per government guidelines, the fee for new application of BIS/CRS Registration is <strong>approximately INR 15,000.</strong></p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note:</strong> This cost may vary depending on the specific product category and the quantity of units that need to be marked with the IS label.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of BIS/CRS Registration costing, feel free contact us at +91-9250056788 or +91-8130856678.</p>',
-                'products' => [''],
+                'products' => ['Mobile','LED TV','Printer','Scanner','Bluetooth Speakers','Bluetooth Headphones','Power Adaptor','Leptop','Notbook','Visual Display Unit','CCTV Camera','Video Camera','Digital Camera','Rice Cooker','Automatic Data Processing Machine (ADPM)','LED Light','LED Street Light','LED Lamp','Musical System','Microwave Ovens'],
                 
             ],
             4 => [
@@ -232,7 +232,8 @@ class BrochureFormController extends Controller
                 units that need to be marked with the ISI label.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">
                 For customized quotations of BIS/ISI Certification costing, feel free contact us at +91-
-                9250056788 or +91-8130856678.</p>'
+                9250056788 or +91-8130856678.</p>',
+                'products' => ['Foot Wear','Paper','Automobile Wheel Rim Component','Helmet for riders of Two Wheeler Motor Vehicles','Refrigerating Appliances','Jute Bag','Chemicals/Fertilizers/Polymers & Textiles','Domestic Gas Stoves for use with Liquefied Petroleum Gases','Plugs and Socket-Outlets and Alternating Current Direct Connected Static','Prepayment Meters for Active Energy','Cables','Aluminium Foil','Non Electric Toys','Safety Glass','Woven Sacks','Steel and Iron Products','Household Electrical goods','Medical Textiles','Copper Products','Steel Wires or Strands, Nylon or Wire Ropes and Wire mesh']
             ],
             5 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">WPC ETA Approval: Mandatory Before Export to India</h2>
@@ -284,6 +285,7 @@ class BrochureFormController extends Controller
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for WPC ETA Approval is<strong> approximately INR 10,000</strong>.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the WPC certificate.</p>
                  <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of WPC ETA Approval costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
+                 'products' => ['Wireless Mouse','Wireless Speakers','Bluetooth Headphones','Scanner','Wireless Pendrive','WiFi Smart Watch','Wireless Nano USB','Wireless Keyboard','Hotspot Devices','Smart Home Gateway','CCTV Camera','Video Camera','Digital Camera','Wireless Terminal','Wireless POS Terminal','WiFi Router','Smart TV','Bluetooth Earbuds','Musical System','Tracking Device']
             ],
             6 => [
                 'page2' => '<h2 class="uk-h3 uk-text-bold">TEC Certification: Mandatory Before Export to India</h2>
@@ -331,7 +333,8 @@ class BrochureFormController extends Controller
                 <h2 class="uk-h3 uk-text-bold">TEC Certification Costing</h2>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">As per government guidelines, the fee for TEC Certification is&nbsp;<strong>approximately INR 50,000</strong>.</p>
                 <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom"><strong>Note</strong>: This cost may vary depending on the specific product category and the quantity of units that require the TEC certificate.</p>
-                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of TEC Certification costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>'
+                <p class="uk-h4 uk-text-justify uk-margin-remove-top uk-margin-remove-bottom">For customized quotations of TEC Certification costing, feel free to contact us at +91-9250056788 or +91-8130856678.</p>',
+                'products' => ['2 Wire Telephone Equipment','Conferencing Equipment','Conferencing and Presentation Equipment','Group 3 Fax Machine','Data Modem (Connectable on 2-wire Analog Line)','Point of Sale Devices (POS)','Cordless Telephone','PON Family of Broadband Equipment','Media Converter','IoT Gateway with Cellular Connectivity','End Point Device for Environmental Monitoring','Feedback Devices','Tracking Device','Smart Electricity Meter','Smart Watch','Smart Camera','HF Radio','Router','LAN Switch','Mobile User Equipment']
             ]
             ];
         $data['sections'] = $section[$request->service];

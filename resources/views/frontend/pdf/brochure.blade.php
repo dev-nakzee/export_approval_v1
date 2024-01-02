@@ -109,6 +109,19 @@
         <div class="page-break"></div>
         <div class="uk-section uk-margin-remove uk-padding-large">
             <div class="uk-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.<th>
+                            <th>Products</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($data['sections']['products'] as $product)
+                            $product
+                        @endforeach
+                    <tbody>
+                </table>
             </div>
         </div>
         <div class="page-break"></div>
