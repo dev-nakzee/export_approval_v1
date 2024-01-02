@@ -187,7 +187,7 @@ class BrochureFormController extends Controller
                 </tr></tbody>
                 </table>
                 <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
-                <strong>Our Role</strong><br>
+                
                 At Brand Liaison, our key role is to provide valuable assistance and support to
 manufacturers aiming to export their products to India by facilitating the process of
 obtaining BIS/CRS Registration. We make sure that your products get the required Indian
@@ -384,7 +384,7 @@ them through the complete process of BIS/CRS Registration.</p>',
                 </tr></tbody>
                 </table>
                 <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
-                <strong>Our Role</strong><br>
+                
                 At Brand Liaison, our key role is to provide valuable assistance and support to
                 manufacturers aiming to export their products to India by facilitating the process of
                 obtaining BIS/ISI Certification. We make sure that your products get the required Indian
@@ -514,7 +514,7 @@ them through the complete process of BIS/CRS Registration.</p>',
                  </tr></tbody>
                  </table>
                  <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
-                 <strong>Our Role</strong><br>
+                 
                  At Brand Liaison, our key role is to provide valuable assistance and support to
  manufacturers aiming to export their products to India by facilitating the process of
  obtaining WPC ETA Approval. We make sure that your products get the required Indian
@@ -641,7 +641,7 @@ them through the complete process of BIS/CRS Registration.</p>',
                 </tr></tbody>
                 </table>
                 <p class="uk-h5 uk-text-justify site-grey-bg uk-margin-large uk-margin-remove-left uk-margin-remove-right uk-margin-remove-bottom uk-padding-small">
-                <strong>Our Role</strong><br>At Brand Liaison, our key role is to provide valuable assistance and support to
+                At Brand Liaison, our key role is to provide valuable assistance and support to
                 manufacturers aiming to export their products to India by facilitating the process of
                 obtaining TEC Certification. We make sure that your products get the required Indian
                 certifications to let you export them to India seamlessly. Our expert team ensures that
