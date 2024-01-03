@@ -73,7 +73,7 @@ Route::controller(SearchController::class)->group(function (){
 Route::controller(BrochureFormController::class)->group(function (){
     Route::get('/brochure/reload-captcha', 'reloadCaptcha')->name('frontend.site.brochure.reload-captcha');
     Route::post('/brochure', 'store')->name('frontend.site.brochure.store');
-    Route::get('/brochure', 'index')->name('frontend.site.index');
+    Route::get('/brochure', 'index')->name('frontend.site.index');  
 });
 
 Route::controller(PartnerFormController::class)->group(function(){
