@@ -148,16 +148,17 @@
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-four wcu-tabs" data-uk-grid="">
-            <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
-            <div class="uk-width-expand">
-            <h3 style="font-size: 16px !important;">Authorized Indian <br>Representative (AIR) Services</h3>
-            </div>
-            </div>
-            <div class="wcu-four wcu-tabs" hidden="" uk-toggle="target: .wcu-four; mode: hover; animation: uk-animation-slide-left-small">We facilitate seamless market access for foreign manufacturers in India.</div>
-            </div>
-            <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
-            <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/rating-1702021109.svg" alt="Experience" width="70" height="70" data-uk-img=""></div>
+
+<div class="uk-width-expand">
+<h3>Get the<br>AIR Support</h3>
+</div>
+</div>
+<div class="wcu-four wcu-tabs" hidden="">We provide essential Authorized Indian Representory (AIR) service for foreign manufacturers.</div>
+</div>
+<div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
+<div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
+<div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
             <h3>10+ years of experience</h3>
             </div>
