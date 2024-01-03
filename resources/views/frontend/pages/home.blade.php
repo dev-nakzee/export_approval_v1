@@ -351,7 +351,7 @@
             <h3>AIR Service<br>&amp; Support</h3>
             </div>
             </div>
-            <div class="wcu-four wcu-tabs" hidden="">We provice Authorized Indian Representory (AIR) service for foreign manufacturers.</div>
+            <div class="wcu-four wcu-tabs" hidden="">We provide essential Authorized Indian Representory (AIR) service for foreign manufacturers.</div>
             </div>
             <div class="uk-width-1-1 uk-width-1-4@m" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">
             <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
