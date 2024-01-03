@@ -276,7 +276,7 @@
                                     <img class="uk-comment-avatar" src="{{$service->media_path}}" alt="{{$service->img_alt}}">
                                 </div>
                                 <div class="uk-width-expand uk-padding-small uk-padding-remove-left">
-                                    <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}#mandatory-product-list">
+                                    <a class="uk-link-reset uk-text-center" href="{{route('frontend.site.service', $service->service_slug)}}#mandatory-product-list">
                                         <h4 class="uk-comment-title uk-margin-remove">Product list<br>for<br>{{$service->service_name}}</h4>
                                     </a>
                                 </div>
