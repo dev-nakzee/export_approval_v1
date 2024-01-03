@@ -160,7 +160,7 @@
 <div class="uk-grid-small uk-grid wcu-three wcu-tabs" data-uk-grid="">
 <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/projects-1702021109.svg" alt="Projects" width="70" height="70" data-uk-img=""></div>
             <div class="uk-width-expand">
-            <h3>10+ years of experience</h3>
+            <h3>10+ Years of Service Excellance</h3>
             </div>
             </div>
             <div class="wcu-three wcu-tabs" hidden="" uk-toggle="target: .wcu-three; mode: hover; animation: uk-animation-slide-left-small">We bring over 10 years of proven experience to achieve success in every project.</div>
