@@ -5,8 +5,8 @@
             <p class="uk-small">We prioritize transparency and security in your browsing experience, and you can manage consent preferences anytime.</p>
         </div>
         <div class="uk-width-1-5@m uk-text-middle cookie-pop-div">
-            <button onclick="acceptAll()" class="uk-button uk-button-default">Accept All</button>
-            <button onclick="rejectAll()" class="uk-button uk-button-default">Reject</button>
+            <button onclick="acceptAll()" class="uk-button uk-button-default uk-margin-small-top">Accept All</button>
+            <button onclick="rejectAll()" class="uk-button uk-button-default uk-margin-small-top">Reject</button>
         </div>
     </div>
 </div>
