@@ -160,22 +160,12 @@ expectations and meet diverse client needs.</p>
                 {{$data['phone']}}<br>
                 {{$data['country']}}
                 </p>
-                <h4 class="uk-h6 uk-text-bold uk-text-center">Internal Remarks</h4>
-                <p class="uk-h6 uk-margin-remove-top uk-text-emphasis">1.</p>
+                <h4 class="uk-h6 uk-text-bold uk-text-center uk-margin-top">Remarks</h4>
+                <br>
                 <hr>
-                <p class="uk-h6 uk-margin-remove-top uk-text-emphasis">
-                    <span class="uk-margin-xlarge-right">Remark Date</span>
-                    <span class="uk-margin-xlarge-right">&nbsp;</span>
-                    <span class="uk-margin-xlarge-left">Remark By</span>
-                </p>
+                <br>
                 <hr>
-                <p class="uk-h6 uk-margin-remove-top uk-text-emphasis">2.</p>
-                <hr>
-                <p class="uk-h6 uk-margin-remove-top uk-text-emphasis">
-                    <span class="uk-margin-xlarge-right">Remark Date</span>
-                    <span class="uk-margin-xlarge-right">&nbsp;</span>
-                    <span class="uk-margin-xlarge-left">Remark By</span>
-                </p>
+                <br>
                 <hr>
                 <br>
                 <h4 class="uk-h4 uk-text-center">Connect with us for further assistance</h4>
