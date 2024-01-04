@@ -128,7 +128,7 @@
                     <div class="uk-margin-bottom">
                         <span class="notification_title">Industrial Notifications for {{$notice_service->service_name}}</span>
                     </div>
-                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small">
+                    <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-small">
                         <thead>
                             <tr>
                                 <th>#</th>

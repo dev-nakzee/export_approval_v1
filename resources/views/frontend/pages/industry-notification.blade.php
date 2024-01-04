@@ -129,7 +129,7 @@
                         <span class="notification_title">{{"All Compliances Industrial Notifications"}}</span>
                     </div>
                     <div class="uk-width-1-1">
-                        <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-striped uk-table-small" style="width: 100%;">
+                        <table id="industrial-notification-list" class="uk-table uk-table-hover uk-table-small" style="width: 100%;">
                             <thead>
                                 <tr>
                                     <th>#</th>
