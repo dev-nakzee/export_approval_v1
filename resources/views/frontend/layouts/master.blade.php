@@ -24,6 +24,7 @@
             
                 $(window).scroll(function(){
                     @if (!$agent->isMobile())
+                    @if(request()->route()->getName() != 'frontend.site.home' || request()->route()->getName() != 'frontend.site.gallery' || request()->route()->getName() != 'frontend.site.contact-us')
                     var currentHash = "#";
                     var blocksArr = $('.ps-sections');
                     var currentTop = window.pageYOffset/1;
