@@ -45,6 +45,7 @@
                         }
                     }
                     @endif
+                    @endif
                     if($(window).scrollTop() >= scrollTop){
                         $('.back-to-top').removeClass('uk-hidden');
                     }
