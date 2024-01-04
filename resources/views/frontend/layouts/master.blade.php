@@ -20,11 +20,14 @@
        
         <script>
             $(document).ready(function(){
+                @if (!$agent->isMobile())
+                    $(this).scrollTop(0);
+                @endif
                 var scrollTop = 80;
             
                 $(window).scroll(function(){
                     @if (!$agent->isMobile())
-                    @if(request()->route()->getName() != 'frontend.site.home' || request()->route()->getName() != 'frontend.site.gallery' || request()->route()->getName() != 'frontend.site.contact-us')
+
                     var currentHash = "#";
                     var blocksArr = $('.ps-sections');
                     var currentTop = window.pageYOffset/1;
@@ -44,7 +47,6 @@
                             currentHash = hash;
                         }
                     }
-                    @endif
                     @endif
                     if($(window).scrollTop() >= scrollTop){
                         $('.back-to-top').removeClass('uk-hidden');
