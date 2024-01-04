@@ -10,7 +10,7 @@
 <meta property="og:description" content="{{$blog->seo_description}}" />
 <meta property="og:url" content="{{url()->full()}}" />
 <meta property="og:site_name" content="Export Approval" />
-<meta property="og:image" content="" />
+<meta property="og:image" content="{{$blog->media_path}}" />
 <meta name="format-detection" content="telephone=no" />
 @endsection
 @section('content')

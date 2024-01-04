@@ -358,10 +358,7 @@ strong {
                         </span>
                         <p class="uk-width-4-5 uk-padding-remove uk-margin-remove">info@bl-india.com</p>
                         <span class="uk-width-1-1 uk-margin-small"></span>
-                        <span class="uk-width-1-5 uk-text-center uk-padding-remove uk-margin-remove">
-                            <i uk-icon="icon:social; ratio: 1.25;"></i>
-                        </span>
-                        <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
+                        <div class="uk-width-1-1 uk-text-center footer-social uk-padding-remove uk-margin-remove">
                             <a target="blank" href="https://www.facebook.com/Exportapproval1" class="facebook" uk-icon="facebook"></a>
                             <a target="blank" href="https://www.instagram.com/exportapproval/" class="instagram" uk-icon="instagram"></a>
                             <a target="blank" href="https://www.linkedin.com/company/101070178/admin/feed/posts/" class="linkedin" uk-icon="linkedin"></a>
