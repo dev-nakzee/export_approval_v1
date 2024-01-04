@@ -235,6 +235,9 @@ iframe {
 .nav-highlight {
     color: #ed462f !important;
 }
+.product-page-link td {
+    font-size: 16px;
+}
 @media screen and (min-width: 1600px) {
     .ps-sidebar-fixed {
         position: fixed;
