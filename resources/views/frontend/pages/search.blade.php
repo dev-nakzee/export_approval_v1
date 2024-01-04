@@ -54,7 +54,6 @@
             <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}">
                 <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                     <h5 class="uk-card-title site-blue">Services - {{$service->service_name}}</h5>
-                    <p>{{$service->seo_description}}</p>
                 </div>
             </a>
             @endforeach
@@ -63,7 +62,6 @@
             <a class="uk-link-reset" href="{{route('frontend.site.product', $products->product_slug)}}">
                 <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                     <h5 class="uk-card-title site-blue">Products - {{$products->product_name}}</h5>
-                    <p>{{$products->seo_description}}</p>
                 </div>
             </a>
             @endforeach
@@ -73,7 +71,6 @@
                 <a class="uk-link-reset" href="{{route('frontend.site.product', $notice->notice_slug)}}">
                     <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                         <h5 class="uk-card-title site-blue">Notifications - {{$notice->notice_title}}</h5>
-                        <p>{{$notice->seo_description}}</p>
                     </div>
                 </a>
             @endforeach

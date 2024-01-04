@@ -1,4 +1,3 @@
-Explain
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,7 +25,7 @@ Explain
                             Delhi - 110092, India<br>
                             +91-9810363988<br>
                             info@bl-india.com<br>
-                            https://two.exportapproval.com</td>
+                            https://bl-india.com</td>
                     </tr>
                 </table>
             </div>
