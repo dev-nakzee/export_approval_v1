@@ -121,6 +121,11 @@
             @endif
         </script>
          @yield('scripts')
+        <style>
+            mobile-nav li a {
+                color: #000 !important;
+            }
+        </style>
     </head>
     <body>
         @if ($agent->isMobile())
@@ -136,7 +141,7 @@
             <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
                 <div class="uk-offcanvas-bar mobile-menu">
                     <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
-                    <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top" uk-nav>
+                    <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top mobile-nav" uk-nav>
                         <li><a @if(strtolower($routeName) === 'frontend.site.home') style="color: #ed462f !important;"@endif href="{{route('frontend.site.home')}}">Home</a></li>
                         <li><a @if(strtolower($routeName) === 'frontend.site.about-us') style="color: #ed462f !important;"@endif href="{{route('frontend.site.about-us')}}">About us</a></li>
                         <li class="uk-parent">
