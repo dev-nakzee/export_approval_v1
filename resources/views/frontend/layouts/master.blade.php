@@ -20,9 +20,8 @@
        
         <script>
             $(document).ready(function(){
-                @if (!$agent->isMobile())
-                    $(this).scrollTop(0);
-                @endif
+
+                $(this).scrollTop(0);
                 var scrollTop = 80;
             
                 $(window).scroll(function(){
