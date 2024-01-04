@@ -60,7 +60,7 @@
     color: #052faa !important;
 }
 strong {
-    font-weight: 900;
+    font-weight: 900 !important;
 }
         </style>
        
