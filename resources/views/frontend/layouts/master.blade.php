@@ -7,6 +7,7 @@
         @yield('seo')
         <meta name="audience" content="Everyone">
         <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{url()->full()}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/uikit.min.css')}}" />
         @if ($agent->isMobile())
         <link rel="stylesheet" href="{{asset('frontend/css/mobile.css')}}" />
