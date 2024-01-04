@@ -17,6 +17,47 @@
         <script src="{{asset('frontend/js/uikit.min.js')}}"></script>
         <script src="{{asset('frontend/js/uikit-icons.min.js')}}"></script>
 
+        <style>
+            .uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+    justify-content: left !important;
+}
+
+.mobile-menu {
+    background-color: #fff !important;
+}
+.mobile-menu ul li a {
+    font-size: 20px !important;
+    color: #052faa !important;
+}
+.mobile-menu ul li ul li a::before  {
+    content: "➤ ";
+}
+.mobile-menu ul li {
+    border-bottom: 1px solid #052faa !important;
+}
+.mobile-menu ul li:last-child,  .mobile-menu ul li ul li {
+    border-bottom: none !important;
+}
+.mobile-menu ul li ul li a {
+    font-size: 16px !important;
+}
+
+.uk-offcanvas-close svg {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.mobile-menu-poweredby {
+    padding-left: 12px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #8b8b8b !important;
+}
+
+.uk-offcanvas-close {
+    color: #052faa !important;
+}
+        </style>
        
         <script>
             $(document).ready(function(){
