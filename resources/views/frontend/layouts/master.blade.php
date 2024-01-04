@@ -59,6 +59,9 @@
 .uk-offcanvas-close {
     color: #052faa !important;
 }
+strong {
+    font-weight: 900;
+}
         </style>
        
         <script>
