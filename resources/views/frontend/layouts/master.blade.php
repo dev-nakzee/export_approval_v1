@@ -21,8 +21,9 @@
         <script>
             $(document).ready(function(){
                 var scrollTop = 80;
-                @if (!$agent->isMobile())
+            
                 $(window).scroll(function(){
+                    @if (!$agent->isMobile())
                     var currentHash = "#";
                     var blocksArr = $('.ps-sections');
                     var currentTop = window.pageYOffset/1;
@@ -42,7 +43,7 @@
                             currentHash = hash;
                         }
                     }
-                @endif
+                    @endif
                     if($(window).scrollTop() >= scrollTop){
                         $('.back-to-top').removeClass('uk-hidden');
                     }
