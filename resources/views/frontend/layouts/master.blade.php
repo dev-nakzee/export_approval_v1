@@ -307,10 +307,11 @@
                         </span>
                         <div class="uk-width-4-5 footer-social uk-padding-remove uk-margin-remove">
                             <a target="blank" href="https://www.facebook.com/Exportapproval1" class="facebook" uk-icon="facebook"></a>
-                            <a target="blank" href="" class="instagram" uk-icon="instagram"></a>
+                            <a target="blank" href="https://www.instagram.com/exportapproval/" class="instagram" uk-icon="instagram"></a>
                             <a target="blank" href="https://www.linkedin.com/company/101070178/admin/feed/posts/" class="linkedin" uk-icon="linkedin"></a>
-                            <a target="blank" href="" class="pinterest" uk-icon="pinterest"></a>
-                            <a target="blank" href="" class="twitter" uk-icon="twitter"></a>
+                            <a target="blank" href="https://in.pinterest.com/exportapproval/" class="pinterest" uk-icon="pinterest"></a>
+                            <a target="blank" href="https://twitter.com/ExportApproval" class="twitter" uk-icon="twitter"></a>
+                            <a target="blank" href="https://www.youtube.com/channel/UCXuD7VLu7dMJA3y9eUux1NQ" class="youtube" uk-icon="youtube"></a>
                         </div>
                     </div>
                     
