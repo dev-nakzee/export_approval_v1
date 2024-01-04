@@ -179,7 +179,7 @@
                     <span uk-icon="icon: menu; ratio: 2.5"></span>
                 </a>
             </div>
-            <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: push;">
+            <div id="main_menu" class="" uk-offcanvas="overlay: true; flip: true; mode: slide;">
                 <div class="uk-offcanvas-bar mobile-menu">
                     <button class="uk-offcanvas-close uk-margin-top uk-margin-right" type="button" uk-close></button>
                     <ul class="uk-nav uk-nav-default uk-nav-divider uk-margin-xlarge-top mobile-nav" uk-nav>
