@@ -173,7 +173,7 @@
         @if ($agent->isMobile())
         <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-small uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
-                <img class="uk-img-logo" src="{{asset('frontend/images/logo.png')}}">
+                <img class="uk-img-logo" alt="Export Approval" src="{{asset('frontend/images/logo.png')}}">
                 <h1 class="uk-hidden">Export Approval</h1>
             </a>
             <div class="uk-navbar-item">
@@ -228,7 +228,7 @@
         <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-large uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
-                    <img class="uk-img-logo uk-visible@s" src="{{asset('frontend/images/logo.png')}}">
+                    <img class="uk-img-logo uk-visible@s" alt="Export Approval logo" src="{{asset('frontend/images/logo.png')}}">
                     <h1 class="uk-hidden">Export Approval</h1>
                 </a>
             </div>
