@@ -20,12 +20,7 @@
                             <img src="https://bl-india.com/logo/img/logo-700x175.jpg" style="height: 70px;">
                         </td>
                         <td class="uk-text-right uk-text-small"><strong>Brand Liaison India Pvt. Ltd.</strong><br>
-                            110, Sharma Complex<br>
-                            A-2, Guru Nanak Pura, Laxmi Nagar<br>
-                            Delhi - 110092, India<br>
-                            +91-9810363988<br>
-                            info@bl-india.com<br>
-                            https://bl-india.com</td>
+                           </td>
                     </tr>
                 </table>
             </div>
@@ -443,6 +438,14 @@
                 </div>
                 <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
                 <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
+              </div>
+              <div class="uk-width-1-1 uk-text-center">
+              110, Sharma Complex<br>
+                            A-2, Guru Nanak Pura, Laxmi Nagar<br>
+                            Delhi - 110092, India<br>
+                            +91-9810363988<br>
+                            info@bl-india.com<br>
+                            https://bl-india.com
               </div>
         </div>
     </body>
