@@ -71,7 +71,7 @@
                 @if($services)
                 @foreach($services as $service)
                 <div class="uk-margin-small-bottom home-ml-section">
-                    <article class="uk-comment uk-padding-remove uk-card uk-box-shadow-large uk-card-body uk-border-rounded" role="comment">
+                    <article class="uk-comment uk-padding-remove uk-card uk-box-shadow-large uk-card-body uk-border-rounded">
                         <header class="uk-comment-header">
                             <div class="uk-grid-medium uk-flex-middle" uk-grid>
                                 <div class="uk-width-1-3">
