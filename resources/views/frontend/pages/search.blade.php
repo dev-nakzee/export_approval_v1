@@ -101,7 +101,7 @@
         <div class="uk-heading uk-h3">
             Results for "{{$keywords}}"
         </div>
-        <form id="search_form" action="{{route('frontend.site.search.page')}}" method="POST">
+        <form class="uk-margin-bottom uk-width-1-2" id="search_form" action="{{route('frontend.site.search.page')}}" method="POST">
             @csrf
             <div class="uk-inline uk-width-expanded">
                 <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" disabled style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
@@ -116,7 +116,6 @@
             <a class="uk-link-reset" href="{{route('frontend.site.service', $service->service_slug)}}">
                 <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                     <h5 class="uk-card-title site-blue">Services - {{$service->service_name}}</h5>
-                    <p>{{$service->seo_description}}</p>
                 </div>
             </a>
             @endforeach
@@ -125,7 +124,7 @@
             <a class="uk-link-reset" href="{{route('frontend.site.product', $products->product_slug)}}">
                 <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                     <h5 class="uk-card-title site-blue">Products - {{$products->product_name}}</h5>
-                    <p>{{$products->seo_description}}</p>
+                    
                 </div>
             </a>
             @endforeach
@@ -135,7 +134,7 @@
                 <a class="uk-link-reset" href="{{route('frontend.site.product', $notice->notice_slug)}}">
                     <div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-bottom">
                         <h5 class="uk-card-title site-blue">Notifications - {{$notice->notice_title}}</h5>
-                        <p>{{$notice->seo_description}}</p>
+
                     </div>
                 </a>
             @endforeach

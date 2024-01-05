@@ -23,7 +23,7 @@ class PartnerFormController extends Controller
     {
         $countries = Countries::get();
         $agent = new Agent;
-        $page = StaticPages::where('static_page_id', 1)->first();
+        $page = StaticPages::where('static_page_id', 12)->first();
         $routeName = Route::currentRouteName();
         $service_slug = '';
         return view('frontend.pages.ba', compact('countries', 'agent', 'page', 'routeName', 'service_slug'));
@@ -109,7 +109,7 @@ class PartnerFormController extends Controller
     {
         $countries = Countries::get();
         $agent = new Agent;
-        $page = StaticPages::where('static_page_id', 1)->first();
+        $page = StaticPages::where('static_page_id', 13)->first();
         $routeName = Route::currentRouteName();
         $service_slug = '';
         return view('frontend.pages.re', compact('countries', 'agent', 'page', 'routeName', 'service_slug'));

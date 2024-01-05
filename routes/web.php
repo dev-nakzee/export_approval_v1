@@ -18,6 +18,7 @@ use App\Http\Controllers\Frontend\PartnerFormController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\PopupController;
 use App\Http\Controllers\Frontend\CookiesController;
+use App\Http\Controllers\Frontend\TestController;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'index')->name('frontend.site.home');
@@ -30,8 +31,11 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/contact-us', 'contact')->name('frontend.site.contact-us');
     Route::get('/holiday-list', 'holidays')->name('frontend.site.holiday.list');
     Route::get('/calendar/{year}', 'calendar')->name('frontend.site.calender.download');
+   
 });
-
+Route::controller(TestController::class)->group(function (){
+    Route::get('test-one', 'test')->name('frontend.site.test');
+});
 Route::controller(PopupController::class)->group(function (){
     Route::get('/pop-up/close', 'close')->name('frontend.site.popup.close');
 });
