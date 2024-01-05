@@ -17,10 +17,12 @@
                 <table class="uk-table">
                     <tr>
                         <td>
-                            <img src="https://bl-india.com/logo/img/logo-700x175.jpg" style="height: 70px;">
+                        <img src="https://ik.imagekit.io/bimma/exportapproval/logo.png?updatedAt=1703831191033">
                         </td>
-                        <td class="uk-text-right uk-text-small"><strong>Brand Liaison India Pvt. Ltd.</strong><br>
-                           </td>
+                        <td class="uk-text-right uk-text-small">
+                        <span class="uk-text-bold uk-text-small">Powered By</span><br>
+                <img src="https://ik.imagekit.io/bimma/exportapproval/bl-logo-hq.jpg?updatedAt=1703831190940">
+                        </td>
                     </tr>
                 </table>
             </div>
