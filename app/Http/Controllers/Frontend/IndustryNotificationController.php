@@ -62,6 +62,7 @@ class IndustryNotificationController extends Controller
         $agent = new Agent;
         $routeName = Route::currentRouteName();
         $service_slug = '';
-        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'media', 'agent', 'routeName', 'service_slug'));
+        $page = StaticPages::where('static_page_id', 9)->first();
+        return view('frontend.pages.industry-notice-detail', compact('services', 'notice', 'notice_service', 'document', 'page', 'media', 'agent', 'routeName', 'service_slug'));
     }
 }
