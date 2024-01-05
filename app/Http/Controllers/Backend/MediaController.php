@@ -40,8 +40,15 @@ class MediaController extends Controller
     {
         //
         $image = $request->file('file');
-        $fullName = $image->getClientOriginalName();
         $extension = $image->getClientOriginalExtension();
+        if($extension == 'png') {
+            $image = imagecreatefrompng($image)
+        }
+        if($extension == 'jpg' || $extension == 'jpeg')
+        {
+            $image = imagecreatefromjpg($image)
+        }
+        $fullName = $image->getClientOriginalName();
         $onlyName = explode('.'.$extension, $fullName);
         $imageName = str_replace(" ","-",$onlyName[0]).'-'.time().'.'.$image->getClientOriginalExtension();
         Media::create([
