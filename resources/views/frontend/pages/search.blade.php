@@ -45,7 +45,7 @@
             <div class="uk-inline uk-width-expanded">
                 <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" disabled style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
+                <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Find your product name OR compliance name" aria-label="Search">
                 <div id="home_search_result" style="z-index: 999;" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small uk-overflow-auto">
                 </div>
             </div>
@@ -106,7 +106,7 @@
             <div class="uk-inline uk-width-expanded">
                 <button uk-icon="icon: search" type="submit" class="uk-background-primary uk-light uk-form-icon uk-form-icon-flip home-search-button" disabled style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
                 </button>
-                <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Enter your product name OR compliance name" aria-label="Search">
+                <input id="home_search" name="search_keywords" class="uk-input uk-border-rounded uk-form-medium" type="text" placeholder="Find your product name OR compliance name" aria-label="Search">
                 <div id="home_search_result" style="z-index: 999;" class="uk-hidden uk-width-1-1 uk-position-absolute uk-margin-remove uk-padding-remove uk-background-muted uk-border-rounded uk-box-shadow-large uk-height-small uk-overflow-auto">
                 </div>
             </div>
