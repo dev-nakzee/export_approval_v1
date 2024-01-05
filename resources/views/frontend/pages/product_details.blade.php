@@ -20,7 +20,7 @@
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 {{$product->product_name}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} is Mandatory</span>
             </h2>
         </div>
     </div>
@@ -107,7 +107,7 @@
         <div>
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
                 {{$product->product_name}}<br>
-                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}}</span>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$service->service_name}} is Mandatory</span>
             </h2>
         </div>
     </div>
