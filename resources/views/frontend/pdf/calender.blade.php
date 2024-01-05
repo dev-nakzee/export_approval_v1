@@ -21,7 +21,8 @@
                         </td>
                         <td class="uk-text-right uk-text-small">
                         <span class="uk-text-bold uk-text-small">Powered By</span><br>
-                <img src="https://ik.imagekit.io/bimma/exportapproval/bl-logo-hq.jpg?updatedAt=1703831190940">
+                        <h2>Brand Liaison India Pvt. Ltd.</h2>
+                <!-- <img src="https://ik.imagekit.io/bimma/exportapproval/bl-logo-hq.jpg?updatedAt=1703831190940"> -->
                         </td>
                     </tr>
                 </table>
@@ -441,7 +442,8 @@
                 <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
                 <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
               </div>
-              <div class="uk-width-1-1 uk-text-center">
+              <div class="uk-width-1-1 uk-text-center uk-margin-large-top">
+                <hr>
               110, Sharma Complex<br>
                             A-2, Guru Nanak Pura, Laxmi Nagar<br>
                             Delhi - 110092, India<br>
