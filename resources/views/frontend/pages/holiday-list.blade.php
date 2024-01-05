@@ -20,8 +20,8 @@
       <div>
           <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/calendar.png')}}" alt="">
           <h2 class="uk-text-middle uk-inline uk-margin-remove">
-            {{'Holiday list'}}<br>
-              <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
+          {{$page->page_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
           </h2>
       </div>
   </div>
@@ -246,8 +246,8 @@
       <div>
         <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/calendar.png')}}" alt="Holiday list Image">
         <h2 class="uk-text-middle uk-inline uk-margin-remove">
-          {{'Holiday List'}}<br>
-          <span class="uk-text-small" style="color: #8b8b8b;">{{'Plan Accordingly'}}</span>
+        {{$page->page_name}}<br>
+                <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
         </h2>
       </div>
    
@@ -264,205 +264,6 @@
 <section class="uk-section home-section-3 uk-padding uk-padding-remove-top" style="">
   <div class="uk-container uk-margin-remove uk-width-1-1" >
     <div uk-grid class="uk-child-width-1-2@m">
-      <div class="uk-width-1-1">
-        <h2 class="uk-margin-remove">List of Holidays in <b>2023</b></h2>
-        <p class="uk-width-1-1 uk-margin-remove">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2023)}}">Download List</a></p>     
-      </div>  
-       <div class="uk-margin-small-top uk-margin-bottom" >
-              <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
-                <tbody>
-                <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                  <td colspan="3"><strong style="font-weight: 600;">January 2023</strong></td>
-                </tr>
-
-                <tr>
-                  <td style="color: orange;">01-01-2023</td>
-                  <td style="color: orange;">Sunday</td>
-                  <td> RH* - New Year's Day</td>
-                </tr>
-                <tr>
-                  <td style="color: orange;">14-01-2023</td>
-                  <td style="color: orange;">Saturday</td>
-                  <td> RH* - Makar Sankranti</td>
-                </tr>
-
-                <tr>
-                  <td style="color: red;">26-01-2023</td>
-                  <td style="color: red;">Thursday</td>
-                  <td>Republic Day of India</td>
-                </tr>
-                
-                <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                  <td colspan="3"><strong style="font-weight: 600;">February 2023</strong></td>
-                </tr>
-                <tr>
-                  <td style="color: orange;">18-02-2023</td>
-                  <td style="color: orange;">Saturday</td>
-                  <td>RH* - Maha Shivaratri</td>
-                </tr>
-                
-                <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                    <td colspan="3"><strong style="font-weight: 600;">March 2023</strong></td>
-                  </tr>
-
-                  <tr>
-                    <td style="color: orange;">07-03-2023</td>
-                    <td style="color: orange;">Tuesday</td>
-                    <td>RH* - Holika Dahan</td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">08-03-2023</td>
-                    <td style="color: red;">Wednesday</td>
-                    <td>Holi</td>
-                  </tr>
-                  <tr>
-                    <td style="color: orange;">30-03-2023</td>
-                    <td style="color: orange;">Thursday</td>
-                    <td> RH* - Ram Navami</td>
-                  </tr>
-                  <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                    <td colspan="3"><strong style="font-weight: 600;">April 2023</strong></td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">04-04-2023 </td>
-                    <td style="color: red;">Tuesday</td>
-                    <td> Mahavir Jayanti</td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">07-04-2023</td>
-                    <td style="color: red;">Friday</td>
-                    <td>Good Friday</td>
-                  </tr>
-                  <tr>
-                    <td style="color: orange;">14-04-2023</td>
-                    <td style="color: orange;">Friday</td>
-                    <td>RH* - Ambedkar Jayanti</td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">22-04-2023</td>
-                    <td style="color: red;">Saturday</td>
-                    <td>Eid ul-Fitr</td>
-                  </tr>
-                  
-                  <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                    <td colspan="3"><strong style="font-weight: 600;">May 2023</strong></td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">05-05-2023</td>
-                    <td style="color: red;">Friday</td>
-                    <td>Buddha Purnima</td>
-                  </tr>
-                  <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                    <td colspan="3"><strong style="font-weight: 600;">June 2023</strong></td>
-                  </tr>
-                  <tr>
-                    <td style="color: red;">29-06-2023</td>
-                    <td style="color: red;">Thursday</td>
-                    <td>Eid ul-Zuha</td>
-                  </tr> 
-
-                </tbody>
-              </table>
-       </div>
-
-       <div class="uk-margin-small-top" >
-
-          <table class="uk-table uk-table-divider" style="border: 1px solid #e9b6b68a;">      
-            <tbody>
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong style="font-weight: 600;">July 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">29-07-2023</td>
-                <td style="color: red;">Saturday</td>
-                <td>Muharram</td>
-              </tr>
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong>August 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">15-08-2023</td>
-                <td style="color: red;">Tuesday</td>
-                <td>Independence Day of India</td>
-              </tr>
-              <tr>
-                <td style="color: orange;">30-08-2023</td>
-                <td style="color: orange;">Wednesday</td>
-                <td>RH* - Raksha Bandhan</td>
-              </tr>
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong style="font-weight: 600;">September 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">07-09-2023</td>
-                <td style="color: red;">Thursday</td>
-                <td>Krishna Janmashtami</td>
-              </tr>
-              <tr>
-                <td style="color: red;">28-09-2023</td>
-                <td style="color: red;">Thursday</td>
-                <td>Eid-Milad (Milad un-Nabi)</td>
-              </tr>
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong style="font-weight: 600;">October 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">02-10-2023</td>
-                <td style="color: red;">Monday</td>
-                <td>Gandhi Jayanti</td>
-              </tr>
-              <tr>
-                <td style="color: orange;">23-10-2023</td>
-                <td style="color: orange;">Monday</td>
-                <td> RH* - Dussehra Navami</td>
-              </tr>
-              <tr>
-                <td style="color: red;">24-10-2023</td>
-                <td style="color: red;">Tuesday</td>
-                <td>Dussehra</td>
-              </tr>
-
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong style="font-weight: 600;">November 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">12-11-2023</td>
-                <td style="color: red;">Sunday</td>
-                <td>Diwali</td>
-              </tr>
-              <tr>
-                <td style="color: red;">13-11-2023</td>
-                <td style="color: red;">Monday</td>
-                <td>Govardhan Puja</td>
-              </tr>
-              <tr>
-                <td style="color: red;">14-11-2023</td>
-                <td style="color: red;">Tuesday</td>
-                <td>Bhai Duja</td>
-              </tr>
-              <tr>
-                <td style="color: orange;">19-11-2023</td>
-                <td style="color: orange;">Sunday</td>
-                <td>RH* - Chatt Puja</td>
-              </tr>
-              <tr>
-                <td style="color: red;">27-11-2023</td>
-                <td style="color: red;">Monday</td>
-                <td>Guru Nanak Jayanti</td>
-              </tr>
-
-              <tr class="winner__table" colspan="3" style="background-color: #f9f4f4;">          
-                <td colspan="3"><strong style="font-weight: 600;">December 2023</strong></td>
-              </tr>
-              <tr>
-                <td style="color: red;">25-12-2023</td>
-                <td style="color: red;">Monday</td>
-                <td>Christmas Day</td>
-              </tr>
-            </tbody>
-          </table>
-
-       </div>
        <div class="uk-width-1-1">
         <h2  class="uk-margin-remove">List of Holidays in <b>2024</b></h2>
         <p class="uk-margin-remove uk-margin-bottom">Office will remain closed on the holidays denoted by Red Colour. <a target="blank" href="{{route('frontend.site.calender.download', 2024)}}">Download List</a></p>       
