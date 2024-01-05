@@ -13,15 +13,15 @@
     </head>
     <body>
         <div class="uk-section">
-            <div class="uk-container">
+            <div class="uk-margin-bottom">
                 <table class="uk-table">
                     <tr>
                         <td>
-                        <img src="https://ik.imagekit.io/bimma/exportapproval/logo.png?updatedAt=1703831191033">
+                        <img style="height:50px" src="https://ik.imagekit.io/bimma/exportapproval/logo.png?updatedAt=1703831191033">
                         </td>
                         <td class="uk-text-right uk-text-small">
-                        <span class="uk-text-bold uk-text-small">Powered By</span><br>
-                        <h2>Brand Liaison India Pvt. Ltd.</h2>
+                        <span class="uk-text-small uk-margin-remove">Powered By</span><br>
+                        <h5 class="uk-margin-remove uk-text-bolder">Brand Liaison India Pvt. Ltd.</h5>
                 <!-- <img src="https://ik.imagekit.io/bimma/exportapproval/bl-logo-hq.jpg?updatedAt=1703831190940"> -->
                         </td>
                     </tr>
@@ -442,13 +442,13 @@
                 <p  style="color: orange;">* RH - Restricted Holiday (optional)</p>
                 <p>Office work may be affected on <b>RH*</b> holidays denoted by Orange Colour </p>
               </div>
-              <div class="uk-width-1-1 uk-text-center uk-margin-large-top">
-                <hr>
-              110, Sharma Complex<br>
-                            A-2, Guru Nanak Pura, Laxmi Nagar<br>
-                            Delhi - 110092, India<br>
-                            +91-9810363988<br>
-                            info@bl-india.com<br>
+              <div class="uk-width-1-1 uk-padding-large uk-padding-remove-horizontal uk-padding-remove-bottom uk-text-center uk-text-small">
+                <hr class="uk-text-emphasis">
+              110, Sharma Complex 
+                            A-2, Guru Nanak Pura, Laxmi Nagar 
+                            Delhi - 110092, India 
+                            +91-9810363988 
+                            info@bl-india.com 
                             https://bl-india.com
               </div>
         </div>
