@@ -132,11 +132,11 @@ class ProductSectionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($product, $id)
     {
         //
         $productSection = ProductSection::where('product_section_id', $id)->first();
         ProductSection::where('product_section_id', $id)->delete();
-        return redirect()->route('products.sections.index', $productSection->product_id)->with('success', 'Products section deleted successfully');
+        return redirect()->route('products.sections.index', $product)->with('success', 'Products section deleted successfully');
     }
 }
