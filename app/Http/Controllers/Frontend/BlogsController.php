@@ -54,7 +54,8 @@ class BlogsController extends Controller
         $agent = new Agent;
         $service_slug = '';
         $routeName = Route::currentRouteName();
-        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug', 'category_name', 'agent', 'service_slug', 'routeName'));
+        $page = StaticPages::where('static_page_id', 10)->first();
+        return view('frontend.pages.blog-category', compact('blogs', 'categories', 'category_slug', 'page', 'category_name', 'agent', 'service_slug', 'routeName'));
     }
 
     public function detail ($category, $slug)
@@ -71,6 +72,7 @@ class BlogsController extends Controller
         $agent = new Agent;
         $service_slug = '';
         $routeName = Route::currentRouteName();
-        return view('frontend.pages.blog_details', compact('blog', 'categories', 'category_slug', 'agent', 'service_slug', 'routeName'));
+        $page = StaticPages::where('static_page_id', 10)->first();
+        return view('frontend.pages.blog_details', compact('blog', 'categories', 'category_slug', 'agent', 'service_slug', 'page', 'routeName'));
     }
 }
