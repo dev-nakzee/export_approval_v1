@@ -15,7 +15,9 @@
 @endsection
 
 @section('content')
+<h1 class="uk-hidden">{{$service->service_name}}</h1>
 @if($agent->isMobile())
+
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-container uk-text-center">
         <div>

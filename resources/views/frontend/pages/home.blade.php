@@ -14,6 +14,7 @@
     <meta name="format-detection" content="telephone=no" />
     @endsection
 @section('content')
+<h1 class="uk-hidden">Export Approval</h1>
 @if ($agent->isMobile())
 
     <section class="uk-section uk-padding-small" style="background-color: {{$sections[0]->section_color}}">

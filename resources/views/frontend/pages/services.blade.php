@@ -16,6 +16,7 @@
 
 @section('content')
 @if($agent->isMobile())
+<h1 class="uk-hidden">{{'Services'}}</h1>
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
@@ -35,13 +36,6 @@
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding-small">
-    <div class="uk-text-center">
-        <p class="section-heading uk-margin-remove-bottom">
-            {{$sections[0]->section_name}} 
-        </p>
-        <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
-        <p class="section-description">{!! $sections[0]->section_description !!}</p>
-    </div>
     <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
 
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
@@ -116,13 +110,6 @@
     </div>
 </section>
 <section class="uk-section home-section-2 uk-padding uk-padding-remove-vertical">
-    <div class="section-two-heading uk-text-center uk-padding">
-        <p class="section-heading uk-margin-remove-bottom">
-            {{$sections[0]->section_name}} 
-        </p>
-        <span class="section-tagline">{!!$sections[0]->section_tagline!!}</span>
-        <p class="section-description">{!! $sections[0]->section_description !!}</p>
-    </div>
     <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
 
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>

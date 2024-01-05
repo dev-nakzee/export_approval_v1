@@ -15,6 +15,7 @@
 @endsection
 @section('content')
 @if($agent->isMobile())
+<h1 class="uk-hidden"> {{$static_page->page_name}}</h1>
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
@@ -73,6 +74,7 @@
 </section>
 @include('frontend.components.downloadbrochure')
 @else
+<h1 class="uk-hidden"> {{$static_page->page_name}}</h1>
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
