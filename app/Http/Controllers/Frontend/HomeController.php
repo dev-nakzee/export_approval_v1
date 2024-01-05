@@ -228,6 +228,6 @@ class HomeController extends Controller
 
     public function calendar($year) {
         $pdf = PDF::loadView('frontend.pdf.calender', compact(['year']));
-        return $pdf->download('Holiday-list-'.$year.'.pdf');
+        return $pdf->download('Brand Liaison Holiday list-'.$year.'.pdf');
     }
 }
