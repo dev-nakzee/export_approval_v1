@@ -97,6 +97,7 @@ class StaticPageController extends Controller
         $data = [
             'page_name' => $request->name,
             'page_slug' => $request->slug,
+            'tagline' => $request->tagline,
             'media_id' => $request->media_id,
             'img_alt' => $request->img_alt,
             'seo_title' => $request->seo_title,

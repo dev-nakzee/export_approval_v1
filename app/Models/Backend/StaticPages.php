@@ -15,8 +15,12 @@ class StaticPages extends Model
     protected $fillable = [
         'page_name',
         'page_slug',
+        'tagline',
         'media_id',
         'img_alt',
-        'page_status'
+        'page_status',
+        'seo_title',
+        'seo_description',
+        'seo_keywords'
     ];
 }

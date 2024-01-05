@@ -16,6 +16,10 @@
             <input type="text" class="form-control form-control-sm" id="slug" name="slug" value="{{$static_page->page_slug}}">
         </div>
         <div class="mb-3 col-md-6">
+            <label for="slug" class="form-label">Page Tagline</label>
+            <input type="text" class="form-control form-control-sm" id="tagline" name="tagline" value="{{$static_page->tagline}}">
+        </div>
+        <div class="mb-3 col-md-6">
             <label for="media_id" class="form-label">Page image</label>
             <div class="input-group input-group-sm">
                 <span class="input-group-text"><i class="fa-light fa-image"></i></span>
