@@ -133,7 +133,7 @@
             <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/cost-effective-1702021109.svg" alt="cost-effective" width="70" height="70" data-uk-img=""></div>
                 <div class="uk-width-expand">
-                <h3>Cost effective<br>solutions</h3>
+                <h3>Get Cost effective<br>solutions</h3>
                 </div>
             </div>
             <div class="wcu-one wcu-tabs" uk-toggle="target: .wcu-one; mode: hover; animation: uk-animation-slide-left-small" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
@@ -331,7 +331,7 @@
             <div class="uk-grid-small uk-grid wcu-one wcu-tabs" data-uk-grid="">
             <div class="uk-width-auto uk-first-column"><img src="../../../../../../storage/media/cost-effective-1702021109.svg" alt="cost-effective" width="70" height="70" data-uk-img=""></div>
                 <div class="uk-width-expand">
-                <h3>Cost effective<br>solutions</h3>
+                <h3>Get Cost effective<br>solutions</h3>
                 </div>
             </div>
             <div class="wcu-one wcu-tabs" hidden="">We deliver cost-effective solutions tailored to meet your diverse needs.</div>
