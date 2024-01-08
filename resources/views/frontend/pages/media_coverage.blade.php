@@ -57,7 +57,7 @@
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/microphone.png')}}" alt="Media Coverage Image">
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/microphone.webp')}}" alt="Media Coverage Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>

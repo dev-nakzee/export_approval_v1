@@ -18,7 +18,7 @@
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
-            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/governance.png')}}" alt="">
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/governance.webp')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
@@ -82,7 +82,7 @@
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/governance.png')}}" alt="Notifications Image">
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/governance.webp')}}" alt="Notifications Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
@@ -106,7 +106,7 @@
             <div class="uk-width-1-4@m">
                 <div class="ps-details-section">
                     <span class="uk-text-bold">
-                        <img class="uk-border-circle title-page-image uk-margin-right" src="{{asset('frontend/images/governance.png')}}" alt="notification Image">
+                        <img class="uk-border-circle title-page-image uk-margin-right" src="{{asset('frontend/images/governance.webp')}}" alt="notification Image">
                         {{'Industrial Notifications'}}
                     </span>
                     <ul class="uk-nav-default uk-nav-divider uk-margin-top" uk-nav>

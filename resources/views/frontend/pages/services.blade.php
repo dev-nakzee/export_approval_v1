@@ -37,7 +37,9 @@
 </section>
 <section class="uk-section home-section-2 uk-padding-small">
     <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
-
+        <div class="uk-text-center uk-padding">
+        {!! $sections[0]->section_description !!}
+        </div>
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
                 <img src="{{$sections[1]->media_path}}" alt="" uk-cover>
@@ -111,7 +113,9 @@
 </section>
 <section class="uk-section home-section-2 uk-padding uk-padding-remove-vertical">
     <div class="uk-section uk-padding-large uk-padding-remove-vertical uk-margin-large-bottom">
-
+        <div class="uk-text-center uk-padding">
+        {!! $sections[0]->section_description !!}
+        </div>
         <div class="uk-card uk-card-default uk-grid-collapse uk-margin uk-child-width-1-2" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
                 <img src="{{$sections[1]->media_path}}" alt="" uk-cover>

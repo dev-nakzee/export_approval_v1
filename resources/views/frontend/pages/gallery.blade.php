@@ -19,7 +19,7 @@
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
-            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/gallery.png')}}" alt="">
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/gallery.webp')}}" alt="">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
@@ -55,7 +55,7 @@
 <section class="uk-section page-header uk-padding-small">
     <div class="uk-container uk-text-center">
         <div>
-            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/gallery.png')}}" alt="Blogs Image">
+            <img class="uk-margin-right uk-border-circle service-details-image" src="{{asset('frontend/images/gallery.webp')}}" alt="Blogs Image">
             <h2 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
