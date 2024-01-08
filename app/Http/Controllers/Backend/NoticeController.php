@@ -65,7 +65,7 @@ class NoticeController extends Controller
         ]);
         $data = [
             'notice_title' => $request->name,
-            'notice_date' => $request->notice_date
+            'notice_date' => $request->notice_date,
             'notice_slug' => $request->slug,
             'notice_content' => $request->notice_content,
             'media_id' => $request->media_id,
@@ -161,7 +161,7 @@ class NoticeController extends Controller
         ]);
         $data = [
             'notice_title' => $request->name,
-            'notice_date' => $request->notice_date
+            'notice_date' => $request->notice_date,
             'notice_slug' => $request->slug,
             'notice_content' => $request->notice_content,
             'media_id' => $request->media_id,
