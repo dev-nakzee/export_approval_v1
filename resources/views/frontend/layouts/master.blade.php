@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
+        <link rel="icon" href="{{asset('frontend/images/favicon.png')}}http://example.com/favicon.png">
         @yield('seo')
         <meta name="audience" content="Everyone">
         <meta name="robots" content="index, follow">
@@ -399,5 +400,10 @@ strong {
         })();
         </script>
         <!--End of Tawk.to Script-->
+        <style>
+            .tawk-branding {
+                display: none !important;
+            }
+        </style>
     </body>
 </html>
