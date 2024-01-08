@@ -15,12 +15,13 @@
 
 @endsection
 @section('content')
+<h1 class="uk-hidden">{{$page->page_name}) {{$page->tagline}}</h1>
 @if($agent->isMobile())
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
         <div>
-            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/microphone.png')}}" alt="">
-            <h2 class="uk-text-middle uk-inline uk-margin-remove">
+            <img class="uk-margin-remove uk-border-circle mobile-page-image" src="{{asset('frontend/images/microphone.webp')}}" alt="">
+            <h1 class="uk-text-middle uk-inline uk-margin-remove">
             {{$page->page_name}}<br>
                 <span class="uk-text-small" style="color: #8b8b8b;">{{$page->tagline}}</span>
             </h2>

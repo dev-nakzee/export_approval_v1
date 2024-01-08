@@ -14,6 +14,7 @@
 <meta name="format-detection" content="telephone=no" />
 @endsection
 @section('content')
+<h1 class="uk-hidden">{{$notice->notice_title}}</h1>
 @if($agent->isMobile())
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
