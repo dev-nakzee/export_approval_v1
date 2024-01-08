@@ -18,7 +18,7 @@
             }
         });
         $.ajax({
-            url:"{{route('frontend.site.cookie.accept')}}",
+            url:"https://exportapproval.com/cookie/accept",
             method:"GET",
             success:function(response){
                 $('.cookie-pop').addClass('uk-hidden');
@@ -33,7 +33,7 @@
             }
         });
         $.ajax({
-            url:"{{route('frontend.site.cookie.reject')}}",
+            url:"https://exportapproval.com/cookie/reject",
             method:"GET",
             success:function(response){
                 $('.cookie-pop').addClass('uk-hidden');

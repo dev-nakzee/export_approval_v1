@@ -19,7 +19,7 @@
             }
         });
         $.ajax({
-            url:"{{route('frontend.site.popup.close')}}",
+            url:"https://exportapproval.com/pop-up/close",
             method:"GET",
             success:function(response){
 
