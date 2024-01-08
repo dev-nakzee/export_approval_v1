@@ -27,7 +27,7 @@ class IndustryNotificationController extends Controller
         $services = Services::select('service_name', 'service_slug')->get();
         $notices = Notices::select('notice_id', 'notice_title', 'notice_date', 'notice_slug', 'service_slug')
         ->join('services', 'services.service_id', '=', 'notices.service_id')
-        ->orderBy('notices.created_at', 'DESC')
+        ->orderBy('notices.notice_date', 'DESC')
         ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 9)->first();
@@ -43,7 +43,7 @@ class IndustryNotificationController extends Controller
         $notices = Notices::select('notice_id', 'notice_title', 'notice_date', 'notice_slug', 'service_name','service_slug')
             ->join('services', 'services.service_id', '=', 'notices.service_id')
             ->where('notices.service_id', $notice_service->service_id)
-            ->orderBy('notices.created_at', 'DESC')
+            ->orderBy('notices.notice_date', 'DESC')
             ->get();
         $agent = new Agent;
         $page = StaticPages::where('static_page_id', 9)->first();
