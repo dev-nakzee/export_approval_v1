@@ -176,7 +176,7 @@ strong {
         </style>
     </head>
     <body>
-        <div id="overlay" class="uk-overlay-default uk-position-cover" style="z-index: 99999">
+        <div id="overlay" class="uk-overlay-default uk-position-fixed uk-position-cover" style="z-index: 99999">
             <div class="uk-position-center" uk-spinner="ratio: 3"></div>
         </div>
         @if ($agent->isMobile())
