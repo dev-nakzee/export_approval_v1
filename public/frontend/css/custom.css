@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 @font-face {
     font-family: captcha;
@@ -6,7 +6,10 @@
 }
 * {
     box-sizing: border-box;
-    font-family: sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+strong {
+    font-weight: 400 !important;
 }
 .cookie-pop {
     z-index: 999;
