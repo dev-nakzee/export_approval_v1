@@ -222,7 +222,7 @@ strong {
                     </ul>
                     <div class="uk-position-small uk-position-bottom-center">
                         <span class="mobile-menu-poweredby">Powered by</span>
-                        <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
+                        <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.webp')}}" alt="Export Approval">
                     </div>
                 </div>
             </div>
@@ -291,7 +291,7 @@ strong {
                     <ul class="uk-nav uk-nav-default">
                         <li class="uk-nav-header">Powered by</li>
                     </ul>
-                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.jpg')}}" alt="Export Approval">
+                    <img class="footer-logo" src="{{asset('frontend/images/bl-logo-hq.webp')}}" alt="Export Approval">
                     <p class="">Export Approval is a trusted platform for foreign manufacturers entering the Indian market. Our platform simplifies necessary Indian certifications and approvals for seamless product exportation to India.                    </p>
                 </div>
                 <div class="uk-width-1-4@s">
