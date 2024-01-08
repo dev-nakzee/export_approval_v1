@@ -15,6 +15,7 @@
 
 @endsection
 @section('content')
+<h1 class="uk-hidden">{{$page->page_name}} - {{$page->tagline}}</h1>
 @if($agent->isMobile())
 <section class="uk-section page-header uk-padding-small" uk-sticky="offset: 80">
     <div class="uk-text-center">
