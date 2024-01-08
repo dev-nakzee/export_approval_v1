@@ -412,7 +412,7 @@ strong {
        
         <script>
         $(window).on("load", function() {
-            $('#overlay').hide();
+            $('#overlay').hide('slow');
         });
         </script>
     </body>
