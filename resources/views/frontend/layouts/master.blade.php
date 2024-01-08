@@ -66,6 +66,7 @@ strong {
         </style>
        
         <script>
+ 
             $(document).ready(function(){
 
                 $(this).scrollTop(0);
@@ -175,6 +176,9 @@ strong {
         </style>
     </head>
     <body>
+        <div id="overlay" class="uk-overlay-default uk-position-cover" style="z-index: 99999">
+            <div class="uk-position-center" uk-spinner="ratio: 3"></div>
+        </div>
         @if ($agent->isMobile())
         <nav style="border-bottom: 0.09em solid #c4c4c4;" class="uk-navbar-container uk-box-shadow-medium uk-padding-small uk-padding-remove-vertical uk-background-transparent" uk-navbar="mode: click" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
             <a class="uk-navbar-item uk-logo" href="{{route('frontend.site.home')}}">
@@ -405,5 +409,11 @@ strong {
                 display: none !important;
             }
         </style>
+       
+        <script>
+        $(window).on("load", function() {
+            $('#overlay').hide();
+        });
+        </script>
     </body>
 </html>

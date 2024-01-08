@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Pagination\Paginator;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        if (app()->environment('remote') || env('FORCE_HTTPS',false)) {
+            URL::forceScheme('https');
+        }
+
         view()->composer('backend.layouts.partials.sidebar', function($view){
             $modules = Module::where('enabled', 1)->orderBy('sort_order')->get();
             $submodules = SubModule::where('enabled',1)->orderBy('sort_order')->get();
